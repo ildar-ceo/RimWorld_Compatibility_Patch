@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Biomes! Islands</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="BiomesIslands_RedSnapper"]/lifeStages</xpath>
+					<value>
+						<lifeStages>
+							<li>
+								<bodyGraphicData>
+									<texPath>BiomesIslands_Things/Pawn/Animal/RedSnapper/RedSnapper</texPath>
+									<drawSize>0.5</drawSize>
+								</bodyGraphicData>
+								<dessicatedBodyGraphicData>
+									<texPath>BiomesIslands_Things/Pawn/Animal/Dessicated/Fish</texPath>
+									<drawSize>0.5</drawSize>
+								</dessicatedBodyGraphicData>
+							</li>
+							<li>
+								<bodyGraphicData>
+									<texPath>BiomesIslands_Things/Pawn/Animal/RedSnapper/RedSnapper</texPath>
+									<drawSize>1.2</drawSize>
+								</bodyGraphicData>
+								<dessicatedBodyGraphicData>
+									<texPath>BiomesIslands_Things/Pawn/Animal/Dessicated/Fish</texPath>
+									<drawSize>1.2</drawSize>
+								</dessicatedBodyGraphicData>
+							</li>
+							<li>
+								<bodyGraphicData>
+									<texPath>BiomesIslands_Things/Pawn/Animal/RedSnapper/RedSnapper</texPath>
+									<drawSize>1.6</drawSize>
+								</bodyGraphicData>
+								<dessicatedBodyGraphicData>
+									<texPath>BiomesIslands_Things/Pawn/Animal/Dessicated/Fish</texPath>
+									<drawSize>1.6</drawSize>
+								</dessicatedBodyGraphicData>
+							</li>
+						</lifeStages>
+					</value>
+				</li>
+				
+				
+				<!-- Add HealrootWild -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="BiomesIslands_Atoll"]/wildPlants</xpath>
+					<value>
+						<Plant_HealrootWild>0.05</Plant_HealrootWild>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="BiomesIslands_TropicalIslandBase"]/wildPlants</xpath>
+					<value>
+						<Plant_HealrootWild>0.05</Plant_HealrootWild>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef[defName="BiomesIslands_DesertIslandBase"]/wildPlants</xpath>
+					<value>
+						<Plant_HealrootWild>0.05</Plant_HealrootWild>
+					</value>
+				</li>
+				
+				
+			</operations>
+		</match>
+	</Operation>
+</Patch>

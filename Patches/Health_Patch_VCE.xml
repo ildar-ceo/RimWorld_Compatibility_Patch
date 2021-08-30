@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Patches the severity of VCE's health conditions to decay by 2400% per day (100% per hour), so they should never reasonably appear -->
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Cooking Expanded</li></mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName="VCE_Cholesterol"]/comps/li/severityPerDay</xpath>
+				<value>
+					<severityPerDay>-24</severityPerDay>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName="VCE_Diabetes"]/comps/li/severityPerDay</xpath>
+				<value>
+					<severityPerDay>-24</severityPerDay>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName="VCE_HighBloodPressure"]/comps/li/severityPerDay</xpath>
+				<value>
+					<severityPerDay>-24</severityPerDay>
+				</value>
+			</li>
+		</operations>
+		</match>
+	</Operation>
+</Patch>
