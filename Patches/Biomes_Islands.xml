@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+	<!-- ID: 2038001322 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Biomes! Islands</li></mods>
 		<match Class="PatchOperationSequence">
@@ -47,19 +48,19 @@
 				
 				<!-- Add HealrootWild -->
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/PawnKindDef[defName="BiomesIslands_Atoll"]/wildPlants</xpath>
+					<xpath>Defs/BiomeDef[defName="BiomesIslands_Atoll"]/wildPlants</xpath>
 					<value>
 						<Plant_HealrootWild>0.05</Plant_HealrootWild>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/PawnKindDef[defName="BiomesIslands_TropicalIslandBase"]/wildPlants</xpath>
+					<xpath>Defs/BiomeDef[defName="BiomesIslands_TropicalIslandBase"]/wildPlants</xpath>
 					<value>
 						<Plant_HealrootWild>0.05</Plant_HealrootWild>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/PawnKindDef[defName="BiomesIslands_DesertIslandBase"]/wildPlants</xpath>
+					<xpath>Defs/BiomeDef[defName="BiomesIslands_DesertIslandBase"]/wildPlants</xpath>
 					<value>
 						<Plant_HealrootWild>0.05</Plant_HealrootWild>
 					</value>

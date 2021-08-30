@@ -50,6 +50,7 @@
 		</match>
 	</Operation>
 	
+	<!-- ID: 1180721235 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>[KV] RimFridge</li></mods>
 		<match Class="PatchOperationSequence">
@@ -59,24 +60,6 @@
 					<xpath>/Defs/ThingDef[@Name="FridgeBase"]/building</xpath>
 					<value>
 						<uninstallWork>350</uninstallWork>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/ThingDef[defName="LWM_DS_RimFridge_Refrigerator"]/minifiedDef</xpath>
-				</li>
-				
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/ThingDef[defName="LWM_DS_RimFridge_Refrigerator"]/thingCategories</xpath>
-				</li>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="LWM_DS_RimFridge_Refrigerator"]</xpath>
-					<value>
-						<minifiedDef>MinifiedThing</minifiedDef>
-						<building>
-							<uninstallWork>350</uninstallWork>
-						</building>
 					</value>
 				</li>
 				
@@ -111,6 +94,39 @@
 				</li>
 				
 			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1180721235 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>[KV] RimFridge</li></mods>
+		
+		<!-- ID: 1617282896 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>LWM's Deep Storage</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="LWM_DS_RimFridge_Refrigerator"]/minifiedDef</xpath>
+					</li>
+					
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="LWM_DS_RimFridge_Refrigerator"]/thingCategories</xpath>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="LWM_DS_RimFridge_Refrigerator"]</xpath>
+						<value>
+							<minifiedDef>MinifiedThing</minifiedDef>
+							<building>
+								<uninstallWork>350</uninstallWork>
+							</building>
+						</value>
+					</li>
+				</operations>
+			</match>
+			
 		</match>
 	</Operation>
 	
