@@ -9,6 +9,13 @@
 	</supportedVersions>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
+		<li>CETeam.CombatExtended</li>
+		<li>BiomesTeam.BiomesCore</li>
+		<li>BiomesTeam.BiomesIslands</li>
+		<li>rimfridge.kv.rw</li>
+		<li>notfood.MendAndRecycle</li>
+		<li>LWM.DeepStorage</li>
+		<li>VanillaExpanded.VCookE</li>
 	</loadAfter>
 	<description>Expanded compability patch</description>
 </ModMetaData>
