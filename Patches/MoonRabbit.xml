@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	
+	<!-- ID: 1837246563 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Rabbie The Moonrabbit race</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Add Hair -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/HairDef[defName="RBhair_A" or defName="RBhair_B" or defName="RBhair_C" or defName="RBhair_D" or defName="RBhair_E" or defName="RBhair_F" or defName="RBhair_G" or defName="RBhair_H" or defName="RBhair_I" or defName="RBhair_J" or defName="RBhair_K" or defName="RBhair_L" or defName="RBhair_M" or defName="RBhair_N" or defName="RBhair_O" or defName="RBhair_P"]/styleGender</xpath>
+					<value>
+						<styleGender>Any</styleGender>
+					</value>
+				</li>
+				
+				<!-- Remove Planetarium Hediff -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Rabbie"]/alienRace/generalSettings/chemicalSettings/li[1]</xpath>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+</Patch>
