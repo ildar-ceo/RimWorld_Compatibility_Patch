@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	
+	
+	<!-- ID: 2007062982 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Garden Gourmet</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Remove Fine and Lavish recipes -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/recipes/li[text()="CookMealSimple" or text()="CookMealSimpleBulk" or text()="CookMealFine" or text()="CookMealFine_Veg" or text()="CookMealFine_Meat" or text()="CookMealLavish" or text()="CookMealLavish_Veg" or text()="CookMealLavish_Meat" or text()="CookMealFineBulk" or text()="CookMealFineBulk_Veg" or text()="CookMealFineBulk_Meat" or text()="CookMealLavishBulk" or text()="CookMealLavishBulk_Veg" or text()="CookMealLavishBulk_Meat"]</xpath>
+				</li>
+				
+				
+				<!-- FruitFoodRaw is FoodRaw, not PlantFoodRaw -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingCategoryDef[defName="FruitFoodRaw"]/parent</xpath>
+					<value>
+						<parent>FoodRaw</parent>
+					</value>
+				</li>
+				
+				
+				<!-- Replace ingredients for Stirfry and bowlstew -->
+				<li Class="PatchOperationAttributeRemove">
+					<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot"]</xpath>
+					<attribute>ParentName</attribute>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot"]/ingredients</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot"]</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<categories>
+										<li>MeatRaw</li>
+									</categories>
+								</filter>
+								<count>1</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>RawCorn</li>
+										<li>RawPotatoes</li>
+										<li>RawFungus</li>
+										<li>Rawsnowbeet</li>
+										<li>Rawbean</li>
+										<li>RawOlive</li>
+										<li>PickledVeg</li>
+										<li>RawAgave</li>
+										<li>RawCoconut</li>
+									</thingDefs>
+								</filter>
+								<count>1</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<categories>
+								<li>MeatRaw</li>
+							</categories>
+							<thingDefs>
+								<li>RawCorn</li>
+								<li>RawPotatoes</li>
+								<li>RawFungus</li>
+								<li>Rawsnowbeet</li>
+								<li>Rawbean</li>
+								<li>RawOlive</li>
+								<li>PickledVeg</li>
+								<li>RawAgave</li>
+								<li>RawCoconut</li>
+							</thingDefs>
+							<specialFiltersToDisallow>
+								<li>AllowPlantFood</li>
+							</specialFiltersToDisallow>
+						</fixedIngredientFilter>
+						<defaultIngredientFilter>
+							<categories>
+								<li>MeatRaw</li>
+							</categories>
+							<thingDefs>
+								<li>RawCorn</li>
+								<li>RawPotatoes</li>
+								<li>RawFungus</li>
+								<li>Rawsnowbeet</li>
+								<li>Rawbean</li>
+								<li>RawOlive</li>
+								<li>PickledVeg</li>
+								<li>RawAgave</li>
+								<li>RawCoconut</li>
+							</thingDefs>
+							<disallowedCategories>
+								<li>EggsFertilized</li>
+							</disallowedCategories>
+							<disallowedThingDefs>
+								<li>Meat_Human</li>
+								<li>Meat_Megaspider</li>
+								<li>InsectJelly</li>
+							</disallowedThingDefs>
+						</defaultIngredientFilter>
+						<workSkill>Cooking</workSkill>
+					</value>
+				</li>
+				
+				
+				<!-- Kabob -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillKabob"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<categories>
+										<li>MeatRaw</li>
+									</categories>
+								</filter>
+								<count>0.6</count>
+							</li>
+							<li>
+								<filter>
+									<categories>
+										<li>PlantFoodRaw</li>
+									</categories>
+								</filter>
+								<count>0.3</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="GrillKabob"]</xpath>
+					<value>
+						<skillRequirements>
+							<Cooking>5</Cooking>
+						</skillRequirements>
+					</value>
+				</li>
+				
+				
+				<!-- Sushi -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="CookMakiRoll" or defName="Make_Nigiri"]/ingredients</xpath>
+					<value>
+						<li>
+							<filter>
+								<categories>
+									<li>MeatRaw</li>
+								</categories>
+							</filter>
+							<count>0.6</count>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="CookMakiRoll" or defName="Make_Nigiri"]/fixedIngredientFilter</xpath>
+					<value>
+						<categories>
+							<li>MeatRaw</li>
+						</categories>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="CookMakiRoll" or defName="Make_Nigiri"]/defaultIngredientFilter</xpath>
+					<value>
+						<categories>
+							<li>MeatRaw</li>
+						</categories>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="CookMakiRoll" or defName="Make_Nigiri"]/skillRequirements</xpath>
+					<value>
+						<skillRequirements>
+							<Cooking>12</Cooking>
+						</skillRequirements>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[2]/filter/thingDefs/li[text()="Rawtofu"]</xpath>
+				</li>
+				
+				
+				<!-- FineMeal -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Kabob" or defName="BlueberryPie" or defName="grilledcheese"]/ingestible/preferability</xpath>
+					<value>
+						<preferability>MealFine</preferability>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Kabob" or defName="BlueberryPie" or defName="grilledcheese"]/ingestible</xpath>
+					<value>
+						<tasteThought>AteFineMeal</tasteThought>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Kabob" or defName="BlueberryPie" or defName="grilledcheese"]/thingCategories/li[text()="SimpleMeals"]</xpath>
+					<value>
+						<li>FineMeals</li>
+					</value>
+				</li>
+				
+				
+				<!-- MealLavish -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="MakiRoll" or defName="Nigiri"]/ingestible/preferability</xpath>
+					<value>
+						<preferability>MealLavish</preferability>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="MakiRoll" or defName="Nigiri"]/ingestible/tasteThought</xpath>
+					<value>
+						<tasteThought>AteLavishMeal</tasteThought>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="MakiRoll" or defName="Nigiri"]/thingCategories/li[text()="FineMeals"]</xpath>
+					<value>
+						<li>LavishMeals</li>
+					</value>
+				</li>
+				
+				
+				<!-- Nutrition -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Kabob" or defName="BlueberryPie" or defName="grilledcheese" or defName="Nigiri"]/statBases/Nutrition</xpath>
+					<value>
+						<Nutrition>0.6</Nutrition>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="BlueberryPie"]/statBases/Nutrition</xpath>
+					<value>
+						<Nutrition>0.8</Nutrition>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="MakiRoll"]/statBases/Nutrition</xpath>
+					<value>
+						<Nutrition>1.0</Nutrition>
+					</value>
+				</li>
+				
+				
+				<!-- FruitSalad -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="MealBase">
+							<defName>FruitSalad</defName>
+							<label>Fruit salad</label>
+							<description>Fruit salad</description>
+							<graphicData>
+								<texPath>Things/Item/Meal/FineVeg</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+							</graphicData>
+							<statBases>
+								<DeteriorationRate>0.25</DeteriorationRate>
+								<MarketValue>32</MarketValue>
+								<WorkToMake>300</WorkToMake>
+								<Nutrition>0.75</Nutrition>
+								<Mass>0.3</Mass>
+							</statBases>
+							<ingestible>
+								<preferability>MealSimple</preferability>
+								<optimalityOffsetHumanlikes>-5</optimalityOffsetHumanlikes>
+								<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+								<ingestEffect>EatVegetarian</ingestEffect>
+								<ingestSound>Meal_Eat</ingestSound>
+							</ingestible>
+							<thingCategories>
+								<li>SimpleMeals</li>
+							</thingCategories>
+						</ThingDef>
+						
+						<RecipeDef>
+							<defName>CookFruitSalad</defName>
+							<label>Cook fruit salad</label>
+							<description>Cook fruit salad</description>
+							<jobString>Cooking fruit salad</jobString>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+							<ingredients>
+								<li>
+									<filter>
+										<categories>
+											<li>FruitFoodRaw</li>
+										</categories>
+									</filter>
+								<count>0.75</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<categories>
+									<li>FruitFoodRaw</li>
+								</categories>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>FruitFoodRaw</li>
+								</categories>
+							</defaultIngredientFilter>
+							<products>
+								<FruitSalad>1</FruitSalad>
+							</products>
+							<recipeUsers>
+								<li>Canningstove</li>
+								<li>HandCanningstove</li>
+							</recipeUsers>
+							<workSkill>Cooking</workSkill>
+						</RecipeDef>
+						
+						<RecipeDef>
+							<defName>CookFruitSalad_x4</defName>
+							<label>Cook fruit salad x4</label>
+							<description>Cook fruit salad x4</description>
+							<jobString>Cooking fruit salad x4</jobString>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>
+							<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+							<ingredients>
+								<li>
+									<filter>
+										<categories>
+											<li>FruitFoodRaw</li>
+										</categories>
+									</filter>
+								<count>4</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<categories>
+									<li>FruitFoodRaw</li>
+								</categories>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>FruitFoodRaw</li>
+								</categories>
+							</defaultIngredientFilter>
+							<products>
+								<FruitSalad>4</FruitSalad>
+							</products>
+							<recipeUsers>
+								<li>Canningstove</li>
+								<li>HandCanningstove</li>
+							</recipeUsers>
+							<workSkill>Cooking</workSkill>
+						</RecipeDef>
+						
+					</value>
+				</li>
+				
+				
+				<!-- Meat -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="stirfry" or defName="bowlstew" or defName="SaltedMeat" or defName="cheese" or defName="grilledcheese"]/comps</xpath>
+					<value>
+						<li Class="CompProperties_Ingredients">
+							<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="grilledmeat" or defName="pizza" or defName="smoothie" or defName="Tacos" or defName="Grilledsteak" or defName="Kabob" or defName="meatpie"]</xpath>
+					<value>
+						<comps>
+							<li Class="CompProperties_Ingredients">
+								<noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+							</li>
+						</comps>
+					</value>
+				</li>
+				
+				
+				<!-- NonMeat -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VG_Hardtack" or defName="FruitSalad" or defName="driedfruit" or defName="Rawsugarcane" or defName="Sugar" or defName="Flour" or defName="Cornmeal" or defName="Rawwheat" or defName="PickledVeg"]/comps</xpath>
+					<value>
+						<li Class="CompProperties_Ingredients">
+							<noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="cookie" or defName="BlueberryPie" or defName="bread" or defName="sweetbun" or defName="Porridge" or defName="yogurt" or defName="icecream" or defName="Grilledveg" or defname="Rawtofu" or defName="RawPolenta" or defName="grilledpolenta" or defName="bakedpolenta" or defName="Cornbread" or defName="muffin" or defName="MakiRoll" or defName="Nigiri" or defName="VeganEgg"]</xpath>
+					<value>
+						<comps>
+							<li Class="CompProperties_Ingredients">
+								<noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+							</li>
+						</comps>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

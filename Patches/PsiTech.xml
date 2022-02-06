@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>PsiTech</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				
+				<!-- Research -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ResearchProjectDef[@Name="PsiTechProjectBase"]/requiredResearchFacilities</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ResearchProjectDef[@Name="PsiTechProjectBase"]/requiredResearchBuilding</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ResearchProjectDef[defName="PTAtheniumReclamation"]/requiredResearchBuilding</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTAtheniumReclamation"]/prerequisites</xpath>
+					<value>
+						<prerequisites>
+							<li>Electricity</li>
+						</prerequisites>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsionics"]/prerequisites/li[1]</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsionics"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsychicWorkbench"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTUnlockingTheSubconscious"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTMindAndBody"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiEmpaty"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiMeditation"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiCombat"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsychicWeapons"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsychicSuppressionField"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTProjectionTheory"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPerfectedMeditation"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTBattlefieldMastery"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTMindConnection"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTMindInvasion"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTAdvancedPsychicEquipment"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiTranscendence"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTAtheniumCreation"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTAtheniumCreation"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsychicEquipment"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsychicEquipment"]</xpath>
+					<value>
+						<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTArtifactCreation"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="PTArtifactCreation"]</xpath>
+					<value>
+						<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="PTAdvancedPsychicEquipment"]</xpath>
+					<value>
+						<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiTranscendence"]</xpath>
+					<value>
+						<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTAdvancedPsychicEquipment"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiTranscendence"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTMindFortress"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiRally"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiStorm"]/techLevel</xpath>
+					<value>
+						<techLevel>Industrial</techLevel>
+					</value>
+				</li>
+				
+				
+				<!-- baseCost -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTAtheniumReclamation"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsionics"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsychicWorkbench"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTUnlockingTheSubconscious"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTMindAndBody"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiEmpaty"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiMeditation"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiCombat"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsychicEquipment"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsychicWeapons"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTArtifactCreation"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsychicSuppressionField"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTAtheniumCreation"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTProjectionTheory"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPerfectedMeditation"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTBattlefieldMastery"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTMindConnection"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTMindInvasion"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTAdvancedPsychicEquipment"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiTranscendence"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTMindFortress"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiRally"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="PTPsiStorm"]/baseCost</xpath>
+					<value>
+						<baseCost>500</baseCost>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

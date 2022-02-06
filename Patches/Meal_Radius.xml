@@ -4,12 +4,14 @@
 		<mods><li>Meal Radius (Continued)</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
+				<!--
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[@Name="MealBase"]/ingestible/chairSearchRadius</xpath>
 					<value>
 					  <chairSearchRadius>64</chairSearchRadius>
 					</value>
 				</li>
+				-->
 			</operations>
 		</match>
 	</Operation>

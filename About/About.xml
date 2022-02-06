@@ -16,6 +16,12 @@
 		<li>notfood.MendAndRecycle</li>
 		<li>LWM.DeepStorage</li>
 		<li>VanillaExpanded.VCookE</li>
+		<li>notfood.SeedsPlease</li>
+		<li>dismarzero.VGP.VGPVegetableGarden</li>
+		<li>dismarzero.VGP.VGPGardenGourmet</li>
+		<li>dismarzero.VGP.VGPGardenFabrics</li>
+		<li>dismarzero.VGP.VGPGardenMedicine</li>
+		<li>gekasid.VGP.VGPVegetableGarden.rus</li>
 	</loadAfter>
 	<description>Expanded compability patch</description>
 </ModMetaData>
