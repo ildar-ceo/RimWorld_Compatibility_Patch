@@ -12,7 +12,7 @@
 				
 				<!-- Remove Fine and Lavish recipes -->
 				<li Class="PatchOperationRemove">
-					<xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/recipes/li[text()="CookMealSimple" or text()="CookMealSimpleBulk" or text()="CookMealFine" or text()="CookMealFine_Veg" or text()="CookMealFine_Meat" or text()="CookMealLavish" or text()="CookMealLavish_Veg" or text()="CookMealLavish_Meat" or text()="CookMealFineBulk" or text()="CookMealFineBulk_Veg" or text()="CookMealFineBulk_Meat" or text()="CookMealLavishBulk" or text()="CookMealLavishBulk_Veg" or text()="CookMealLavishBulk_Meat"]</xpath>
+					<xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove" or defName="HandCanningstove" or defName="Canningstove" or defName="VG_Campfire" or defName="Campfire"]/recipes/li[text()="CookMealSimple" or text()="CookMealSimpleBulk" or text()="CookMealFine" or text()="CookMealFine_Veg" or text()="CookMealFine_Meat" or text()="CookMealLavish" or text()="CookMealLavish_Veg" or text()="CookMealLavish_Meat" or text()="CookMealFineBulk" or text()="CookMealFineBulk_Veg" or text()="CookMealFineBulk_Meat" or text()="CookMealLavishBulk" or text()="CookMealLavishBulk_Veg" or text()="CookMealLavishBulk_Meat"]</xpath>
 				</li>
 				
 				
@@ -254,7 +254,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs</xpath>
 					<value>
-						<ThingDef ParentName="MealBase">
+						<ThingDef ParentName="VG_MealRottable">
 							<defName>FruitSalad</defName>
 							<label>Fruit salad</label>
 							<description>Fruit salad</description>
@@ -368,6 +368,7 @@
 				
 				
 				<!-- Meat -->
+				<!--
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName="stirfry" or defName="bowlstew" or defName="SaltedMeat" or defName="cheese" or defName="grilledcheese"]/comps</xpath>
 					<value>
@@ -386,9 +387,10 @@
 						</comps>
 					</value>
 				</li>
-				
+				-->
 				
 				<!-- NonMeat -->
+				<!--
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName="VG_Hardtack" or defName="FruitSalad" or defName="driedfruit" or defName="Rawsugarcane" or defName="Sugar" or defName="Flour" or defName="Cornmeal" or defName="Rawwheat" or defName="PickledVeg"]/comps</xpath>
 					<value>
@@ -407,7 +409,7 @@
 						</comps>
 					</value>
 				</li>
-				
+				-->
 			</operations>
 		</match>
 		
