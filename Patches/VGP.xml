@@ -144,36 +144,151 @@
 				</li>
 				
 				
-				<!-- Sushi -->
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/RecipeDef[defName="CookMakiRoll" or defName="Make_Nigiri"]/ingredients</xpath>
+				<!-- CookMakiRoll -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients</xpath>
 					<value>
-						<li>
-							<filter>
-								<categories>
-									<li>MeatRaw</li>
-								</categories>
-							</filter>
-							<count>0.6</count>
-						</li>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>RawRice</li>
+									</thingDefs>
+								</filter>
+								<count>1</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>Rawsnowbeet</li>
+										<li>Rawbean</li>
+										<li>PickledVeg</li>
+										<li>RawAgave</li>
+										<li>RawCoconut</li>
+										<li>RawOlive</li>
+									</thingDefs>
+								</filter>
+								<count>0.5</count>
+							</li>
+							<li>
+								<filter>
+									<categories>
+										<li>MeatRaw</li>
+									</categories>
+								</filter>
+								<count>1</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/fixedIngredientFilter</xpath>
+					<value>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>RawRice</li>
+								<li>Rawsnowbeet</li>
+								<li>Rawbean</li>
+								<li>PickledVeg</li>
+								<li>RawAgave</li>
+								<li>RawCoconut</li>
+								<li>RawOlive</li>
+							</thingDefs>
+							<categories>
+								<li>MeatRaw</li>
+							</categories>
+							<specialFiltersToDisallow>
+								<li>AllowRotten</li>
+							</specialFiltersToDisallow>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/defaultIngredientFilter</xpath>
+					<value>
+						<defaultIngredientFilter>
+							<thingDefs>
+								<li>RawRice</li>
+								<li>Rawsnowbeet</li>
+								<li>Rawbean</li>
+								<li>PickledVeg</li>
+								<li>RawAgave</li>
+								<li>RawCoconut</li>
+								<li>RawOlive</li>
+							</thingDefs>
+							<categories>
+								<li>MeatRaw</li>
+							</categories>
+							<disallowedThingDefs>
+								<li>Meat_Human</li>
+								<li>Meat_Megaspider</li>
+								<li>InsectJelly</li>
+							</disallowedThingDefs>
+						</defaultIngredientFilter>
+					</value>
+				</li>
+				
+				<!-- Make_Nigiri -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+								   <thingDefs>
+										<li>RawRice</li>
+								   </thingDefs>
+								</filter>
+								<count>1</count>
+							</li>
+							<li>
+								<filter>
+									<categories>
+										<li>MeatRaw</li>
+									</categories>
+								</filter>
+								<count>1</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/fixedIngredientFilter</xpath>
+					<value>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>RawRice</li>
+							</thingDefs>
+							<categories>
+								<li>MeatRaw</li>
+							</categories>
+							<specialFiltersToDisallow>
+								<li>AllowRotten</li>
+							</specialFiltersToDisallow>
+						</fixedIngredientFilter>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/RecipeDef[defName="CookMakiRoll" or defName="Make_Nigiri"]/fixedIngredientFilter</xpath>
+					<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]</xpath>
 					<value>
-						<categories>
-							<li>MeatRaw</li>
-						</categories>
+						<defaultIngredientFilter>
+							<thingDefs>
+								<li>RawRice</li>
+							</thingDefs>
+							<categories>
+								<li>MeatRaw</li>
+							</categories>
+							<disallowedThingDefs>
+								<li>Meat_Human</li>
+								<li>Meat_Megaspider</li>
+								<li>InsectJelly</li>
+							</disallowedThingDefs>
+						</defaultIngredientFilter>
 					</value>
 				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/RecipeDef[defName="CookMakiRoll" or defName="Make_Nigiri"]/defaultIngredientFilter</xpath>
-					<value>
-						<categories>
-							<li>MeatRaw</li>
-						</categories>
-					</value>
-				</li>
+				
+				
+				<!-- skillRequirements -->
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/RecipeDef[defName="CookMakiRoll" or defName="Make_Nigiri"]/skillRequirements</xpath>
 					<value>
@@ -181,9 +296,6 @@
 							<Cooking>12</Cooking>
 						</skillRequirements>
 					</value>
-				</li>
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[2]/filter/thingDefs/li[text()="Rawtofu"]</xpath>
 				</li>
 				
 				
@@ -246,6 +358,12 @@
 					<xpath>/Defs/ThingDef[defName="MakiRoll"]/statBases/Nutrition</xpath>
 					<value>
 						<Nutrition>1.0</Nutrition>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Nigiri"]/statBases/Nutrition</xpath>
+					<value>
+						<Nutrition>0.6</Nutrition>
 					</value>
 				</li>
 				
@@ -414,5 +532,176 @@
 		</match>
 		
 	</Operation>
+	
+	
+	
+	<!-- ID: 2007062982 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Garden Gourmet</li></mods>
+		
+		<!-- ID: 1914064942 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Fishing Expanded</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients</xpath>
+						<value>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>RawRice</li>
+										</thingDefs>
+									</filter>
+									<count>1.5</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Rawsnowbeet</li>
+											<li>Rawbean</li>
+											<li>PickledVeg</li>
+											<li>RawAgave</li>
+											<li>RawCoconut</li>
+											<li>RawOlive</li>
+										</thingDefs>
+									</filter>
+									<count>0.5</count>
+								</li>
+								<li>
+									<filter>
+										<categories>
+											<li>VCEF_RawFishCategory</li>
+										</categories>
+										<thingDefs>
+											<li>Rawtofu</li>
+											<li>Rawmushroom</li>
+											<li>RawRedLentil</li>
+										</thingDefs>
+									</filter>
+									<count>0.5</count>
+								</li>
+							</ingredients>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/fixedIngredientFilter</xpath>
+						<value>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>RawRice</li>
+									<li>Rawsnowbeet</li>
+									<li>Rawbean</li>
+									<li>Rawmushroom</li>
+									<li>RawRedLentil</li>
+									<li>PickledVeg</li>
+									<li>RawAgave</li>
+									<li>RawCoconut</li>
+									<li>RawOlive</li>
+								</thingDefs>
+								<categories>
+									<li>VCEF_RawFishCategory</li>
+								</categories>
+								<specialFiltersToDisallow>
+									<li>AllowRotten</li>
+								</specialFiltersToDisallow>
+							</fixedIngredientFilter>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/defaultIngredientFilter</xpath>
+						<value>
+							<defaultIngredientFilter>
+								<thingDefs>
+									<li>RawRice</li>
+									<li>Rawsnowbeet</li>
+									<li>Rawbean</li>
+									<li>Rawmushroom</li>
+									<li>RawRedLentil</li>
+									<li>PickledVeg</li>
+									<li>RawAgave</li>
+									<li>RawCoconut</li>
+									<li>RawOlive</li>
+								</thingDefs>
+								<categories>
+									<li>VCEF_RawFishCategory</li>
+								</categories>
+							</defaultIngredientFilter>
+						</value>
+					</li>
+					
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/ingredients</xpath>
+						<value>
+							<ingredients>
+								<li>
+									<filter>
+									   <thingDefs>
+											<li>RawRice</li>
+									   </thingDefs>
+									</filter>
+									<count>1.5</count>
+								</li>
+								<li>
+									<filter>
+										<categories>
+											<li>VCEF_RawFishCategory</li>
+										</categories>
+										<thingDefs>
+											<li>Rawtofu</li>
+											<li>Rawmushroom</li>
+											<li>RawRedLentil</li>
+										</thingDefs>
+									</filter>
+									<count>0.5</count>
+								</li>
+							</ingredients>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/fixedIngredientFilter</xpath>
+						<value>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>RawRice</li>
+									<li>Rawtofu</li>
+									<li>Rawmushroom</li>
+									<li>RawRedLentil</li>
+								</thingDefs>
+								<categories>
+									<li>VCEF_RawFishCategory</li>
+								</categories>
+								<specialFiltersToDisallow>
+									<li>AllowRotten</li>
+								</specialFiltersToDisallow>
+							</fixedIngredientFilter>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/defaultIngredientFilter</xpath>
+						<value>
+							<defaultIngredientFilter>
+								<thingDefs>
+									<li>RawRice</li>
+									<li>Rawtofu</li>
+									<li>Rawmushroom</li>
+									<li>RawRedLentil</li>
+								</thingDefs>
+								<categories>
+									<li>VCEF_RawFishCategory</li>
+								</categories>
+							</defaultIngredientFilter>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
 	
 </Patch>
