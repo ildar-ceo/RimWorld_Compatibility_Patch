@@ -3,4 +3,7 @@
   <Bakepolenta.label>испечь 2 рулета из поленты</Bakepolenta.label>
   <Bakepolenta.description>Испечь вкусный рулет из поленты. \n\nСделать 2 рулета.</Bakepolenta.description>
   <Bakepolenta.jobString>Печет поленту.</Bakepolenta.jobString> 
+  
+  <Rawmushroom.label>Шампиньон</Rawmushroom.label>
+  <Rawmushroom.description>Сырые, богатые белком грибы. Используется вместо мяса в рецептах.</Rawmushroom.description>
 </LanguageData>
