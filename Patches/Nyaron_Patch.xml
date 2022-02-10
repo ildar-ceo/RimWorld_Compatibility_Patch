@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Fix Names -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RulePackDef[defName="NamerNyaronUtility"]/rulePack/rulesFiles</xpath>
+					<value>
+						<rulesFiles>
+							<li>NameNyaronMaleFirst->Names/Nyaron_First_Male</li>
+							<li>NameNyaronFemaleFirst->Names/Nyaron_First_Female</li>
+							<li>NameNyaronUnisexLast->Names/Nyaron_First_Male</li>
+							<li>NameNyaronMaleNick->Names/Nyaron_Nick_Male</li>
+							<li>NameNyaronFemaleNick->Names/Nyaron_Nick_Female</li>
+							<li>NameNyaronUnisexNick->Names/Nyaron_Nick_Male</li>
+						</rulesFiles>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RulePackDef[defName="NamerNyaronMale"]</xpath>
+					<value>
+						<RulePackDef>
+							<defName>NamerNyaronMale</defName>
+							<include>
+							  <li>NamerNyaronUtility</li>
+							</include>
+							<rulePack>
+							  <rulesStrings>
+								<!--<li>r_name(p=6)->[NameNyaronUnisexLast] [NameNyaronFemaleFirst]</li>-->
+								<li>r_name(p=6)->[NameAnimalMale] [NameNyaronUnisexLast]</li>
+								<li>r_name(p=6)->[NameAnimalUnisex] [NameNyaronUnisexLast]</li>
+								<li>r_name(p=6)->[NamePersonMale] [NameNyaronUnisexLast]</li>
+								<li>r_name->[exoticname]</li>
+								<li>exoticname(p=2)->[AdjectiveBadass]</li>
+								<li>exoticname(p=2)->[PersonBadass]</li>
+								<li>exoticname->[Enemy]</li>
+								<li>exoticname->[ConceptAny]</li>
+								<li>exoticname->[Color]</li>
+							  </rulesStrings>
+							</rulePack>
+						</RulePackDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RulePackDef[defName="NamerNyaronFemale"]</xpath>
+					<value>
+						<RulePackDef>
+							<defName>NamerNyaronFemale</defName>
+							 <include>
+							  <li>NamerNyaronUtility</li>
+							</include>
+							<rulePack>
+							  <rulesStrings>
+							    <!--<li>r_name(p=6)->[NameNyaronUnisexLast] [NameNyaronFemaleFirst]</li>-->
+								<li>r_name(p=6)->[NameAnimalFemale] [NameNyaronUnisexLast]</li>
+								<li>r_name(p=6)->[NameAnimalUnisex] [NameNyaronUnisexLast]</li>
+								<li>r_name(p=6)->[NamePersonMale] [NameNyaronUnisexLast]</li>
+								<li>r_name->[exoticname]</li>
+								<li>exoticname(p=2)->[AdjectiveBadass]</li>
+								<li>exoticname(p=2)->[PersonBadass]</li>
+								<li>exoticname->[Enemy]</li>
+								<li>exoticname->[ConceptAny]</li>
+								<li>exoticname->[Color]</li>
+							  </rulesStrings>
+							</rulePack>
+						</RulePackDef>
+					</value>
+				</li>
+				
+				<!--
+					Fix Gender
+					https://www.loverslab.com/topic/121825-mod-rimworld-gender-balancer/
+				-->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Nyaron"]/alienRace/generalSettings/maleGenderProbability</xpath>
+					<value>
+						<maleGenderProbability>0.5</maleGenderProbability>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Nyaron"]/alienRace/generalSettings/alienPartGenerator/alienbodytypes</xpath>
+					<value>
+						<alienbodytypes>
+							<li>Female</li>
+						</alienbodytypes>
+					</value>
+				</li>
+				
+				
+				<!-- Fix Nyaron Faction -->
+				<li Class="PatchOperationAttributeAdd">
+					<xpath>/Defs/FactionDef[defName="NyaronFaction"]</xpath>
+					<attribute>Name</attribute>
+					<value>SK_NyaronFactionBase</value>
+				</li>
+				<li Class="PatchOperationAttributeAdd">
+					<xpath>/Defs/FactionDef[@Name="SK_NyaronFactionBase"]</xpath>
+					<attribute>Abstract</attribute>
+					<value>True</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/FactionDef[@Name="SK_NyaronFactionBase"]/defName</xpath>
+				</li>
+				
+				
+				<!-- Add Hair -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/HairDef[defName="Nr_Long" or defName="Nr_Short" or defName="Nr_Twin" or defName="Nr_Twintw" or defName="Nr_ShortTwin" or defName="Nr_Pony"]/styleGender</xpath>
+					<value>
+						<styleGender>Any</styleGender>
+					</value>
+				</li>
+				
+				
+				<!-- Add Nyaron Town -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<FactionDef ParentName="SK_NyaronFactionBase">
+							<defName>NyaronFaction</defName>
+							<label>Nyaron Town</label>
+							<description>Nyaron Town</description>
+							<mustStartOneEnemy>false</mustStartOneEnemy>
+							<colorSpectrum>
+								<li>(1.0, 0.8, 0.9)</li>
+								<li>(1.0, 0.85, 0.95)</li>
+								<li>(1.0, 0.9, 0.95)</li>
+							</colorSpectrum>
+						</FactionDef>
+					</value>
+				</li>
+				
+				
+				<!-- Add Nyaron Empire -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<FactionDef ParentName="SK_NyaronFactionBase">
+							<defName>NyaronEmpire</defName>
+							<label>Nyaron Empire</label>
+							<description>Nyaron Empire</description>
+							<permanentEnemy>true</permanentEnemy>
+							<colorSpectrum>
+								<li>(1.0, 0.20, 0.08)</li>
+								<li>(1.0, 0.15, 0.05)</li>
+								<li>(1.0, 0.55, 0.02)</li>
+							</colorSpectrum>
+						</FactionDef>
+					</value>
+				</li>
+				
+				<!--
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@ParentName="SK_NyaronFactionBase"]</xpath>
+					<value>
+						<raidCommonalityFromPointsCurve>
+							<points>
+								<li>(0, 0.1)</li>
+								<li>(900, 0.5)</li>
+								<li>(4500, 1)</li>
+								<li>(7000, 1.3)</li>
+								<li>(10000, 1.5)</li>
+								<li>(25000, 2)</li>
+							</points>
+						</raidCommonalityFromPointsCurve>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@ParentName="SK_NyaronFactionBase"]</xpath>
+					<value>
+						<maxPawnCostPerTotalPointsCurve>
+							<points>
+								<li>(0, 1)</li>
+								<li>(100, 10)</li>
+								<li>(400, 20)</li>
+								<li>(700, 50)</li>
+								<li>(3000, 100)</li>
+								<li>(6500, 200)</li>
+								<li>(11000, 410)</li>
+								<li>(12500, 500)</li>
+								<li>(15000, 700)</li>
+								<li>(100000, 10000)</li>
+							</points>
+						</maxPawnCostPerTotalPointsCurve>
+					</value>
+				</li>
+				-->
+
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1180721235 -->
+	<!--
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods><li>Combat Extended</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[@Name="BaseNyaronPawn"]/inspectorTabs</xpath>
+						<value>
+							<li>ITab_Pawn_Gear</li>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	-->
+</Patch>
