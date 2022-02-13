@@ -12,8 +12,9 @@
 				
 				<!-- Remove Fine and Lavish recipes -->
 				<li Class="PatchOperationRemove">
-					<xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove" or defName="HandCanningstove" or defName="Canningstove" or defName="VG_Campfire" or defName="Campfire"]/recipes/li[text()="CookMealSimple" or text()="CookMealSimpleBulk" or text()="CookMealFine" or text()="CookMealFine_Veg" or text()="CookMealFine_Meat" or text()="CookMealLavish" or text()="CookMealLavish_Veg" or text()="CookMealLavish_Meat" or text()="CookMealFineBulk" or text()="CookMealFineBulk_Veg" or text()="CookMealFineBulk_Meat" or text()="CookMealLavishBulk" or text()="CookMealLavishBulk_Veg" or text()="CookMealLavishBulk_Meat"]</xpath>
+					<xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove" or defName="HandCanningstove" or defName="Canningstove" or defName="VG_Campfire" or defName="Campfire"]/recipes/li[text()="CookMealSimpleBulk" or text()="CookMealFine" or text()="CookMealFine_Veg" or text()="CookMealFine_Meat" or text()="CookMealLavish" or text()="CookMealLavish_Veg" or text()="CookMealLavish_Meat" or text()="CookMealFineBulk" or text()="CookMealFineBulk_Veg" or text()="CookMealFineBulk_Meat" or text()="CookMealLavishBulk" or text()="CookMealLavishBulk_Veg" or text()="CookMealLavishBulk_Meat"]</xpath>
 				</li>
+				<!-- text()="CookMealSimple" -->
 				
 				
 				<!-- FruitFoodRaw is FoodRaw, not PlantFoodRaw -->
@@ -1294,5 +1295,28 @@
 		
 	</Operation>
 	
+	
+	<!-- ID: 2007062982 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Garden Gourmet</li></mods>
+		
+		<!-- ID: 839005762 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Humanoid Alien Races</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<!-- Remove allowMixingIngredients (because bug in AlienRaces)
+					https://github.com/erdelf/AlienRaces/issues/70 -->
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/RecipeDef[defName="Grillsteak" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="GrillKabob" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="CookMealSimple" or defName="CookMealSimpleBulk" or defName="CookMealFine" or defName="CookMealFine_Veg" or defName="CookMealFine_Meat" or defName="CookMealLavish" or defName="CookMealLavish_Veg" or defName="CookMealLavish_Meat" or defName="CookMealFineBulk" or defName="CookMealFineBulk_Veg" or defName="CookMealFineBulk_Meat" or defName="CookMealLavishBulk" or defName="CookMealLavishBulk_Veg" or defName="CookMealLavishBulk_Meat"]/allowMixingIngredients</xpath>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+				
 	
 </Patch>
