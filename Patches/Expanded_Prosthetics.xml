@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<!-- ID: 725956940 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Expanded Prosthetics and Organ Engineering</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- RecipeBasicProsthesis -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="RecipeBasicProsthesis"]/recipeUsers</xpath>
+					<value>
+						<li>TableMachining</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[@Name="Basic"]/recipeMaker/recipeUsers</xpath>
+					<value>
+						<li>TableMachining</li>
+					</value>
+				</li>
+				
+				<!-- RecipeSimpleProsthesis -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[@Name="Simple"]/recipeMaker/recipeUsers</xpath>
+					<value>
+						<li>TableMachining</li>
+					</value>
+				</li>
+				
+				
+			</operations>
+		</match>
+		
+	</Operation>
+
+</Patch>

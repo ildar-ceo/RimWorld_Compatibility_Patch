@@ -2,6 +2,8 @@
 
 <Patch>
 	
+	<!-- Грибы: RawFungus -->
+	
 	
 	<!-- ID: 2007062982 -->
 	<Operation Class="PatchOperationFindMod">
@@ -51,13 +53,10 @@
 									<thingDefs>
 										<li>RawCorn</li>
 										<li>RawPotatoes</li>
-										<li>RawFungus</li>
 										<li>Rawsnowbeet</li>
 										<li>Rawbean</li>
 										<li>RawOlive</li>
 										<li>PickledVeg</li>
-										<li>RawAgave</li>
-										<li>RawCoconut</li>
 									</thingDefs>
 								</filter>
 								<count>1</count>
@@ -70,13 +69,10 @@
 							<thingDefs>
 								<li>RawCorn</li>
 								<li>RawPotatoes</li>
-								<li>RawFungus</li>
 								<li>Rawsnowbeet</li>
 								<li>Rawbean</li>
 								<li>RawOlive</li>
 								<li>PickledVeg</li>
-								<li>RawAgave</li>
-								<li>RawCoconut</li>
 							</thingDefs>
 							<specialFiltersToDisallow>
 								<li>AllowPlantFood</li>
@@ -89,13 +85,10 @@
 							<thingDefs>
 								<li>RawCorn</li>
 								<li>RawPotatoes</li>
-								<li>RawFungus</li>
 								<li>Rawsnowbeet</li>
 								<li>Rawbean</li>
 								<li>RawOlive</li>
 								<li>PickledVeg</li>
-								<li>RawAgave</li>
-								<li>RawCoconut</li>
 							</thingDefs>
 							<disallowedCategories>
 								<li>EggsFertilized</li>
@@ -107,6 +100,103 @@
 							</disallowedThingDefs>
 						</defaultIngredientFilter>
 						<workSkill>Cooking</workSkill>
+					</value>
+				</li>
+				
+				<!--
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<categories>
+										<li>MeatRaw</li>
+										<li>AnimalProductRaw</li>
+									</categories>
+								</filter>
+								<count>2</count>
+							</li>
+							<li>
+								<filter>
+									<categories>
+										<li>PlantFoodRaw</li>
+										<li>CookingSupplies</li>
+								</categories>
+								</filter>
+								<count>2</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				-->
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Stirfrymeal"]/products</xpath>
+					<value>
+						<products>
+							<stirfry>4</stirfry>
+						</products>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Cookstewpot"]/products</xpath>
+					<value>
+						<products>
+							<bowlstew>4</bowlstew>
+						</products>
+					</value>
+				</li>
+				
+				
+				<!-- GrillVegetables -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillVegetables"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>RawCorn</li>
+										<li>RawPotatoes</li>
+										<li>Rawsnowbeet</li>
+										<li>Rawbean</li>
+										<li>PickledVeg</li>
+									</thingDefs>
+								</filter>
+								<count>0.5</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillVegetables"]/fixedIngredientFilter</xpath>
+					<value>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>RawCorn</li>
+								<li>RawPotatoes</li>
+								<li>Rawsnowbeet</li>
+								<li>Rawbean</li>
+								<li>RawOlive</li>
+								<li>PickledVeg</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillVegetables"]/defaultIngredientFilter</xpath>
+					<value>
+						<defaultIngredientFilter>
+							<thingDefs>
+								<li>RawCorn</li>
+								<li>RawPotatoes</li>
+								<li>Rawsnowbeet</li>
+								<li>Rawbean</li>
+								<li>RawOlive</li>
+								<li>PickledVeg</li>
+							</thingDefs>
+						</defaultIngredientFilter>
 					</value>
 				</li>
 				
@@ -126,13 +216,65 @@
 							</li>
 							<li>
 								<filter>
-									<categories>
-										<li>PlantFoodRaw</li>
-									</categories>
+									<thingDefs>
+										<li>RawCorn</li>
+										<li>RawPotatoes</li>
+										<li>Rawsnowbeet</li>
+										<li>Rawbean</li>
+										<li>RawOlive</li>
+										<li>PickledVeg</li>
+										<li>RawAgave</li>
+									</thingDefs>
 								</filter>
 								<count>0.5</count>
 							</li>
 						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillKabob"]/fixedIngredientFilter</xpath>
+					<value>
+						<fixedIngredientFilter>
+							<categories>
+								<li>MeatRaw</li>
+							</categories>
+							<thingDefs>
+								<li>RawCorn</li>
+								<li>RawPotatoes</li>
+								<li>Rawsnowbeet</li>
+								<li>Rawbean</li>
+								<li>RawOlive</li>
+								<li>PickledVeg</li>
+								<li>RawAgave</li>
+							</thingDefs>
+							<specialFiltersToDisallow>
+								<li>AllowPlantFood</li>
+								<li>AllowRotten</li>
+							</specialFiltersToDisallow>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillKabob"]/defaultIngredientFilter</xpath>
+					<value>
+						<defaultIngredientFilter>
+							<categories>
+								<li>MeatRaw</li>
+							</categories>
+							<thingDefs>
+								<li>RawCorn</li>
+								<li>RawPotatoes</li>
+								<li>Rawsnowbeet</li>
+								<li>Rawbean</li>
+								<li>RawOlive</li>
+								<li>PickledVeg</li>
+								<li>RawAgave</li>
+							</thingDefs>
+							<disallowedThingDefs>
+								<li>Meat_Human</li>
+								<li>Meat_Megaspider</li>
+							</disallowedThingDefs>
+						</defaultIngredientFilter>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
@@ -362,50 +504,6 @@
 								<count>5</count>
 							</li>
 						</ingredients>
-					</value>
-				</li>
-				
-				
-				<!-- Stirfrymeal -->
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot"]/ingredients</xpath>
-					<value>
-						<ingredients>
-							<li>
-								<filter>
-									<categories>
-										<li>MeatRaw</li>
-										<li>AnimalProductRaw</li>
-									</categories>
-								</filter>
-								<count>2</count>
-							</li>
-							<li>
-								<filter>
-									<categories>
-										<li>PlantFoodRaw</li>
-										<li>CookingSupplies</li>
-								</categories>
-								</filter>
-								<count>2</count>
-							</li>
-						</ingredients>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/RecipeDef[defName="Stirfrymeal"]/products</xpath>
-					<value>
-						<products>
-							<stirfry>4</stirfry>
-						</products>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/RecipeDef[defName="Cookstewpot"]/products</xpath>
-					<value>
-						<products>
-							<bowlstew>4</bowlstew>
-						</products>
 					</value>
 				</li>
 				
@@ -1290,6 +1388,90 @@
 					</li>
 					
 				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2007062982 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Garden Gourmet</li></mods>
+		
+		<!-- ID: 1914064942 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Fishing Expanded</li></mods>
+			
+			<!-- ID: 2038000893 -->
+			<match Class="PatchOperationFindMod">
+				<mods><li>Biomes! Islands</li></mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+					
+					</operations>
+				</match>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2007062982 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Garden Gourmet</li></mods>
+		
+		<!-- ID: 1914064942 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Fishing Expanded</li></mods>
+			
+			<!-- ID: 1469326540 -->
+			<match Class="PatchOperationFindMod">
+				<mods><li>Travel through water</li></mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+						
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[3]/filter/thingDefs</xpath>
+							<value>
+								<li>RawFish</li>
+							</value>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/fixedIngredientFilter/thingDefs</xpath>
+							<value>
+								<li>RawFish</li>
+							</value>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/defaultIngredientFilter/thingDefs</xpath>
+							<value>
+								<li>RawFish</li>
+							</value>
+						</li>
+						
+						
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/ingredients/li[2]/filter/thingDefs</xpath>
+							<value>
+								<li>RawFish</li>
+							</value>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/fixedIngredientFilter/thingDefs</xpath>
+							<value>
+								<li>RawFish</li>
+							</value>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/defaultIngredientFilter/thingDefs</xpath>
+							<value>
+								<li>RawFish</li>
+							</value>
+						</li>
+						
+						
+					</operations>
+				</match>
 			</match>
 		</match>
 		
