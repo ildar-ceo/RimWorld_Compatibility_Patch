@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<!-- ID: 2045064990 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Organism and Neural Network</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/HediffDef[defName="Trunken_hediff_LaserDetection"]/comps/li[@Class="CONN.CompProperties_LightEffect"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/HediffDef[defName="Trunken_hediff_FlashLight"]/comps/li[@Class="CONN.CompProperties_LightEffect"]</xpath>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

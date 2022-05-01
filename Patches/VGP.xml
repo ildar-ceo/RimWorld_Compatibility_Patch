@@ -51,7 +51,7 @@
 							<li>
 								<filter>
 									<thingDefs>
-										<li>RawCorn</li>
+										<!--<li>RawCorn</li>-->
 										<li>RawPotatoes</li>
 										<li>Rawsnowbeet</li>
 										<li>Rawbean</li>
@@ -67,7 +67,7 @@
 								<li>MeatRaw</li>
 							</categories>
 							<thingDefs>
-								<li>RawCorn</li>
+								<!--<li>RawCorn</li>-->
 								<li>RawPotatoes</li>
 								<li>Rawsnowbeet</li>
 								<li>Rawbean</li>
@@ -83,7 +83,7 @@
 								<li>MeatRaw</li>
 							</categories>
 							<thingDefs>
-								<li>RawCorn</li>
+								<!--<li>RawCorn</li>-->
 								<li>RawPotatoes</li>
 								<li>Rawsnowbeet</li>
 								<li>Rawbean</li>
@@ -1398,18 +1398,58 @@
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>VGP Garden Gourmet</li></mods>
 		
-		<!-- ID: 1914064942 -->
+		<!-- ID: 2038000893 -->
 		<match Class="PatchOperationFindMod">
-			<mods><li>Vanilla Fishing Expanded</li></mods>
-			
-			<!-- ID: 2038000893 -->
-			<match Class="PatchOperationFindMod">
-				<mods><li>Biomes! Islands</li></mods>
-				<match Class="PatchOperationSequence">
-					<operations>
+			<mods><li>Biomes! Islands</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
 					
-					</operations>
-				</match>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs</xpath>
+						<value>
+							<RecipeDef>
+								<defName>CraftBulkSugar_From_BiomesIslands_Bananas</defName>
+								<label>grind 25 sugarcane from Bananas</label>
+								<description>Make 25 sugar from bananas jobString</description>
+								<jobString>Grinding sugarcane.</jobString>
+								<workAmount>1400</workAmount>
+								<workSpeedStat>CookSpeed</workSpeedStat>
+								<effectWorking>Cook</effectWorking>
+								<soundWorking>Recipe_CookMeal</soundWorking>
+								<products>
+									<Sugar>25</Sugar>
+								</products>
+								<ingredients>
+									<li>
+										<filter>
+											<thingDefs>
+												<li>BiomesIslands_Bananas</li>
+											</thingDefs>
+										</filter>
+										<count>50</count>
+									</li>
+								</ingredients>
+								<fixedIngredientFilter>
+									<thingDefs>
+										<li>BiomesIslands_Bananas</li>
+									</thingDefs>
+									<specialFiltersToDisallow>
+										<li>AllowRotten</li>
+									</specialFiltersToDisallow>
+								</fixedIngredientFilter>
+								<workSkill>Cooking</workSkill>
+							</RecipeDef>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="GrindStone" or defName="ElectricGrindStone"]/recipes</xpath>
+						<value>
+							<li>CraftBulkSugar_From_BiomesIslands_Bananas</li>
+						</value>
+					</li>
+					
+				</operations>
 			</match>
 		</match>
 		
