@@ -1539,6 +1539,100 @@
 		</match>
 		
 	</Operation>
+	
+	
+	<!-- ID: 2167582651 (VGP Garden Drinks UF) -->
+	<!-- ID: 2007062530 (VGP Garden Drinks) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>VGP Garden Drinks UF</li>
+			<li>VGP Garden Drinks</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
 				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="cider"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>7</MarketValue>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="rum"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>10</MarketValue>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Wine"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>8</MarketValue>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VGP_BerryWine"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>8</MarketValue>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="saki"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>7</MarketValue>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CPD_Vodka"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>8</MarketValue>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="tequila"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>10</MarketValue>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CPD_Whiskey"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>8</MarketValue>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="BrownAle"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>7</MarketValue>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Fruitshine"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>5</MarketValue>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Beer"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>4</MarketValue>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
 	
 </Patch>

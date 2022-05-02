@@ -10,11 +10,14 @@
 	- Giddy-up! Core
 	- RimFridge
 	- MendAndRecycle
-	- DeepStorage
+	- LWM DeepStorage
 	- Travel Through Water
 	- VGP
 	- SeedsPlease
 	- Nyaron Race
+	Also:
+	- Remove ArchotechStructureStudiable Effect
+	- Craftable AI Computer Core
 	</description>
 	<supportedVersions>
 		<li>1.3</li>
@@ -33,10 +36,16 @@
 		<li>dismarzero.VGP.VGPGardenGourmet</li>
 		<li>dismarzero.VGP.VGPGardenFabrics</li>
 		<li>dismarzero.VGP.VGPGardenMedicine</li>
+		<li>dismarzero.VGP.VGPGardenDrinksUF</li>
+		<li>dismarzero.VGP.VGPGardenDrinks</li>
 		<li>gekasid.VGP.VGPVegetableGarden.rus</li>
 		<li>visilt.travelthroughwater</li>
 		<li>Farmradish.Nyaron</li>
 		<li>kikohi.cybernetic</li>
 		<li>Ykara.EPOE</li>
 	</loadAfter>
+	<loadBefore>
+		<li>trinity.runtimegcupdated</li>
+		<li>krkr.rocketman</li>
+	</loadBefore>
 </ModMetaData>
