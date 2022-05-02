@@ -1098,6 +1098,9 @@
 										<li>RawCoconut</li>
 										<li>RawOlive</li>
 									</thingDefs>
+									<categories>
+										<li>FruitFoodRaw</li>
+									</categories>
 								</filter>
 								<count>0.5</count>
 							</li>
@@ -1135,6 +1138,7 @@
 							</thingDefs>
 							<categories>
 								<li>MeatRaw</li>
+								<li>FruitFoodRaw</li>
 							</categories>
 							<specialFiltersToDisallow>
 								<li>AllowRotten</li>
@@ -1160,6 +1164,7 @@
 							</thingDefs>
 							<categories>
 								<li>MeatRaw</li>
+								<li>FruitFoodRaw</li>
 							</categories>
 							<disallowedThingDefs>
 								<li>Meat_Human</li>
@@ -1193,6 +1198,7 @@
 									</thingDefs>
 									<categories>
 										<li>MeatRaw</li>
+										<li>FruitFoodRaw</li>
 									</categories>
 								</filter>
 								<count>1</count>
@@ -1212,6 +1218,7 @@
 							</thingDefs>
 							<categories>
 								<li>MeatRaw</li>
+								<li>FruitFoodRaw</li>
 							</categories>
 							<specialFiltersToDisallow>
 								<li>AllowRotten</li>
@@ -1231,6 +1238,7 @@
 							</thingDefs>
 							<categories>
 								<li>MeatRaw</li>
+								<li>FruitFoodRaw</li>
 							</categories>
 							<disallowedThingDefs>
 								<li>Meat_Human</li>
@@ -1274,6 +1282,31 @@
 				</li>
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/defaultIngredientFilter/categories/li[text()="MeatRaw"]</xpath>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[1]/count</xpath>
+					<value>
+						<count>2.6</count>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[3]/count</xpath>
+					<value>
+						<count>0.8</count>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/ingredients/li[1]/count</xpath>
+					<value>
+						<count>1.6</count>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/ingredients/li[2]/count</xpath>
+					<value>
+						<count>0.8</count>
+					</value>
 				</li>
 				
 			</operations>
