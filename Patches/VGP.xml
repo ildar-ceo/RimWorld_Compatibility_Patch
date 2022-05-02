@@ -1281,6 +1281,26 @@
 	</Operation>
 	
 	
+	<!-- Remove MeatRaw if fishing mod is installed -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>FishIndustry</li>
+			<li>Biomes! Islands</li>
+			<li>Travel through water</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter[not(disallowedThingDefs)]</xpath>
+					<value>
+						<disallowedThingDefs />
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	
 	<!-- ID: 2007062982 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>VGP Garden Gourmet</li></mods>
@@ -1290,13 +1310,6 @@
 			<mods><li>Biomes! Islands</li></mods>
 			<match Class="PatchOperationSequence">
 				<operations>
-					
-					<li Class="PatchOperationAdd">
-						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter[not(disallowedThingDefs)]</xpath>
-						<value>
-							<disallowedThingDefs />
-						</value>
-					</li>
 					
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter/disallowedThingDefs</xpath>
@@ -1387,13 +1400,6 @@
 			<mods><li>FishIndustry</li></mods>
 			<match Class="PatchOperationSequence">
 				<operations>
-					<!--
-					<li Class="PatchOperationAdd">
-						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter[not(disallowedThingDefs)]</xpath>
-						<value>
-							<disallowedThingDefs />
-						</value>
-					</li>
 					
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter/disallowedThingDefs</xpath>
@@ -1405,7 +1411,6 @@
 							<li>Meat_Tailteeth</li>
 						</value>
 					</li>
-					-->
 					
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[3]/filter/thingDefs</xpath>
@@ -1484,21 +1489,19 @@
 			<match Class="PatchOperationSequence">
 				<operations>
 					
-					<!--
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter[not(disallowedCategories)]</xpath>
+						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter[not(disallowedCategories)]</xpath>
 						<value>
 							<disallowedCategories />
 						</value>
 					</li>
 					
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter/disallowedCategories</xpath>
+						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter/disallowedCategories</xpath>
 						<value>
 							<li>VCEF_RawFishCategory</li>
 						</value>
 					</li>
-					-->
 					
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[3]/filter/categories</xpath>
@@ -1554,21 +1557,12 @@
 			<match Class="PatchOperationSequence">
 				<operations>
 					
-					<!--
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter[not(disallowedThingDefs)]</xpath>
-						<value>
-							<disallowedThingDefs />
-						</value>
-					</li>
-					
-					<li Class="PatchOperationAdd">
-						<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter/disallowedThingDefs</xpath>
+						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter/disallowedThingDefs</xpath>
 						<value>
 							<li>RawFish</li>
 						</value>
 					</li>
-					-->
 					
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[3]/filter/thingDefs</xpath>
