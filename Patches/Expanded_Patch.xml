@@ -50,58 +50,31 @@
 		</match>
 	</Operation>
 	
-	
-	<!-- Add AIPersonaCore -->
+	<!-- Add ReinforcedBarrel craftable -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs</xpath>
-		<value>
-			<ResearchProjectDef ParentName="ShipResearchProjectBase">
-				<defName>CreateComputerCore</defName>
-				<label>AI Computer Core</label>
-				<description>Create AI Computer Core</description>
-				<baseCost>10000</baseCost>
-				<techLevel>Spacer</techLevel>
-				<prerequisites>
-					<li>ShipComputerCore</li>
-				</prerequisites>
-			</ResearchProjectDef>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef[defName="AIPersonaCore"]</xpath>
+		<xpath>/Defs/ThingDef[defName="ReinforcedBarrel"]</xpath>
 		<value>
 			<costList>
-				<Gold>25</Gold>
-				<Steel>100</Steel>
-				<Plasteel>150</Plasteel>
-				<ComponentSpacer>50</ComponentSpacer>
-				<ComponentIndustrial>100</ComponentIndustrial>
+				<Steel>250</Steel>
 			</costList>
 			<recipeMaker>
 				<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 				<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
 				<workSkill>Crafting</workSkill>
 				<effectWorking>Smith</effectWorking>
-				<researchPrerequisite>CreateComputerCore</researchPrerequisite>
 				<recipeUsers>
-					<li>FabricationBench</li>
+					<li>TableMachining</li>
 				</recipeUsers>
 				<skillRequirements>
-					<Crafting>10</Crafting>
+					<Crafting>5</Crafting>
 				</skillRequirements>
 			</recipeMaker>
 		</value>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef[defName="AIPersonaCore"]/statBases/MarketValue</xpath>
-		<value>
-			<MarketValue>15000</MarketValue>
-		</value>
-	</Operation>
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef[defName="AIPersonaCore"]/statBases</xpath>
+		<xpath>/Defs/ThingDef[defName="ReinforcedBarrel"]/statBases</xpath>
 		<value>
-			<WorkToMake>15000</WorkToMake>
+			<WorkToMake>700</WorkToMake>
 		</value>
 	</Operation>
 	

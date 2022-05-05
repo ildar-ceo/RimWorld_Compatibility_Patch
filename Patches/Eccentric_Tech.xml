@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<!-- ID: 2552623545 (Eccentric Tech - Core) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Eccentric Tech - Core</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Fix ships craft. Need Aurora core -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="ShipEngine" or defName="ShipReactor" or defName="ShipCryptosleep" or defName="ShipSensorCluster"]</xpath>
+					<value>
+						<requiredResearchFacilities>
+							<li>MultiAnalyzer</li>
+							<li>EccentricAuroraCore</li>
+						</requiredResearchFacilities>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="ShipBasics"]/baseCost</xpath>
+					<value>
+						<baseCost>2000</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="ShipEngine"]/baseCost</xpath>
+					<value>
+						<baseCost>8000</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="ShipReactor"]/baseCost</xpath>
+					<value>
+						<baseCost>18000</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="ShipSensorCluster"]/baseCost</xpath>
+					<value>
+						<baseCost>8000</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="ShipCryptosleep"]/baseCost</xpath>
+					<value>
+						<baseCost>5000</baseCost>
+					</value>
+				</li>
+				
+				<!-- Add AIPersonaCore -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ResearchProjectDef ParentName="ShipResearchProjectBase">
+							<defName>CreateComputerCore</defName>
+							<label>AI Computer Core</label>
+							<description>Create AI Computer Core</description>
+							<baseCost>2000</baseCost>
+							<techLevel>Spacer</techLevel>
+							<prerequisites>
+								<li>ShipComputerCore</li>
+							</prerequisites>
+						</ResearchProjectDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AIPersonaCore"]</xpath>
+					<value>
+						<costList>
+							<Gold>25</Gold>
+							<Steel>100</Steel>
+							<Plasteel>150</Plasteel>
+							<ComponentSpacer>50</ComponentSpacer>
+							<ComponentIndustrial>100</ComponentIndustrial>
+						</costList>
+						<recipeMaker>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+							<workSkill>Crafting</workSkill>
+							<effectWorking>Smith</effectWorking>
+							<researchPrerequisite>CreateComputerCore</researchPrerequisite>
+							<recipeUsers>
+								<li>FabricationBench</li>
+							</recipeUsers>
+							<skillRequirements>
+								<Crafting>12</Crafting>
+								<Intellectual>5</Intellectual>
+							</skillRequirements>
+						</recipeMaker>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AIPersonaCore"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>15000</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AIPersonaCore"]/statBases</xpath>
+					<value>
+						<WorkToMake>15000</WorkToMake>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>
