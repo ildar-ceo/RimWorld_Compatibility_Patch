@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SettingsBlock>
+	<ModSettings Class="Numbers.Numbers_Settings">
+		<numbersPawnTableDefs>
+			<li>Numbers_Prisoners,Default,Label,Numbers_Equipment,Numbers_PrisonerResistance,Numbers_MentalState,Numbers_NeedsTreatment,Numbers_DiseaseProgress,MedicalCare,FoodRestriction,Numbers_RimWorld_StatDef_MarketValue,RemainingSpace,</li>
+			<li>Numbers_MainTable,Default,Label,Numbers_Backstory,Numbers_Equipment,MedicalCare,Numbers_DiseaseProgress,Numbers_Operations,Numbers_Inspiration,Numbers_RimWorld_NeedDef_Mood,Numbers_RimWorld_StatDef_ComfyTemperatureMin,Numbers_RimWorld_StatDef_ComfyTemperatureMax,RemainingSpace,</li>
+		</numbersPawnTableDefs>
+	</ModSettings>
+</SettingsBlock>
