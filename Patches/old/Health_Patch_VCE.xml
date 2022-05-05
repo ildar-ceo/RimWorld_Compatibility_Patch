@@ -3,7 +3,7 @@
 
 <Patch>
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Vanilla Cooking Expanded</li></mods>
+		<mods><li>Vanilla Cooking Expanded Old</li></mods>
 		<match Class="PatchOperationSequence">
 		<operations>
 			<li Class="PatchOperationReplace">

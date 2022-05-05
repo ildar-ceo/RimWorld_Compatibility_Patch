@@ -2,7 +2,7 @@
 <Patch>
 	<!-- ID: 2259837114 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Expanded Materials - Metals</li></mods>
+		<mods><li>Expanded Materials - Metals Old</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 				

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	
+	<!--
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/FactionDef[defName="Mechanoid"]/earliestRaidDays</xpath>
 		<value>
@@ -34,9 +34,10 @@
 			</maxPawnCostPerTotalPointsCurve>
 		</value>
 	</Operation>
+	-->
 	
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Combat Extended</li></mods>
+		<mods><li>Combat Extended Old</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 				
