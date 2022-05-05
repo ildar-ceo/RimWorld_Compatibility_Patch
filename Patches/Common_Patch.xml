@@ -2,52 +2,12 @@
 
 <Patch>
 	
-	<Operation Class="PatchOperationFindMod">
-		<mods><li>Combat Extended</li></mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="Gun_KPV"]/comps/li[@Class="CombatExtended.CompProperties_AmmoUser"]/magazineSize</xpath>
-					<value>
-						<magazineSize>120</magazineSize>
-					</value>
-				</li>
-				
-			</operations>
-		</match>
-	</Operation>
-	
-	<Operation Class="PatchOperationFindMod">
-		<mods><li>Combat Extended Melee</li></mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="CE_Melee_WraithBlade"]/statBases/MarketValue</xpath>
-					<value>
-						<MarketValue>5000</MarketValue>
-					</value>
-				</li>
-				
-			</operations>
-		</match>
-	</Operation>
-	
-	<Operation Class="PatchOperationFindMod">
-		<mods><li>MendAndRecycle</li></mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="MendingKit"]/statBases/MarketValue</xpath>
-					<value>
-						<MarketValue>1</MarketValue>
-					</value>
-				</li>
-				
-			</operations>
-		</match>
+	<!-- WindTurbine size -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName = "WindTurbine"]/size</xpath>
+		<value>
+            <size>(5,2)</size>
+		</value>
 	</Operation>
 	
 	<!-- Add ReinforcedBarrel craftable -->
@@ -78,7 +38,7 @@
 		</value>
 	</Operation>
 	
-	<!-- Leather patch -->
+	<!-- Leather patch market value -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="Leather_Human"]/statBases/MarketValue</xpath>
 		<value>
