@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>RimWorld Mods Compatibility Patch by Emty</name>
+	<name>Mods Compatibility Patch by Emty</name>
 	<author>Emty</author>
 	<packageId>Emty.Compatibility.Patch</packageId>
 	<description>
@@ -58,8 +58,8 @@ Cybernetic Organism and Neural Network:
 
 =====
 
-MendingKit:
-- Market price 1 silver for MendingKit, because in default is too much value
+MendAndRecycle:
+- Market price 4 silver for MendingKit, because in default is too much market value then sell it
 
 =====
 
