@@ -46,9 +46,9 @@
 		</value>
 	</Operation>
 	
-	<!-- Remove ArchotechStructureStudiable Effect -->
+	<!-- Remove ArchotechStructure Effect -->
 	<Operation Class="PatchOperationRemove">
-		<xpath>/Defs/ThingDef[defName="MajorArchotechStructureStudiable"]/comps/li[mote="Mote_PsychicConditionCauserEffect"]</xpath>
+		<xpath>/Defs/ThingDef[defName="MajorArchotechStructureStudiable" or defName="GrandArchotechStructure"]/comps/li[mote="Mote_PsychicConditionCauserEffect"]</xpath>
 	</Operation>
 	
 </Patch>
