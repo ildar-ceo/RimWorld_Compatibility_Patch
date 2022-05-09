@@ -72,10 +72,10 @@
 					<value>
 						<costList>
 							<Gold>25</Gold>
-							<Steel>100</Steel>
+							<Steel>1000</Steel>
 							<Plasteel>150</Plasteel>
-							<ComponentSpacer>50</ComponentSpacer>
-							<ComponentIndustrial>100</ComponentIndustrial>
+							<ComponentSpacer>20</ComponentSpacer>
+							<ComponentIndustrial>50</ComponentIndustrial>
 						</costList>
 						<recipeMaker>
 							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
