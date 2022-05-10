@@ -242,6 +242,18 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
+				<!-- Add apparels to race -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AS_WAE_Race" or defName="AS_WHE_Race"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Apparel_PackJump</li>
+						<li>Apparel_PackBroadshield</li>
+						<li>Apparel_PsychicShockLance</li>
+						<li>Apparel_PsychicInsanityLance</li>
+					</value>
+				</li>
+				
+				
 				<!-- Temperature fix -->
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="AS_WHE_UnderwearA" or defName="AS_WHE_UnderwearB" or defName="AS_WHE_UnderwearC" or defName="AS_WHE_UnderwearD" or defName="AS_WHE_UnderwearE" or defName="AS_WHE_UnderwearF" or defName="AS_WHE_UnderwearG" or defName="AS_WHE_UnderwearH" or defName="AS_WHE_UnderwearI"]/statBases/StuffEffectMultiplierInsulation_Cold</xpath>
@@ -401,6 +413,130 @@
 				</li>
 				
 				
+				<!-- Hitech Armor -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_PressureResistantSuits"]/statBases/ArmorRating_Blunt</xpath>
+					<value>
+						<ArmorRating_Blunt>0.92</ArmorRating_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_PressureResistantSuits"]/statBases/ArmorRating_Sharp</xpath>
+					<value>
+						<ArmorRating_Sharp>0.71</ArmorRating_Sharp>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_MarineArmor"]/statBases/ArmorRating_Blunt</xpath>
+					<value>
+						<ArmorRating_Blunt>0.72</ArmorRating_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_MarineArmor"]/statBases/ArmorRating_Sharp</xpath>
+					<value>
+						<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WAE_KnightDress"]/statBases/ArmorRating_Blunt</xpath>
+					<value>
+						<ArmorRating_Blunt>0.82</ArmorRating_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WAE_KnightDress"]/statBases/ArmorRating_Sharp</xpath>
+					<value>
+						<ArmorRating_Sharp>0.57</ArmorRating_Sharp>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_WAEArmor_Re"]/statBases/ArmorRating_Blunt</xpath>
+					<value>
+						<ArmorRating_Blunt>0.82</ArmorRating_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_WAEArmor_Re"]/statBases/ArmorRating_Sharp</xpath>
+					<value>
+						<ArmorRating_Sharp>0.54</ArmorRating_Sharp>
+					</value>
+				</li>
+				
+				
+				<!-- Default Armor -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_MarineArmor"]/statBases/ArmorRating_Heat</xpath>
+					<value>
+						<ArmorRating_Heat>0.35</ArmorRating_Heat>
+					</value>
+				</li>
+				
+				
+				<!-- recipeUsers -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WAE_KnightDress" or defName="AS_WAE_FeatherHelm" or defName="AS_WHE_WAEArmor_Re"]/recipeMaker/recipeUsers</xpath>
+					<value>
+						<recipeUsers Inherit="False">
+							<li>FabricationBench</li>
+						</recipeUsers>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_WAESword"]/recipeMaker</xpath>
+					<value>
+						<recipeUsers Inherit="False">
+							<li>FabricationBench</li>
+						</recipeUsers>
+					</value>
+				</li>
+				
+				
+				<!-- Layer -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_MaidWare" or defName="AS_WHE_Tribal" or defName="AS_WHE_TShirts" or defName="AS_WHE_ShortPants" or defName="AS_WHE_ShirtButton" or defName="AS_WHE_TankTop"]/apparel/layers</xpath>
+					<value>
+						<layers>
+							<li>Middle</li>
+						</layers>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_BulletProofVest" or defName="AS_WHE_PlateArmor"]/apparel/layers</xpath>
+					<value>
+						<layers>
+							<li>AS_UnderMiddle</li>
+						</layers>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_Cape" or defName="AS_WHE_Parka" or defName="AS_WHE_SimplePoncho" or defName="AS_WHE_ElvenPoncho" or defName="AS_WHE_ElvenMantle" or defName="AS_WAE_NobleCoat"]/apparel/layers</xpath>
+					<value>
+						<layers>
+							<li>Shell</li>
+						</layers>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WAE_KnightDress" or defName="AS_WHE_MarineArmor" or defName="AS_WHE_WAEArmor_Re"]/apparel/layers</xpath>
+					<value>
+						<layers>
+							<li>AS_UnderMiddle</li>
+							<li>Shell</li>
+						</layers>
+					</value>
+				</li>
+				
+				
+				<!-- Remove AS_WHE_ShoulderBack -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_ShoulderBack"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AS_WAE_Race" or defName="AS_WHE_Race"]/alienRace/raceRestriction/apparelList/li[text()="AS_WHE_ShoulderBack"]</xpath>
+				</li>
+				
+				
 				<!-- Add HiTechArmor Tag -->
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName="AS_WAE_NobleCoat" or defName="AS_WAE_KnightDress" or defName="AS_WHE_ElvenMantle" or defName="AS_WHE_ElvenPoncho"]</xpath>
@@ -416,6 +552,7 @@
 						<li>HiTechArmor</li>
 					</value>
 				</li>
+				
 				
 				<!-- Market value -->
 				<li Class="PatchOperationAdd">
@@ -494,6 +631,22 @@
 			</match>
 		</match>
 		
+	</Operation>
+	
+	
+	<!-- Weapons -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ancient Species</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<!-- Remove WHE_ElvenBow because WAE_ElvenBow_Origin is exists -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="WHE_ElvenBow"]</xpath>
+				</li>
+				
+			</operations>
+		</match>
 	</Operation>
 	
 	
