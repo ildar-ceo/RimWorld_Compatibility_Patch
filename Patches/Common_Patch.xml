@@ -52,7 +52,7 @@
 	</Operation>
 	
 	<!-- Disable tribes raids in end game -->
-	<li Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/FactionDef[@Name="TribeBase"]/raidCommonalityFromPointsCurve</xpath>
 		<value>
 			<raidCommonalityFromPointsCurve>
@@ -64,8 +64,8 @@
 				</points>
 			</raidCommonalityFromPointsCurve>
 		</value>
-	</li>
-	<li Class="PatchOperationReplace">
+	</Operation>
+	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/FactionDef[@Name="TribeBase"]/maxPawnCostPerTotalPointsCurve</xpath>
 		<value>
 			<maxPawnCostPerTotalPointsCurve>
@@ -79,6 +79,6 @@
 				</points>
 			</maxPawnCostPerTotalPointsCurve>
 		</value>
-	</li>
+	</Operation>
 	
 </Patch>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	
+	<!-- ID: 2154569778 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ancient Species</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Show in fraction control menu -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="AS_WAE_Settlement" or defName="AS_WHE_Settlement" or defName="AS_WHE_Village" or defName="AS_WHE_Town"]</xpath>
+					<value>
+						<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+					</value>
+				</li>
+				
+				<!-- Add configurationListOrderPriority -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="AS_WAE_Settlement"]</xpath>
+					<value>
+						<configurationListOrderPriority>35</configurationListOrderPriority>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="AS_WHE_Settlement"]</xpath>
+					<value>
+						<configurationListOrderPriority>36</configurationListOrderPriority>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="AS_WHE_Village"]</xpath>
+					<value>
+						<configurationListOrderPriority>37</configurationListOrderPriority>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="AS_WHE_Town"]</xpath>
+					<value>
+						<configurationListOrderPriority>38</configurationListOrderPriority>
+					</value>
+				</li>
+				
+				<!-- Set settlementGenerationWeight to 1 -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="AS_WAE_Settlement" or defName="AS_WHE_Settlement" or defName="AS_WHE_Village" or defName="AS_WHE_Town"]/settlementGenerationWeight</xpath>
+					<value>
+						<settlementGenerationWeight>0.25</settlementGenerationWeight>
+					</value>
+				</li>
+				
+				<!-- Set requiredCountAtGameStart to 0 except AS_WHE_Town -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="AS_WAE_Settlement" or defName="AS_WHE_Settlement" or defName="AS_WHE_Village"]/requiredCountAtGameStart</xpath>
+					<value>
+						<requiredCountAtGameStart>0</requiredCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="AS_WAE_Settlement" or defName="AS_WHE_BaseFaction"]/canMakeRandomly</xpath>
+					<value>
+						<canMakeRandomly>false</canMakeRandomly>
+					</value>
+				</li>
+				
+				<!-- Remove Faction Relations -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AS_WAE_Race" or defName="AS_WHE_Race"]/alienRace/generalSettings/factionRelations</xpath>
+				</li>
+				
+				<!-- Remove Neolithic and Medieval Faction -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/FactionDef[defName="AS_WAE_Settlement" or defName="AS_WHE_Settlement" or defName="AS_WHE_Village"]</xpath>
+				</li>
+				
+				<!-- Remove default faction type -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PawnKindDef[@Name="AS_WAE_NPCBase_Neolithic" or @Name="AS_WHE_NPCBase_Neolithic" or @Name="AS_WHE_NPCBase_Medieval" or  @Name="AS_WHE_NPCBase_Industrial"]/defaultFactionType</xpath>
+				</li>
+				
+				<!-- Make enemy Faction -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="AS_WHE_Town"]</xpath>
+					<value>
+						<naturalEnemy>true</naturalEnemy>
+					</value>
+				</li>
+				
+				<!-- Remove factionLeader tag -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PawnKindDef[defName="AS_WHE_Archer"]/factionLeader</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PawnKindDef[defName="AS_WHE_Gunner"]/factionLeader</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PawnKindDef[defName="AS_WHE_Knight"]/factionLeader</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PawnKindDef[defName="AS_WHE_Hunter"]/factionLeader</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PawnKindDef[defName="AS_WHE_Warrior"]/factionLeader</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PawnKindDef[defName="AS_WAE_Hunter"]/factionLeader</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PawnKindDef[defName="AS_WAE_Knight"]/factionLeader</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PawnKindDef[defName="AS_WAE_PKKnight"]/factionLeader</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PawnKindDef[defName="AS_WAE_PKHunter"]/factionLeader</xpath>
+				</li>
+				
+				<!-- combatPower fix -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="AS_WAE_Knight"]</xpath>
+					<value>
+						<combatPower>710</combatPower>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="AS_WAE_Hunter"]</xpath>
+					<value>
+						<combatPower>710</combatPower>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="AS_WHE_Gunner"]</xpath>
+					<value>
+						<combatPower>200</combatPower>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="AS_WHE_Knight"]</xpath>
+					<value>
+						<combatPower>210</combatPower>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="AS_WHE_Fighter"]</xpath>
+					<value>
+						<combatPower>110</combatPower>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="AS_WHE_Shooter"]</xpath>
+					<value>
+						<combatPower>110</combatPower>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="AS_WHE_TownsPeople"]</xpath>
+					<value>
+						<combatPower>110</combatPower>
+					</value>
+				</li>
+				
+				<!-- Tribal -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="AS_WHE_Archer"]</xpath>
+					<value>
+						<combatPower>75</combatPower>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- Apparel -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ancient Species old</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Add HiTechArmor Tag -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AS_WAE_NobleCoat" or defName="AS_WAE_KnightDress"]</xpath>
+					<value>
+						<tradeTags>
+							<li>HiTechArmor</li>
+						</tradeTags>
+					</value>
+				</li>
+				
+				<!-- Market value -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WAE_NobleCoat"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>1900</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WAE_KnightDress"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>3200</MarketValue>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- Apparel -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ancient Species old</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Add Prestige Tag -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="AS_WAE_NobleCoat" or defName="AS_WAE_KnightDress"]/apparel/tags</xpath>
+						<value>
+							<li>PrestigeCombatGear</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2154569778 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ancient Species</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Tribal Combat 100, ranged with melee mix-ins -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<AS_WHE_Warrior>3</AS_WHE_Warrior>
+						<AS_WHE_Hunter>3</AS_WHE_Hunter>
+						<AS_WHE_Archer>2</AS_WHE_Archer>
+					</value>
+				</li>
+				
+				<!-- Tribal Combat 60, ranged only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[2]/options</xpath>
+					<value>
+						<AS_WHE_Hunter>3</AS_WHE_Hunter>
+						<AS_WHE_Archer>2</AS_WHE_Archer>
+					</value>
+				</li>
+				
+				<!-- Tribal Combat 60, melee only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[3]/options</xpath>
+					<value>
+						<AS_WHE_Warrior>3</AS_WHE_Warrior>
+					</value>
+				</li>
+				
+				<!-- Tribal Combat 5, breach-capable fights, breachers plus ranged with melee mix-ins -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[4]/options</xpath>
+					<value>
+						<AS_WHE_Warrior>3</AS_WHE_Warrior>
+						<AS_WHE_Hunter>3</AS_WHE_Hunter>
+						<AS_WHE_Archer>2</AS_WHE_Archer>
+					</value>
+				</li>
+				
+				<!-- Tribal Peaceful -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[5]/options</xpath>
+					<value>
+						<AS_WHE_Warrior>3</AS_WHE_Warrior>
+						<AS_WHE_Villager>3</AS_WHE_Villager>
+						<AS_WHE_Archer>2</AS_WHE_Archer>
+					</value>
+				</li>
+				
+				<!-- Tribal Trader -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[6]/guards</xpath>
+					<value>
+						<AS_WHE_Archer>1</AS_WHE_Archer>
+						<AS_WHE_Villager>3</AS_WHE_Villager>
+						<AS_WHE_Warrior>3</AS_WHE_Warrior>
+					</value>
+				</li>
+				
+				<!-- Tribal Settlement -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[7]/options</xpath>
+					<value>
+						<AS_WHE_Warrior>3</AS_WHE_Warrior>
+						<AS_WHE_Villager>3</AS_WHE_Villager>
+						<AS_WHE_Archer>1</AS_WHE_Archer>
+					</value>
+				</li>
+				
+				<!-- Tribal Settlement_RangedOnly -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[8]/options</xpath>
+					<value>
+						<AS_WHE_Archer>2</AS_WHE_Archer>
+					</value>
+				</li>
+				
+				
+				<!-- Outlander Combat -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<AS_WHE_Gunner>5</AS_WHE_Gunner>
+						<AS_WHE_Fighter>10</AS_WHE_Fighter>
+						<AS_WHE_Knight>5</AS_WHE_Knight>
+					</value>
+				</li>
+				
+				<!-- Outlander Peaceful -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
+					<value>
+						<AS_WHE_Gunner>5</AS_WHE_Gunner>
+						<AS_WHE_Fighter>10</AS_WHE_Fighter>
+						<AS_WHE_Knight>5</AS_WHE_Knight>
+					</value>
+				</li>
+				
+				<!-- Outlander Trader -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[3]/guards</xpath>
+					<value>
+						<AS_WHE_TownsPeople>4</AS_WHE_TownsPeople>
+					</value>
+				</li>
+				
+				<!-- Outlander Settlement -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[4]/options</xpath>
+					<value>
+						<AS_WHE_Fighter>10</AS_WHE_Fighter>
+						<AS_WHE_TownsPeople>5</AS_WHE_TownsPeople>
+						<AS_WHE_Knight>5</AS_WHE_Knight>
+						<AS_WHE_Gunner>5</AS_WHE_Gunner>
+					</value>
+				</li>
+				
+				
+				<!-- Pirate Combat 100, Normal fights, ranged with melee mix-ins -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<AS_WHE_Fighter>10</AS_WHE_Fighter>
+						<AS_WHE_Knight>5</AS_WHE_Knight>
+						<AS_WHE_Gunner>5</AS_WHE_Gunner>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 30, Normal fights, melee-only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[2]/options</xpath>
+					<value>
+						<AS_WHE_Fighter>10</AS_WHE_Fighter>
+						<AS_WHE_Knight>5</AS_WHE_Knight>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 20, ranged only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[3]/options</xpath>
+					<value>
+						<AS_WHE_Gunner>3</AS_WHE_Gunner>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 15, explosives with ranged mix-ins -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[4]/options</xpath>
+					<value>
+						<AS_WHE_Gunner>3</AS_WHE_Gunner>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 10, snipers only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[5]/options</xpath>
+					<value>
+						<AS_WHE_Gunner>3</AS_WHE_Gunner>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 2.5 Normal fights, drifters only 
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[6]/options</xpath>
+					<value>
+					</value>
+				</li>
+				-->
+				
+				<!-- Pirate Settlement -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[7]/options</xpath>
+					<value>
+						<AS_WHE_Knight>5</AS_WHE_Knight>
+						<AS_WHE_Gunner>5</AS_WHE_Gunner>
+						<AS_WHE_TownsPeople>5</AS_WHE_TownsPeople>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+	
+	
+	<!-- Adds Ancient Species to Royalty factions -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ancient Species</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Empire Trader -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[1]/guards</xpath>
+						<value>
+							<AS_WAE_Knight>2</AS_WAE_Knight>
+							<AS_WAE_Hunter>2</AS_WAE_Hunter>
+						</value>
+					</li>
+					
+					<!-- Empire Combat 100 Normal fights -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[2]/options</xpath>
+						<value>
+							<AS_WAE_Knight>3</AS_WAE_Knight>
+							<AS_WAE_Hunter>3</AS_WAE_Hunter>
+						</value>
+					</li>
+					
+					<!-- Empire Combat 10 breach fights -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[3]/options</xpath>
+						<value>
+							<AS_WAE_Knight>3</AS_WAE_Knight>
+							<AS_WAE_Hunter>3</AS_WAE_Hunter>
+						</value>
+					</li>
+					
+					<!-- Empire Settlement -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[4]/options</xpath>
+						<value>
+							<AS_WAE_Knight>3</AS_WAE_Knight>
+							<AS_WAE_Hunter>3</AS_WAE_Hunter>
+							<AS_WAE_Villager>3</AS_WAE_Villager>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+</Patch>

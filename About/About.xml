@@ -30,6 +30,7 @@ VGP:
 Eccentric Tech:
 - Craftable AI Computer Core
 - Research ship needs Aurora Core
+- Add Angel Apparel to traders
 
 =====
 
@@ -41,6 +42,13 @@ SeedsPlease:
 Nyaron race:
 - Add man gender to Nyaron
 - Fix correct names
+- Adds Nyaron to other factions with balance fix
+
+=====
+
+Ancient Species:
+- Adds Elves to other factions with balance fix
+- Remove Neolithic and Medieval Factions
 
 =====
 
@@ -92,6 +100,7 @@ PsiTech:
 		<li>dismarzero.VGP.VGPGardenDrinksUF</li>
 		<li>dismarzero.VGP.VGPGardenDrinks</li>
 		<li>gekasid.VGP.VGPVegetableGarden.rus</li>
+		<li>syrchalis.universalfermenter</li>
 		<li>visilt.travelthroughwater</li>
 		<li>Farmradish.Nyaron</li>
 		<li>Rikiki.FishIndustry</li>

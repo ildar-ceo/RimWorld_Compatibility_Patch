@@ -54,7 +54,6 @@
 					</value>
 				</li>
 				
-				
 				<!--
 					Fix Gender
 					https://www.loverslab.com/topic/121825-mod-rimworld-gender-balancer/
@@ -74,7 +73,6 @@
 					</value>
 				</li>
 				
-				
 				<!-- Add Hair -->
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/HairDef[defName="Nr_Long" or defName="Nr_Short" or defName="Nr_Twin" or defName="Nr_Twintw" or defName="Nr_ShortTwin" or defName="Nr_Pony"]/styleGender</xpath>
@@ -83,28 +81,226 @@
 					</value>
 				</li>
 				
+				<!-- Trade -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Nr_PowerArmor" or defName="Nr_PowerArmorHelmet"]</xpath>
+					<value>
+						<tradeTags>
+							<li>HiTechArmor</li>
+						</tradeTags>
+					</value>
+				</li>
+				
+				<!-- Make enemy Faction -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="NyaronFaction"]</xpath>
+					<value>
+						<naturalEnemy>true</naturalEnemy>
+					</value>
+				</li>
+				
+				<!-- Remove Faction -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/FactionDef[defName="NyaronFactionEnemy"]</xpath>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
 	
 	
-	<!-- ID: 1180721235 -->
-	<!--
+	<!-- ID: 1854376306 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Nyaron race</li></mods>
+		
 		<match Class="PatchOperationFindMod">
-			<mods><li>Combat Extended</li></mods>
+			<mods><li>Royalty</li></mods>
 			<match Class="PatchOperationSequence">
 				<operations>
+					
+					<!-- Add Prestige Tag -->
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/ThingDef[@Name="BaseNyaronPawn"]/inspectorTabs</xpath>
+						<xpath>/Defs/ThingDef[defName="Nr_PowerArmor" or defName="Nr_PowerArmorHelmet"]/apparel/tags</xpath>
 						<value>
-							<li>ITab_Pawn_Gear</li>
+							<li>PrestigeCombatGear</li>
 						</value>
 					</li>
+					
 				</operations>
 			</match>
 		</match>
+		
 	</Operation>
-	-->
+	
+	
+	<!-- Adds Nyaron to other factions -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Outlander Combat -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<Nyaron_Soldier>4</Nyaron_Soldier>
+						<Nyaron_Ranger>4</Nyaron_Ranger>
+						<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+						<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+					</value>
+				</li>
+				
+				<!-- Outlander Peaceful -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
+					<value>
+						<Nyaron_Soldier>3</Nyaron_Soldier>
+					</value>
+				</li>
+				
+				<!-- Outlander Trader -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[3]/guards</xpath>
+					<value>
+						<Nyaron_Soldier>3</Nyaron_Soldier>
+						<Nyaron_Ranger>2</Nyaron_Ranger>
+					</value>
+				</li>
+				
+				<!-- Outlander Settlement -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[4]/options</xpath>
+					<value>
+						<Nyaron_Soldier>4</Nyaron_Soldier>
+						<Nyaron_Ranger>4</Nyaron_Ranger>
+						<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+						<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+					</value>
+				</li>
+				
+				
+				<!-- Pirate Combat 100, Normal fights, ranged with melee mix-ins -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<Nyaron_Soldier>3</Nyaron_Soldier>
+						<Nyaron_Ranger>3</Nyaron_Ranger>
+						<Nyaron_Soldier_Light>4</Nyaron_Soldier_Light>
+						<Nyaron_Ranger_Light>4</Nyaron_Ranger_Light>
+						<Nyaron_Ranger_Rocketeer>1</Nyaron_Ranger_Rocketeer>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 30, Normal fights, melee-only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[2]/options</xpath>
+					<value>
+						<Nyaron_Soldier>3</Nyaron_Soldier>
+						<Nyaron_Soldier_Light>4</Nyaron_Soldier_Light>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 20, ranged only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[3]/options</xpath>
+					<value>
+						<Nyaron_Ranger>3</Nyaron_Ranger>
+						<Nyaron_Ranger_Light>4</Nyaron_Ranger_Light>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 15, explosives with ranged mix-ins -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[4]/options</xpath>
+					<value>
+						<Nyaron_Ranger>2</Nyaron_Ranger>
+						<Nyaron_Ranger_Light>3</Nyaron_Ranger_Light>
+						<Nyaron_Ranger_Rocketeer>1</Nyaron_Ranger_Rocketeer>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 10, snipers only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[5]/options</xpath>
+					<value>
+						<Nyaron_Ranger>2</Nyaron_Ranger>
+						<Nyaron_Ranger_Light>3</Nyaron_Ranger_Light>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 2.5 Normal fights, drifters only 
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[6]/options</xpath>
+					<value>
+					</value>
+				</li>
+				-->
+				
+				<!-- Pirate Settlement -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[7]/options</xpath>
+					<value>
+						<Nyaron_Soldier>3</Nyaron_Soldier>
+						<Nyaron_Ranger>3</Nyaron_Ranger>
+						<Nyaron_Soldier_Light>4</Nyaron_Soldier_Light>
+						<Nyaron_Ranger_Light>4</Nyaron_Ranger_Light>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- Adds Nyaron to Royalty factions -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Empire Trader -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[1]/guards</xpath>
+						<value>
+							<Nyaron_Soldier_Elite>1</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>1</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+					
+					<!-- Empire Combat 100 Normal fights -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[2]/options</xpath>
+						<value>
+							<Nyaron_Soldier_Elite>3</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>3</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+					
+					<!-- Empire Combat 10 breach fights -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[3]/options</xpath>
+						<value>
+							<Nyaron_Soldier_Elite>3</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>3</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+					
+					<!-- Empire Settlement -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[4]/options</xpath>
+						<value>
+							<Nyaron_Soldier_Elite>2</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>2</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
 </Patch>

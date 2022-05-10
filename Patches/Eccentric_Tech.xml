@@ -106,8 +106,152 @@
 					</value>
 				</li>
 				
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="Eccentric_HexCell"]/tradeability</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="Eccentric_Nanoweave"]/tradeability</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Visitor_Outlander_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Eccentric_HexCell</thingDef>
+							<countRange>1~5</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Visitor_Outlander_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Eccentric_Nanoweave</thingDef>
+							<countRange>50~200</countRange>
+						</li>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2585928816 (Eccentric Tech - Angel Apparel) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Eccentric Tech - Angel Apparel</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Trade -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitBase" or @Name="EccentricFrillBase" or @Name="EccentricApronBase"]</xpath>
+					<value>
+						<tradeTags>
+							<li>HiTechArmor</li>
+						</tradeTags>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>HiTechArmor</tradeTag>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>HiTechArmor</tradeTag>
+							<thingDefCountRange>0~1</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2552623545 (Eccentric Tech - Core) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Eccentric Tech - Core</li>
+		</mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard" or defName="Orbital_Empire"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>Eccentric_HexCell</thingDef>
+								<countRange>1~5</countRange>
+							</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard" or defName="Orbital_Empire"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>Eccentric_Nanoweave</thingDef>
+								<countRange>50~200</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2585928816 (Eccentric Tech - Angel Apparel) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Eccentric Tech - Angel Apparel</li>
+		</mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Add Prestige Tag -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitBase"]/apparel/tags</xpath>
+						<value>
+							<li>PrestigeCombatGear</li>
+						</value>
+					</li>
+					
+					<!-- Trade -->
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard" or defName="Orbital_Empire"]/stockGenerators/li[tradeTag="HiTechArmor"]</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>HiTechArmor</tradeTag>
+								<thingDefCountRange>4~8</thingDefCountRange>
+								<countRange>1~2</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
 	</Operation>
 	
 </Patch>
