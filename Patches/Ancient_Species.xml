@@ -42,7 +42,7 @@
 					</value>
 				</li>
 				
-				<!-- Set settlementGenerationWeight to 1 -->
+				<!-- Set settlementGenerationWeight to 0.25 -->
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/FactionDef[defName="AS_WAE_Settlement" or defName="AS_WHE_Settlement" or defName="AS_WHE_Village" or defName="AS_WHE_Town"]/settlementGenerationWeight</xpath>
 					<value>
@@ -69,6 +69,36 @@
 					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AS_WAE_Race" or defName="AS_WHE_Race"]/alienRace/generalSettings/factionRelations</xpath>
 				</li>
 				
+				<!-- Change label -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AS_WAE_Race"]/label</xpath>
+					<value>
+						<label>Elder Elves</label>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AS_WAE_Race" or defName="AS_WHE_Race"]/statBases/ComfyTemperatureMax</xpath>
+					<value>
+						<ComfyTemperatureMax>28</ComfyTemperatureMax>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AS_WAE_Race" or defName="AS_WHE_Race"]/statBases/ComfyTemperatureMin</xpath>
+					<value>
+						<ComfyTemperatureMin>21</ComfyTemperatureMin>
+					</value>
+				</li>
+				
+				<!-- Use all apparels
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AS_WAE_Race" or defName="AS_WHE_Race"]/alienRace/raceRestriction/onlyUseRaceRestrictedApparel</xpath>
+					<value>
+						<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
+					</value>
+				</li>
+				-->
+				
 				<!-- Remove Neolithic and Medieval Faction -->
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/FactionDef[defName="AS_WAE_Settlement" or defName="AS_WHE_Settlement" or defName="AS_WHE_Village"]</xpath>
@@ -84,6 +114,37 @@
 					<xpath>/Defs/FactionDef[defName="AS_WHE_Town"]</xpath>
 					<value>
 						<naturalEnemy>true</naturalEnemy>
+					</value>
+				</li>
+				
+				<!-- Add pawn -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<PawnKindDef ParentName="AS_WAE_CommonBase">
+							<defName>AS_WAE_Colonist</defName>
+							<label>WAE Colonist</label>
+							<defaultFactionType>AS_WHE_PlayerFaction_Neolithic</defaultFactionType>
+							<isFighter>false</isFighter>
+							<backstoryFiltersOverride>
+								<li>
+									<categories>
+										<li>AS_WAE_Villager</li>
+									</categories>
+								</li>
+							</backstoryFiltersOverride>
+							<apparelTags>
+								<li>AS_WHE_Colonist</li>
+							</apparelTags>
+							<apparelRequired>
+								<li>AS_WHE_Tribal</li>
+							</apparelRequired>
+							<apparelMoney>
+								<min>120</min>
+								<max>120</max>
+							</apparelMoney>
+							<apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
+						</PawnKindDef>
 					</value>
 				</li>
 				
@@ -176,32 +237,233 @@
 	
 	<!-- Apparel -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Ancient Species old</li></mods>
+		<mods><li>Ancient Species</li></mods>
 		
 		<match Class="PatchOperationSequence">
 			<operations>
 				
+				<!-- Temperature fix -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_UnderwearA" or defName="AS_WHE_UnderwearB" or defName="AS_WHE_UnderwearC" or defName="AS_WHE_UnderwearD" or defName="AS_WHE_UnderwearE" or defName="AS_WHE_UnderwearF" or defName="AS_WHE_UnderwearG" or defName="AS_WHE_UnderwearH" or defName="AS_WHE_UnderwearI"]/statBases/StuffEffectMultiplierInsulation_Cold</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Cold>0.10</StuffEffectMultiplierInsulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_UnderwearA" or defName="AS_WHE_UnderwearB" or defName="AS_WHE_UnderwearC" or defName="AS_WHE_UnderwearD" or defName="AS_WHE_UnderwearE" or defName="AS_WHE_UnderwearF" or defName="AS_WHE_UnderwearG" or defName="AS_WHE_UnderwearH" or defName="AS_WHE_UnderwearI"]/statBases/StuffEffectMultiplierInsulation_Heat</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_UnderwearB" or defName="AS_WHE_UnderwearC" or defName="AS_WHE_UnderwearD" or defName="AS_WHE_UnderwearG" or defName="AS_WHE_UnderwearH" or defName="AS_WHE_UnderwearI" or defName="AS_WHE_GarterBelt"]/statBases/Insulation_Cold</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_UnderwearB" or defName="AS_WHE_UnderwearC" or defName="AS_WHE_UnderwearD" or defName="AS_WHE_UnderwearG" or defName="AS_WHE_UnderwearH" or defName="AS_WHE_UnderwearI" or defName="AS_WHE_GarterBelt"]/statBases/Insulation_Heat</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_Tribal" or defName="AS_WHE_Neeso" or defName="AS_WHE_StripeNeeso"]/statBases/StuffEffectMultiplierInsulation_Cold</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_Tribal" or defName="AS_WHE_Neeso" or defName="AS_WHE_StripeNeeso"]/statBases/StuffEffectMultiplierInsulation_Heat</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Heat>0.15</StuffEffectMultiplierInsulation_Heat>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_TShirts"]/statBases/StuffEffectMultiplierInsulation_Cold</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Cold>0.22</StuffEffectMultiplierInsulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_TShirts"]/statBases/StuffEffectMultiplierInsulation_Heat</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Heat>0.28</StuffEffectMultiplierInsulation_Heat>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_ShortPants"]/statBases/StuffEffectMultiplierInsulation_Cold</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Cold>0.25</StuffEffectMultiplierInsulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_ShortPants"]/statBases/StuffEffectMultiplierInsulation_Heat</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_ShirtButton"]/statBases/StuffEffectMultiplierInsulation_Cold</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_ShirtButton"]/statBases/StuffEffectMultiplierInsulation_Heat</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Heat>0.25</StuffEffectMultiplierInsulation_Heat>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_TankTop"]/statBases/StuffEffectMultiplierInsulation_Cold</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_TankTop"]/statBases/StuffEffectMultiplierInsulation_Heat</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Heat>0.22</StuffEffectMultiplierInsulation_Heat>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_Scarf"]/statBases/StuffEffectMultiplierInsulation_Cold</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Cold>0.45</StuffEffectMultiplierInsulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_ShieldScarf"]/statBases/StuffEffectMultiplierInsulation_Cold</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Cold>0.45</StuffEffectMultiplierInsulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_Cape"]/statBases/StuffEffectMultiplierInsulation_Cold</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_Parka"]/statBases/StuffEffectMultiplierInsulation_Cold</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Cold>0.62</StuffEffectMultiplierInsulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_SimplePoncho"]/statBases/StuffEffectMultiplierInsulation_Cold</xpath>
+					<value>
+						<StuffEffectMultiplierInsulation_Cold>0.4</StuffEffectMultiplierInsulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_MaidHairBand"]/statBases/Insulation_Cold</xpath>
+					<value>
+						<Insulation_Cold>1.2</Insulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_MaidHairBand"]/statBases/Insulation_Heat</xpath>
+					<value>
+						<Insulation_Heat>7,5</Insulation_Heat>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_PressureResistantHelmet"]/statBases/Insulation_Cold</xpath>
+					<value>
+						<Insulation_Cold>8</Insulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_PressureResistantHelmet"]/statBases/Insulation_Heat</xpath>
+					<value>
+						<Insulation_Heat>7</Insulation_Heat>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_PressureResistantSuits"]/statBases/Insulation_Cold</xpath>
+					<value>
+						<Insulation_Cold>25</Insulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_PressureResistantSuits"]/statBases/Insulation_Heat</xpath>
+					<value>
+						<Insulation_Heat>15</Insulation_Heat>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WAE_KnightDress"]/statBases/Insulation_Cold</xpath>
+					<value>
+						<Insulation_Cold>20</Insulation_Cold>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AS_WAE_KnightDress"]/statBases/Insulation_Heat</xpath>
+					<value>
+						<Insulation_Heat>15</Insulation_Heat>
+					</value>
+				</li>
+				
+				
 				<!-- Add HiTechArmor Tag -->
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="AS_WAE_NobleCoat" or defName="AS_WAE_KnightDress"]</xpath>
+					<xpath>/Defs/ThingDef[defName="AS_WAE_NobleCoat" or defName="AS_WAE_KnightDress" or defName="AS_WHE_ElvenMantle" or defName="AS_WHE_ElvenPoncho"]</xpath>
 					<value>
 						<tradeTags>
 							<li>HiTechArmor</li>
 						</tradeTags>
 					</value>
 				</li>
-				
-				<!-- Market value -->
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="AS_WAE_NobleCoat"]/statBases/MarketValue</xpath>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_MarineArmor" or defName="AS_WAE_FeatherHelm" or defName="AS_WHE_PressureResistantSuits" or defName="AS_WHE_WAEArmor_Re"]/tradeTags</xpath>
 					<value>
-						<MarketValue>1900</MarketValue>
+						<li>HiTechArmor</li>
 					</value>
 				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="AS_WAE_KnightDress"]/statBases/MarketValue</xpath>
+				
+				<!-- Market value -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AS_WAE_NobleCoat"]/statBases</xpath>
+					<value>
+						<MarketValue>2270</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AS_WAE_KnightDress"]/statBases</xpath>
 					<value>
 						<MarketValue>3200</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_ElvenMantle"]/statBases</xpath>
+					<value>
+						<MarketValue>1500</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AS_WAE_FeatherHelm"]/statBases</xpath>
+					<value>
+						<MarketValue>1850</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_ElvenPoncho"]/statBases</xpath>
+					<value>
+						<MarketValue>1850</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_MarineArmor"]/statBases</xpath>
+					<value>
+						<MarketValue>3250</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_WAEArmor_Re"]/statBases</xpath>
+					<value>
+						<MarketValue>2900</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AS_WHE_PressureResistantSuits"]/statBases</xpath>
+					<value>
+						<MarketValue>3700</MarketValue>
 					</value>
 				</li>
 				
@@ -213,7 +475,7 @@
 	
 	<!-- Apparel -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Ancient Species old</li></mods>
+		<mods><li>Ancient Species</li></mods>
 		
 		<match Class="PatchOperationFindMod">
 			<mods><li>Royalty</li></mods>
@@ -222,7 +484,7 @@
 					
 					<!-- Add Prestige Tag -->
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/ThingDef[defName="AS_WAE_NobleCoat" or defName="AS_WAE_KnightDress"]/apparel/tags</xpath>
+						<xpath>/Defs/ThingDef[defName="AS_WAE_NobleCoat" or defName="AS_WAE_KnightDress" or defName="AS_WHE_ElvenMantle" or defName="AS_WAE_FeatherHelm" or defName="AS_WHE_ElvenPoncho" or defName="AS_WHE_MarineArmor" or defName="AS_WHE_Cape" or defName="AS_WHE_UnderwearA" or defName="AS_WHE_UnderwearB" or defName="AS_WHE_UnderwearC" or defName="AS_WHE_UnderwearD" or defName="AS_WHE_UnderwearE" or defName="AS_WHE_UnderwearF" or defName="AS_WHE_UnderwearG" or defName="AS_WHE_UnderwearH" or defName="AS_WHE_UnderwearI" or defName="AS_WHE_GarterBelt" or defName="AS_WHE_StripeNeeso" or defName="AS_WHE_Neeso" or defName="AS_WHE_WAEArmor_Re" or defName="AS_WHE_PressureResistantSuits"]/apparel/tags</xpath>
 						<value>
 							<li>PrestigeCombatGear</li>
 						</value>
@@ -477,5 +739,58 @@
 		
 	</Operation>
 	
+	
+	<!-- Scenario -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ancient Species</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Add HiTechArmor Tag -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ScenarioDef>
+							<defName>AS_Elves_in_negligee</defName>
+							<label>Elves in negligee</label>
+							<description>Elves in negligee</description>
+							<scenario>
+								<summary>Elves in negligee</summary>
+								<playerFaction>
+									<def>PlayerFaction</def>
+									<factionDef>AS_WHE_PlayerFaction_Neolithic</factionDef>
+								</playerFaction>
+								<parts>
+									<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+										<def>ConfigPage_ConfigureStartingPawns</def>
+										<pawnCount>1</pawnCount>
+										<pawnChoiceCount>1</pawnChoiceCount>
+									</li>
+									<li Class="ScenPart_PlayerPawnsArriveMethod">
+										<def>PlayerPawnsArriveMethod</def>
+										<method>Standing</method>
+									</li>
+									<li Class="ScenPart_StartingThing_Defined">
+										<def>StartingThing_Defined</def>
+										<thingDef>AS_WHE_UnderwearE</thingDef>
+										<count>1</count>
+									</li>
+									<li Class="ScenPart_StartingThing_Defined">
+										<def>StartingThing_Defined</def>
+										<thingDef>AS_WHE_Tribal</thingDef>
+										<count>1</count>
+									</li>
+								</parts>
+							</scenario>
+						</ScenarioDef>
+					</value>
+				</li>
+				
+				
+			</operations>
+		</match>
+		
+	</Operation>
 	
 </Patch>
