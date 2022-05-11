@@ -16,6 +16,7 @@ Common:
 - Disable visual effect in Archotech Structure Studiable
 - Disable tribes raids in end game
 - Wind turbine smaller size
+- Rottable BodyPartNatural
 
 =====
 
@@ -42,14 +43,15 @@ SeedsPlease:
 Nyaron race:
 - Add man gender to Nyaron
 - Fix correct names
-- Adds Nyaron to other factions with balance fix
+- Adds Nyaron to common factions with balance fix
 
 =====
 
 Ancient Species:
-- Adds Elves to other factions with balance fix
+- Adds Elves to common factions with balance fix
 - Remove Neolithic and Medieval Factions
-- Fix apparels, wearable psychic shock, insanity lance
+- Wearable lances
+- Fix apparels temperature and armor
 
 =====
 
@@ -103,6 +105,7 @@ PsiTech:
 		<li>gekasid.VGP.VGPVegetableGarden.rus</li>
 		<li>syrchalis.universalfermenter</li>
 		<li>visilt.travelthroughwater</li>
+		<li>Haduki.AncientSpecies</li>
 		<li>Farmradish.Nyaron</li>
 		<li>Rikiki.FishIndustry</li>
 		<li>kikohi.cybernetic</li>

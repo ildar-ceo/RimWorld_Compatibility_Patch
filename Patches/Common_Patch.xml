@@ -51,7 +51,7 @@
 		<xpath>/Defs/ThingDef[defName="MajorArchotechStructureStudiable" or defName="GrandArchotechStructure"]/comps/li[mote="Mote_PsychicConditionCauserEffect"]</xpath>
 	</Operation>
 	
-	<!-- Disable tribes raids in end game -->
+	<!-- Disable tribes raids in endgame -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/FactionDef[@Name="TribeBase"]/raidCommonalityFromPointsCurve</xpath>
 		<value>
@@ -60,7 +60,7 @@
 					<li>(300,  0)</li>
 					<li>(700,  1)</li>
 					<li>(1400, 1.8)</li>
-					<li>(3000, 0)</li>
+					<li>(3500, 0)</li>
 				</points>
 			</raidCommonalityFromPointsCurve>
 		</value>
@@ -75,9 +75,23 @@
 					<li>(800, 100)</li>
 					<li>(1300, 150)</li>
 					<li>(2000, 300)</li>
-					<li>(3000, 0)</li>
+					<li>(3500, 0)</li>
 				</points>
 			</maxPawnCostPerTotalPointsCurve>
+		</value>
+	</Operation>
+	
+	<!-- Rottable BodyPartNatural -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[@Name="BodyPartNaturalBase"]</xpath>
+		<value>
+			<tickerType>Rare</tickerType>
+            <comps>
+				<li Class="CompProperties_Rottable">
+					<daysToRotStart>1.5</daysToRotStart>
+					<rotDestroys>true</rotDestroys>
+				</li>
+			</comps>
 		</value>
 	</Operation>
 	
