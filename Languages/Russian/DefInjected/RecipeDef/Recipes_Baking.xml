@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Bakepolenta.label>испечь 2 рулета из поленты</Bakepolenta.label>
+  <Bakepolenta.description>Испечь вкусный рулет из поленты. \n\nСделать 2 рулета.</Bakepolenta.description>
+  <Bakepolenta.jobString>Печет поленту.</Bakepolenta.jobString>
+  
+  <BakeBread.label>испечь 7 хлеба</BakeBread.label>
+  <BakeBread.description>Испечь хлеб из муки. \n\nСделать 7 булок.</BakeBread.description>
+  <BakeBread.jobString>Печет хлеб.</BakeBread.jobString>
+  
+  <BakeCornbread.label>испечь 5 кукурузных хлеба</BakeCornbread.label>
+  <BakeCornbread.description>Испечь вкусный кукурузный хлеб. \n\nСделать 5 булок.</BakeCornbread.description>
+  <BakeCornbread.jobString>Печет кукурузный хлеб.</BakeCornbread.jobString>
+</LanguageData> 

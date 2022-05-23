@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <GrillPolenta.label>поджарить 4 поленты</GrillPolenta.label>
+  <GrillPolenta.description>Жареные ломтики поленты. \n\nСделать 4 порции. \n\nЭффекты: +метаболизм и +манипуляция.</GrillPolenta.description>
+  <GrillPolenta.jobString>Жарит поленту.</GrillPolenta.jobString> 
+</LanguageData> 

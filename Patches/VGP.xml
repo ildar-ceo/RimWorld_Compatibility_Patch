@@ -312,7 +312,24 @@
 										<li>Cornmeal</li>
 								   </thingDefs>
 								</filter>
-								<count>8</count>
+								<count>5</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				
+				<!-- MakebulkPolenta -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="MakebulkPolenta"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+								   <thingDefs>
+										<li>Cornmeal</li>
+								   </thingDefs>
+								</filter>
+								<count>25</count>
 							</li>
 						</ingredients>
 					</value>
@@ -338,7 +355,7 @@
 										<li>RawPolenta</li>
 									</thingDefs>
 								</filter>
-								<count>4</count>
+								<count>2</count>
 							</li>
 						</ingredients>
 					</value>
@@ -349,6 +366,12 @@
 						<products>
 							<bakedpolenta>2</bakedpolenta>
 						</products>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Bakepolenta"]/label</xpath>
+					<value>
+						<label>bake 2 polenta loaf</label>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
@@ -367,12 +390,40 @@
 							<li>
 								<filter>
 									<thingDefs>
+										<li>Flour</li>
+									</thingDefs>
+								</filter>
+								<count>4</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
 										<li>RawPolenta</li>
 									</thingDefs>
 								</filter>
-								<count>5</count>
+								<count>4</count>
 							</li>
 						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillPolenta"]/products</xpath>
+					<value>
+						<products>
+							<grilledpolenta>4</grilledpolenta>
+						</products>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillPolenta"]/label</xpath>
+					<value>
+						<label>grill 4 polenta</label>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillPolenta"]/description</xpath>
+					<value>
+						<description>Bake a tasty polenta loaf. \n\nMakes 4 slices.</description>
 					</value>
 				</li>
 				
@@ -388,9 +439,29 @@
 										<li>Flour</li>
 									</thingDefs>
 								</filter>
-								<count>9</count>
+								<count>20</count>
 							</li>
 						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="BakeBread"]/products</xpath>
+					<value>
+						<products>
+							<Bread>7</Bread>
+						</products>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="BakeBread"]/label</xpath>
+					<value>
+						<label>bake 7 breads</label>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="BakeBread"]/description</xpath>
+					<value>
+						<description>Bake bread from flour. \n\nMakes 7 Bread.</description>
 					</value>
 				</li>
 				
@@ -406,7 +477,7 @@
 										<li>Cornmeal</li>
 									</thingDefs>
 								</filter>
-								<count>12</count>
+								<count>25</count>
 							</li>
 						</ingredients>
 					</value>
@@ -422,6 +493,26 @@
 								<li>AllowRotten</li>
 							</specialFiltersToDisallow>
 						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="BakeCornbread"]/products</xpath>
+					<value>
+						<products>
+							<Cornbread>5</Cornbread>
+						</products>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="BakeCornbread"]/label</xpath>
+					<value>
+						<label>bake 5 cornbread</label>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="BakeCornbread"]/description</xpath>
+					<value>
+						<description>Bake a tasty cornbread loaf. \n\nMakes 5 loafs.</description>
 					</value>
 				</li>
 				
@@ -1759,7 +1850,7 @@
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>VGP Garden Drinks UF</li>
-			<li>VGP Garden Drinks</li>
+			<!--<li>VGP Garden Drinks</li>-->
 		</mods>
 		
 		<match Class="PatchOperationSequence">
@@ -1768,7 +1859,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="cider"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>7</MarketValue>
+						<MarketValue>12</MarketValue>
 					</value>
 				</li>
 				
@@ -1782,49 +1873,49 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="Wine"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>8</MarketValue>
+						<MarketValue>12</MarketValue>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="VGP_BerryWine"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>8</MarketValue>
+						<MarketValue>12</MarketValue>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="saki"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>12</MarketValue>
+						<MarketValue>15</MarketValue>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="CPD_Vodka"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>15</MarketValue>
+						<MarketValue>17</MarketValue>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="tequila"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>12</MarketValue>
+						<MarketValue>15</MarketValue>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="CPD_Whiskey"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>15</MarketValue>
+						<MarketValue>17</MarketValue>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="BrownAle"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>10</MarketValue>
+						<MarketValue>11</MarketValue>
 					</value>
 				</li>
 				
@@ -1838,7 +1929,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="Beer"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>5</MarketValue>
+						<MarketValue>9</MarketValue>
 					</value>
 				</li>
 				
