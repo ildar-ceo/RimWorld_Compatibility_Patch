@@ -1856,36 +1856,47 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
+				<!--
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ResearchProjectDef[defName="VG_industrialfermenting"]</xpath>
+				</li>
+				-->
+				
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VG_LargeFermentingBarrel"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes/li[thingDef="rum" or thingDef="VGP_BerryWine" or thingDef="VG_AmbrosiaWine" or thingDef="saki" or thingDef="tequila" or thingDef="CPD_Whiskey" or thingDef="Fruitshine"]/usesQuality</xpath>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="saki"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>15</MarketValue>
+					</value>
+				</li>
+				
+				<!--
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="cider"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>12</MarketValue>
+						<MarketValue>17</MarketValue>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="rum"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>15</MarketValue>
+						<MarketValue>17</MarketValue>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="Wine"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>12</MarketValue>
+						<MarketValue>15</MarketValue>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="VGP_BerryWine"]/statBases/MarketValue</xpath>
-					<value>
-						<MarketValue>12</MarketValue>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="saki"]/statBases/MarketValue</xpath>
 					<value>
 						<MarketValue>15</MarketValue>
 					</value>
@@ -1901,37 +1912,38 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="tequila"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>15</MarketValue>
+						<MarketValue>19</MarketValue>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="CPD_Whiskey"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>17</MarketValue>
+						<MarketValue>19</MarketValue>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="BrownAle"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>11</MarketValue>
+						<MarketValue>15</MarketValue>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="Fruitshine"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>8</MarketValue>
+						<MarketValue>9</MarketValue>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="Beer"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>9</MarketValue>
+						<MarketValue>14</MarketValue>
 					</value>
 				</li>
+				-->
 				
 			</operations>
 		</match>
