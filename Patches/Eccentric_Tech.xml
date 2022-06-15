@@ -72,7 +72,7 @@
 					<value>
 						<costList>
 							<Gold>25</Gold>
-							<Steel>1000</Steel>
+							<Steel>100</Steel>
 							<Plasteel>150</Plasteel>
 							<ComponentSpacer>20</ComponentSpacer>
 							<ComponentIndustrial>50</ComponentIndustrial>

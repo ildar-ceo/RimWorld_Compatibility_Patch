@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Mods Compatibility Patch by Emty</name>
-	<author>Emty</author>
-	<packageId>Emty.Compatibility.Patch</packageId>
+	<name>Mods Compatibility Patch by Mr.GoodVine</name>
+	<author>Mr.GoodVine</author>
+	<packageId>GoodVine.Compatibility.Patch</packageId>
 	<description>
 Mods Compatibility Patch
 
@@ -44,14 +44,6 @@ Nyaron race:
 - Add man gender to Nyaron
 - Fix correct names
 - Adds Nyaron to common factions with balance fix
-
-=====
-
-Ancient Species:
-- Adds Elves to common factions with balance fix
-- Remove Neolithic and Medieval Factions
-- Wearable lances
-- Fix apparels temperature and armor
 
 =====
 

@@ -91,18 +91,18 @@
 					</value>
 				</li>
 				
-				<!-- Make enemy Faction -->
+				<!-- Make enemy Faction 
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[defName="NyaronFaction"]</xpath>
 					<value>
 						<naturalEnemy>true</naturalEnemy>
 					</value>
-				</li>
+				</li>-->
 				
-				<!-- Remove Faction -->
+				<!-- Remove Faction 
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/FactionDef[defName="NyaronFactionEnemy"]</xpath>
-				</li>
+				</li>-->
 				
 			</operations>
 		</match>
