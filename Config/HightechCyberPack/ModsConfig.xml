@@ -122,6 +122,7 @@
     <li>ru.vanillaexpanded.vee</li>
     <li>ru.vanillaexpanded.vcef</li>
     <li>regrowth.botr.core</li>
+    <li>regrowth.botr.wastelands</li>
     <li>frozensnowfox.filthvanisheswithrainandtime</li>
     <li>syrchalis.universalfermenter</li>
     <li>dismarzero.vgp.vgpvegetablegarden</li>
@@ -163,7 +164,6 @@
     <li>velc.hatsdisplayselection</li>
     <li>ru.vanillaexpanded.vfea</li>
     <li>spoonshortage.spoonshairmod</li>
-    <li>laast.wantedfacialanim.fr</li>
     <li>albion.sparklingworlds.full</li>
     <li>neronix17.retexture.rimsenalrimhair</li>
     <li>sr.modrimworld.factionalwar</li>
@@ -172,6 +172,7 @@
     <li>goodvine.compatibility.patch</li>
     <li>trinity.runtimegcupdated</li>
     <li>krkr.rocketman</li>
+    <li>ow.ru.regrowth</li>
   </activeMods>
   <knownExpansions>
     <li>ludeon.rimworld.ideology</li>
