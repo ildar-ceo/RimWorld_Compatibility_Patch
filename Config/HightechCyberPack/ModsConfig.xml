@@ -97,7 +97,6 @@
     <li>linkolas.stabilize</li>
     <li>scherub.skilledstonecutting</li>
     <li>vanillaexpanded.vhe</li>
-    <li>vanillaexpanded.achievements</li>
     <li>vanillaexpanded.vcef</li>
     <li>vanillaexpanded.vaeaccessories</li>
     <li>vanillaexpanded.vanillasocialinteractionsexpanded</li>
@@ -128,7 +127,6 @@
     <li>dismarzero.vgp.vgpvegetablegarden</li>
     <li>dismarzero.vgp.vgpgardengourmet</li>
     <li>dismarzero.vgp.vgpgardenmedicine</li>
-    <li>dismarzero.vgp.vgpgardenfabrics</li>
     <li>dismarzero.vgp.vgpgardendrinksuf</li>
     <li>gekasid.vgp.vgpvegetablegarden.rus</li>
     <li>roolo.giddyupcore</li>
@@ -153,11 +151,7 @@
     <li>ghxx.techadvancing</li>
     <li>aelanna.eccentrictech.core</li>
     <li>aelanna.eccentrictech.angelapparel</li>
-    <li>aelanna.eccentrictech.cosmetics2</li>
-    <li>aelanna.eccentrictech.advancedshields</li>
-    <li>aelanna.eccentrictech.fusionpower</li>
     <li>aelanna.eccentricextras.angelhairs</li>
-    <li>aelanna.eccentrictech.foxysarmory2</li>
     <li>aelanna.eccentricextras.signaturegear</li>
     <li>inglix.fasterbiosculptingpod</li>
     <li>mlie.morefactioninteraction</li>
@@ -166,23 +160,16 @@
     <li>telardo.romanceontherim</li>
     <li>ru.telardo.romanceontherim</li>
     <li>vanillaexpanded.vfea</li>
-    <li>haduki.ancientspecies</li>
     <li>velc.hatsdisplayselection</li>
     <li>ru.vanillaexpanded.vfea</li>
-    <li>kiricordv1/3.ancientspecies</li>
     <li>spoonshortage.spoonshairmod</li>
-    <li>nals.facialanimation</li>
-    <li>nals.facialanimationexperimentals</li>
     <li>laast.wantedfacialanim.fr</li>
     <li>albion.sparklingworlds.full</li>
-    <li>troopersmith1.permafrost1.1</li>
     <li>neronix17.retexture.rimsenalrimhair</li>
     <li>sr.modrimworld.factionalwar</li>
     <li>rimsenal.evp</li>
     <li>ru.rimsenal.evp</li>
-    <li>unknown.perevod.rimsenal.core</li>
-    <li>rimsenal.core</li>
-    <li>vanillaexpanded.vwe</li>
+    <li>goodvine.compatibility.patch</li>
     <li>trinity.runtimegcupdated</li>
     <li>krkr.rocketman</li>
   </activeMods>
