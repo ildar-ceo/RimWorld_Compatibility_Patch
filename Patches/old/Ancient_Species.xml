@@ -5,7 +5,7 @@
 	<!-- ID: 2154569778 -->
 	<!-- ID: 2804434524 - Translate -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Ancient Species</li></mods>
+		<mods><li>Ancient Species old</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 				
@@ -238,7 +238,7 @@
 	
 	<!-- Apparel -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Ancient Species</li></mods>
+		<mods><li>Ancient Species old</li></mods>
 		
 		<match Class="PatchOperationSequence">
 			<operations>
@@ -682,7 +682,7 @@
 	
 	<!-- Apparel -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Ancient Species</li></mods>
+		<mods><li>Ancient Species old</li></mods>
 		
 		<match Class="PatchOperationFindMod">
 			<mods><li>Royalty</li></mods>
@@ -706,7 +706,7 @@
 	
 	<!-- Weapons -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Ancient Species</li></mods>
+		<mods><li>Ancient Species old</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 			
@@ -722,7 +722,7 @@
 	
 	<!-- ID: 2154569778 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Ancient Species</li></mods>
+		<mods><li>Ancient Species old</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 				
@@ -912,7 +912,7 @@
 	
 	<!-- Adds Ancient Species to Royalty factions -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Ancient Species</li></mods>
+		<mods><li>Ancient Species old</li></mods>
 		
 		<match Class="PatchOperationFindMod">
 			<mods><li>Royalty</li></mods>
@@ -965,7 +965,7 @@
 	
 	<!-- Scenario -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Ancient Species</li></mods>
+		<mods><li>Ancient Species old</li></mods>
 		
 		<match Class="PatchOperationSequence">
 			<operations>
