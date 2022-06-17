@@ -125,7 +125,21 @@
 					</value>
 				</li>
 				
+				<!-- Add Rice to default Scenario -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ScenarioDef[defName="Crashlanded" or defName="LostTribe" or defName="TheRichExplorer"]/scenario/parts</xpath>
+					<value>
+						<li Class="ScenPart_StartingThing_Defined">
+							<def>StartingThing_Defined</def>
+							<thingDef>Seed_Rice</thingDef>
+							<count>150</count>
+						</li>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
+	
+	
 </Patch>

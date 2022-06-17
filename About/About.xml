@@ -13,8 +13,8 @@ Common:
 - More trades ships
 - Nerf leather human market price
 - Craftable reinforced barrel
+- Setup start count factions for tribal to zero
 - Disable visual effect in Archotech Structure Studiable
-- Disable tribes raids in end game
 - Wind turbine smaller size
 - Rottable BodyPartNatural
 
@@ -37,6 +37,7 @@ Eccentric Tech:
 
 SeedsPlease:
 - More seeds in traders caravans
+- Add Rice seeds to default scenarios
 
 =====
 
