@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Set Outlander Faction to zero -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/requiredCountAtGameStart</xpath>
+					<value>
+						<requiredCountAtGameStart>0</requiredCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]</xpath>
+					<value>
+						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+					</value>
+				</li>
+				
+				<!-- Set Pirate Faction to zero -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="Pirate"]/requiredCountAtGameStart</xpath>
+					<value>
+						<requiredCountAtGameStart>0</requiredCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="Pirate"]</xpath>
+					<value>
+						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+					</value>
+				</li>
+				
+				<!-- Set Mechanoid Faction to zero -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/requiredCountAtGameStart</xpath>
+					<value>
+						<requiredCountAtGameStart>0</requiredCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]</xpath>
+					<value>
+						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+					</value>
+				</li>
+				
+				<!-- Research fix -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/requiredCountAtGameStart</xpath>
+					<value>
+						<requiredCountAtGameStart>0</requiredCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]</xpath>
+					<value>
+						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
+		<!-- ID: 1854376306 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Nyaron race</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Set Nyaron Faction to zero -->
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="NyaronFaction" or defName="NyaronFactionEnemy"]/requiredCountAtGameStart</xpath>
+						<value>
+							<requiredCountAtGameStart>0</requiredCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="NyaronFaction" or defName="NyaronFactionEnemy"]</xpath>
+						<value>
+							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+						</value>
+					</li>
+					
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+</Patch>

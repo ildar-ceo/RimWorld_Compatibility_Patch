@@ -189,7 +189,7 @@
 	</Operation>
 	-->
 	
-	<!-- Change Pirate -->
+	<!-- Change Pirate
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Royalty</li></mods>
 		<match Class="PatchOperationSequence">
@@ -221,6 +221,6 @@
 			</operations>
 		</match>
 	</Operation>
-	
+	-->
 	
 </Patch>

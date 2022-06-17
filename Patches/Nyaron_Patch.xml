@@ -441,4 +441,252 @@
 		
 	</Operation>
 	
+	
+	<!-- Adds Nyaron to Medieval Overhaul factions -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2553700067 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Medieval Overhaul</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Nyaron_Soldier_Medieval -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs</xpath>
+						<value>
+							<PawnKindDef ParentName="NyaronMilBase">
+								<defName>Nyaron_Soldier_Medieval</defName>
+								<label>Nyaron Soldier</label>
+								<combatPower>100</combatPower>
+								<itemQuality>Good</itemQuality>
+								<minGenerationAge>15</minGenerationAge>
+								<gearHealthRange>0.7~0.9</gearHealthRange>
+								<apparelMoney>450~1000</apparelMoney>
+								<weaponMoney>200~550</weaponMoney>
+								<initialWillRange>2~4</initialWillRange>
+								<initialResistanceRange>14~22</initialResistanceRange>
+								<apparelTags>
+									<li>DankPyon_BrigandRaider</li>
+									<li>DankPyon_BrigandThug</li>
+									<li>DankPyon_PeasantHelmet</li>
+								</apparelTags>
+								<weaponTags>
+									<li>DankPyon_HuntingBow</li>
+									<li>DankPyon_GreatBow</li>
+									<li>DankPyon_Crossbow</li>
+									<li>DankPyon_ArmingSword</li>
+									<li>DankPyon_MorningStar</li>
+									<li>DankPyon_MilitaryPick</li>
+									<li>DankPyon_Handaxe</li>
+									<li>DankPyon_Falchion</li>
+									<li>DankPyon_BoarSpear</li>
+									<li>DankPyon_Billhook</li>
+									<li>DankPyon_TwoHandedMallet</li>
+									<li>DankPyon_TwoHandedMace</li>
+									<li>DankPyon_Longsword</li>
+									<li>DankPyon_MorningStar</li>
+									<li>DankPyon_Bludgeon</li>
+									<li>DankPyon_Pitchfork</li>
+									<li>DankPyon_HookedBlade</li>
+									<li>DankPyon_Pickaxe</li>
+									<li>DankPyon_Hatchet</li>
+									<li>DankPyon_WoodcuttersAxe</li>
+									<li>DankPyon_Goedendag</li>
+									<li>DankPyon_MilitiaSpear</li>
+								</weaponTags>
+								<techHediffsMoney>50~2000</techHediffsMoney>
+								<combatEnhancingDrugsCount>
+									<min>0</min>
+									<max>1</max>
+								</combatEnhancingDrugsCount>
+								<techHediffsTags>
+									<li>Poor</li>
+								</techHediffsTags>
+								<skills>
+									<li>
+										<skill>Shooting</skill>
+										<range>4~12</range>
+									</li>
+									<li>
+										<skill>Melee</skill>
+										<range>4~15</range>
+									</li>
+								</skills>
+								<inventoryOptions>
+									<skipChance>0.8</skipChance>
+									<subOptionsChooseOne>
+										<li>
+											<thingDef>Silver</thingDef>
+											<countRange>
+												<min>50</min>
+												<max>200</max>
+											</countRange>
+										</li>
+										<li>
+											<thingDef>MedicineHerbal</thingDef>
+											<countRange>
+												<min>1</min>
+												<max>2</max>
+											</countRange>
+										</li>
+									</subOptionsChooseOne>
+								</inventoryOptions>
+							</PawnKindDef>
+						</value>
+					</li>
+					
+					<!-- Combat -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+						<value>
+							<Nyaron_Soldier_Medieval>30</Nyaron_Soldier_Medieval>
+						</value>
+					</li>
+					
+					<!-- Peaceful -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[kindDef="Peaceful"]/options</xpath>
+						<value>
+							<Nyaron_Soldier_Medieval>20</Nyaron_Soldier_Medieval>
+						</value>
+					</li>
+					
+					<!-- Trader -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+						<value>
+							<Nyaron_Soldier_Medieval>10</Nyaron_Soldier_Medieval>
+						</value>
+					</li>
+					
+					<!-- Settlement -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier_Medieval>20</Nyaron_Soldier_Medieval>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- Adds Nyaron to Vanilla Factions Expanded - Vikings factions -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2231295285 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Vikings</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Nyaron_Soldier_Medieval -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs</xpath>
+						<value>
+							<PawnKindDef ParentName="NyaronMilBase">
+								<defName>Nyaron_Soldier_Viking</defName>
+								<label>Nyaron Viking</label>
+								<combatPower>100</combatPower>
+								<itemQuality>Good</itemQuality>
+								<minGenerationAge>15</minGenerationAge>
+								<gearHealthRange>0.7~0.9</gearHealthRange>
+								<apparelMoney>450~1000</apparelMoney>
+								<weaponMoney>200~550</weaponMoney>
+								<initialWillRange>2~4</initialWillRange>
+								<initialResistanceRange>14~22</initialResistanceRange>
+								<apparelTags>
+									<li>Apparel_VikingGuardian</li>
+								</apparelTags>
+								<weaponTags>
+									<li>VikingMeleeBasic</li>
+									<li>VikingMeleeDecent</li>
+									<li>VikingMeleeAdvanced</li>
+									<li>MedievalMeleeDecent</li>
+									<li>VikingRangedBasic</li>
+								</weaponTags>
+								<techHediffsMoney>50~2000</techHediffsMoney>
+								<combatEnhancingDrugsCount>
+									<min>0</min>
+									<max>1</max>
+								</combatEnhancingDrugsCount>
+								<techHediffsTags>
+									<li>Poor</li>
+								</techHediffsTags>
+								<skills>
+									<li>
+										<skill>Shooting</skill>
+										<range>4~12</range>
+									</li>
+									<li>
+										<skill>Melee</skill>
+										<range>4~15</range>
+									</li>
+								</skills>
+								<inventoryOptions>
+									<skipChance>0.8</skipChance>
+									<subOptionsChooseOne>
+										<li>
+											<thingDef>Silver</thingDef>
+											<countRange>
+												<min>50</min>
+												<max>200</max>
+											</countRange>
+										</li>
+										<li>
+											<thingDef>MedicineHerbal</thingDef>
+											<countRange>
+												<min>1</min>
+												<max>2</max>
+											</countRange>
+										</li>
+									</subOptionsChooseOne>
+								</inventoryOptions>
+							</PawnKindDef>
+						</value>
+					</li>
+					
+					<!-- Combat -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEV_VikingsClan" or defName="VFEV_VikingsSlaver"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+						<value>
+							<Nyaron_Soldier_Viking>5</Nyaron_Soldier_Viking>
+						</value>
+					</li>
+					
+					<!-- Peaceful -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEV_VikingsClan" or defName="VFEV_VikingsSlaver"]/pawnGroupMakers/li[kindDef="Peaceful"]/options</xpath>
+						<value>
+							<Nyaron_Soldier_Viking>5</Nyaron_Soldier_Viking>
+						</value>
+					</li>
+					
+					<!-- Trader -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEV_VikingsClan" or defName="VFEV_VikingsSlaver"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+						<value>
+							<Nyaron_Soldier_Viking>5</Nyaron_Soldier_Viking>
+						</value>
+					</li>
+					
+					<!-- Settlement -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEV_VikingsClan" or defName="VFEV_VikingsSlaver"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier_Viking>5</Nyaron_Soldier_Viking>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
 </Patch>
