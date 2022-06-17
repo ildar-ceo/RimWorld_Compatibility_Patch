@@ -168,59 +168,60 @@
 			<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
 		</value>
 	</Operation>
-	<!--
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/FactionDef[@Name="TribeBase"]/canMakeRandomly</xpath>
-		<value>
-			<canMakeRandomly>false</canMakeRandomly>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/FactionDef[defName="TribeCivil" or defName="TribeRough" or defName="TribeSavage"]</xpath>
-		<value>
-			<requiredCountAtGameStart>0</requiredCountAtGameStart>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/FactionDef[defName="TribeCivil" or defName="TribeRough" or defName="TribeSavage"]</xpath>
-		<value>
-			<canMakeRandomly>false</canMakeRandomly>
-		</value>
-	</Operation>
-	-->
 	
-	<!-- Change Pirate
-	<Operation Class="PatchOperationFindMod">
-		<mods><li>Royalty</li></mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/FactionDef[defName="Pirate"]/requiredCountAtGameStart</xpath>
-					<value>
-						<requiredCountAtGameStart>0</requiredCountAtGameStart>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Pirate"]</xpath>
-					<value>
-						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/FactionDef[defName="CannibalPirate"]/requiredCountAtGameStart</xpath>
-					<value>
-						<requiredCountAtGameStart>1</requiredCountAtGameStart>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/FactionDef[defName="CannibalPirate"]/startingCountAtWorldCreation</xpath>
-					<value>
-						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
-					</value>
-				</li>
-			</operations>
-		</match>
+	<!-- Add AIPersonaCore -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<ResearchProjectDef ParentName="ShipResearchProjectBase">
+				<defName>CreateComputerCore</defName>
+				<label>AI Computer Core</label>
+				<description>Create AI Computer Core</description>
+				<baseCost>2000</baseCost>
+				<techLevel>Spacer</techLevel>
+				<prerequisites>
+					<li>ShipComputerCore</li>
+				</prerequisites>
+			</ResearchProjectDef>
+		</value>
 	</Operation>
-	-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="AIPersonaCore"]</xpath>
+		<value>
+			<costList>
+				<Gold>25</Gold>
+				<Steel>100</Steel>
+				<Plasteel>150</Plasteel>
+				<ComponentSpacer>20</ComponentSpacer>
+				<ComponentIndustrial>50</ComponentIndustrial>
+			</costList>
+			<recipeMaker>
+				<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+				<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+				<workSkill>Crafting</workSkill>
+				<effectWorking>Smith</effectWorking>
+				<researchPrerequisite>CreateComputerCore</researchPrerequisite>
+				<recipeUsers>
+					<li>FabricationBench</li>
+				</recipeUsers>
+				<skillRequirements>
+					<Crafting>12</Crafting>
+					<Intellectual>5</Intellectual>
+				</skillRequirements>
+			</recipeMaker>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="AIPersonaCore"]/statBases/MarketValue</xpath>
+		<value>
+			<MarketValue>15000</MarketValue>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="AIPersonaCore"]/statBases</xpath>
+		<value>
+			<WorkToMake>15000</WorkToMake>
+		</value>
+	</Operation>
 	
 </Patch>

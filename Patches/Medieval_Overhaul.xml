@@ -51,16 +51,28 @@
 				</li>
 				
 				<!-- Research fix -->
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/requiredCountAtGameStart</xpath>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="FlakArmor"]/prerequisites</xpath>
 					<value>
-						<requiredCountAtGameStart>0</requiredCountAtGameStart>
+						<li>PlateArmor</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]</xpath>
+					<xpath>/Defs/ResearchProjectDef[defName="Gunsmithing"]/prerequisites</xpath>
 					<value>
-						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+						<li>Greatbow</li>
+						<li>DankPyon_Steel</li>
+						<li>DankPyon_Gunpowder</li>
+						<li>DankPyon_MilitarySpears</li>
+						<li>DankPyon_MilitaryPolearms</li>
+						<li>DankPyon_MilitarySwords</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="Electricity"]/prerequisites</xpath>
+					<value>
+						<li>DankPyon_Alchemy</li>
+						<li>DankPyon_Steel</li>
 					</value>
 				</li>
 				
@@ -92,7 +104,6 @@
 							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
 						</value>
 					</li>
-					
 					
 				</operations>
 			</match>

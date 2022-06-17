@@ -5,6 +5,7 @@
 	<packageId>GoodVine.Compatibility.Patch</packageId>
 	<description>
 Mods Compatibility Patch
+Version: 1.1
 
 =====
 
@@ -17,6 +18,7 @@ Common:
 - Disable visual effect in Archotech Structure Studiable
 - Wind turbine smaller size
 - Rottable BodyPartNatural
+- Craftable AI Core
 
 =====
 
@@ -28,8 +30,15 @@ VGP:
 
 =====
 
+Medieval Overhaul:
+- Nyaron race support
+- Disable default factions by default
+- Disable Mechanoids
+- Research fix
+
+=====
+
 Eccentric Tech:
-- Craftable AI Computer Core
 - Research ship needs Aurora Core
 - Add Angel Apparel to traders
 
@@ -96,7 +105,10 @@ PsiTech:
 		<li>dismarzero.VGP.VGPGardenDrinksUF</li>
 		<li>dismarzero.VGP.VGPGardenDrinks</li>
 		<li>gekasid.VGP.VGPVegetableGarden.rus</li>
+		<li>syrchalis.processor.framework</li>
 		<li>syrchalis.universalfermenter</li>
+		<li>DankPyon.Medieval.Overhaul</li>
+		<li>OskarPotocki.VFE.Vikings</li>
 		<li>visilt.travelthroughwater</li>
 		<li>Haduki.AncientSpecies</li>
 		<li>Farmradish.Nyaron</li>
