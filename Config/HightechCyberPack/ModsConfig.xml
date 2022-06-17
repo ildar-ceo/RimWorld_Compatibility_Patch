@@ -111,18 +111,27 @@
     <li>vanillaexpanded.vfefarming</li>
     <li>vanillaexpanded.vfesecurity</li>
     <li>vanillaexpanded.vfemedical</li>
+    <li>vanillaexpanded.vfea</li>
     <li>vanillaexpanded.vee</li>
+    <li>vanillaexpanded.vanillatradingexpanded</li>
+    <li>vanillaexpanded.vanillatraitsexpanded</li>
     <li>ru.vie</li>
     <li>inoshishi3.vef.ruspatch</li>
     <li>inoshishi3.vfe.farmingruspatch</li>
     <li>inoshishi3.vfe.medicalruspatch</li>
     <li>inoshishi3.vfe.powerruspatch</li>
+    <li>inoshishi3.vfe.securityruspatch</li>
     <li>ru.aaa</li>
     <li>ru.vanillasocialinteractionsexpanded</li>
     <li>ru.vanillaexpanded.vee</li>
     <li>ru.vanillaexpanded.vcef</li>
+    <li>ow.ru.trading</li>
+    <li>ru.vfe.ancients</li>
+    <li>ru.vanillaexpanded.vanillatraitsexpanded</li>
+    <li>ru.vanillaexpanded.vhe</li>
     <li>regrowth.botr.core</li>
     <li>regrowth.botr.wastelands</li>
+    <li>ow.ru.regrowth</li>
     <li>frozensnowfox.filthvanisheswithrainandtime</li>
     <li>syrchalis.universalfermenter</li>
     <li>dismarzero.vgp.vgpvegetablegarden</li>
@@ -160,22 +169,26 @@
     <li>mlie.omnicoredrill</li>
     <li>telardo.romanceontherim</li>
     <li>ru.telardo.romanceontherim</li>
-    <li>vanillaexpanded.vfea</li>
     <li>velc.hatsdisplayselection</li>
-    <li>ru.vanillaexpanded.vfea</li>
     <li>spoonshortage.spoonshairmod</li>
     <li>albion.sparklingworlds.full</li>
     <li>neronix17.retexture.rimsenalrimhair</li>
-    <li>sr.modrimworld.factionalwar</li>
+    <li>rimsenal.feral</li>
     <li>rimsenal.evp</li>
+    <li>ru.rimsenal.feral</li>
     <li>ru.rimsenal.evp</li>
-    <li>nals.facialanimation</li>
-    <li>nals.facialanimationexperimentals</li>
-    <li>laast.wantedfacialanim.fr</li>
+    <li>vanillaexpanded.vwe</li>
+    <li>canguro.mechanoid</li>
+    <li>mlie.rachelsanimehairmodyo</li>
+    <li>mlie.expandedincidents</li>
+    <li>iforgotmysocks.caravanadventures</li>
+    <li>ru.iforgotmysocks.caravanadventures</li>
+    <li>sr.modrimworld.factionalwar</li>
+    <li>syrchalis.scarremoval</li>
+    <li>dimonsever000.psionicplus.specific</li>
     <li>goodvine.compatibility.patch</li>
     <li>trinity.runtimegcupdated</li>
     <li>krkr.rocketman</li>
-    <li>ow.ru.regrowth</li>
   </activeMods>
   <knownExpansions>
     <li>ludeon.rimworld.ideology</li>
