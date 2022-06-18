@@ -8,7 +8,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
-				<!-- Set Outlander Faction to zero -->
+				<!-- Set Outlander Faction to zero
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/requiredCountAtGameStart</xpath>
 					<value>
@@ -21,18 +21,33 @@
 						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
 					</value>
 				</li>
+				-->
 				
-				<!-- Set Pirate Faction to zero -->
+				<!-- Set NobleHouse Faction to zero -->
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/FactionDef[defName="Pirate"]/requiredCountAtGameStart</xpath>
+					<xpath>/Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/requiredCountAtGameStart</xpath>
 					<value>
 						<requiredCountAtGameStart>0</requiredCountAtGameStart>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Pirate"]</xpath>
+					<xpath>/Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]</xpath>
 					<value>
 						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+					</value>
+				</li>
+				
+				<!-- Add DankPyon_NobleHouseCivil Faction -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil"]</xpath>
+					<value>
+						<requiredCountAtGameStart>1</requiredCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil"]</xpath>
+					<value>
+						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
 					</value>
 				</li>
 				
@@ -91,7 +106,7 @@
 			<match Class="PatchOperationSequence">
 				<operations>
 					
-					<!-- Set Nyaron Faction to zero -->
+					<!-- Set Nyaron Faction to zero 
 					<li Class="PatchOperationReplace">
 						<xpath>/Defs/FactionDef[defName="NyaronFaction" or defName="NyaronFactionEnemy"]/requiredCountAtGameStart</xpath>
 						<value>
@@ -102,6 +117,136 @@
 						<xpath>/Defs/FactionDef[defName="NyaronFaction" or defName="NyaronFactionEnemy"]</xpath>
 						<value>
 							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+						</value>
+					</li>
+					-->
+					<!-- Add NyaronFaction Faction
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="NyaronFaction"]/requiredCountAtGameStart</xpath>
+						<value>
+							<requiredCountAtGameStart>1</requiredCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="NyaronFaction"]/startingCountAtWorldCreation</xpath>
+						<value>
+							<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+						</value>
+					</li>
+					-->
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Ideology</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Set Pirate Faction to zero -->
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="Pirate"]/requiredCountAtGameStart</xpath>
+						<value>
+							<requiredCountAtGameStart>0</requiredCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Pirate"]</xpath>
+						<value>
+							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+						</value>
+					</li>
+					
+					<!-- Set CannibalPirate Faction to 1 -->
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="CannibalPirate"]/requiredCountAtGameStart</xpath>
+						<value>
+							<requiredCountAtGameStart>1</requiredCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="CannibalPirate"]/startingCountAtWorldCreation</xpath>
+						<value>
+							<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
+		<!-- ID: 2787850474 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Classical</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Set VFEC_RepublicBase Faction to zero -->
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[@Name="VFEC_RepublicBase"]/requiredCountAtGameStart</xpath>
+						<value>
+							<requiredCountAtGameStart>0</requiredCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[@Name="VFEC_RepublicBase"]</xpath>
+						<value>
+							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+						</value>
+					</li>
+					
+					<!-- Add VFEC_CentralRepublic Faction -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEC_CentralRepublic"]</xpath>
+						<value>
+							<requiredCountAtGameStart>1</requiredCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEC_CentralRepublic"]</xpath>
+						<value>
+							<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+						</value>
+					</li>
+					
+					<!-- Senators replace -->
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="VFEC_CentralRepublic"]/modExtensions/li[@Class="VFEC.Senators.FactionExtension_SenatorInfo"]</xpath>
+						<value>
+							<li Class="VFEC.Senators.FactionExtension_SenatorInfo">
+								<numSenators>5</numSenators>
+								<senatorPerks>
+									<li>CarpeDiem</li>
+									<li>ArsLongaVitaBrevis</li>
+									<li>MensSanaInCorporeSano</li>
+									<li>SiVisPacemParaBellum</li>
+									<li>NaturaNonConstristatur</li>
+								</senatorPerks>
+								<senatorResearch>
+									<li>VFEC_TemperatureControl</li>
+									<li>VFEC_Thermaebath</li>
+									<li>VFEC_CementMaking</li>
+									<li>VFEC_CenturionArmor</li>
+									<li>VFEC_TyrianProduction</li>
+								</senatorResearch>
+								<finalResearch>VFEC_Beacons</finalResearch>
+								<finalPerk>Auxilia</finalPerk>
+								<perkBGPath>UI/Perks/PerkBG_CentralRepublic</perkBGPath>
+							</li>
 						</value>
 					</li>
 					

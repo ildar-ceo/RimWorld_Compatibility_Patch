@@ -316,7 +316,6 @@
 					</value>
 				</li>
 				
-				
 				<!-- Pirate Combat 100, Normal fights, ranged with melee mix-ins -->
 				<li Class="PatchOperationAdd">
 		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[1]/options</xpath>
@@ -539,7 +538,7 @@
 					
 					<!-- Combat -->
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce" or defName="DankPyon_NobleHouseSavage"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
 						<value>
 							<Nyaron_Soldier_Medieval>30</Nyaron_Soldier_Medieval>
 						</value>
@@ -547,7 +546,7 @@
 					
 					<!-- Peaceful -->
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[kindDef="Peaceful"]/options</xpath>
+						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce" or defName="DankPyon_NobleHouseSavage"]/pawnGroupMakers/li[kindDef="Peaceful"]/options</xpath>
 						<value>
 							<Nyaron_Soldier_Medieval>20</Nyaron_Soldier_Medieval>
 						</value>
@@ -555,7 +554,7 @@
 					
 					<!-- Trader -->
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce" or defName="DankPyon_NobleHouseSavage"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
 						<value>
 							<Nyaron_Soldier_Medieval>10</Nyaron_Soldier_Medieval>
 						</value>
@@ -563,9 +562,17 @@
 					
 					<!-- Settlement -->
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce" or defName="DankPyon_NobleHouseSavage"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
 						<value>
 							<Nyaron_Soldier_Medieval>20</Nyaron_Soldier_Medieval>
+						</value>
+					</li>
+					
+					<!-- Combat -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[@Name="DankPyon_BrigandFactionBase"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+						<value>
+							<Nyaron_Soldier_Medieval>25</Nyaron_Soldier_Medieval>
 						</value>
 					</li>
 					
