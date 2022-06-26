@@ -3,6 +3,7 @@
 <Patch>
 	
 	<!-- ID: 2553700067 -->
+	<!-- ID: 2812992901 Russian Translate -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Medieval Overhaul</li></mods>
 		<match Class="PatchOperationSequence">
@@ -88,6 +89,44 @@
 					<value>
 						<li>DankPyon_Alchemy</li>
 						<li>DankPyon_Steel</li>
+					</value>
+				</li>
+				
+				<!-- Storage -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="DankPyon_RusticChest" or defName="DankPyon_MetalStrongbox" or defName="DankPyon_RoyalChest"]/comps</xpath>
+					<value>
+						<li Class="LWM.DeepStorage.Properties">
+							<minNumberStacks>1</minNumberStacks>
+							<maxNumberStacks>4</maxNumberStacks>
+							<maxMassOfStoredItem>20</maxMassOfStoredItem>
+							<timeStoringTakes>20</timeStoringTakes>
+							<showContents>true</showContents>
+							<overlayType>SumOfAllItems</overlayType>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="DankPyon_RusticChest" or defName="DankPyon_MetalStrongbox" or defName="DankPyon_RoyalChest"]/inspectorTabs</xpath>
+					<value>
+						<inspectorTabs>
+							<li>ITab_Storage</li>
+							<li>LWM.DeepStorage.ITab_DeepStorage_Inventory</li>
+						</inspectorTabs>
+					</value>
+				</li>
+				
+				<!-- Mineable -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="DankPyon_MineableCoal" or defName="DankPyon_MineableSalt" or defName="DankPyon_MineableGold" or defName="DankPyon_MineableIron"]/building/mineableYield</xpath>
+					<value>
+						<mineableYield>65</mineableYield>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="DankPyon_MineableCitrine" or defName="DankPyon_MineableAmber" or defName="DankPyon_MineableOnyx" or defName="DankPyon_MineableEmerald" or defName="DankPyon_MineableSapphire" or defName="DankPyon_MineableRuby"]/building/mineableYield</xpath>
+					<value>
+						<mineableYield>25</mineableYield>
 					</value>
 				</li>
 				
@@ -190,10 +229,47 @@
 		<mods><li>Medieval Overhaul</li></mods>
 		
 		<!-- ID: 2787850474 -->
+		<!-- ID: 2790332207 Russian -->
 		<match Class="PatchOperationFindMod">
 			<mods><li>Vanilla Factions Expanded - Classical</li></mods>
 			<match Class="PatchOperationSequence">
 				<operations>
+					
+					<!-- Fix buildings production -->
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="VFEC_MeatDryingRack"]/costList</xpath>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VFEC_MeatDryingRack"]</xpath>
+						<value>
+							<costStuffCount>75</costStuffCount>
+							<stuffCategories>
+								<li>Metallic</li>
+								<li>Woody</li>
+							</stuffCategories>
+						</value>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="VFEC_CraftingBench"]/costList</xpath>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VFEC_CraftingBench"]</xpath>
+						<value>
+							<costStuffCount>75</costStuffCount>
+							<stuffCategories>
+								<li>Metallic</li>
+								<li>Woody</li>
+							</stuffCategories>
+						</value>
+					</li>
+					
+					<!-- Make Bronze -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="DankPyon_Furnace"]/recipes</xpath>
+						<value>
+							<li>VFEC_Make_Bronze</li>
+						</value>
+					</li>
 					
 					<!-- Set VFEC_RepublicBase Faction to zero -->
 					<li Class="PatchOperationReplace">

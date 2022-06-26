@@ -169,6 +169,20 @@
 		</value>
 	</Operation>
 	
+	<!-- Mineable -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="MineableSteel" or defName="MineableSilver" or defName="MineableGold" or defName="MineableUranium" or defName="MineablePlasteel"]/building/mineableYield</xpath>
+		<value>
+			<mineableYield>65</mineableYield>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="MineableComponentsIndustrial"]/building/mineableYield</xpath>
+		<value>
+			<mineableYield>7</mineableYield>
+		</value>
+	</Operation>
+	
 	<!-- Add AIPersonaCore -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs</xpath>
