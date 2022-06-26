@@ -228,6 +228,37 @@
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Medieval Overhaul</li></mods>
 		
+		<!-- ID: 1582570547 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Combat Extended Guns</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="CE_Gun_Crossbow"]/costList</xpath>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="CE_Gun_Crossbow"]</xpath>
+						<value>
+							<costStuffCount>75</costStuffCount>
+							<stuffCategories>
+								<li>Metallic</li>
+								<li>Woody</li>
+							</stuffCategories>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
 		<!-- ID: 2787850474 -->
 		<!-- ID: 2790332207 Russian -->
 		<match Class="PatchOperationFindMod">
