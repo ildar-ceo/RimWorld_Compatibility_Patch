@@ -14,6 +14,25 @@
 					</value>
 				</li>
 				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Outlander_PirateMerchant" or defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier" or defName="Orbital_BulkGoods" or defName="Orbital_CombatSupplier" or defName="Orbital_Exotic" or defName="Orbital_PirateMerchant"]/stockGenerators/li[tradeTag="CE_Ammo"]/thingDefCountRange</xpath>
+					<value>
+						<thingDefCountRange>
+							<min>5</min>
+							<max>12</max>
+						</thingDefCountRange>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Outlander_PirateMerchant" or defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier"]/stockGenerators/li[tradeTag="CE_HeavyAmmo"]/thingDefCountRange</xpath>
+					<value>
+						<thingDefCountRange>
+							<min>1</min>
+							<max>2</max>
+						</thingDefCountRange>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>

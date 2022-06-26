@@ -696,4 +696,48 @@
 	</Operation>
 	
 	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 1631756268 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Combat Extended</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>CE_Ammo</tradeTag>
+								<countRange>
+									<min>200</min>
+									<max>400</max>
+								</countRange>
+								<thingDefCountRange>
+									<min>5</min>
+									<max>12</max>
+								</thingDefCountRange>
+							</li>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>CE_HeavyAmmo</tradeTag>
+								<countRange>
+									<min>5</min>
+									<max>20</max>
+								</countRange>
+								<thingDefCountRange>
+									<min>1</min>
+									<max>2</max>
+								</thingDefCountRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
 </Patch>
