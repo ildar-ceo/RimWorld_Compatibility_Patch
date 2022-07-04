@@ -132,7 +132,7 @@
 				
 				<!-- Disable CookMealFine and CookMealLavish -->
 				<li Class="PatchOperationRemove">
-					<xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove" or defName="DankPyon_RusticCookingTable" or defName="Campfire"]/recipes/li[text()="CookMealSimpleBulk" or text()="CookMealFine" or text()="CookMealFine_Veg" or text()="CookMealFine_Meat" or text()="CookMealLavish" or text()="CookMealLavish_Veg" or text()="CookMealLavish_Meat" or text()="CookMealFineBulk" or text()="CookMealFineBulk_Veg" or text()="CookMealFineBulk_Meat" or text()="CookMealLavishBulk" or text()="CookMealLavishBulk_Veg" or text()="CookMealLavishBulk_Meat"]</xpath>
+					<xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove" or defName="DankPyon_RusticCookingTable" or defName="Campfire"]/recipes/li[text()="CookMealFine" or text()="CookMealFine_Veg" or text()="CookMealFine_Meat" or text()="CookMealLavish" or text()="CookMealLavish_Veg" or text()="CookMealLavish_Meat" or text()="CookMealFineBulk" or text()="CookMealFineBulk_Veg" or text()="CookMealFineBulk_Meat" or text()="CookMealLavishBulk" or text()="CookMealLavishBulk_Veg" or text()="CookMealLavishBulk_Meat"]</xpath>
 				</li>
 				
 			</operations>
