@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
-	
-	<!-- Грибы: RawFungus -->
-	
-	
+		
 	<!-- ID: 2729188290 (VGP Русский) -->
 	<!-- ID: 2007061826 (VGP Vegetable Garden) -->
 	<!-- ID: 2007062982 (VGP Garden Gourmet) -->
@@ -28,6 +25,33 @@
 						<parent>FoodRaw</parent>
 					</value>
 				</li>
+				
+				
+				<!-- Грибы: RawFungus, Rawmushroom -->
+				<!-- RawFungus is Vegetarian Meat -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RawFungus"]</xpath>
+					<value>
+						<thingCategories>
+							<li>MeatRaw</li>
+						</thingCategories>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RawFungus"]/ingestible</xpath>
+					<value>
+						<preferability>RawTasty</preferability>
+						<ingestEffect>EatVegetarian</ingestEffect>
+					</value>
+				</li>
+				<!--
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="RawFungus"]/ingestible/foodType</xpath>
+					<value>
+						<foodType>VegetableOrFruit</foodType>
+					</value>
+				</li>
+				-->
 				
 				
 				<!-- Replace ingredients for Stirfry and bowlstew -->
@@ -1225,6 +1249,7 @@
 									<thingDefs>
 										<li>Rawtofu</li>
 										<li>Rawmushroom</li>
+										<li>RawFungus</li>
 										<li>RawRedLentil</li>
 									</thingDefs>
 								</filter>
@@ -1247,6 +1272,7 @@
 								<li>RawOlive</li>
 								<li>Rawtofu</li>
 								<li>Rawmushroom</li>
+								<li>RawFungus</li>
 								<li>RawRedLentil</li>
 							</thingDefs>
 							<categories>
@@ -1273,6 +1299,7 @@
 								<li>RawOlive</li>
 								<li>Rawtofu</li>
 								<li>Rawmushroom</li>
+								<li>RawFungus</li>
 								<li>RawRedLentil</li>
 							</thingDefs>
 							<categories>
@@ -1307,6 +1334,7 @@
 									<thingDefs>
 										<li>Rawtofu</li>
 										<li>Rawmushroom</li>
+										<li>RawFungus</li>
 										<li>RawRedLentil</li>
 									</thingDefs>
 									<categories>
@@ -1327,6 +1355,7 @@
 								<li>RawRice</li>
 								<li>Rawtofu</li>
 								<li>Rawmushroom</li>
+								<li>RawFungus</li>
 								<li>RawRedLentil</li>
 							</thingDefs>
 							<categories>
@@ -1347,6 +1376,7 @@
 								<li>RawRice</li>
 								<li>Rawtofu</li>
 								<li>Rawmushroom</li>
+								<li>RawFungus</li>
 								<li>RawRedLentil</li>
 							</thingDefs>
 							<categories>

@@ -8,7 +8,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
-				<!-- RecipeBasicProsthesis -->
+				<!-- RecipeBasicProsthesis
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/RecipeDef[@Name="RecipeBasicProsthesis"]/recipeUsers</xpath>
 					<value>
@@ -21,15 +21,22 @@
 						<li>TableMachining</li>
 					</value>
 				</li>
-				
-				<!-- RecipeSimpleProsthesis -->
+				-->
+				<!-- RecipeSimpleProsthesis
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[@Name="Simple"]/recipeMaker/recipeUsers</xpath>
 					<value>
 						<li>TableMachining</li>
 					</value>
 				</li>
+				-->
 				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="TableProsthetics"]/costList/Plasteel</xpath>
+					<value>
+						<Plasteel>50</Plasteel>
+					</value>
+				</li>
 				
 			</operations>
 		</match>

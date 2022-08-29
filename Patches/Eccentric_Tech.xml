@@ -1,7 +1,54 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Patch>
-
+	
+	<!-- ID: 2552623545 (Eccentric Tech - Core) -->
+	<!-- ID: 2479560240 (Rim-Effect: Core) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Eccentric Tech - Core</li>
+			<li>Rim-Effect: Core</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Fix ships craft. Need Aurora core -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="ShipBasics"]/baseCost</xpath>
+					<value>
+						<baseCost>2000</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="ShipEngine"]/baseCost</xpath>
+					<value>
+						<baseCost>16000</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="ShipReactor"]/baseCost</xpath>
+					<value>
+						<baseCost>32000</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="ShipSensorCluster"]/baseCost</xpath>
+					<value>
+						<baseCost>16000</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="ShipCryptosleep"]/baseCost</xpath>
+					<value>
+						<baseCost>5000</baseCost>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
 	<!-- ID: 2552623545 (Eccentric Tech - Core) -->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
@@ -20,37 +67,6 @@
 						</requiredResearchFacilities>
 					</value>
 				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ResearchProjectDef[defName="ShipBasics"]/baseCost</xpath>
-					<value>
-						<baseCost>2000</baseCost>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ResearchProjectDef[defName="ShipEngine"]/baseCost</xpath>
-					<value>
-						<baseCost>8000</baseCost>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ResearchProjectDef[defName="ShipReactor"]/baseCost</xpath>
-					<value>
-						<baseCost>18000</baseCost>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ResearchProjectDef[defName="ShipSensorCluster"]/baseCost</xpath>
-					<value>
-						<baseCost>8000</baseCost>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ResearchProjectDef[defName="ShipCryptosleep"]/baseCost</xpath>
-					<value>
-						<baseCost>5000</baseCost>
-					</value>
-				</li>
-				
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/ThingDef[defName="Eccentric_HexCell"]/tradeability</xpath>
 				</li>
