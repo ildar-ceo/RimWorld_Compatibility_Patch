@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic"]/stockGenerators/li[thingDef="ComponentIndustrial"]</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>30~50</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic"]/stockGenerators/li[thingDef="ComponentSpacer"]</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentSpacer</thingDef>
+				<countRange>5~20</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators/li[categoryDef="Drugs"]</xpath>
+		<value>
+			<li Class="StockGenerator_Category">
+				<categoryDef>Drugs</categoryDef>
+				<thingDefCountRange>4~9</thingDefCountRange>
+				<totalPriceRange>2000~3000</totalPriceRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>HiTechArmor</tradeTag>
+				<thingDefCountRange>0~1</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>HiTechArmor</tradeTag>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_BuySingleDef">
+				<thingDef>Chemfuel</thingDef>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MealSurvivalPack</thingDef>
+				<countRange>10~30</countRange>
+			</li>
+		</value>
+	</Operation>
+	<!--
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StorytellerDef[defName="Cassandra" or defName="Phoebe"]/comps/li[incident="TraderCaravanArrival"]</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_FactionInteraction">
+				<incident>TraderCaravanArrival</incident>
+				<minDaysPassed>7</minDaysPassed>
+				<baseIncidentsPerYear>4</baseIncidentsPerYear>
+				<minSpacingDays>10</minSpacingDays>
+				<allowedTargetTags>
+					<li>Map_PlayerHome</li>
+				</allowedTargetTags>
+			</li>
+		</value>
+	</Operation>
+	-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StorytellerDef[defName="Cassandra" or defName="Phoebe"]/comps/li[incident="OrbitalTraderArrival"]</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+				<incident>OrbitalTraderArrival</incident>
+				<onDays>7</onDays>
+				<offDays>2</offDays>
+				<numIncidentsRange>3</numIncidentsRange>
+			</li>
+		</value>
+	</Operation>
+	
+	<!--
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StorytellerDef[defName="Randy"]/comps/li[@Class="StorytellerCompProperties_RandomMain"]/categoryWeights/OrbitalVisitor</xpath>
+		<value>
+			<OrbitalVisitor>0</OrbitalVisitor>
+		</value>
+	</Operation>
+	-->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StorytellerDef[defName="Randy"]/comps/li[@Class="StorytellerCompProperties_RandomMain"]/categoryWeights/FactionArrival</xpath>
+		<value>
+			<FactionArrival>1</FactionArrival>
+		</value>
+	</Operation>
+	
+	<!--
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/StorytellerDef[defName="Randy"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+				<incident>TraderCaravanArrival</incident>
+				<onDays>10</onDays>
+				<offDays>5</offDays>
+				<minSpacingDays>10</minSpacingDays>
+				<numIncidentsRange>1</numIncidentsRange>
+				<allowedTargetTags>
+					<li>Map_PlayerHome</li>
+				</allowedTargetTags>
+			</li>
+		</value>
+	</Operation>
+	-->
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/StorytellerDef[defName="Randy"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+				<incident>OrbitalTraderArrival</incident>
+				<onDays>10</onDays>
+				<offDays>5</offDays>
+				<numIncidentsRange>3</numIncidentsRange>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- ID: 2006535182 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Empire</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="PColony"]</xpath>
+					<value>
+						<caravanTraderKinds></caravanTraderKinds>
+					</value>
+				</li>
+				<!--
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="PColony"]</xpath>
+					<value>
+						<caravanTraderKinds>
+							<li>Caravan_Outlander_BulkGoods</li>
+						</caravanTraderKinds>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="PColony"]</xpath>
+					<value>
+						<visitorTraderKinds>
+							<li>Visitor_Outlander_Standard</li>
+						</visitorTraderKinds>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="PColony"]</xpath>
+					<value>
+						<baseTraderKinds>
+							<li>Base_Outlander_Standard</li>
+						</baseTraderKinds>
+					</value>
+				</li>
+				-->
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1631756268 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Combat Extended</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/TraderKindDef[defName="Caravan_Outlander_PirateMerchant" or defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier" or defName="Orbital_BulkGoods" or defName="Orbital_CombatSupplier" or defName="Orbital_Exotic" or defName="Orbital_PirateMerchant"]/stockGenerators/li[tradeTag="CE_Ammo"]/thingDefCountRange</xpath>
+					<value>
+						<thingDefCountRange>
+							<min>5</min>
+							<max>12</max>
+						</thingDefCountRange>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/TraderKindDef[defName="Caravan_Outlander_PirateMerchant" or defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier"]/stockGenerators/li[tradeTag="CE_HeavyAmmo"]/thingDefCountRange</xpath>
+					<value>
+						<thingDefCountRange>
+							<min>0</min>
+							<max>1</max>
+						</thingDefCountRange>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

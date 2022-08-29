@@ -81,55 +81,6 @@
 		</value>
 	</Operation>
 	
-	<!-- Traders -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic"]/stockGenerators/li[thingDef="ComponentIndustrial"]</xpath>
-		<value>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>ComponentIndustrial</thingDef>
-				<countRange>30~50</countRange>
-			</li>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic"]/stockGenerators/li[thingDef="ComponentSpacer"]</xpath>
-		<value>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>ComponentSpacer</thingDef>
-				<countRange>5~20</countRange>
-			</li>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators/li[categoryDef="Drugs"]</xpath>
-		<value>
-			<li Class="StockGenerator_Category">
-				<categoryDef>Drugs</categoryDef>
-				<thingDefCountRange>4~9</thingDefCountRange>
-				<totalPriceRange>2000~3000</totalPriceRange>
-			</li>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic"]/stockGenerators</xpath>
-		<value>
-			<li Class="StockGenerator_Tag">
-				<tradeTag>HiTechArmor</tradeTag>
-				<thingDefCountRange>4~7</thingDefCountRange>
-				<countRange>1~2</countRange>
-			</li>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic"]/stockGenerators</xpath>
-		<value>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>MealSurvivalPack</thingDef>
-				<countRange>10~30</countRange>
-			</li>
-		</value>
-	</Operation>
-	
 	<!-- Rottable BodyPartNatural -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[@Name="BodyPartNaturalBase"]</xpath>

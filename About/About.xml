@@ -117,6 +117,7 @@ PsiTech:
 		<li>Rikiki.FishIndustry</li>
 		<li>kikohi.cybernetic</li>
 		<li>Ykara.EPOE</li>
+		<li>Saakra.Empire</li>
 	</loadAfter>
 	<loadBefore>
 		<li>trinity.runtimegcupdated</li>
