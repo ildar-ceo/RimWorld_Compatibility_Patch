@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<!-- ID: 2842502659 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Psycasts Expanded</li></mods>
+		
+		<!-- ID: 2679831053 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Combat Psycasts</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Add Stun -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs</xpath>
+						<value>
+							<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+								<defName>CP_Stun</defName>
+								<label>stun</label>
+								<description>Momentarily disrupt motor function in the target's brain, preventing any movement.</description>
+								<iconPath>UI/Abilities/Stun</iconPath>
+								<castTime>100</castTime>
+								<durationTime>400</durationTime>
+								<range>25</range>
+								<targetMode>Pawn</targetMode>
+								<goodwillImpact>-15</goodwillImpact>
+								<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+								<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+								<targetingParameters>
+									<canTargetSelf>True</canTargetSelf>
+									<canTargetHumans>True</canTargetHumans>
+									<canTargetMechs>True</canTargetMechs>
+									<canTargetAnimals>True</canTargetAnimals>
+									<neverTargetIncapacitated>True</neverTargetIncapacitated>
+								</targetingParameters>
+								<modExtensions>
+									<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+										<path>CP_Combat</path>
+										<level>2</level>
+										<order>2</order>
+										<psyfocusCost>0.02</psyfocusCost>
+										<entropyGain>40</entropyGain>
+										<prerequisites>
+											<li>CP_LightPsychicSlug</li>
+										</prerequisites>
+									</li>
+									<li Class="VFECore.Abilities.AbilityExtension_Stun">
+										<stunTicks>120~180</stunTicks>
+									</li>
+								</modExtensions>
+							</VFECore.Abilities.AbilityDef>
+						</value>
+					</li>
+					
+					<!-- Add Vertigo -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs</xpath>
+						<value>
+							<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+								<defName>CP_Vertigo</defName>
+								<label>vertigo</label>
+								<description>Interfere with the spatial orientation sense of everyone near the target point, causing intermittent loss of balance. Flesh creatures will become extremely nauseous as well.</description>
+								<iconPath>UI/Abilities/NauseaPulse</iconPath>
+								<castTime>100</castTime>
+								<durationTime>1200</durationTime>
+								<range>25</range>
+								<targetMode>Pawn</targetMode>
+								<goodwillImpact>-15</goodwillImpact>
+								<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+								<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+								<targetingParameters>
+									<canTargetSelf>True</canTargetSelf>
+									<canTargetPawns>true</canTargetPawns>
+									<canTargetHumans>True</canTargetHumans>
+									<canTargetMechs>True</canTargetMechs>
+									<canTargetAnimals>True</canTargetAnimals>
+									<neverTargetIncapacitated>True</neverTargetIncapacitated>
+								</targetingParameters>
+								<modExtensions>
+									<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+										<path>CP_Combat</path>
+										<level>3</level>
+										<order>2</order>
+										<psyfocusCost>0.05</psyfocusCost>
+										<entropyGain>80</entropyGain>
+										<prerequisites>
+											<li>CP_Stun</li>
+											<li>CP_MediumPsychicSlug</li>
+										</prerequisites>
+									</li>
+									<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+										<hediff>PsychicVertigo</hediff>
+										<durationMultiplier>PsychicSensitivity</durationMultiplier>
+									</li>
+								</modExtensions>
+							</VFECore.Abilities.AbilityDef>
+						</value>
+					</li>
+					
+					<!-- Add Berserk -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs</xpath>
+						<value>
+							<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+								<defName>CP_Berserk</defName>
+								<label>berserk</label>
+								<description>Induce an angry psychosis in the target's mind, causing them to attack anyone nearby.</description>
+								<iconPath>UI/Abilities/Berserk</iconPath>
+								<castTime>100</castTime>
+								<durationTime>1200</durationTime>
+								<range>25</range>
+								<targetMode>Pawn</targetMode>
+								<goodwillImpact>-15</goodwillImpact>
+								<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+								<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+								<targetingParameters>
+									<canTargetSelf>True</canTargetSelf>
+									<canTargetHumans>True</canTargetHumans>
+									<canTargetMechs>True</canTargetMechs>
+									<canTargetAnimals>True</canTargetAnimals>
+									<neverTargetIncapacitated>True</neverTargetIncapacitated>
+								</targetingParameters>
+								<modExtensions>
+									<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+										<path>CP_Combat</path>
+										<level>3</level>
+										<order>3</order>
+										<psyfocusCost>0.05</psyfocusCost>
+										<entropyGain>80</entropyGain>
+										<prerequisites>
+											<li>CP_Stun</li>
+										</prerequisites>
+									</li>
+									<li Class="VanillaPsycastsExpanded.AbilityExtension_GiveMentalState">
+										<stateDef>Berserk</stateDef>
+										<stateDefForMechs>BerserkMechanoid</stateDefForMechs>
+										<durationMultiplier>PsychicSensitivity</durationMultiplier>
+									</li>
+								</modExtensions>
+							</VFECore.Abilities.AbilityDef>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs</xpath>
+						<value>
+							<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+								<defName>CP_Stun_Pulse</defName>
+								<label>stun pulse</label>
+								<description>Momentarily disrupt motor function in the target's brain, preventing any movement.</description>
+								<iconPath>UI/Abilities/Stun</iconPath>
+								<castTime>120</castTime>
+								<durationTime>2400</durationTime>
+								<range>15</range>
+								<radius>2.9</radius>
+								<goodwillImpact>-15</goodwillImpact>
+								<fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+								<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+								<targetMode>Location</targetMode>
+								<hasAoE>true</hasAoE>
+								<targetingParametersForAoE>
+									<canTargetSelf>True</canTargetSelf>
+									<canTargetPawns>true</canTargetPawns>
+									<canTargetHumans>True</canTargetHumans>
+									<canTargetMechs>True</canTargetMechs>
+									<canTargetAnimals>True</canTargetAnimals>
+									<neverTargetIncapacitated>True</neverTargetIncapacitated>
+								</targetingParametersForAoE>
+								<modExtensions>
+									<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+										<path>CP_Combat</path>
+										<level>4</level>
+										<order>3</order>
+										<psyfocusCost>0.1</psyfocusCost>
+										<entropyGain>180</entropyGain>
+										<prerequisites>
+											<li>CP_Berserk</li>
+											<li>CP_Vertigo</li>
+										</prerequisites>
+									</li>
+									<li Class="VFECore.Abilities.AbilityExtension_Stun">
+										<stunTicks>300~400</stunTicks>
+									</li>
+								</modExtensions>
+							</VFECore.Abilities.AbilityDef>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/VFECore.Abilities.AbilityDef[defName="CP_PsychicPellets" or defName="CP_PsychicGrenade"]/modExtensions/li[@Class="VanillaPsycastsExpanded.AbilityExtension_Psycast"]/prerequisites</xpath>
+						<value>
+							<li>CP_Vertigo</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/VFECore.Abilities.AbilityDef[defName="CP_PsychicChoke" or defName="CP_BrainExploder"]/modExtensions/li[@Class="VanillaPsycastsExpanded.AbilityExtension_Psycast"]/prerequisites</xpath>
+						<value>
+							<li>CP_Stun_Pulse</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+</Patch>
