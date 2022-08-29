@@ -24,7 +24,6 @@
     <li>oblitus.animalslogic</li>
     <li>com.bymarcin.architecticons</li>
     <li>dimonsever000.backstoriesplus.specific</li>
-    <li>mlie.roadsoftherim</li>
     <li>fluffy.musicmanager</li>
     <li>name.krypt.rimworld.moddiff</li>
     <li>mlie.dismisstrader</li>
@@ -36,7 +35,6 @@
     <li>mlie.silentdoors</li>
     <li>doug.nojobauthors</li>
     <li>crashm.colorcodedmoodbar.11</li>
-    <li>ryder.satisfiedstorage</li>
     <li>smashphil.loadinginprogress</li>
     <li>smashphil.dropspot</li>
     <li>zylle.morevanillabiomes</li>
@@ -67,7 +65,6 @@
     <li>mlie.turnonoffrepowered</li>
     <li>murmur.walllight</li>
     <li>fluffy.backuppower</li>
-    <li>dracoix.doormat.r12a</li>
     <li>wit.expandedroofing</li>
     <li>5katz.commschat</li>
     <li>meltup.beautifuloutdoors</li>
@@ -75,13 +72,10 @@
     <li>automatic.bionicicons</li>
     <li>ykara.epoe</li>
     <li>kikohi.cybernetic</li>
-    <li>spoonshortage.adogsaidanimalprosthetics</li>
     <li>ratys.rtfuse</li>
-    <li>hatti.qualitybuilder</li>
     <li>brrainz.carefulraids</li>
     <li>notfood.seedsplease</li>
     <li>dubwise.dubsbadhygiene</li>
-    <li>avius.locks</li>
     <li>petetimessix.compacthediffs</li>
     <li>oblitus.housekeeperassistancecat</li>
     <li>nephlite.orbitaltradecolumn</li>
@@ -92,13 +86,15 @@
     <li>mlie.wikirim</li>
     <li>chais.custommusic</li>
     <li>com.yayo.yayoani</li>
+    <li>ceteam.combatextended</li>
+    <li>ceteam.combatextendedguns</li>
+    <li>ceteam.combatextendedmelee</li>
     <li>sandy.rpgstyleinventory.avilmask.revamped</li>
     <li>uuugggg.smartmedicine</li>
     <li>linkolas.stabilize</li>
     <li>scherub.skilledstonecutting</li>
     <li>vanillaexpanded.vhe</li>
     <li>vanillaexpanded.vcef</li>
-    <li>vanillaexpanded.vaeaccessories</li>
     <li>vanillaexpanded.vanillasocialinteractionsexpanded</li>
     <li>oskarpotocki.vanillafactionsexpanded.core</li>
     <li>oskarpotocki.vanillaexpanded.ideologypatches</li>
@@ -111,9 +107,7 @@
     <li>vanillaexpanded.vfefarming</li>
     <li>vanillaexpanded.vfesecurity</li>
     <li>vanillaexpanded.vfemedical</li>
-    <li>vanillaexpanded.vfea</li>
     <li>vanillaexpanded.vee</li>
-    <li>vanillaexpanded.vanillatradingexpanded</li>
     <li>vanillaexpanded.vanillatraitsexpanded</li>
     <li>ru.vie</li>
     <li>inoshishi3.vef.ruspatch</li>
@@ -121,12 +115,9 @@
     <li>inoshishi3.vfe.medicalruspatch</li>
     <li>inoshishi3.vfe.powerruspatch</li>
     <li>inoshishi3.vfe.securityruspatch</li>
-    <li>ru.aaa</li>
     <li>ru.vanillasocialinteractionsexpanded</li>
     <li>ru.vanillaexpanded.vee</li>
     <li>ru.vanillaexpanded.vcef</li>
-    <li>ow.ru.trading</li>
-    <li>ru.vfe.ancients</li>
     <li>ru.vanillaexpanded.vanillatraitsexpanded</li>
     <li>ru.vanillaexpanded.vhe</li>
     <li>regrowth.botr.core</li>
@@ -145,7 +136,6 @@
     <li>roolo.giddyupbattlemounts</li>
     <li>ameiro.animehairs</li>
     <li>bjis.lovelyhairstyle</li>
-    <li>hobtook.mortaraccuracy</li>
     <li>fluffy.researchtree</li>
     <li>theeyeofbrows.fluffybreakdowns</li>
     <li>haecriver.injuredcarry</li>
@@ -158,12 +148,10 @@
     <li>sgc.quests</li>
     <li>dhultgren.smarterconstruction</li>
     <li>uuugggg.sharetheload</li>
-    <li>ghxx.techadvancing</li>
     <li>aelanna.eccentrictech.core</li>
     <li>aelanna.eccentrictech.angelapparel</li>
     <li>aelanna.eccentricextras.angelhairs</li>
     <li>aelanna.eccentricextras.signaturegear</li>
-    <li>inglix.fasterbiosculptingpod</li>
     <li>mlie.morefactioninteraction</li>
     <li>balistafreak.stopdropandroll</li>
     <li>mlie.omnicoredrill</li>
@@ -172,20 +160,38 @@
     <li>velc.hatsdisplayselection</li>
     <li>spoonshortage.spoonshairmod</li>
     <li>albion.sparklingworlds.full</li>
-    <li>neronix17.retexture.rimsenalrimhair</li>
-    <li>rimsenal.feral</li>
-    <li>rimsenal.evp</li>
-    <li>ru.rimsenal.feral</li>
-    <li>ru.rimsenal.evp</li>
-    <li>vanillaexpanded.vwe</li>
     <li>canguro.mechanoid</li>
-    <li>mlie.rachelsanimehairmodyo</li>
     <li>mlie.expandedincidents</li>
-    <li>iforgotmysocks.caravanadventures</li>
-    <li>ru.iforgotmysocks.caravanadventures</li>
     <li>sr.modrimworld.factionalwar</li>
     <li>syrchalis.scarremoval</li>
-    <li>dimonsever000.psionicplus.specific</li>
+    <li>m00nl1ght.geologicallandforms</li>
+    <li>dmitry6.rusgeologicallandforms</li>
+    <li>vanillaexpanded.vpsycastse</li>
+    <li>ow.ru.psy</li>
+    <li>edern.combatpsycasts</li>
+    <li>ru.pashka.edern.combatpsycasts</li>
+    <li>longman.smallerradiusforanimatreesandshrines</li>
+    <li>dakkpasserida.animareplant</li>
+    <li>frozensnowfox.bettercamploot</li>
+    <li>xrushha.reinstallablealtars</li>
+    <li>mlie.drugpolicyfix</li>
+    <li>dhultgren.changecaravanloadout</li>
+    <li>neceros.tradershavemoney</li>
+    <li>proxyer.optionalicons4ai</li>
+    <li>knight.useyourgun</li>
+    <li>rimeffect.core</li>
+    <li>rimeffect.asarireapers</li>
+    <li>ru.rimeffect.asarireapers</li>
+    <li>ru.pashka.rimeffect.core</li>
+    <li>carnysenpai.enableoversizedweapons</li>
+    <li>atlas.androidtiers</li>
+    <li>winterbloom.atgynoids</li>
+    <li>androidtiers.ruslang.by.vsk</li>
+    <li>rimsenal.feral</li>
+    <li>ru.rimsenal.feral</li>
+    <li>vanillaexpanded.vfea</li>
+    <li>ru.vfe.ancients</li>
+    <li>pirateby.ce.extendedloadout</li>
     <li>goodvine.compatibility.patch</li>
     <li>trinity.runtimegcupdated</li>
     <li>krkr.rocketman</li>
