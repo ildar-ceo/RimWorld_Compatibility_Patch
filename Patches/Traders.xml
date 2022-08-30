@@ -140,6 +140,40 @@
 	</Operation>
 	
 	
+	<!-- Add PsychicAmplifier -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Royalty</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic" or defName="Orbital_Exotic" or defName="Orbital_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>PsychicAmplifier</thingDef>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>PsychicAmplifier</thingDef>
+							<countRange>0~1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>2000</MarketValue>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	
 	<!-- ID: 2006535182 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Empire</li></mods>
