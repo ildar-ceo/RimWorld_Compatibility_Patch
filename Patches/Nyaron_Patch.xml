@@ -131,89 +131,6 @@
 					</value>
 				</li>
 				
-				<!-- Add Nyaron classic scenario
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs</xpath>
-					<value>
-						<ScenarioDef>
-							<defName>NyaronClassicStart</defName>
-							<label>Classic Nyaron Start</label>	
-							<description>Classic Nyaron Start</description>
-							<scenario>
-								<summary>Classic Nyaron Start</summary>
-								<description>3 cats</description>
-								<playerFaction>
-									<def>PlayerFaction</def>
-									<factionDef>NyaronPlayerColony</factionDef>
-								</playerFaction>
-								
-								<parts>
-									<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
-										<def>ConfigPage_ConfigureStartingPawns</def>
-										<pawnCount>3</pawnCount>
-										<pawnChoiceCount>3</pawnChoiceCount>
-									</li>
-									<li Class="ScenPart_PlayerPawnsArriveMethod">
-										<def>PlayerPawnsArriveMethod</def>
-										<method>DropPods</method>
-									</li>
-									<li Class="ScenPart_StartingThing_Defined">
-										<def>StartingThing_Defined</def>
-										<thingDef>MealSurvivalPack</thingDef>
-										<count>30</count>
-									</li>
-									<li Class="ScenPart_ScatterThingsNearPlayerStart">
-										<def>ScatterThingsNearPlayerStart</def>
-										<thingDef>MedicineIndustrial</thingDef>
-										<count>30</count>
-										<allowRoofed>True</allowRoofed>
-									</li>
-									<li Class="ScenPart_StartingThing_Defined">
-										<def>StartingThing_Defined</def>
-										<thingDef>WoodLog</thingDef>
-										<count>400</count>
-									</li>
-									<li Class="ScenPart_StartingThing_Defined">
-										<def>StartingThing_Defined</def>
-										<thingDef>Steel</thingDef>
-										<count>350</count>
-									</li>
-									<li Class="ScenPart_StartingResearch">
-										<def>StartingResearch</def>
-										<project>ComplexFurniture</project>
-									</li>
-									<li Class="ScenPart_StartingResearch">
-										<def>StartingResearch</def>
-										<project>Stonecutting</project>
-									</li>
-									<li Class="ScenPart_StartingResearch">
-										<def>StartingResearch</def>
-										<project>ComplexClothing</project>
-									</li>
-									<li Class="ScenPart_StartingResearch">
-										<def>StartingResearch</def>
-										<project>Electricity</project>
-									</li>
-									<li Class="ScenPart_StartingResearch">
-										<def>StartingResearch</def>
-										<project>Machining</project>
-									</li>
-									<li Class="ScenPart_StartingResearch">
-										<def>StartingResearch</def>
-										<project>Batteries</project>
-									</li>
-									<li Class="ScenPart_StartingResearch">
-										<def>StartingResearch</def>
-										<project>AirConditioning</project>
-									</li>
-								</parts>
-								
-							</scenario>
-						</ScenarioDef>
-					</value>
-				</li>
-				-->
-				 
 			</operations>
 		</match>
 	</Operation>
@@ -672,6 +589,59 @@
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Nyaron race</li></mods>
 		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>HiTechArmor</tradeTag>
+							<thingDefCountRange>0~1</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>HiTechArmor</tradeTag>
+							<thingDefCountRange>4~7</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Steel</thingDef>
+							<countRange>50~120</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_BuySingleDef">
+							<thingDef>NeurotrainersSkill</thingDef>
+							<thingDefCountRange>0~1</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
 		<!-- ID: 1631756268 -->
 		<match Class="PatchOperationFindMod">
 			<mods><li>Combat Extended</li></mods>
@@ -679,7 +649,7 @@
 				<operations>
 					
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods"]/stockGenerators</xpath>
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_CombatSupplier"]/stockGenerators</xpath>
 						<value>
 							<li Class="StockGenerator_Tag">
 								<tradeTag>CE_Ammo</tradeTag>
@@ -711,5 +681,67 @@
 		</match>
 	</Operation>
 	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 1386412863 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Android tiers</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods" or defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>ATPP_AndroidNanokitBasic</thingDef>
+								<countRange>20~50</countRange>
+							</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods" or defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>ATPP_AndroidNanokitIntermediate</thingDef>
+								<countRange>5~10</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2654846754 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Ancients</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>VFEA_SuperNanites</thingDef>
+								<countRange>0~1</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
 	
 </Patch>

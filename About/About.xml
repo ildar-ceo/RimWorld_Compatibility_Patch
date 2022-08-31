@@ -5,7 +5,7 @@
 	<packageId>GoodVine.Compatibility.Patch</packageId>
 	<description>
 Mods Compatibility Patch
-Version: 1.1
+Version: 1.3.2
 
 =====
 
@@ -18,6 +18,7 @@ Common:
 - Disable visual effect in Archotech Structure Studiable
 - Wind turbine smaller size
 - Rottable BodyPartNatural
+- Tradable Psychic amplifier, Neurotrainers skill, Broadshield core
 - Craftable AI Core
 
 =====
@@ -27,6 +28,7 @@ VGP:
 - Fix meals ingredients
 - Make sushi with fish from Vanilla Fishing Expanded, Biomes! Islands, FishIndustry
 - Humanoid Alien Races MixingIngredients bug fix (https://github.com/erdelf/AlienRaces/issues/70)
+- RawFungus Fix
 
 =====
 
@@ -55,6 +57,11 @@ Nyaron race:
 - Add man gender to Nyaron
 - Fix correct names
 - Adds Nyaron to common factions with balance fix
+
+=====
+
+Android Tiers:
+- Tradable nanokits
 
 =====
 
