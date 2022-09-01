@@ -624,8 +624,8 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
 					<value>
-						<li Class="StockGenerator_BuySingleDef">
-							<thingDef>NeurotrainersSkill</thingDef>
+						<li Class="StockGenerator_Category">
+							<categoryDef>NeurotrainersSkill</categoryDef>
 							<thingDefCountRange>0~1</thingDefCountRange>
 							<countRange>1</countRange>
 						</li>

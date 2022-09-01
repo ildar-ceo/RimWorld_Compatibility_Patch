@@ -61,8 +61,8 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
 		<value>
-			<li Class="StockGenerator_BuySingleDef">
-				<thingDef>NeurotrainersSkill</thingDef>
+			<li Class="StockGenerator_Category">
+				<categoryDef>NeurotrainersSkill</categoryDef>
 				<thingDefCountRange>2~3</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
@@ -71,8 +71,8 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic"]/stockGenerators</xpath>
 		<value>
-			<li Class="StockGenerator_BuySingleDef">
-				<thingDef>NeurotrainersSkill</thingDef>
+			<li Class="StockGenerator_Category">
+				<categoryDef>NeurotrainersSkill</categoryDef>
 				<thingDefCountRange>3~4</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
@@ -345,8 +345,8 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Orbital_GlitterWorldSW"]/stockGenerators</xpath>
 					<value>
-						<li Class="StockGenerator_BuySingleDef">
-							<thingDef>NeurotrainersSkill</thingDef>
+						<li Class="StockGenerator_Category">
+							<categoryDef>NeurotrainersSkill</categoryDef>
 							<thingDefCountRange>3~4</thingDefCountRange>
 							<countRange>1~2</countRange>
 						</li>
@@ -443,8 +443,8 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="RE_Caravan_Alliance_BulkGoods" or defName="RE_Base_Alliance_Standard" or defName="RE_Caravan_Alliance_Exotic"]/stockGenerators</xpath>
 					<value>
-						<li Class="StockGenerator_BuySingleDef">
-							<thingDef>NeurotrainersSkill</thingDef>
+						<li Class="StockGenerator_Category">
+							<categoryDef>NeurotrainersSkill</categoryDef>
 							<thingDefCountRange>3~4</thingDefCountRange>
 							<countRange>1~2</countRange>
 						</li>
@@ -453,8 +453,8 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="RE_Visitor_Alliance_Standard"]/stockGenerators</xpath>
 					<value>
-						<li Class="StockGenerator_BuySingleDef">
-							<thingDef>NeurotrainersSkill</thingDef>
+						<li Class="StockGenerator_Category">
+							<categoryDef>NeurotrainersSkill</categoryDef>
 							<thingDefCountRange>0~1</thingDefCountRange>
 							<countRange>1</countRange>
 						</li>
