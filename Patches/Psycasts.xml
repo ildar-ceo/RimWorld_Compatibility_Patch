@@ -39,7 +39,7 @@
 										<path>CP_Combat</path>
 										<level>2</level>
 										<order>2</order>
-										<psyfocusCost>0.02</psyfocusCost>
+										<psyfocusCost>0.05</psyfocusCost>
 										<entropyGain>12</entropyGain>
 										<prerequisites>
 											<li>CP_LightPsychicSlug</li>
@@ -83,7 +83,7 @@
 										<level>3</level>
 										<order>2</order>
 										<psyfocusCost>0.05</psyfocusCost>
-										<entropyGain>25</entropyGain>
+										<entropyGain>20</entropyGain>
 										<prerequisites>
 											<li>CP_Stun</li>
 											<li>CP_MediumPsychicSlug</li>
@@ -126,7 +126,7 @@
 										<path>CP_Combat</path>
 										<level>3</level>
 										<order>3</order>
-										<psyfocusCost>0.05</psyfocusCost>
+										<psyfocusCost>0.1</psyfocusCost>
 										<entropyGain>25</entropyGain>
 										<prerequisites>
 											<li>CP_Stun</li>
@@ -173,7 +173,7 @@
 										<level>4</level>
 										<order>3</order>
 										<psyfocusCost>0.1</psyfocusCost>
-										<entropyGain>80</entropyGain>
+										<entropyGain>50</entropyGain>
 										<prerequisites>
 											<li>CP_Berserk</li>
 											<li>CP_Vertigo</li>

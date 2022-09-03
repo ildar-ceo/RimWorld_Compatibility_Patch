@@ -2,7 +2,6 @@
 <SettingsBlock>
 	<ModSettings Class="SmartMedicine.Settings">
 		<distanceToUseEqualOnGround>9</distanceToUseEqualOnGround>
-		<stockUp>False</stockUp>
 		<fieldTendingAlways>True</fieldTendingAlways>
 	</ModSettings>
 </SettingsBlock>
