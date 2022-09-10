@@ -8,6 +8,7 @@
     <li>ludeon.rimworld.ideology</li>
     <li>davyd.translation.ideology</li>
     <li>erdelf.humanoidalienraces</li>
+    <li>atsukohi.humanoidalienracesrus</li>
     <li>telardo.dragselect</li>
     <li>ccl.patchoperation.highlander</li>
     <li>unlimitedhugs.hugslib</li>
@@ -24,7 +25,6 @@
     <li>oblitus.animalslogic</li>
     <li>com.bymarcin.architecticons</li>
     <li>dimonsever000.backstoriesplus.specific</li>
-    <li>fluffy.musicmanager</li>
     <li>name.krypt.rimworld.moddiff</li>
     <li>mlie.dismisstrader</li>
     <li>revolus.whatsmissing</li>
@@ -84,11 +84,8 @@
     <li>syrchalis.setupcamp</li>
     <li>farmradish.nyaron</li>
     <li>mlie.wikirim</li>
-    <li>chais.custommusic</li>
     <li>com.yayo.yayoani</li>
-    <li>ceteam.combatextended</li>
-    <li>ceteam.combatextendedguns</li>
-    <li>ceteam.combatextendedmelee</li>
+    <li>oskarpotocki.vanillafactionsexpanded.core</li>
     <li>sandy.rpgstyleinventory.avilmask.revamped</li>
     <li>uuugggg.smartmedicine</li>
     <li>linkolas.stabilize</li>
@@ -96,7 +93,6 @@
     <li>vanillaexpanded.vhe</li>
     <li>vanillaexpanded.vcef</li>
     <li>vanillaexpanded.vanillasocialinteractionsexpanded</li>
-    <li>oskarpotocki.vanillafactionsexpanded.core</li>
     <li>oskarpotocki.vanillaexpanded.ideologypatches</li>
     <li>oskarpotocki.vanillaexpanded.royaltypatches</li>
     <li>vanillaexpanded.viehar</li>
@@ -107,10 +103,11 @@
     <li>vanillaexpanded.vfefarming</li>
     <li>vanillaexpanded.vfesecurity</li>
     <li>vanillaexpanded.vfemedical</li>
+    <li>oskarpotocki.vfe.insectoid</li>
+    <li>vanillaexpanded.vaeaccessories</li>
     <li>vanillaexpanded.vee</li>
     <li>vanillaexpanded.vanillatraitsexpanded</li>
     <li>ru.vie</li>
-    <li>inoshishi3.vef.ruspatch</li>
     <li>inoshishi3.vfe.farmingruspatch</li>
     <li>inoshishi3.vfe.medicalruspatch</li>
     <li>inoshishi3.vfe.powerruspatch</li>
@@ -120,6 +117,10 @@
     <li>ru.vanillaexpanded.vcef</li>
     <li>ru.vanillaexpanded.vanillatraitsexpanded</li>
     <li>ru.vanillaexpanded.vhe</li>
+    <li>ru.vfe.insectoid</li>
+    <li>ow.ru.aaa</li>
+    <li>rimsenal.feral</li>
+    <li>ru.rimsenal.feral</li>
     <li>regrowth.botr.core</li>
     <li>regrowth.botr.wastelands</li>
     <li>ow.ru.regrowth</li>
@@ -144,9 +145,11 @@
     <li>carnysenpai.traitraritycolors</li>
     <li>ryflamer.misc.drawabead</li>
     <li>sneaks.meatblend</li>
+    <li>sneaks.veggiemix</li>
     <li>jaxe.morerandomseeds</li>
     <li>sgc.quests</li>
     <li>dhultgren.smarterconstruction</li>
+    <li>legodude17.smartdecon</li>
     <li>uuugggg.sharetheload</li>
     <li>aelanna.eccentrictech.core</li>
     <li>aelanna.eccentrictech.angelapparel</li>
@@ -166,8 +169,6 @@
     <li>syrchalis.scarremoval</li>
     <li>m00nl1ght.geologicallandforms</li>
     <li>dmitry6.rusgeologicallandforms</li>
-    <li>vanillaexpanded.vpsycastse</li>
-    <li>ow.ru.psy</li>
     <li>edern.combatpsycasts</li>
     <li>ru.pashka.edern.combatpsycasts</li>
     <li>longman.smallerradiusforanimatreesandshrines</li>
@@ -179,19 +180,26 @@
     <li>neceros.tradershavemoney</li>
     <li>proxyer.optionalicons4ai</li>
     <li>knight.useyourgun</li>
-    <li>rimeffect.core</li>
-    <li>rimeffect.asarireapers</li>
-    <li>ru.rimeffect.asarireapers</li>
-    <li>ru.pashka.rimeffect.core</li>
+    <li>mlie.cyberneticwarfare</li>
+    <li>xedos.psyblade</li>
+    <li>animalfilthdontcare.1trickponyta</li>
     <li>carnysenpai.enableoversizedweapons</li>
     <li>atlas.androidtiers</li>
     <li>winterbloom.atgynoids</li>
     <li>androidtiers.ruslang.by.vsk</li>
-    <li>rimsenal.feral</li>
-    <li>ru.rimsenal.feral</li>
+    <li>noodlesking.morepsycasts</li>
+    <li>ru.pashka.noodlesking.morepsycasts</li>
+    <li>vanillaexpanded.basegeneration</li>
     <li>vanillaexpanded.vfea</li>
     <li>ru.vfe.ancients</li>
-    <li>pirateby.ce.extendedloadout</li>
+    <li>azuraal.choiceofpsycasts</li>
+    <li>roolo.almostthere</li>
+    <li>vfme.caravanpacks</li>
+    <li>avius.locks</li>
+    <li>hobtook.mortaraccuracy</li>
+    <li>jaschaephraim.endlessrimworld</li>
+    <li>fluffy.musicmanager</li>
+    <li>chais.custommusic</li>
     <li>goodvine.compatibility.patch</li>
     <li>trinity.runtimegcupdated</li>
     <li>krkr.rocketman</li>
