@@ -11,6 +11,15 @@
 			</li>
 		</value>
 	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Steel</thingDef>
+				<countRange>500~800</countRange>
+			</li>
+		</value>
+	</Operation>
 	
 	
 	<!-- Add Components to Traders -->
@@ -180,7 +189,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>3200</MarketValue>
+						<MarketValue>2100</MarketValue>
 					</value>
 				</li>
 				
@@ -212,6 +221,18 @@
 	
 	
 	<!-- Increases Orbital traders rate -->
+	<!--
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/StorytellerDef[@Name="BaseStoryteller"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+				<incident>OrbitalTraderArrival</incident>
+				<onDays>7</onDays>
+				<offDays>5</offDays>
+				<numIncidentsRange>2</numIncidentsRange>
+			</li>
+		</value>
+	</Operation>-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/StorytellerDef[defName="Cassandra" or defName="Phoebe"]/comps/li[incident="OrbitalTraderArrival"]</xpath>
 		<value>
@@ -219,7 +240,7 @@
 				<incident>OrbitalTraderArrival</incident>
 				<onDays>7</onDays>
 				<offDays>5</offDays>
-				<numIncidentsRange>3</numIncidentsRange>
+				<numIncidentsRange>2</numIncidentsRange>
 			</li>
 		</value>
 	</Operation>
@@ -249,6 +270,27 @@
 			<operations>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/StorytellerDef[defName="RE_LiaraLawful"]/comps</xpath>
+					<value>
+						<li Class="StorytellerCompProperties_OnOffCycle">
+							<incident>OrbitalTraderArrival</incident>
+							<onDays>7</onDays>
+							<offDays>5</offDays>
+							<numIncidentsRange>2</numIncidentsRange>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2842502659 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Psycasts Expanded</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/StorytellerDef[defName="VPE_Basilicus"]/comps</xpath>
 					<value>
 						<li Class="StorytellerCompProperties_OnOffCycle">
 							<incident>OrbitalTraderArrival</incident>
@@ -349,6 +391,16 @@
 							<categoryDef>NeurotrainersSkill</categoryDef>
 							<thingDefCountRange>3~4</thingDefCountRange>
 							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_GlitterWorldSW"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Steel</thingDef>
+							<countRange>500~800</countRange>
 						</li>
 					</value>
 				</li>

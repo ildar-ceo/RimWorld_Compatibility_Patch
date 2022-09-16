@@ -1876,6 +1876,35 @@
 	
 	
 	<!-- ID: 2167582651 (VGP Garden Drinks UF) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>VGP Garden Drinks UF</li>
+		</mods>
+		
+		<!-- ID: 2073225100 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>[SYR] Universal Fermenter</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!--
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ResearchProjectDef[defName="VG_industrialfermenting"]</xpath>
+					</li>
+					-->
+					
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="VG_LargeFermentingBarrel"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes/li[thingDef="rum" or thingDef="VGP_BerryWine" or thingDef="VG_AmbrosiaWine" or thingDef="saki" or thingDef="tequila" or thingDef="CPD_Whiskey" or thingDef="Fruitshine"]/usesQuality</xpath>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2167582651 (VGP Garden Drinks UF) -->
 	<!-- ID: 2007062530 (VGP Garden Drinks) -->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
@@ -1885,16 +1914,6 @@
 		
 		<match Class="PatchOperationSequence">
 			<operations>
-				
-				<!--
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/ResearchProjectDef[defName="VG_industrialfermenting"]</xpath>
-				</li>
-				-->
-				
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/ThingDef[defName="VG_LargeFermentingBarrel"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes/li[thingDef="rum" or thingDef="VGP_BerryWine" or thingDef="VG_AmbrosiaWine" or thingDef="saki" or thingDef="tequila" or thingDef="CPD_Whiskey" or thingDef="Fruitshine"]/usesQuality</xpath>
-				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="saki"]/statBases/MarketValue</xpath>
@@ -1982,30 +2001,66 @@
 	
 	
 	<!-- ID: 2167582651 (VGP Garden Drinks UF) -->
-	<!-- ID: 2007062530 (VGP Garden Drinks) -->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>VGP Garden Drinks UF</li>
-			<li>VGP Garden Drinks</li>
 		</mods>
 		
-		<match Class="PatchOperationSequence">
-			<operations>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/RecipeDef[defName="DistillBulkVodka" or defName="CPD_DistillVodka"]/ingredients/li[1]/filter/thingDefs</xpath>
-					<value>
-						<li>Rawwheat</li>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/RecipeDef[defName="DistillBulkVodka" or defName="CPD_DistillVodka"]/fixedIngredientFilter/thingDefs</xpath>
-					<value>
-						<li>Rawwheat</li>
-					</value>
-				</li>
-				
-			</operations>
+		<!-- ID: 2007062982 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>VGP Garden Gourmet</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="DistillBulkVodka" or defName="CPD_DistillVodka"]/ingredients/li[1]/filter/thingDefs</xpath>
+						<value>
+							<li>Rawwheat</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="DistillBulkVodka" or defName="CPD_DistillVodka"]/fixedIngredientFilter/thingDefs</xpath>
+						<value>
+							<li>Rawwheat</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
 		</match>
+		
 	</Operation>
+	
+	
+	<!-- ID: 2167582651 (VGP Garden Drinks UF) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>VGP Garden Drinks UF</li>
+		</mods>
+		
+		<!-- ID: 2260097569 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>ReGrowth Remastered: Core</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="CPD_MakeWineMust" or defName="CPD_MakeBulkWineMust"]/ingredients/li[1]/filter/thingDefs</xpath>
+						<value>
+							<li>RG_RawRaspberries</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="CPD_MakeWineMust" or defName="CPD_MakeBulkWineMust"]/fixedIngredientFilter/thingDefs</xpath>
+						<value>
+							<li>RG_RawRaspberries</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
 </Patch>

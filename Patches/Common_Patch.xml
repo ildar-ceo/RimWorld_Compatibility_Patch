@@ -189,4 +189,32 @@
 		</value>
 	</Operation>
 	
+	<!-- Add minifiedDef -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="CommsConsole"]</xpath>
+		<value>
+			<minifiedDef>MinifiedThing</minifiedDef>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="HiTechResearchBench"]</xpath>
+		<value>
+			<building>
+				<uninstallWork>350</uninstallWork>
+			</building>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="FabricationBench" or defName="HiTechResearchBench" or defName="BiofuelRefinery"]/minifiedDef</xpath>
+		<value>
+			<minifiedDef>MinifiedThing</minifiedDef>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="FabricationBench" or defName="MultiAnalyzer" or defName="CommsConsole"]/building</xpath>
+		<value>
+			<uninstallWork>350</uninstallWork>
+		</value>
+	</Operation>
+	
 </Patch>

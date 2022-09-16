@@ -22,13 +22,13 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ResearchProjectDef[defName="ShipEngine"]/baseCost</xpath>
 					<value>
-						<baseCost>16000</baseCost>
+						<baseCost>10000</baseCost>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ResearchProjectDef[defName="ShipReactor"]/baseCost</xpath>
 					<value>
-						<baseCost>32000</baseCost>
+						<baseCost>20000</baseCost>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
@@ -89,6 +89,14 @@
 							<thingDef>Eccentric_Nanoweave</thingDef>
 							<countRange>50~200</countRange>
 						</li>
+					</value>
+				</li>
+				
+				<!-- Add minifiedDef -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="EccentricAuroraCore"]/building</xpath>
+					<value>
+						<uninstallWork>350</uninstallWork>
 					</value>
 				</li>
 				

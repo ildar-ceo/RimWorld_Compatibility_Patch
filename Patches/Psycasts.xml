@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 	
+	<!-- ID: 2636329500 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Ideology Expanded - Memes and Structures</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Add Prestige Tag -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/PreceptDef[defName="VME_PsychicSensitivity_Heightened" or defName="VME_PsyfocusGain_Doubled" or defName="VME_Meditation_Exquisite"]</xpath>
+						<value>
+							<requiredMemes>
+								<li>VME_PsychicFocus</li>
+							</requiredMemes>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
 	<!-- ID: 2842502659 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Vanilla Psycasts Expanded</li></mods>

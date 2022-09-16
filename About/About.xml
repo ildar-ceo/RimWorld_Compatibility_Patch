@@ -5,20 +5,23 @@
 	<packageId>GoodVine.Compatibility.Patch</packageId>
 	<description>
 Mods Compatibility Patch
-Version: 1.3.2
+Version: 1.3.3
+
+Mod compatibility for Battle Royal, Ancients World, Hightech CyberPack.
+May used as standalone mod.
 
 =====
 
 Common:
 - More mineable steel for modpacks
-- More trades ships
+- More orbital trades ships
 - Nerf leather human market price
 - Craftable reinforced barrel
 - Setup start count factions for tribal to zero
 - Disable visual effect in Archotech Structure Studiable
 - Wind turbine smaller size
 - Rottable BodyPartNatural
-- Tradable Psychic amplifier, Neurotrainers skill, Broadshield core
+- Tradable Psychic amplifier, Neurotrainers skill, Broadshield core, HiTechArmor
 - Craftable AI Core
 
 =====
@@ -47,9 +50,20 @@ Eccentric Tech:
 
 =====
 
+Backup Power:
+- Add research to Batteries
+
+=====
+
+Combat Extended:
+- Add more tradable ammo
+
+=====
+
 SeedsPlease:
 - More seeds in traders caravans
 - Add Rice seeds to default scenarios
+- Add wild growthable Rice, Potato, Hay Grass to Temperate and Tropical biomes for seeds
 
 =====
 
@@ -75,12 +89,17 @@ Cybernetic Organism and Neural Network:
 
 =====
 
+Expanded Prosthetics:
+- Table Prosthetics decrease requirement Plasteel for 50
+
+=====
+
 MendAndRecycle:
 - Market price 4 silver for MendingKit, because in default is too much market value then sell it
 
 =====
 
-Biomes! Islands
+Biomes! Islands:
 - More islands clusters
 
 =====
