@@ -91,7 +91,7 @@
 	
 	<!-- Add HiTechArmor to Traders -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier" or defName="Caravan_Outlander_PirateMerchant"]/stockGenerators</xpath>
 		<value>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>HiTechArmor</tradeTag>
@@ -101,7 +101,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Orbital_PirateMerchant" or defName="Orbital_CombatSupplier" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
 		<value>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>HiTechArmor</tradeTag>
@@ -135,7 +135,6 @@
 	</Operation>
 	
 	
-	<!-- Add PsychicAmplifier -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Royalty</li></mods>
 		<match Class="PatchOperationSequence">
@@ -169,7 +168,7 @@
 			
 				<!-- Add PsychicAmplifier to Traders -->
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic" or defName="Orbital_Exotic" or defName="Orbital_BulkGoods"]/stockGenerators</xpath>
+					<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard"]/stockGenerators</xpath>
 					<value>
 						<li Class="StockGenerator_SingleDef">
 							<thingDef>PsychicAmplifier</thingDef>
@@ -177,19 +176,10 @@
 						</li>
 					</value>
 				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
-					<value>
-						<li Class="StockGenerator_SingleDef">
-							<thingDef>PsychicAmplifier</thingDef>
-							<countRange>0~1</countRange>
-						</li>
-					</value>
-				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>2100</MarketValue>
+						<MarketValue>3200</MarketValue>
 					</value>
 				</li>
 				
@@ -447,7 +437,7 @@
 						<value>
 							<li Class="StockGenerator_SingleDef">
 								<thingDef>PsychicAmplifier</thingDef>
-								<countRange>1~2</countRange>
+								<countRange>0~1</countRange>
 							</li>
 						</value>
 					</li>
@@ -567,17 +557,6 @@
 						<value>
 							<li Class="StockGenerator_SingleDef">
 								<thingDef>BroadshieldCore</thingDef>
-								<countRange>1~2</countRange>
-							</li>
-						</value>
-					</li>
-				
-					<!-- Add PsychicAmplifier to Traders -->
-					<li Class="PatchOperationAdd">
-						<xpath>/Defs/TraderKindDef[defName="RE_Caravan_Alliance_BulkGoods" or defName="RE_Base_Alliance_Standard" or defName="RE_Caravan_Alliance_Exotic"]/stockGenerators</xpath>
-						<value>
-							<li Class="StockGenerator_SingleDef">
-								<thingDef>PsychicAmplifier</thingDef>
 								<countRange>1~2</countRange>
 							</li>
 						</value>
@@ -729,7 +708,7 @@
 			<operations>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier" or defName="Caravan_Outlander_PirateMerchant"]/stockGenerators</xpath>
 					<value>
 						<li Class="StockGenerator_Category">
 							<categoryDef>CW_CyborgWeaponry</categoryDef>
@@ -740,7 +719,7 @@
 				</li>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Orbital_PirateMerchant" or defName="Orbital_CombatSupplier" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
 					<value>
 						<li Class="StockGenerator_Category">
 							<categoryDef>CW_CyborgWeaponry</categoryDef>
@@ -819,7 +798,7 @@
 			<operations>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier" or defName="Caravan_Outlander_PirateMerchant"]/stockGenerators</xpath>
 					<value>
 						<li Class="StockGenerator_Category">
 							<categoryDef>EccentricApparel</categoryDef>
@@ -840,7 +819,7 @@
 				</li>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Orbital_PirateMerchant" or defName="Orbital_CombatSupplier" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
 					<value>
 						<li Class="StockGenerator_Category">
 							<categoryDef>EccentricApparel</categoryDef>
