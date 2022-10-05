@@ -179,7 +179,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="AIPersonaCore"]/statBases/MarketValue</xpath>
 		<value>
-			<MarketValue>15000</MarketValue>
+			<MarketValue>1500</MarketValue>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAdd">
