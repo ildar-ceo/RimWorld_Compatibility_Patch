@@ -1202,4 +1202,181 @@
 		
 	</Operation>
 	
+	
+	<!-- Remove MeatRaw if fishing mod is installed -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Garden Gourmet</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>FishIndustry</li>
+				<li>Biomes! Islands</li>
+				<li>Vanilla Fishing Expanded</li>
+			</mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[3]/filter/categories/li[text()="MeatRaw"]</xpath>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/fixedIngredientFilter/categories/li[text()="MeatRaw"]</xpath>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/defaultIngredientFilter/categories/li[text()="MeatRaw"]</xpath>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/ingredients/li[2]/filter/categories/li[text()="MeatRaw"]</xpath>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/fixedIngredientFilter/categories/li[text()="MeatRaw"]</xpath>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/defaultIngredientFilter/categories/li[text()="MeatRaw"]</xpath>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[1]/count</xpath>
+						<value>
+							<count>2.6</count>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[3]/count</xpath>
+						<value>
+							<count>0.8</count>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/ingredients/li[1]/count</xpath>
+						<value>
+							<count>1.6</count>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/ingredients/li[2]/count</xpath>
+						<value>
+							<count>0.8</count>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- Remove MeatRaw if fishing mod is installed -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Garden Gourmet</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>FishIndustry</li>
+				<li>Biomes! Islands</li>
+				<li>Travel through water</li>
+			</mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter[not(disallowedThingDefs)]</xpath>
+						<value>
+							<disallowedThingDefs />
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2007062982 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Garden Gourmet</li></mods>
+		
+		<!-- ID: 1914064942 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Fishing Expanded</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter[not(disallowedCategories)]</xpath>
+						<value>
+							<disallowedCategories />
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter/disallowedCategories</xpath>
+						<value>
+							<li>VCEF_RawFishCategory</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[3]/filter/categories</xpath>
+						<value>
+							<li>VCEF_RawFishCategory</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/fixedIngredientFilter/categories</xpath>
+						<value>
+							<li>VCEF_RawFishCategory</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/defaultIngredientFilter/categories</xpath>
+						<value>
+							<li>VCEF_RawFishCategory</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/ingredients/li[2]/filter/categories</xpath>
+						<value>
+							<li>VCEF_RawFishCategory</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/fixedIngredientFilter/categories</xpath>
+						<value>
+							<li>VCEF_RawFishCategory</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/defaultIngredientFilter/categories</xpath>
+						<value>
+							<li>VCEF_RawFishCategory</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	
+	<!-- ID: 2007062982 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Garden Gourmet</li></mods>
+		
+		<!-- ID: 839005762 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Humanoid Alien Races</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<!-- Remove allowMixingIngredients (because bug in AlienRaces)
+					https://github.com/erdelf/AlienRaces/issues/70 -->
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/RecipeDef[defName="Grillsteak" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="GrillKabob" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="CookMealSimple" or defName="CookMealSimpleBulk" or defName="CookMealFine" or defName="CookMealFine_Veg" or defName="CookMealFine_Meat" or defName="CookMealLavish" or defName="CookMealLavish_Veg" or defName="CookMealLavish_Meat" or defName="CookMealFineBulk" or defName="CookMealFineBulk_Veg" or defName="CookMealFineBulk_Meat" or defName="CookMealLavishBulk" or defName="CookMealLavishBulk_Veg" or defName="CookMealLavishBulk_Meat"]/allowMixingIngredients</xpath>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
 </Patch>
