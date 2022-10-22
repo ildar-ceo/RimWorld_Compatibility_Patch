@@ -296,6 +296,276 @@
 				</li>
 				
 				
+				<!-- Bakepolenta -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Bakepolenta"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>Flour</li>
+									</thingDefs>
+								</filter>
+								<count>4</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>RawCorn</li>
+									</thingDefs>
+								</filter>
+								<count>10</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Bakepolenta"]/products</xpath>
+					<value>
+						<products>
+							<bakedpolenta>2</bakedpolenta>
+						</products>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Bakepolenta"]/label</xpath>
+					<value>
+						<label>bake 2 polenta loaf</label>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Bakepolenta"]/description</xpath>
+					<value>
+						<description>Bake a tasty polenta loaf. \n\nMakes 2 slices.</description>
+					</value>
+				</li>
+				
+				
+				<!-- GrillPolenta -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillPolenta"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>Flour</li>
+									</thingDefs>
+								</filter>
+								<count>4</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>RawCorn</li>
+									</thingDefs>
+								</filter>
+								<count>20</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillPolenta"]/fixedIngredientFilter</xpath>
+					<value>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>RawCorn</li>
+							</thingDefs>
+							<specialFiltersToDisallow>
+								<li>AllowRotten</li>
+							</specialFiltersToDisallow>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillPolenta"]/products</xpath>
+					<value>
+						<products>
+							<grilledpolenta>4</grilledpolenta>
+						</products>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillPolenta"]/label</xpath>
+					<value>
+						<label>grill 4 polenta</label>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="GrillPolenta"]/description</xpath>
+					<value>
+						<description>Grilled slices of Polenta. \n\nMakes 4 servings.</description>
+					</value>
+				</li>
+				
+				
+				<!-- BakeBread -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="BakeBread"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>Flour</li>
+									</thingDefs>
+								</filter>
+								<count>20</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="BakeBread"]/products</xpath>
+					<value>
+						<products>
+							<Bread>7</Bread>
+						</products>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="BakeBread"]/label</xpath>
+					<value>
+						<label>bake 7 breads</label>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="BakeBread"]/description</xpath>
+					<value>
+						<description>Bake bread from flour. \n\nMakes 7 Bread.</description>
+					</value>
+				</li>
+				
+				
+				<!-- CookGrillcheese -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="CookGrillcheese"]</xpath>
+					<value>
+						<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="CookGrillcheese"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>Bread</li>
+									</thingDefs>
+								</filter>
+								<count>1</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>cheese</li>
+									</thingDefs>
+								</filter>
+								<count>0.5</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="CookGrillcheese"]/fixedIngredientFilter</xpath>
+					<value>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>Bread</li>
+								<li>cheese</li>
+							</thingDefs>
+							<specialFiltersToDisallow>
+								<li>AllowRotten</li>
+							</specialFiltersToDisallow>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="CookGrillcheese"]</xpath>
+					<value>
+						<defaultIngredientFilter>
+							<thingDefs>
+								<li>Bread</li>
+								<li>cheese</li>
+							</thingDefs>
+						</defaultIngredientFilter>
+					</value>
+				</li>
+				
+				
+				<!-- Cookgrilledsandwich -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="Cookgrilledsandwich"]</xpath>
+					<value>
+						<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Cookgrilledsandwich"]/ingredients</xpath>
+					<value>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>Bread</li>
+									</thingDefs>
+								</filter>
+								<count>1</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>cheese</li>
+									</thingDefs>
+								</filter>
+								<count>0.5</count>
+							</li>
+							<li>
+								<filter>
+									<categories>
+										<li>MeatRaw</li>
+									</categories>
+								</filter>
+								<count>0.5</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Cookgrilledsandwich"]/fixedIngredientFilter</xpath>
+					<value>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>Bread</li>
+								<li>cheese</li>
+							</thingDefs>
+							<categories>
+								<li>MeatRaw</li>
+							</categories>
+							<specialFiltersToDisallow>
+								<li>AllowRotten</li>
+							</specialFiltersToDisallow>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="Cookgrilledsandwich"]/defaultIngredientFilter</xpath>
+					<value>
+						<defaultIngredientFilter>
+							<thingDefs>
+								<li>Bread</li>
+								<li>cheese</li>
+							</thingDefs>
+							<categories>
+								<li>MeatRaw</li>
+							</categories>
+						</defaultIngredientFilter>
+					</value>
+				</li>
+				
 				
 			</operations>
 		</match>
