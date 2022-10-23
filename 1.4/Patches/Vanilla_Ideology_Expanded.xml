@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	
+	<!-- ID: 2636329500 -->
+	<!-- ID: 2569397678 Русский язык -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Ideology Expanded - Memes and Structures</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/PreceptDef[defName="VME_CraftingQuality_Increased" or defName="VME_TradingPrice_Improved" or defName="VME_Travel_Desired" or defName="VME_AutomationEfficiency_Increased" or defName="VME_AutonomousWeapons_Accepted" or defName="VME_AutonomousWeapons_Exalted" or defName="VME_JunkDeconstructionYield_High" or defName="VME_FarmingYield_High" or defName="VME_Immunity_Enhanced"][not(requiredMemes)]</xpath>
+					<value>
+						<requiredMemes />
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/MemeDef[defName="TreeConnection" or defName="NaturePrimacy" or defName="VME_Healthcare" or defName="HumanPrimacy"][not(requireOne)]</xpath>
+					<value>
+						<requireOne />
+					</value>
+				</li>
+				
+				
+				<!-- CraftCulture -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="VME_CraftingQuality_Increased"]/requiredMemes</xpath>
+					<value>
+						<li>VME_CraftCulture</li>
+					</value>
+				</li>
+				
+				
+				<!-- Trader -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="VME_TradingPrice_Improved" or defName="VME_Travel_Desired"]/requiredMemes</xpath>
+					<value>
+						<li>VME_Trader</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="VME_Travel_Desired"]/requiredMemes</xpath>
+					<value>
+						<li>VME_Nomad</li>
+					</value>
+				</li>
+				
+				
+				<!-- Progressive -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="VME_AutomationEfficiency_Increased"]/requiredMemes</xpath>
+					<value>
+						<li>VME_Progressive</li>
+					</value>
+				</li>
+				
+				
+				<!-- HumanPrimacy -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="VME_AutonomousWeapons_Accepted" or defName="VME_AutonomousWeapons_Exalted" or defName="VME_JunkDeconstructionYield_High" or defName="VME_FarmingYield_High"]/requiredMemes</xpath>
+					<value>
+						<li>HumanPrimacy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/MemeDef[defName="HumanPrimacy"]/requireOne</xpath>
+					<value>
+						<li>
+							<li>VME_AutonomousWeapons_Accepted</li>
+							<li>VME_AutonomousWeapons_Exalted</li>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/MemeDef[defName="HumanPrimacy"]/requireOne</xpath>
+					<value>
+						<li>
+							<li>VME_JunkDeconstructionYield_High</li>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/MemeDef[defName="HumanPrimacy"]/requireOne</xpath>
+					<value>
+						<li>
+							<li>VME_FarmingYield_High</li>
+						</li>
+					</value>
+				</li>
+				
+				
+				<!-- VME_Scrapper -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="VME_JunkDeconstructionYield_High"]/requiredMemes</xpath>
+					<value>
+						<li>VME_Scrapper</li>
+					</value>
+				</li>
+				
+				
+				<!-- TreeConnection -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="VME_FarmingYield_High"]/requiredMemes</xpath>
+					<value>
+						<li>TreeConnection</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/MemeDef[defName="TreeConnection"]/requireOne</xpath>
+					<value>
+						<li>
+							<li>VME_FarmingYield_High</li>
+						</li>
+					</value>
+				</li>
+				
+				
+				<!-- NaturePrimacy -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="VME_FarmingYield_High"]/requiredMemes</xpath>
+					<value>
+						<li>NaturePrimacy</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/MemeDef[defName="NaturePrimacy"]/requireOne</xpath>
+					<value>
+						<li>
+							<li>VME_FarmingYield_High</li>
+						</li>
+					</value>
+				</li>
+				
+				
+				<!-- VME_FarmingYield_High -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="VME_FarmingYield_High"]/requiredMemes</xpath>
+					<value>
+						<li>VME_Vegan</li>
+						<li>VME_HardcoreIndustrialism</li>
+					</value>
+				</li>
+				
+				
+				<!-- VME_Healthcare -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="VME_Immunity_Enhanced"]/requiredMemes</xpath>
+					<value>
+						<li>VME_HolyDiseases</li>
+						<li>VME_Healthcare</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/MemeDef[defName="VME_Healthcare"]/requireOne</xpath>
+					<value>
+						<li>
+							<li>VME_Immunity_Enhanced</li>
+						</li>
+					</value>
+				</li>
+				
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+	
+	
+	<!-- ID: 2636329500 -->
+	<!-- ID: 2569397678 Русский язык -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Ideology Expanded - Memes and Structures</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- PsychicFocus -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/PreceptDef[defName="VME_PsychicSensitivity_Heightened" or defName="VME_PsyfocusGain_Doubled" or defName="VME_Meditation_Exquisite"][not(requiredMemes)]</xpath>
+						<value>
+							<requiredMemes></requiredMemes>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/PreceptDef[defName="VME_PsychicSensitivity_Heightened" or defName="VME_PsyfocusGain_Doubled" or defName="VME_Meditation_Exquisite"]/requiredMemes</xpath>
+						<value>
+							<li>VME_PsychicFocus</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+</Patch>

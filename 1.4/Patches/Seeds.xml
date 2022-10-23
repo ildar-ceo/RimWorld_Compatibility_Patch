@@ -2,8 +2,12 @@
 <Patch>
 
 	<!-- ID: 935732834 -->
+	<!-- ID: 2586052937 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>SeedsPlease</li></mods>
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 				
@@ -145,7 +149,40 @@
 	
 	<!-- ID: 935732834 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>SeedsPlease</li></mods>
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Biotech</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Add Rice to default Scenario -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ScenarioDef[defName="Mechanitor" or defName="Sanguophage"]/scenario/parts</xpath>
+						<value>
+							<li Class="ScenPart_StartingThing_Defined">
+								<def>StartingThing_Defined</def>
+								<thingDef>Seed_Rice</thingDef>
+								<count>150</count>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 935732834 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
 		
 		<!-- ID: 1854376306 -->
 		<match Class="PatchOperationFindMod">
@@ -173,7 +210,10 @@
 	
 	<!-- ID: 935732834 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>SeedsPlease</li></mods>
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
 		
 		<!-- ID: 1386412863 -->
 		<match Class="PatchOperationFindMod">
@@ -202,7 +242,10 @@
 	
 	<!-- ID: 935732834 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>SeedsPlease</li></mods>
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
 		
 		<!-- ID: 2654846754 -->
 		<match Class="PatchOperationFindMod">
@@ -230,7 +273,10 @@
 	
 	<!-- ID: 935732834 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>SeedsPlease</li></mods>
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
 		
 		<!-- ID: 2479560240 -->
 		<match Class="PatchOperationFindMod">
@@ -258,7 +304,10 @@
 	
 	<!-- ID: 935732834 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>SeedsPlease</li></mods>
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
 		
 		<!-- ID: 2651149728 -->
 		<match Class="PatchOperationFindMod">
@@ -286,7 +335,10 @@
 	
 	<!-- ID: 935732834 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>SeedsPlease</li></mods>
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 				
@@ -306,7 +358,10 @@
 	
 	<!-- ID: 935732834 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>SeedsPlease</li></mods>
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
 		
 		<!-- ID: 1931453053 -->
 		<match Class="PatchOperationFindMod">
