@@ -1391,11 +1391,11 @@
 				<operations>
 					
 					<li Class="PatchOperationRemove">
-						<xpath>Defs/ThingDef[defName = "Plant_Strawberry"]/plant/sowResearchPrerequisites</xpath>
+						<xpath>Defs/ThingDef[defName="Plant_Strawberry"]/plant/sowResearchPrerequisites</xpath>
 					</li>
 					
 					<li Class="PatchOperationAdd">
-						<xpath>Defs/ThingDef[defName = "Plant_Strawberry"]/plant</xpath>
+						<xpath>Defs/ThingDef[defName="Plant_Strawberry"]/plant</xpath>
 						<value>
 							<sowResearchPrerequisites>
 								<li>agricultureII</li>

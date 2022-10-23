@@ -209,4 +209,60 @@
 		</value>
 	</Operation>
 	
+	<!-- Works -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="Refuel" or defName="RearmTurrets" or defName="TakeBeerOutOfFermentingBarrel" or defName="FillFermentingBarrel"]/workType</xpath>
+		<value>
+			<workType>BasicWorker</workType>
+		</value>
+	</Operation>
+	
+	<!-- ID: 2023507013 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Expanded Framework</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="IP_RemoveProduct"]/workType</xpath>
+					<value>
+						<workType>BasicWorker</workType>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ID: 836308268 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Dubs Bad Hygiene</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="emptySepticTank" or defName="LoadWashing" or defName="UnloadWashing"]/workType</xpath>
+					<value>
+						<workType>BasicWorker</workType>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ID: 2633514537 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>[SYR] Processor Framework</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="EmptyProcessor" or defName="FillProcessor"]/workType</xpath>
+					<value>
+						<workType>BasicWorker</workType>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
 </Patch>

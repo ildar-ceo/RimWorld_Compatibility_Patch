@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModsConfigData>
-  <version>1.4.3525 rev1020</version>
+  <version>1.4.3525 rev917</version>
   <activeMods>
     <li>brrainz.harmony</li>
     <li>ludeon.rimworld</li>
     <li>ludeon.rimworld.royalty</li>
     <li>ludeon.rimworld.ideology</li>
     <li>ludeon.rimworld.biotech</li>
-    <li>erdelf.humanoidalienraces</li>
     <li>unlimitedhugs.hugslib</li>
     <li>com.bymarcin.architecticons</li>
     <li>fluffy.areaunlocker</li>
@@ -27,11 +26,15 @@
     <li>mlie.dismisstrader</li>
     <li>mlie.drugpolicyfix</li>
     <li>dubwise.dubsbadhygiene</li>
+    <li>dubwise.dubsmintmenus</li>
     <li>aelanna.eccentrictech.core</li>
     <li>aelanna.eccentrictech.angelapparel</li>
+    <li>vat.epoeforked</li>
+    <li>vat.epoeforkedroyalty</li>
     <li>m00nl1ght.geologicallandforms</li>
     <li>albion.goexplore</li>
     <li>telardo.dragselect</li>
+    <li>m00nl1ght.mappreview</li>
     <li>jaxe.morerandomseeds</li>
     <li>bichang.moresculpture</li>
     <li>zylle.morevanillabiomes</li>
@@ -49,11 +52,12 @@
     <li>vanillaexpanded.vcef</li>
     <li>sgc.quests</li>
     <li>lucifer.realisticrooms</li>
-    <li>dakkpasserida.animareplant</li>
     <li>rimfridge.aug.rw</li>
     <li>jaxe.rimhud</li>
     <li>ratys.rtfuse</li>
     <li>telardo.romanceontherim</li>
+    <li>regrowth.botr.core</li>
+    <li>regrowth.botr.borealforestexpansion</li>
     <li>uuugggg.replacestuff</li>
     <li>owlchemist.seedspleaselite</li>
     <li>mlie.silentdoors</li>
@@ -74,13 +78,16 @@
     <li>vanillaexpanded.vfepower</li>
     <li>oskarpotocki.vanillaexpanded.ideologypatches</li>
     <li>oskarpotocki.vanillaexpanded.royaltypatches</li>
+    <li>vanillaexpanded.vfea</li>
+    <li>oskarpotocki.vfe.pirates</li>
     <li>vanillaexpanded.vee</li>
     <li>vanillaexpanded.varme</li>
+    <li>vanillaexpanded.vanillatraitsexpanded</li>
     <li>vanillaexpanded.basegeneration</li>
     <li>vfme.caravanpacks</li>
     <li>dismarzero.vgp.vgpvegetablegarden</li>
+    <li>dismarzero.vgp.vgpgardendrinks</li>
     <li>dismarzero.vgp.vgpgardengourmet</li>
-    <li>dismarzero.vgp.vgpgardenmedicine</li>
     <li>mlie.wehadatrader</li>
     <li>revolus.whatsmissing</li>
     <li>com.yayo.yayoani</li>
@@ -91,7 +98,20 @@
     <li>ryflamer.misc.drawabead</li>
     <li>grizzlemethis.tradingspot.rw</li>
     <li>syrchalis.scarremoval</li>
+    <li>syrchalis.processor.framework</li>
+    <li>syrchalis.setupcamp</li>
     <li>divinederivative.romance</li>
+    <li>jgh.mechanoidbench3</li>
+    <li>jgh.mechanoidbench3.ru</li>
+    <li>ow.ru.aaa</li>
+    <li>ow.ru.ancients</li>
+    <li>dmitry6.rusgeologicallandforms</li>
+    <li>ru.vanillaexpanded.vee</li>
+    <li>ru.vanillaexpanded.vcef</li>
+    <li>ru.vie</li>
+    <li>ru.vanillaexpanded.vanillatraitsexpanded</li>
+    <li>ru.vanillasocialinteractionsexpanded</li>
+    <li>rus.biotech.iugt</li>
     <li>goodvine.compatibility.patch</li>
     <li>krkr.rocketman</li>
     <li>trinity.runtimegcupdated</li>
