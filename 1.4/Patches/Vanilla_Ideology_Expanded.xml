@@ -19,7 +19,7 @@
 				</li>
 				<li Class="PatchOperationAdd">
 					<success>Always</success>
-					<xpath>/Defs/MemeDef[defName="TreeConnection" or defName="NaturePrimacy" or defName="VME_Healthcare" or defName="HumanPrimacy"][not(requireOne)]</xpath>
+					<xpath>/Defs/MemeDef[defName="TreeConnection" or defName="NaturePrimacy" or defName="Transhumanist" or defName="HumanPrimacy" or defName="VME_Healthcare" or defName="VME_Progressive" or defName="VME_CityBuilders" or defName="VME_HardcoreIndustrialism" or defName="VME_Nomad"][not(requireOne)]</xpath>
 					<value>
 						<requireOne />
 					</value>
@@ -42,19 +42,102 @@
 						<li>VME_Trader</li>
 					</value>
 				</li>
+				
+				
+				<!-- VME_Nomad -->
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PreceptDef[defName="VME_Travel_Desired"]/requiredMemes</xpath>
+					<xpath>/Defs/PreceptDef[defName="VME_TradingPrice_Improved" or defName="VME_Travel_Desired"]/requiredMemes</xpath>
 					<value>
 						<li>VME_Nomad</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/MemeDef[defName="VME_Nomad"]/requireOne</xpath>
+					<value>
+						<li>
+							<li>VME_TradingPrice_Improved</li>
+						</li>
+						<li>
+							<li>VME_Expectations_Low</li>
+						</li>
+					</value>
+				</li>
+				
+				
+				<!-- Transhumanist -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="VME_AutonomousWeapons_Accepted" or defName="VME_AutonomousWeapons_Exalted"]/requiredMemes</xpath>
+					<value>
+						<li>Transhumanist</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/MemeDef[defName="Transhumanist"]/requireOne</xpath>
+					<value>
+						<li>
+							<li>VME_AutonomousWeapons_Accepted</li>
+							<li>VME_AutonomousWeapons_Exalted</li>
+						</li>
+					</value>
+				</li>
+				
+				
+				<!-- VME_HardcoreIndustrialism -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="VME_AutomationEfficiency_Increased" or defName="VME_AutonomousWeapons_Accepted" or defName="VME_AutonomousWeapons_Exalted"]/requiredMemes</xpath>
+					<value>
+						<li>VME_HardcoreIndustrialism</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/MemeDef[defName="VME_HardcoreIndustrialism"]/requireOne</xpath>
+					<value>
+						<li>
+							<li>VME_AutonomousWeapons_Accepted</li>
+							<li>VME_AutonomousWeapons_Exalted</li>
+						</li>
+						<li>
+							<li>VME_AutomationEfficiency_Increased</li>
+						</li>
+					</value>
+				</li>
+				
+				
+				<!-- VME_CityBuilders -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="VME_AutonomousWeapons_Accepted" or defName="VME_AutonomousWeapons_Exalted"]/requiredMemes</xpath>
+					<value>
+						<li>VME_CityBuilders</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/MemeDef[defName="VME_CityBuilders"]/requireOne</xpath>
+					<value>
+						<li>
+							<li>VME_AutonomousWeapons_Accepted</li>
+							<li>VME_AutonomousWeapons_Exalted</li>
+						</li>
 					</value>
 				</li>
 				
 				
 				<!-- Progressive -->
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PreceptDef[defName="VME_AutomationEfficiency_Increased"]/requiredMemes</xpath>
+					<xpath>/Defs/PreceptDef[defName="VME_AutomationEfficiency_Increased" or defName="VME_AutonomousWeapons_Accepted" or defName="VME_AutonomousWeapons_Exalted"]/requiredMemes</xpath>
 					<value>
 						<li>VME_Progressive</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/MemeDef[defName="VME_Progressive"]/requireOne</xpath>
+					<value>
+						<li>
+							<li>VME_AutonomousWeapons_Accepted</li>
+							<li>VME_AutonomousWeapons_Exalted</li>
+						</li>
+						<li>
+							<li>VME_AutomationEfficiency_Increased</li>
+						</li>
 					</value>
 				</li>
 				
