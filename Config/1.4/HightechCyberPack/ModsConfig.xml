@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModsConfigData>
-  <version>1.4.3525 rev917</version>
+  <version>1.4.3531 rev1162</version>
   <activeMods>
     <li>brrainz.harmony</li>
     <li>ludeon.rimworld</li>
@@ -9,6 +9,7 @@
     <li>ludeon.rimworld.biotech</li>
     <li>unlimitedhugs.hugslib</li>
     <li>com.bymarcin.architecticons</li>
+    <li>ben.automaticnightowl</li>
     <li>fluffy.areaunlocker</li>
     <li>jm.bettertraders</li>
     <li>fluffy.backuppower</li>
@@ -31,7 +32,6 @@
     <li>aelanna.eccentrictech.angelapparel</li>
     <li>vat.epoeforked</li>
     <li>vat.epoeforkedroyalty</li>
-    <li>m00nl1ght.geologicallandforms</li>
     <li>albion.goexplore</li>
     <li>telardo.dragselect</li>
     <li>m00nl1ght.mappreview</li>
@@ -41,6 +41,7 @@
     <li>hobtook.mortaraccuracy</li>
     <li>haplo.miscellaneous.trainingnotask</li>
     <li>fluffy.musicmanager</li>
+    <li>com.github.alandariva.moreplanning</li>
     <li>avius.locks</li>
     <li>unon.noburnmetal</li>
     <li>doug.nojobauthors</li>
@@ -52,7 +53,6 @@
     <li>vanillaexpanded.vcef</li>
     <li>sgc.quests</li>
     <li>lucifer.realisticrooms</li>
-    <li>rimfridge.aug.rw</li>
     <li>jaxe.rimhud</li>
     <li>ratys.rtfuse</li>
     <li>telardo.romanceontherim</li>
@@ -65,6 +65,8 @@
     <li>sarg.smartspeed</li>
     <li>albion.sparklingworlds.full</li>
     <li>linkolas.stabilize</li>
+    <li>scherub.stonecuttingextended</li>
+    <li>knight.useyourgun</li>
     <li>carnysenpai.traitraritycolors</li>
     <li>smashphil.dropspot</li>
     <li>xrushha.reinstallablealtars</li>
@@ -78,7 +80,6 @@
     <li>vanillaexpanded.vfepower</li>
     <li>oskarpotocki.vanillaexpanded.ideologypatches</li>
     <li>oskarpotocki.vanillaexpanded.royaltypatches</li>
-    <li>vanillaexpanded.vfea</li>
     <li>oskarpotocki.vfe.pirates</li>
     <li>vanillaexpanded.vee</li>
     <li>vanillaexpanded.varme</li>
@@ -90,8 +91,11 @@
     <li>dismarzero.vgp.vgpgardengourmet</li>
     <li>mlie.wehadatrader</li>
     <li>revolus.whatsmissing</li>
+    <li>murmur.walllight</li>
     <li>com.yayo.yayoani</li>
     <li>petetimessix.simplesidearms</li>
+    <li>darkborderman.moretraitgenes</li>
+    <li>longman.smallerradiusforanimatreesandshrines</li>
     <li>moretraitslots.kv.rw</li>
     <li>frozensnowfox.filthvanisheswithrainandtime</li>
     <li>frozensnowfox.bettercamploot</li>
@@ -101,17 +105,30 @@
     <li>syrchalis.processor.framework</li>
     <li>syrchalis.setupcamp</li>
     <li>divinederivative.romance</li>
-    <li>jgh.mechanoidbench3</li>
-    <li>jgh.mechanoidbench3.ru</li>
+    <li>m00nl1ght.geologicallandforms</li>
     <li>ow.ru.aaa</li>
-    <li>ow.ru.ancients</li>
-    <li>dmitry6.rusgeologicallandforms</li>
     <li>ru.vanillaexpanded.vee</li>
     <li>ru.vanillaexpanded.vcef</li>
-    <li>ru.vie</li>
-    <li>ru.vanillaexpanded.vanillatraitsexpanded</li>
     <li>ru.vanillasocialinteractionsexpanded</li>
+    <li>gekasid.vgp.vgpvegetablegarden.rus</li>
+    <li>gekasid.oskarpotocki.vfe.pirates.rus</li>
+    <li>dmitry6.rusgeologicallandforms</li>
+    <li>ru.vanilla.furniture.expanded.power</li>
+    <li>ow.ru.vie</li>
+    <li>ow.ru.traits</li>
+    <li>hol.catearsanime</li>
+    <li>unlimitedhugs.allowtool</li>
+    <li>3hstltd.wolf.gene</li>
+    <li>caesarv6.damageindicators</li>
+    <li>rimfridge.kv.rw</li>
     <li>rus.biotech.iugt</li>
+    <li>gt.sam.tilledsoil</li>
+    <li>hatti.qualitybuilder</li>
+    <li>mehni.numbers</li>
+    <li>fluffy.researchtree</li>
+    <li>fluffy.worktab</li>
+    <li>peppsen.pmusic</li>
+    <li>khorbos.gotosleep</li>
     <li>goodvine.compatibility.patch</li>
     <li>krkr.rocketman</li>
     <li>trinity.runtimegcupdated</li>

@@ -240,7 +240,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/WorkGiverDef[defName="emptySepticTank" or defName="LoadWashing" or defName="UnloadWashing"]/workType</xpath>
+					<xpath>/Defs/WorkGiverDef[defName="emptySepticTank" or defName="LoadWashing" or defName="UnloadWashing" or defName="RefillWater"]/workType</xpath>
 					<value>
 						<workType>BasicWorker</workType>
 					</value>
@@ -261,6 +261,24 @@
 						<workType>BasicWorker</workType>
 					</value>
 				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ID: 2007061826 (VGP Vegetable Garden) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Vegetable Garden</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="DoBillsHaulBambooCampfire"]/workType</xpath>
+					<value>
+						<workType>BasicWorker</workType>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
