@@ -93,6 +93,44 @@
 					</value>
 				</li>
 				
+				<!-- Animals TropicalIslandBase -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_FiddlerCrab</xpath>
+					<value>
+						<BiomesIslands_FiddlerCrab>0.05</BiomesIslands_FiddlerCrab>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_HermitCrab</xpath>
+					<value>
+						<BiomesIslands_HermitCrab>0.05</BiomesIslands_HermitCrab>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_GreenGecko</xpath>
+					<value>
+						<BiomesIslands_GreenGecko>0.05</BiomesIslands_GreenGecko>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_Flamingo</xpath>
+					<value>
+						<BiomesIslands_Flamingo>1</BiomesIslands_Flamingo>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_BlueSeaSnail</xpath>
+					<value>
+						<BiomesIslands_BlueSeaSnail>0.1</BiomesIslands_BlueSeaSnail>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BMT_GreenEel</xpath>
+					<value>
+						<BMT_GreenEel>0.2</BMT_GreenEel>
+					</value>
+				</li>
+				
 				
 				<!-- TemperateIsland -->
 				<li Class="PatchOperationReplace">
@@ -131,7 +169,7 @@
 				</li>
 				
 				
-				<!-- TundraArchipelago -->
+				<!-- TundraIsland -->
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TundraIsland"]/modExtensions/li[@Class="BiomesCore.DefModExtensions.BiomesMap"]/islandShapes</xpath>
 					<value>
@@ -167,42 +205,11 @@
 					</value>
 				</li>
 				
-				
-				<!-- Animals TropicalIslandBase -->
+				<!-- Plants TundraIslandBase -->
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_FiddlerCrab</xpath>
+					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TundraIslandBase"]/wildPlants/BiomesIslands_WindsweptTree</xpath>
 					<value>
-						<BiomesIslands_FiddlerCrab>0.05</BiomesIslands_FiddlerCrab>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_HermitCrab</xpath>
-					<value>
-						<BiomesIslands_HermitCrab>0.05</BiomesIslands_HermitCrab>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_GreenGecko</xpath>
-					<value>
-						<BiomesIslands_GreenGecko>0.05</BiomesIslands_GreenGecko>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_Flamingo</xpath>
-					<value>
-						<BiomesIslands_Flamingo>1</BiomesIslands_Flamingo>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_BlueSeaSnail</xpath>
-					<value>
-						<BiomesIslands_BlueSeaSnail>0.1</BiomesIslands_BlueSeaSnail>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BMT_GreenEel</xpath>
-					<value>
-						<BMT_GreenEel>0.2</BMT_GreenEel>
+						<BiomesIslands_WindsweptTree>0</BiomesIslands_WindsweptTree>
 					</value>
 				</li>
 				
