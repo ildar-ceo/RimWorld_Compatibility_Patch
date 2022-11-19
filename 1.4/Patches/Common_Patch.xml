@@ -106,20 +106,6 @@
 		</value>
 	</Operation>
 	
-	<!-- Set count factions to zero for Tribal -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/FactionDef[@Name="TribeBase"]/requiredCountAtGameStart</xpath>
-		<value>
-			<requiredCountAtGameStart>0</requiredCountAtGameStart>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/FactionDef[@Name="TribeBase"]</xpath>
-		<value>
-			<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
-		</value>
-	</Operation>
-	
 	<!-- Mineable -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="MineableSteel" or defName="MineableSilver" or defName="MineableGold" or defName="MineableUranium" or defName="MineablePlasteel"]/building/mineableYield</xpath>
@@ -276,6 +262,110 @@
 					<xpath>/Defs/WorkGiverDef[defName="DoBillsHaulBambooCampfire"]/workType</xpath>
 					<value>
 						<workType>BasicWorker</workType>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- Set count factions to zero for Tribal -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/FactionDef[@Name="TribeBase"]/requiredCountAtGameStart</xpath>
+		<value>
+			<requiredCountAtGameStart>0</requiredCountAtGameStart>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[@Name="TribeBase"]</xpath>
+		<value>
+			<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+		</value>
+	</Operation>
+	
+	<!-- Factions patch -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Biotech</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="OutlanderRough"]</xpath>
+					<value>
+						<requiredCountAtGameStart>1</requiredCountAtGameStart>
+						<maxCountAtGameStart>1</maxCountAtGameStart>
+						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="OutlanderRoughPig" or defName="PirateYttakin"]</xpath>
+					<value>
+						<requiredCountAtGameStart>0</requiredCountAtGameStart>
+						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/FactionDef[defName="OutlanderRoughPig"]/replacesFaction</xpath>
+				</li>
+				
+				<!--
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="OutlanderRough"]/xenotypeSet/xenotypeChances</xpath>
+					<value>
+						<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
+						<Pigskin MayRequire="Ludeon.RimWorld.Biotech">0.25</Pigskin>
+						<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0.05</Sanguophage>
+					</value>
+				</li>
+				-->
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- Factions patch -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Royalty</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+					<value>
+						<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
+						<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0.15</Sanguophage>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- 2723801948 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Factions Expanded - Pirates</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_JunkersRaidLootMaker"]/requiredCountAtGameStart</xpath>
+					<value>
+						<requiredCountAtGameStart>0</requiredCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_JunkersRaidLootMaker"]</xpath>
+					<value>
+						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="VFEP_Mercenaries"]/xenotypeSet/xenotypeChances</xpath>
+					<value>
+						<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
+						<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
+						<Pigskin MayRequire="Ludeon.RimWorld.Biotech">0.25</Pigskin>
+						<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0.05</Sanguophage>
 					</value>
 				</li>
 				

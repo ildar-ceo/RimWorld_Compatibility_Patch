@@ -16,9 +16,15 @@
 						<value>
 							<li>Libido_High</li>
 							<li>DarkVision</li>
-							<li>AptitudeTerrible_Mining</li>
 							<li>AptitudeTerrible_Artistic</li>
 							<li>AptitudeTerrible_Animals</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/GeneDef[defName="Nyaron"]/biostatMet</xpath>
+						<value>
+							<biostatMet>6</biostatMet>
 						</value>
 					</li>
 					
@@ -40,7 +46,7 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="PirateWaster"]/xenotypeSet/xenotypeChances</xpath>
 						<value>
-							<Nyaron MayRequire="Ludeon.RimWorld.Biotech">0.05</Nyaron>
+							<Nyaron MayRequire="Ludeon.RimWorld.Biotech">0.35</Nyaron>
 						</value>
 					</li>
 					
@@ -65,7 +71,7 @@
 					<operations>
 						
 						<li Class="PatchOperationAdd">
-							<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_Mercenaries"]/xenotypeSet/xenotypeChances</xpath>
+							<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_Mercenaries" or defName="VFEP_JunkersRaidLootMaker"]/xenotypeSet/xenotypeChances</xpath>
 							<value>
 								<Nyaron MayRequire="Ludeon.RimWorld.Biotech">0.35</Nyaron>
 							</value>
@@ -74,6 +80,30 @@
 					</operations>
 				</match>
 			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2881513314 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Biotech Nyaron</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+						<value>
+							<Nyaron MayRequire="Ludeon.RimWorld.Biotech">0.35</Nyaron>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+			
 		</match>
 	</Operation>
 	

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- ID: 2038001322 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Biomes! Islands</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="BiomesIslands_RedSnapper"]/lifeStages</xpath>
+					<value>
+						<lifeStages>
+							<li>
+								<bodyGraphicData>
+									<texPath>BiomesIslands_Things/Pawn/Animal/RedSnapper/RedSnapper</texPath>
+									<drawSize>0.5</drawSize>
+								</bodyGraphicData>
+								<dessicatedBodyGraphicData>
+									<texPath>BiomesIslands_Things/Pawn/Animal/Dessicated/Fish</texPath>
+									<drawSize>0.5</drawSize>
+								</dessicatedBodyGraphicData>
+							</li>
+							<li>
+								<bodyGraphicData>
+									<texPath>BiomesIslands_Things/Pawn/Animal/RedSnapper/RedSnapper</texPath>
+									<drawSize>1.2</drawSize>
+								</bodyGraphicData>
+								<dessicatedBodyGraphicData>
+									<texPath>BiomesIslands_Things/Pawn/Animal/Dessicated/Fish</texPath>
+									<drawSize>1.2</drawSize>
+								</dessicatedBodyGraphicData>
+							</li>
+							<li>
+								<bodyGraphicData>
+									<texPath>BiomesIslands_Things/Pawn/Animal/RedSnapper/RedSnapper</texPath>
+									<drawSize>1.6</drawSize>
+								</bodyGraphicData>
+								<dessicatedBodyGraphicData>
+									<texPath>BiomesIslands_Things/Pawn/Animal/Dessicated/Fish</texPath>
+									<drawSize>1.6</drawSize>
+								</dessicatedBodyGraphicData>
+							</li>
+						</lifeStages>
+					</value>
+				</li>
+				
+				<!-- Add Fish Meal 
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="BMT_GreenEel"]/race/meatLabel</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="BMT_GreenEel"]/race</xpath>
+					<value>
+						<useMeatFrom>BiomesIslands_WhiteShark</useMeatFrom>
+					</value>
+				</li>
+				-->
+				
+				
+				<!-- TropicalIsland -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TropicalIsland"]/modExtensions/li[@Class="BiomesCore.DefModExtensions.BiomesMap"]/islandShapes</xpath>
+					<value>
+						<islandShapes>
+							<li>Smooth</li>
+							<li>Rough</li>
+							<li>Crescent</li>
+						</islandShapes>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TropicalIsland"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/frequency</xpath>
+					<value>
+						<frequency>70</frequency>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TropicalIsland"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/biomePriority</xpath>
+					<value>
+						<biomePriority>5</biomePriority>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TropicalArchipelago"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/frequency</xpath>
+					<value>
+						<frequency>0</frequency>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TropicalArchipelago"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/biomePriority</xpath>
+					<value>
+						<biomePriority>0</biomePriority>
+					</value>
+				</li>
+				
+				
+				<!-- TemperateIsland -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TemperateIsland"]/modExtensions/li[@Class="BiomesCore.DefModExtensions.BiomesMap"]/islandShapes</xpath>
+					<value>
+						<islandShapes>
+							<li>Smooth</li>
+							<li>Rough</li>
+							<li>Crescent</li>
+						</islandShapes>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TemperateIsland"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/frequency</xpath>
+					<value>
+						<frequency>70</frequency>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TemperateIsland"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]</xpath>
+					<value>
+						<biomePriority>5</biomePriority>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TemperateArchipelago"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/frequency</xpath>
+					<value>
+						<frequency>0</frequency>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TemperateArchipelago"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/biomePriority</xpath>
+					<value>
+						<biomePriority>0</biomePriority>
+					</value>
+				</li>
+				
+				
+				<!-- TundraArchipelago -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TundraIsland"]/modExtensions/li[@Class="BiomesCore.DefModExtensions.BiomesMap"]/islandShapes</xpath>
+					<value>
+						<islandShapes>
+							<li>Smooth</li>
+							<li>Rough</li>
+							<li>Crescent</li>
+						</islandShapes>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TundraIsland"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/frequency</xpath>
+					<value>
+						<frequency>70</frequency>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TundraIsland"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]</xpath>
+					<value>
+						<biomePriority>5</biomePriority>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TundraArchipelago"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/frequency</xpath>
+					<value>
+						<frequency>0</frequency>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TundraArchipelago"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/biomePriority</xpath>
+					<value>
+						<biomePriority>0</biomePriority>
+					</value>
+				</li>
+				
+				
+				<!-- Animals TropicalIslandBase -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_FiddlerCrab</xpath>
+					<value>
+						<BiomesIslands_FiddlerCrab>0.05</BiomesIslands_FiddlerCrab>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_HermitCrab</xpath>
+					<value>
+						<BiomesIslands_HermitCrab>0.05</BiomesIslands_HermitCrab>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_GreenGecko</xpath>
+					<value>
+						<BiomesIslands_GreenGecko>0.05</BiomesIslands_GreenGecko>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_Flamingo</xpath>
+					<value>
+						<BiomesIslands_Flamingo>1</BiomesIslands_Flamingo>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BiomesIslands_BlueSeaSnail</xpath>
+					<value>
+						<BiomesIslands_BlueSeaSnail>0.1</BiomesIslands_BlueSeaSnail>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[@Name="BiomesIslands_TropicalIslandBase"]/wildAnimals/BMT_GreenEel</xpath>
+					<value>
+						<BMT_GreenEel>0.2</BMT_GreenEel>
+					</value>
+				</li>
+				
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2038001322 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Biomes! Islands</li></mods>
+		
+		<!-- ID: 1216999901 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Giddy-up! Core</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="BiomesCore_CrabThingBase" or defName="BiomesIslands_Gigantaconda" or defName="BiomesIslands_SeaTurtle" or defName="BiomesIslands_LeatherbackTurtle" or defName="BiomesIslands_MarineIguana" or defName="BiomesIslands_GreenGecko" or defName="BiomesIslands_GalapagosTortoise" or defName="BMT_KomodoDragon"]/comps</xpath>
+						<value>
+							<li Class="GiddyUpCore.CompProperties_Mount">
+								<isException>true</isException>
+							</li>
+						</value>
+					</li>
+					
+					<!--
+					<li Class="PatchOperationAdd">
+						<xpath>*/ThingDef[defName="BiomesIslands_WhiteShark" or defName="BiomesIslands_Hammerhead" or defName="BiomesIslands_Tuna" or  defName="BiomesIslands_BlueSeaSnail" or defName="BiomesIslands_RedSnapper" or defName="BiomesIslands_Trout" or defName="BiomesIslands_MantaRay"]/comps</xpath>
+						<value>
+							<li Class="GiddyUpCore.CompProperties_Mount">
+								<isException>true</isException>
+							</li>
+						</value>
+					</li>
+					-->
+					
+					<!--
+					<Operation Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>*/ThingDef[defName = "LabradorRetriever"]/comps</xpath>
+								<value>
+									<li Class="GiddyUpCore.CompProperties_Mount">
+										<isException>true</isException>
+									</li>
+								</value>
+							</li>
+						</operations>
+					</Operation>
+					<Operation Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>*/ThingDef[defName = "LabradorRetriever" and not(comps)]</xpath>
+								<value>
+									<comps>
+										<li Class="GiddyUpCore.CompProperties_Mount">
+											<isException>true</isException>
+										</li>
+									</comps>
+								</value>
+							</li>
+						</operations>
+					</Operation>
+					-->
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+</Patch>
