@@ -56,7 +56,7 @@
 	</Operation>
 	
 	
-	<!-- ID: 2881513314 
+	<!-- ID: 2881513314 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Biotech Nyaron</li></mods>
 		
@@ -80,11 +80,26 @@
 						<li Class="PatchOperationRemove">
 							<xpath>/Defs/GeneDef[defName="Nyaron"]/forcedHeadTypes</xpath>
 						</li>
+						<li Class="PatchOperationRemove">
+							<xpath>/Defs/XenotypeDef[defName="Nyaron"]/genes/li[text()="Ears_Nyaron_Normal" or text()="Tail_Nyaron_Normal" or text()="PsychicAbility_Dull"]</xpath>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/XenotypeDef[defName="Nyaron"]/genes</xpath>
+							<value>
+								<li>Beauty_Pretty</li>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/HeadTypeDef[@Name="NyaronHeadtypeBase"]/gender</xpath>
+							<value>
+								<gender>None</gender>
+							</value>
+						</li>
 					</operations>
 				</match>
 			</match>
 		</match>
-	</Operation> -->
+	</Operation>
 	
 	
 	<!-- ID: 2881513314 -->
