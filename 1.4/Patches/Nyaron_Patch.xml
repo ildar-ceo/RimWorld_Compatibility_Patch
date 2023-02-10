@@ -89,12 +89,6 @@
 								<li>Beauty_Pretty</li>
 							</value>
 						</li>
-						<li Class="PatchOperationReplace">
-							<xpath>/Defs/HeadTypeDef[@Name="NyaronHeadtypeBase"]/gender</xpath>
-							<value>
-								<gender>None</gender>
-							</value>
-						</li>
 					</operations>
 				</match>
 			</match>
@@ -218,8 +212,13 @@
 					</value>
 				</li>
 				
-				
 				<!-- Add Hair -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/HeadTypeDef[@Name="NyaronHeadtypeBase"]/gender</xpath>
+					<value>
+						<gender>None</gender>
+					</value>
+				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/HairDef[defName="Nr_Long" or defName="Nr_Short" or defName="Nr_Twin" or defName="Nr_Twintw" or defName="Nr_ShortTwin" or defName="Nr_Pony"]/styleGender</xpath>
 					<value>
