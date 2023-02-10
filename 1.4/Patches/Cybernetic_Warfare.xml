@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	
-	<!-- ID: 2155485488 -->
+	<!-- ID: 2155485488 
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
 		<match Class="PatchOperationSequence">
@@ -14,5 +14,5 @@
 			</operations>
 		</match>
 	</Operation>
-	
+	-->
 </Patch>
