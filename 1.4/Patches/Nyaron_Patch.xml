@@ -56,6 +56,37 @@
 	</Operation>
 	
 	
+	<!-- ID: 2881513314 
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Biotech Nyaron</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Biotech</li></mods>
+			
+			<match Class="PatchOperationFindMod">
+				<mods><li>Nyaron race</li></mods>
+				
+				<match Class="PatchOperationSequence">
+					<operations>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/PawnKindDef[@Name="NyaronBase"]/xenotypeSet/xenotypeChances</xpath>
+							<value>
+								<Nyaron MayRequire="Ludeon.RimWorld.Biotech">1.0</Nyaron>
+							</value>
+						</li>
+						<li Class="PatchOperationRemove">
+							<xpath>/Defs/PawnKindDef[@Name="NyaronBase"]/xenotypeSet/xenotypeChances/Baseliner</xpath>
+						</li>
+						<li Class="PatchOperationRemove">
+							<xpath>/Defs/GeneDef[defName="Nyaron"]/forcedHeadTypes</xpath>
+						</li>
+					</operations>
+				</match>
+			</match>
+		</match>
+	</Operation> -->
+	
+	
 	<!-- ID: 2881513314 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Biotech Nyaron</li></mods>
@@ -165,13 +196,14 @@
 					Fix Gender
 					https://www.loverslab.com/topic/121825-mod-rimworld-gender-balancer/
 				-->
+				<!--
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Nyaron"]/alienRace/generalSettings/maleGenderProbability</xpath>
 					<value>
 						<maleGenderProbability>0.5</maleGenderProbability>
 					</value>
 				</li>
-				
+				-->
 				
 				<!-- Add Hair -->
 				<li Class="PatchOperationReplace">
