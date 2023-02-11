@@ -83,13 +83,13 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TropicalArchipelago"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/frequency</xpath>
 					<value>
-						<frequency>0</frequency>
+						<frequency>25</frequency>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TropicalArchipelago"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/biomePriority</xpath>
 					<value>
-						<biomePriority>0</biomePriority>
+						<biomePriority>2</biomePriority>
 					</value>
 				</li>
 				
@@ -158,13 +158,13 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TemperateArchipelago"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/frequency</xpath>
 					<value>
-						<frequency>0</frequency>
+						<frequency>25</frequency>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TemperateArchipelago"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/biomePriority</xpath>
 					<value>
-						<biomePriority>0</biomePriority>
+						<biomePriority>2</biomePriority>
 					</value>
 				</li>
 				
@@ -195,13 +195,13 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TundraArchipelago"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/frequency</xpath>
 					<value>
-						<frequency>0</frequency>
+						<frequency>25</frequency>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/BiomeDef[defName="BiomesIslands_TundraArchipelago"]/modExtensions/li[@Class="BiomesKit.BiomesKitControls"]/biomePriority</xpath>
 					<value>
-						<biomePriority>0</biomePriority>
+						<biomePriority>2</biomePriority>
 					</value>
 				</li>
 				

@@ -81,6 +81,9 @@
 							<xpath>/Defs/GeneDef[defName="Nyaron"]/forcedHeadTypes</xpath>
 						</li>
 						<li Class="PatchOperationRemove">
+							<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase" or defName="Pirate" or defName="PirateWaster"]/xenotypeSet/xenotypeChances/Nyaron</xpath>
+						</li>
+						<li Class="PatchOperationRemove">
 							<xpath>/Defs/XenotypeDef[defName="Nyaron"]/genes/li[text()="Ears_Nyaron_Normal" or text()="Tail_Nyaron_Normal" or text()="PsychicAbility_Dull"]</xpath>
 						</li>
 						<li Class="PatchOperationAdd">
@@ -96,35 +99,33 @@
 	</Operation>
 	
 	
-	<!-- ID: 2881513314 -->
+	<!-- ID: 1854376306 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Biotech Nyaron</li></mods>
+		<mods><li>Nyaron race</li></mods>
 		
+		<!-- ID: 2723801948 -->
 		<match Class="PatchOperationFindMod">
-			<mods><li>Biotech</li></mods>
+			<mods><li>Vanilla Factions Expanded - Pirates</li></mods>
 			
-			<!-- ID: 2723801948 -->
-			<match Class="PatchOperationFindMod">
-				<mods><li>Vanilla Factions Expanded - Pirates</li></mods>
-				
-				<match Class="PatchOperationSequence">
-					<operations>
-						
-						<li Class="PatchOperationAdd">
-							<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_Mercenaries" or defName="VFEP_JunkersRaidLootMaker"]/xenotypeSet/xenotypeChances</xpath>
-							<value>
-								<Nyaron MayRequire="Ludeon.RimWorld.Biotech">0.35</Nyaron>
-							</value>
-						</li>
-						
-					</operations>
-				</match>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Normal fights, weak mix -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_Mercenaries"]/pawnGroupMakers/li/options</xpath>
+						<value>
+							<Nyaron_Soldier_Elite>2</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>2</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+					
+				</operations>
 			</match>
 		</match>
 	</Operation>
 	
 	
-	<!-- ID: 2881513314 -->
+	<!-- ID: 2881513314
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Biotech Nyaron</li></mods>
 		
@@ -145,7 +146,7 @@
 			</match>
 			
 		</match>
-	</Operation>
+	</Operation>-->
 	
 	
 	<!-- ID: 1854376306 -->
