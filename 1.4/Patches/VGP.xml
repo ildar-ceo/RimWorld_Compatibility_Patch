@@ -1442,4 +1442,30 @@
 		
 	</Operation>
 	
+	
+	
+	<!-- ID: 2729188290 (VGP Русский) -->
+	<!-- ID: 2007061826 (VGP Vegetable Garden) -->
+	<!-- ID: 2007062982 (VGP Garden Gourmet) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Garden Gourmet</li></mods>
+		
+		<!-- ID: 2654846754 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Ancients</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="VFEA_AncientCookingStation"]/modExtensions/li[@Class="RecipeInheritance.ThingDefExtension"]/inheritRecipesFrom</xpath>
+						<value>
+							<li>ElectricOven</li>
+							<li>Canningstove</li>
+						</value>
+					</li>
+				
+				</operations>
+			</match>
+		</match>
+	</Operation>
 </Patch>
