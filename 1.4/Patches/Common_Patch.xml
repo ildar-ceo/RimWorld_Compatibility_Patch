@@ -226,7 +226,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/WorkGiverDef[defName="emptySepticTank" or defName="LoadWashing" or defName="UnloadWashing" or defName="RefillWater"]/workType</xpath>
+					<xpath>/Defs/WorkGiverDef[defName="emptySepticTank" or defName="LoadWashing" or defName="UnloadWashing" or defName="RefillWater" or defName="ClearBlockage"]/workType</xpath>
 					<value>
 						<workType>BasicWorker</workType>
 					</value>

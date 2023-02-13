@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	
-	<!-- ID: 2155485488 
+	<!-- ID: 2155485488 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 				
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/ThingDef[defName="ANN_Shocker"]/thingCategories</xpath>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CW_NapalmBlaster" or defName="CW_Accelerator" or defName="CW_Disruptor" or defName="CW_DualEraser"]/tradeTags</xpath>
+					<value>
+						<li>ExoticMisc</li>
+					</value>
 				</li>
 				
 			</operations>
 		</match>
 	</Operation>
-	-->
+	
 </Patch>

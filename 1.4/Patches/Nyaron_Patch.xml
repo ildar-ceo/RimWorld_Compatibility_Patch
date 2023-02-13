@@ -334,6 +334,17 @@
 						</li>
 					</value>
 				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods" or defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_MarketValue">
+							<tradeTag>WeaponRanged</tradeTag>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
 					<value>
@@ -363,6 +374,13 @@
 						</li>
 					</value>
 				</li>
+				
+				<li Class="PatchOperationReplace">
+				<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods" or defName="Caravan_Nyaron_Exotic"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+				<value>
+					<countRange>1000~4000</countRange>
+				</value>
+			</li>
 				
 			</operations>
 		</match>
