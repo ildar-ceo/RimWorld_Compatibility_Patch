@@ -72,7 +72,7 @@
 		<value>
 			<li Class="StockGenerator_Category">
 				<categoryDef>NeurotrainersSkill</categoryDef>
-				<thingDefCountRange>2~3</thingDefCountRange>
+				<thingDefCountRange>2~5</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 		</value>
@@ -82,7 +82,7 @@
 		<value>
 			<li Class="StockGenerator_Category">
 				<categoryDef>NeurotrainersSkill</categoryDef>
-				<thingDefCountRange>3~4</thingDefCountRange>
+				<thingDefCountRange>3~7</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 		</value>
@@ -115,7 +115,7 @@
 		<value>
 			<li Class="StockGenerator_MarketValue">
 				<tradeTag>WeaponRanged</tradeTag>
-				<countRange>1~2</countRange>
+				<countRange>2~5</countRange>
 			</li>
 		</value>
 	</Operation>
@@ -150,12 +150,57 @@
 		<value>
 			<li Class="StockGenerator_MarketValue">
 				<tradeTag>WeaponRanged</tradeTag>
-				<countRange>2~5</countRange>
+				<countRange>5~5</countRange>
 			</li>
 		</value>
 	</Operation>
 	
 	
+	<!-- Add money -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+		<value>
+			<countRange>200~500</countRange>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier" or defName="Caravan_Outlander_PirateMerchant"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+		<value>
+			<countRange>2000~5000</countRange>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Orbital_PirateMerchant" or defName="Orbital_CombatSupplier" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+		<value>
+			<countRange>5000~10000</countRange>
+		</value>
+	</Operation>
+	
+	
+	<!-- Visitors -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>ExoticMisc</tradeTag>
+				<thingDefCountRange>0~1</thingDefCountRange>
+				<countRange>1~1</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>Artifact</tradeTag>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>1~1</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>NeurotrainersSkill</categoryDef>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- Royalty -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Royalty</li></mods>
 		<match Class="PatchOperationSequence">
@@ -201,6 +246,14 @@
 					<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]/statBases/MarketValue</xpath>
 					<value>
 						<MarketValue>3200</MarketValue>
+					</value>
+				</li>
+				
+				<!-- Add money -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+					<value>
+						<countRange>2000~5000</countRange>
 					</value>
 				</li>
 				
@@ -274,7 +327,7 @@
 					<value>
 						<li Class="StockGenerator_Category">
 							<categoryDef>NeurotrainersSkill</categoryDef>
-							<thingDefCountRange>3~4</thingDefCountRange>
+							<thingDefCountRange>3~7</thingDefCountRange>
 							<countRange>1~2</countRange>
 						</li>
 					</value>
@@ -295,7 +348,7 @@
 					<value>
 						<li Class="StockGenerator_MarketValue">
 							<tradeTag>WeaponRanged</tradeTag>
-							<countRange>2~5</countRange>
+							<countRange>5~5</countRange>
 						</li>
 					</value>
 				</li>
@@ -323,6 +376,14 @@
 								<max>8</max>
 							</countRange>
 						</li>
+					</value>
+				</li>
+				
+				<!-- Add money -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_GlitterWorldSW"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+					<value>
+						<countRange>5000~20000</countRange>
 					</value>
 				</li>
 				
@@ -507,6 +568,10 @@
 					</value>
 				</li>
 				
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[@Name="EccentricUndersuitCommonBase" or @Name="EccentricUniformBase" or @Name="EccentricFrillBase" or @Name="EccentricApronBase" or @Name="EccentricGearBase"]/tradeability</xpath>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
@@ -562,6 +627,25 @@
 						<tradeTags>
 							<li>WeaponRanged</li>
 						</tradeTags>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2586052937 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>SeedsPlease: Lite</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Add money -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_GreenHouseTraderr"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+					<value>
+						<countRange>1000~5000</countRange>
 					</value>
 				</li>
 				

@@ -160,32 +160,6 @@
 	<!-- ID: 1854376306 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Nyaron race</li></mods>
-		
-		<!-- ID: 2723801948 -->
-		<match Class="PatchOperationFindMod">
-			<mods><li>Vanilla Factions Expanded - Pirates</li></mods>
-			
-			<match Class="PatchOperationSequence">
-				<operations>
-					
-					<!-- Normal fights, weak mix -->
-					<li Class="PatchOperationAdd">
-						<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_Mercenaries"]/pawnGroupMakers/li/options</xpath>
-						<value>
-							<Nyaron_Soldier_Elite>2</Nyaron_Soldier_Elite>
-							<Nyaron_Ranger_Elite>2</Nyaron_Ranger_Elite>
-						</value>
-					</li>
-					
-				</operations>
-			</match>
-		</match>
-	</Operation>
-	
-	
-	<!-- ID: 1854376306 -->
-	<Operation Class="PatchOperationFindMod">
-		<mods><li>Nyaron race</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 				
@@ -340,7 +314,7 @@
 					<value>
 						<li Class="StockGenerator_MarketValue">
 							<tradeTag>WeaponRanged</tradeTag>
-							<countRange>1~2</countRange>
+							<countRange>2~5</countRange>
 						</li>
 					</value>
 				</li>
@@ -369,22 +343,153 @@
 					<value>
 						<li Class="StockGenerator_Category">
 							<categoryDef>NeurotrainersSkill</categoryDef>
-							<thingDefCountRange>0~1</thingDefCountRange>
-							<countRange>1</countRange>
+							<thingDefCountRange>2~5</thingDefCountRange>
+							<countRange>1~2</countRange>
 						</li>
 					</value>
 				</li>
 				
+				<!-- Add money -->
 				<li Class="PatchOperationReplace">
-				<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods" or defName="Caravan_Nyaron_Exotic"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
-				<value>
-					<countRange>1000~4000</countRange>
-				</value>
-			</li>
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods" or defName="Caravan_Nyaron_Exotic" or defName="Caravan_Nyaron_CombatSupplier"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+					<value>
+						<countRange>1000~5000</countRange>
+					</value>
+				</li>
 				
 			</operations>
 		</match>
 		
+	</Operation>
+	
+	
+	<!-- Adds Nyaron to other factions -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Outlander Combat -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<NyaronCivBase>5</NyaronCivBase>
+						<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+						<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+						<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
+						<Nyaron_Soldier>5</Nyaron_Soldier>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
+					</value>
+				</li>
+				
+				<!-- Outlander Peaceful -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
+					<value>
+						<NyaronCivBase>5</NyaronCivBase>
+						<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+						<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+						<Nyaron_Soldier>3</Nyaron_Soldier>
+						<Nyaron_Ranger>3</Nyaron_Ranger>
+					</value>
+				</li>
+				
+				<!-- Outlander Trader -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[3]/guards</xpath>
+					<value>
+						<NyaronCivBase>3</NyaronCivBase>
+						<Nyaron_Ranger_Light>3</Nyaron_Ranger_Light>
+						<Nyaron_Soldier_Light>3</Nyaron_Soldier_Light>
+						<Nyaron_Soldier>2</Nyaron_Soldier>
+						<Nyaron_Ranger>2</Nyaron_Ranger>
+					</value>
+				</li>
+				
+				<!-- Outlander Settlement -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[4]/options</xpath>
+					<value>
+						<Nyaron_Soldier>4</Nyaron_Soldier>
+						<Nyaron_Ranger>4</Nyaron_Ranger>
+						<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+						<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 100, Normal fights, ranged with melee mix-ins -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<NyaronCivBase>5</NyaronCivBase>
+						<Nyaron_Soldier>5</Nyaron_Soldier>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
+						<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+						<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+						<Nyaron_Ranger_Rocketeer>1</Nyaron_Ranger_Rocketeer>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 30, Normal fights, melee-only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[2]/options</xpath>
+					<value>
+						<NyaronCivBase>5</NyaronCivBase>
+						<Nyaron_Soldier>3</Nyaron_Soldier>
+						<Nyaron_Soldier_Light>4</Nyaron_Soldier_Light>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 20, ranged only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[3]/options</xpath>
+					<value>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
+						<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 15, explosives with ranged mix-ins -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[4]/options</xpath>
+					<value>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
+						<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+						<Nyaron_Ranger_Rocketeer>3</Nyaron_Ranger_Rocketeer>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 10, snipers only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[5]/options</xpath>
+					<value>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
+						<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 2.5 Normal fights, drifters only 
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[6]/options</xpath>
+					<value>
+					</value>
+				</li>
+				-->
+				
+				<!-- Pirate Settlement -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[7]/options</xpath>
+					<value>
+						<NyaronCivBase>5</NyaronCivBase>
+						<Nyaron_Soldier>3</Nyaron_Soldier>
+						<Nyaron_Ranger>3</Nyaron_Ranger>
+						<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+						<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
 	</Operation>
 	
 	
@@ -429,6 +534,10 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[2]/options</xpath>
 						<value>
+							<Nyaron_Soldier>3</Nyaron_Soldier>
+							<Nyaron_Ranger>3</Nyaron_Ranger>
+							<Nyaron_Ranger_Rocketeer>3</Nyaron_Ranger_Rocketeer>
+							<Nyaron_Special_Assassin>3</Nyaron_Special_Assassin>
 							<Nyaron_Soldier_Elite>3</Nyaron_Soldier_Elite>
 							<Nyaron_Ranger_Elite>3</Nyaron_Ranger_Elite>
 						</value>
@@ -438,6 +547,10 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[3]/options</xpath>
 						<value>
+							<Nyaron_Soldier>3</Nyaron_Soldier>
+							<Nyaron_Ranger>3</Nyaron_Ranger>
+							<Nyaron_Ranger_Rocketeer>3</Nyaron_Ranger_Rocketeer>
+							<Nyaron_Special_Assassin>3</Nyaron_Special_Assassin>
 							<Nyaron_Soldier_Elite>3</Nyaron_Soldier_Elite>
 							<Nyaron_Ranger_Elite>3</Nyaron_Ranger_Elite>
 						</value>
@@ -447,6 +560,10 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[4]/options</xpath>
 						<value>
+							<Nyaron_Soldier>3</Nyaron_Soldier>
+							<Nyaron_Ranger>3</Nyaron_Ranger>
+							<Nyaron_Ranger_Rocketeer>3</Nyaron_Ranger_Rocketeer>
+							<Nyaron_Special_Assassin>3</Nyaron_Special_Assassin>
 							<Nyaron_Soldier_Elite>2</Nyaron_Soldier_Elite>
 							<Nyaron_Ranger_Elite>2</Nyaron_Ranger_Elite>
 						</value>
@@ -456,124 +573,6 @@
 			</match>
 		</match>
 		
-	</Operation>
-	
-	
-	<!-- Adds Nyaron to other factions -->
-	<Operation Class="PatchOperationFindMod">
-		<mods><li>Nyaron race</li></mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-				
-				<!-- Outlander Combat -->
-				<li Class="PatchOperationAdd">
-		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
-					<value>
-						<Nyaron_Soldier>4</Nyaron_Soldier>
-						<Nyaron_Ranger>4</Nyaron_Ranger>
-						<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
-						<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
-					</value>
-				</li>
-				
-				<!-- Outlander Peaceful -->
-				<li Class="PatchOperationAdd">
-		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
-					<value>
-						<Nyaron_Soldier>3</Nyaron_Soldier>
-					</value>
-				</li>
-				
-				<!-- Outlander Trader -->
-				<li Class="PatchOperationAdd">
-		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[3]/guards</xpath>
-					<value>
-						<Nyaron_Soldier>3</Nyaron_Soldier>
-						<Nyaron_Ranger>2</Nyaron_Ranger>
-					</value>
-				</li>
-				
-				<!-- Outlander Settlement -->
-				<li Class="PatchOperationAdd">
-		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[4]/options</xpath>
-					<value>
-						<Nyaron_Soldier>4</Nyaron_Soldier>
-						<Nyaron_Ranger>4</Nyaron_Ranger>
-						<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
-						<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
-					</value>
-				</li>
-				
-				<!-- Pirate Combat 100, Normal fights, ranged with melee mix-ins -->
-				<li Class="PatchOperationAdd">
-		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[1]/options</xpath>
-					<value>
-						<Nyaron_Soldier>3</Nyaron_Soldier>
-						<Nyaron_Ranger>3</Nyaron_Ranger>
-						<Nyaron_Soldier_Light>4</Nyaron_Soldier_Light>
-						<Nyaron_Ranger_Light>4</Nyaron_Ranger_Light>
-						<Nyaron_Ranger_Rocketeer>1</Nyaron_Ranger_Rocketeer>
-					</value>
-				</li>
-				
-				<!-- Pirate Combat 30, Normal fights, melee-only -->
-				<li Class="PatchOperationAdd">
-		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[2]/options</xpath>
-					<value>
-						<Nyaron_Soldier>3</Nyaron_Soldier>
-						<Nyaron_Soldier_Light>4</Nyaron_Soldier_Light>
-					</value>
-				</li>
-				
-				<!-- Pirate Combat 20, ranged only -->
-				<li Class="PatchOperationAdd">
-		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[3]/options</xpath>
-					<value>
-						<Nyaron_Ranger>3</Nyaron_Ranger>
-						<Nyaron_Ranger_Light>4</Nyaron_Ranger_Light>
-					</value>
-				</li>
-				
-				<!-- Pirate Combat 15, explosives with ranged mix-ins -->
-				<li Class="PatchOperationAdd">
-		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[4]/options</xpath>
-					<value>
-						<Nyaron_Ranger>2</Nyaron_Ranger>
-						<Nyaron_Ranger_Light>3</Nyaron_Ranger_Light>
-						<Nyaron_Ranger_Rocketeer>1</Nyaron_Ranger_Rocketeer>
-					</value>
-				</li>
-				
-				<!-- Pirate Combat 10, snipers only -->
-				<li Class="PatchOperationAdd">
-		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[5]/options</xpath>
-					<value>
-						<Nyaron_Ranger>2</Nyaron_Ranger>
-						<Nyaron_Ranger_Light>3</Nyaron_Ranger_Light>
-					</value>
-				</li>
-				
-				<!-- Pirate Combat 2.5 Normal fights, drifters only 
-				<li Class="PatchOperationAdd">
-		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[6]/options</xpath>
-					<value>
-					</value>
-				</li>
-				-->
-				
-				<!-- Pirate Settlement -->
-				<li Class="PatchOperationAdd">
-		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[7]/options</xpath>
-					<value>
-						<Nyaron_Soldier>3</Nyaron_Soldier>
-						<Nyaron_Ranger>3</Nyaron_Ranger>
-						<Nyaron_Soldier_Light>4</Nyaron_Soldier_Light>
-						<Nyaron_Ranger_Light>4</Nyaron_Ranger_Light>
-					</value>
-				</li>
-				
-			</operations>
-		</match>
 	</Operation>
 	
 	
@@ -592,17 +591,17 @@
 						<value>
 							<li Class="StockGenerator_Category">
 								<categoryDef>EccentricApparel</categoryDef>
-								<thingDefCountRange>1~2</thingDefCountRange>
+								<thingDefCountRange>1~3</thingDefCountRange>
 								<countRange>1~2</countRange>
 							</li>
 							<li Class="StockGenerator_Category">
 								<categoryDef>EccentricApparelHeadwear</categoryDef>
-								<thingDefCountRange>1~2</thingDefCountRange>
+								<thingDefCountRange>1~3</thingDefCountRange>
 								<countRange>1~2</countRange>
 							</li>
 							<li Class="StockGenerator_Category">
 								<categoryDef>EccentricApparelGear</categoryDef>
-								<thingDefCountRange>1~2</thingDefCountRange>
+								<thingDefCountRange>1~3</thingDefCountRange>
 								<countRange>1~2</countRange>
 							</li>
 						</value>
@@ -640,6 +639,103 @@
 			</match>
 		</match>
 		
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2723801948 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Pirates</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Normal fights, weak mix -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_Mercenaries"]/pawnGroupMakers/li/options</xpath>
+						<value>
+							<NyaronCivBase>5</NyaronCivBase>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Special_Assassin>5</Nyaron_Special_Assassin>
+							<Nyaron_Soldier_Elite>2</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>2</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_Mercenaries"]/pawnGroupMakers/li[1]/options</xpath>
+						<value>
+							<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEP_Mercenaries"]/pawnGroupMakers/li[2]/options</xpath>
+						<value>
+							<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_Mercenaries"]/pawnGroupMakers/li[3]/options</xpath>
+						<value>
+							<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 1123043922 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Sparkling Worlds - Full Mod</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+						<value>
+							<NyaronCivBase>50</NyaronCivBase>
+							<Nyaron_Soldier_Light>50</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>50</Nyaron_Ranger_Light>
+							<Nyaron_Soldier>50</Nyaron_Soldier>
+							<Nyaron_Ranger>50</Nyaron_Ranger>
+							<Nyaron_Ranger_Rocketeer>50</Nyaron_Ranger_Rocketeer>
+							<Nyaron_Special_Assassin>50</Nyaron_Special_Assassin>
+							<Nyaron_Soldier_Elite>20</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>20</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+						<value>
+							<NyaronCivBase>50</NyaronCivBase>
+							<Nyaron_Soldier_Light>50</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>50</Nyaron_Ranger_Light>
+							<Nyaron_Soldier>50</Nyaron_Soldier>
+							<Nyaron_Ranger>50</Nyaron_Ranger>
+							<Nyaron_Ranger_Rocketeer>50</Nyaron_Ranger_Rocketeer>
+							<Nyaron_Special_Assassin>50</Nyaron_Special_Assassin>
+							<Nyaron_Soldier_Elite>20</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>20</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
 	</Operation>
 	
 </Patch>
