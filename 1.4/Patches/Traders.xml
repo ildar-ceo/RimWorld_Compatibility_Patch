@@ -169,8 +169,8 @@
 			<countRange>2000~5000</countRange>
 		</value>
 	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Orbital_PirateMerchant" or defName="Orbital_CombatSupplier" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Orbital_PirateMerchant" or defName="Orbital_CombatSupplier" or defName="Base_Outlander_Standard"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
 		<value>
 			<countRange>5000~10000</countRange>
 		</value>
@@ -643,7 +643,7 @@
 				
 				<!-- Add money -->
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/TraderKindDef[defName="Caravan_GreenHouseTraderr"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+					<xpath>/Defs/TraderKindDef[defName="Caravan_GreenHouseTrader"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
 					<value>
 						<countRange>1000~5000</countRange>
 					</value>
