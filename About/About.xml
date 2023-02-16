@@ -5,10 +5,10 @@
 	<packageId>GoodVine.Compatibility.Patch</packageId>
 	<description>
 Mods Balance and Compatibility Patch
-Version: 1.4.4
+Version: 1.4.5
 
 Mod compatibility for Hightech CyberPack.
-May used as standalone mod.
+May used as standalone mod. Must be loaded after all mods.
 
 =====
 
@@ -23,6 +23,7 @@ Common:
 - Rottable BodyPartNatural
 - Tradable Psychic amplifier, Neurotrainers skill, Broadshield core, HiTechArmor
 - Craftable AI Core
+- Add money to traders
 
 =====
 
@@ -59,11 +60,6 @@ Nyaron race:
 - Fix correct names
 - Adds Nyaron to common factions with balance fix
 - Nyaron xenotype
-
-=====
-
-Android Tiers:
-- Tradable nanokits
 
 =====
 

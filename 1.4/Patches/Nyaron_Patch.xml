@@ -680,12 +680,6 @@
 							<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
 						</value>
 					</li>
-					<li Class="PatchOperationAdd">
-						<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_Mercenaries"]/pawnGroupMakers/li[3]/options</xpath>
-						<value>
-							<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
-						</value>
-					</li>
 					
 				</operations>
 			</match>
