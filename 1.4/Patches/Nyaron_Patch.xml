@@ -274,17 +274,6 @@
 			<operations>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods"]/stockGenerators</xpath>
-					<value>
-						<li Class="StockGenerator_Tag">
-							<tradeTag>HiTechArmor</tradeTag>
-							<thingDefCountRange>0~1</thingDefCountRange>
-							<countRange>1</countRange>
-						</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods" or defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
 					<value>
 						<li Class="StockGenerator_MarketValue">
@@ -299,8 +288,8 @@
 					<value>
 						<li Class="StockGenerator_Tag">
 							<tradeTag>HiTechArmor</tradeTag>
-							<thingDefCountRange>4~7</thingDefCountRange>
-							<countRange>1~2</countRange>
+							<thingDefCountRange>0~1</thingDefCountRange>
+							<countRange>1</countRange>
 						</li>
 					</value>
 				</li>
@@ -318,7 +307,7 @@
 					<value>
 						<li Class="StockGenerator_Category">
 							<categoryDef>NeurotrainersSkill</categoryDef>
-							<thingDefCountRange>2~5</thingDefCountRange>
+							<thingDefCountRange>1~2</thingDefCountRange>
 							<countRange>1~2</countRange>
 						</li>
 					</value>
@@ -590,21 +579,21 @@
 				<operations>
 					
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_CombatSupplier" or defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
 						<value>
 							<li Class="StockGenerator_Category">
 								<categoryDef>EccentricApparel</categoryDef>
-								<thingDefCountRange>1~3</thingDefCountRange>
+								<thingDefCountRange>1~2</thingDefCountRange>
 								<countRange>1~2</countRange>
 							</li>
 							<li Class="StockGenerator_Category">
 								<categoryDef>EccentricApparelHeadwear</categoryDef>
-								<thingDefCountRange>1~3</thingDefCountRange>
+								<thingDefCountRange>1~2</thingDefCountRange>
 								<countRange>1~2</countRange>
 							</li>
 							<li Class="StockGenerator_Category">
 								<categoryDef>EccentricApparelGear</categoryDef>
-								<thingDefCountRange>1~3</thingDefCountRange>
+								<thingDefCountRange>1~2</thingDefCountRange>
 								<countRange>1~2</countRange>
 							</li>
 						</value>

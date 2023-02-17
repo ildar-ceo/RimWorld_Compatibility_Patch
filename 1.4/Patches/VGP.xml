@@ -737,7 +737,7 @@
 										<li>EggsFertilized</li>
 									</categories>
 								</filter>
-							<count>2</count>
+								<count>2</count>
 							</li>
 							<li>
 								<filter>
@@ -813,42 +813,60 @@
 				</li>
 				
 				
-				<!-- FineMeal -->
+				<!-- FineMeals -->
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="grilledcheese" or defName="meatpie"]/ingestible/preferability</xpath>
+					<xpath>/Defs/ThingDef[defName="Nigiri" or defName="bowlstew" or defName="grilledcheese" or defName="meatpie"]/ingestible/preferability</xpath>
 					<value>
 						<preferability>MealFine</preferability>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="grilledcheese" or defName="meatpie"]/ingestible</xpath>
+					<xpath>/Defs/ThingDef[defName="Nigiri" or defName="bowlstew" or defName="grilledcheese" or defName="meatpie"]/ingestible[not(tasteThought)]</xpath>
+					<value>
+						<tasteThought />
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Nigiri" or defName="bowlstew" or defName="grilledcheese" or defName="meatpie"]/ingestible/tasteThought</xpath>
 					<value>
 						<tasteThought>AteFineMeal</tasteThought>
 					</value>
 				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="grilledcheese" or defName="meatpie"]/thingCategories/li[text()="SimpleMeals"]</xpath>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="Nigiri" or defName="bowlstew" or defName="grilledcheese" or defName="meatpie"]/thingCategories/li[text()="SimpleMeals" or text()="FineMeals" or text()="LavishMeals"]</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Nigiri" or defName="bowlstew" or defName="grilledcheese" or defName="meatpie"]/thingCategories</xpath>
 					<value>
 						<li>FineMeals</li>
 					</value>
 				</li>
 				
 				
-				<!-- MealLavish -->
+				<!-- LavishMeals -->
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="MakiRoll" or defName="Nigiri"]/ingestible/preferability</xpath>
+					<xpath>/Defs/ThingDef[defName="BlueberryPie" or defName="MakiRoll" or defName="grilledmeat" or defName="Tacos"]/ingestible/preferability</xpath>
 					<value>
 						<preferability>MealLavish</preferability>
 					</value>
 				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="BlueberryPie" or defName="MakiRoll" or defName="grilledmeat"]/ingestible[not(tasteThought)]</xpath>
+					<value>
+						<tasteThought />
+					</value>
+				</li>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="MakiRoll" or defName="Nigiri"]/ingestible/tasteThought</xpath>
+					<xpath>/Defs/ThingDef[defName="BlueberryPie" or defName="MakiRoll" or defName="grilledmeat" or defName="Tacos"]/ingestible/tasteThought</xpath>
 					<value>
 						<tasteThought>AteLavishMeal</tasteThought>
 					</value>
 				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="MakiRoll" or defName="Nigiri"]/thingCategories/li[text()="FineMeals"]</xpath>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="BlueberryPie" or defName="MakiRoll" or defName="grilledmeat"]/thingCategories/li[text()="SimpleMeals" or text()="FineMeals" or text()="LavishMeals" or defName="Tacos"]</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="BlueberryPie" or defName="MakiRoll" or defName="grilledmeat"]/thingCategories</xpath>
 					<value>
 						<li>LavishMeals</li>
 					</value>
@@ -1197,6 +1215,64 @@
 					</value>
 				</li>
 				
+				<!-- HedSushi -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<HediffDef>
+							<defName>HedSushi</defName>
+							<label>Ate Sushi</label>
+							<description>Ate a really good meal!</description>
+							<initialSeverity>1</initialSeverity>
+							<defaultLabelColor>(0.062, 0.76, 0.05)</defaultLabelColor>
+							<hediffClass>HediffWithComps</hediffClass>
+							<isBad>false</isBad>
+							<comps>
+								<li Class="HediffCompProperties_SeverityPerDay">
+									<severityPerDay>-1.0</severityPerDay>
+								</li>
+							</comps>
+							<stages>
+								<li>
+									<minSeverity>0</minSeverity>
+									<label>Well Fed: Sushi</label>
+									<painFactor>0.9</painFactor>
+									<capMods>
+										<li>
+											<capacity>Consciousness</capacity>
+											<offset>0.1</offset>
+										</li>
+										<li>
+											<capacity>Metabolism</capacity>
+											<offset>0.5</offset>
+										</li>
+										<li>
+											<capacity>BloodFiltration</capacity>
+											<offset>0.1</offset>
+										</li>
+										<li>
+											<capacity>BloodPumping</capacity>
+											<offset>0.1</offset>
+										</li>
+									</capMods>
+								</li>
+							</stages>
+						</HediffDef>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="MakiRoll"]/ingestible/outcomeDoers/li[@Class="IngestionOutcomeDoer_GiveHediff"]</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="MakiRoll"]/ingestible/outcomeDoers</xpath>
+					<value>
+						<li Class="IngestionOutcomeDoer_GiveHediff">
+							<hediffDef>HedSushi</hediffDef>
+							<severity>0.25</severity>
+						</li>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 		
@@ -1216,14 +1292,33 @@
 				<operations>
 					
 					<li Class="PatchOperationRemove">
-						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[3]/filter/categories/li[text()="MeatRaw"]</xpath>
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients/li[3]</xpath>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/ingredients</xpath>
+						<value>
+							<li>
+								<filter>
+									<categories>
+									</categories>
+								</filter>
+								<count>1</count>
+							</li>
+						</value>
 					</li>
 					<li Class="PatchOperationRemove">
 						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/fixedIngredientFilter/categories/li[text()="MeatRaw"]</xpath>
 					</li>
 					<li Class="PatchOperationRemove">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/fixedIngredientFilter/thingDefs/li[text()="Rawmushroom" or text()="Rawtofu" or text()="RawFungus" or text()="RawRedLentil"]</xpath>
+					</li>
+					<li Class="PatchOperationRemove">
 						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/defaultIngredientFilter/categories/li[text()="MeatRaw"]</xpath>
 					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/RecipeDef[defName="CookMakiRoll"]/defaultIngredientFilter/thingDefs/li[text()="Rawmushroom" or text()="Rawtofu" or text()="RawFungus" or text()="RawRedLentil"]</xpath>
+					</li>
+					
 					<li Class="PatchOperationRemove">
 						<xpath>/Defs/RecipeDef[defName="Make_Nigiri"]/ingredients/li[2]/filter/categories/li[text()="MeatRaw"]</xpath>
 					</li>
