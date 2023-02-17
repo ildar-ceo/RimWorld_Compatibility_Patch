@@ -115,12 +115,16 @@
 				
 				<!-- Trade -->
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitBase" or @Name="EccentricFrillBase" or @Name="EccentricApronBase"]</xpath>
+					<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitCommonBase" or @Name="EccentricGearBase"]</xpath>
 					<value>
 						<tradeTags>
 							<li>HiTechArmor</li>
 						</tradeTags>
 					</value>
+				</li>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitCommonBase" or @Name="EccentricGearBase"]/tradeability</xpath>
 				</li>
 				
 			</operations>
