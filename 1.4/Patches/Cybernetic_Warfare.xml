@@ -13,8 +13,52 @@
 						<li>ExoticMisc</li>
 					</value>
 				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CW_GunBlade"]</xpath>
+					<value>
+						<tradeability>Sellable</tradeability>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="CW_CyberneticWarfare"]/baseCost</xpath>
+					<value>
+						<baseCost>2400</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="CW_FrameworkWeaponry"]/baseCost</xpath>
+					<value>
+						<baseCost>7000</baseCost>
+					</value>
+				</li>
 				
 			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2155485488 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		
+		<!-- ID: 2552623545 (Eccentric Tech - Core) -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Eccentric Tech - Core</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="CW_CyberneticWarfare" or defName="CW_FrameworkWeaponry"]</xpath>
+						<value>
+							<requiredResearchFacilities>
+								<li>MultiAnalyzer</li>
+								<li>EccentricAuroraCore</li>
+							</requiredResearchFacilities>
+						</value>
+					</li>
+				
+				</operations>
+			</match>
 		</match>
 	</Operation>
 	
