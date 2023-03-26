@@ -85,7 +85,7 @@
 		<value>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>HiTechArmor</tradeTag>
-				<thingDefCountRange>0~1</thingDefCountRange>
+				<thingDefCountRange>0~2</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</value>
@@ -95,7 +95,7 @@
 		<value>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>HiTechArmor</tradeTag>
-				<thingDefCountRange>0~2</thingDefCountRange>
+				<thingDefCountRange>1~2</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</value>
@@ -306,7 +306,7 @@
 					<value>
 						<li Class="StockGenerator_Tag">
 							<tradeTag>HiTechArmor</tradeTag>
-							<thingDefCountRange>0~2</thingDefCountRange>
+							<thingDefCountRange>1~2</thingDefCountRange>
 							<countRange>1</countRange>
 						</li>
 					</value>
