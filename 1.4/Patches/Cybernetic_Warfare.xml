@@ -20,6 +20,30 @@
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_GunBlade"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>4000</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_GunBlade"]/statBases/RangedWeapon_Cooldown</xpath>
+					<value>
+						<RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_GunBlade"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>20</Gold>
+							<Uranium>100</Uranium>
+							<Plasteel>150</Plasteel>
+							<ComponentSpacer>25</ComponentSpacer>
+							<ComponentIndustrial>50</ComponentIndustrial>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ResearchProjectDef[defName="CW_CyberneticWarfare"]/baseCost</xpath>
 					<value>
 						<baseCost>2400</baseCost>
@@ -62,4 +86,149 @@
 		</match>
 	</Operation>
 	
+	
+	<!-- ID: 2155485488 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		
+		<!-- ID: 2045064990 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Cybernetic Organism and Neural Network</li></mods>
+			
+			<!-- ID: 1949064302 -->
+			<match Class="PatchOperationFindMod">
+				<mods><li>Expanded Prosthetics and Organ Engineering - Forked</li></mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+					
+						<li Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="CW_DualEraser" or defName="CW_GunBlade" or defName="CW_RiotBreaker" or defName="CW_BallisticShredder" or defName="CW_BallisticCombatGun" or defName="CW_BallisticEnforcer" or defName="CW_Disruptor" or defName="CW_PlasmaGun" or defName="CW_HavocLauncher" or defName="CW_CoilGun" or defName="CW_Accelerator" or defName="CW_ReconBolter"]/modExtensions/li[@Class="ExtraStatParts.EquipmentRequirementModifiers"]/requireAnyOfTheseHediffs</xpath>
+						
+							<value>
+								<li>PowerArm</li>
+								<li>AdvancedBionicArm</li>
+							</value>
+							
+						</li>
+						
+					</operations>
+				</match>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2155485488 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		
+		<!-- ID: 2045064990 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Cybernetic Organism and Neural Network</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="CW_DualEraser" or defName="CW_GunBlade" or defName="CW_RiotBreaker" or defName="CW_BallisticShredder" or defName="CW_BallisticCombatGun" or defName="CW_BallisticEnforcer" or defName="CW_Disruptor" or defName="CW_PlasmaGun" or defName="CW_HavocLauncher" or defName="CW_CoilGun" or defName="CW_Accelerator" or defName="CW_ReconBolter"]/modExtensions/li[@Class="ExtraStatParts.EquipmentRequirementModifiers"]/requireAnyOfTheseHediffs</xpath>
+					
+						<value>
+							<li>CONN_hediff_ExoskeletonArmor</li>
+							<li>CONN_hediff_PowerArms</li>
+							<li>CONN_hediff_EnergyLink</li>
+							<li>CONN_hediff_Musclewire</li>
+						</value>
+						
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2155485488 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		
+		<!-- ID: 2045064990 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Cybernetic Organism and Neural Network</li></mods>
+			
+			<match Class="PatchOperationFindMod">
+				<mods><li>Royalty</li></mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+					
+						<li Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="CW_DualEraser" or defName="CW_GunBlade" or defName="CW_RiotBreaker" or defName="CW_BallisticShredder" or defName="CW_BallisticCombatGun" or defName="CW_BallisticEnforcer" or defName="CW_Disruptor" or defName="CW_PlasmaGun" or defName="CW_HavocLauncher" or defName="CW_CoilGun" or defName="CW_Accelerator" or defName="CW_ReconBolter"]/modExtensions/li[@Class="ExtraStatParts.EquipmentRequirementModifiers"]/requireAnyOfTheseHediffs</xpath>
+						
+							<value>
+								<li>FieldHand</li>
+								<li>DrillArm</li>
+							</value>
+							
+						</li>
+						
+					</operations>
+				</match>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2155485488 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		
+		<!-- ID: 2045064990 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Cybernetic Organism and Neural Network</li></mods>
+			
+			<!-- ID: 2008970276 -->
+			<match Class="PatchOperationFindMod">
+				<mods><li>EPOE-Forked: Royalty DLC expansion</li></mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+					
+						<li Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="CW_DualEraser" or defName="CW_GunBlade" or defName="CW_RiotBreaker" or defName="CW_BallisticShredder" or defName="CW_BallisticCombatGun" or defName="CW_BallisticEnforcer" or defName="CW_Disruptor" or defName="CW_PlasmaGun" or defName="CW_HavocLauncher" or defName="CW_CoilGun" or defName="CW_Accelerator" or defName="CW_ReconBolter"]/modExtensions/li[@Class="ExtraStatParts.EquipmentRequirementModifiers"]/requireAnyOfTheseHediffs</xpath>
+						
+							<value>
+								<li>EPOE_AdvancedDrillArm</li>
+							</value>
+							
+						</li>
+						
+					</operations>
+				</match>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1949064302 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Expanded Prosthetics and Organ Engineering - Forked</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="CreatePowerArm"]/ingredients/li[2]/filter/thingDefs</xpath>
+					<value>
+						<li>EPIA_ScytherBlade</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="CreatePowerArm"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>EPIA_ScytherBlade</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+		
 </Patch>
