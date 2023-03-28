@@ -273,6 +273,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
+				<!-- WeaponRanged -->
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
 					<value>
@@ -283,6 +284,7 @@
 					</value>
 				</li>
 				
+				<!-- HiTechArmor -->
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_CombatSupplier"]/stockGenerators</xpath>
 					<value>
@@ -328,6 +330,48 @@
 					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods" or defName="Caravan_Nyaron_Exotic" or defName="Caravan_Nyaron_CombatSupplier"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
 					<value>
 						<countRange>1000~5000</countRange>
+					</value>
+				</li>
+				
+				<!-- BodyParts -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_CombatSupplier"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyParts</categoryDef>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyPartsProsthetic</categoryDef>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyPartsBionic</categoryDef>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyParts</categoryDef>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>1~1</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyPartsProsthetic</categoryDef>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyPartsBionic</categoryDef>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
 					</value>
 				</li>
 				

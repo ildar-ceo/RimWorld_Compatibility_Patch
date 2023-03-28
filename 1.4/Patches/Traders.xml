@@ -177,6 +177,83 @@
 	</Operation>
 	
 	
+	<!-- Add BodyParts -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_CombatSupplier" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyParts</categoryDef>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsProsthetic</categoryDef>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsBionic</categoryDef>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyParts</categoryDef>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1~1</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsProsthetic</categoryDef>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsBionic</categoryDef>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyParts</categoryDef>
+				<thingDefCountRange>1~4</thingDefCountRange>
+				<countRange>1~1</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsProsthetic</categoryDef>
+				<thingDefCountRange>1~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsBionic</categoryDef>
+				<thingDefCountRange>1~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsUltra</categoryDef>
+				<thingDefCountRange>1~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsArchotech</categoryDef>
+				<thingDefCountRange>1~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+				<excludedThingDefs>
+					<li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech">PsychicAmplifier</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Mechlink</li>
+				</excludedThingDefs>
+			</li>
+		</value>
+	</Operation>
+	
+	
 	<!-- Visitors -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators</xpath>
@@ -231,7 +308,7 @@
 						<MarketValue>2000</MarketValue>
 					</value>
 				</li>
-			
+				
 				<!-- Add PsychicAmplifier to Traders -->
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard"]/stockGenerators</xpath>
