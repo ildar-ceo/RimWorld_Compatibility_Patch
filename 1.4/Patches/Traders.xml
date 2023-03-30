@@ -359,7 +359,7 @@
 				<incident>OrbitalTraderArrival</incident>
 				<onDays>10</onDays>
 				<offDays>5</offDays>
-				<numIncidentsRange>3</numIncidentsRange>
+				<numIncidentsRange>2</numIncidentsRange>
 			</li>
 		</value>
 	</Operation>
@@ -370,7 +370,7 @@
 				<incident>OrbitalTraderArrival</incident>
 				<onDays>10</onDays>
 				<offDays>5</offDays>
-				<numIncidentsRange>3</numIncidentsRange>
+				<numIncidentsRange>2</numIncidentsRange>
 			</li>
 		</value>
 	</Operation>
@@ -394,7 +394,7 @@
 							<incident>OrbitalTraderArrival</incident>
 							<onDays>10</onDays>
 							<offDays>5</offDays>
-							<numIncidentsRange>3</numIncidentsRange>
+							<numIncidentsRange>2</numIncidentsRange>
 						</li>
 					</value>
 				</li>

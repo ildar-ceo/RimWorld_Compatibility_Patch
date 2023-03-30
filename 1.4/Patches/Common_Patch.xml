@@ -128,7 +128,7 @@
 				<defName>CreateComputerCore</defName>
 				<label>AI Computer Core</label>
 				<description>Create AI Computer Core</description>
-				<baseCost>2000</baseCost>
+				<baseCost>4500</baseCost>
 				<techLevel>Spacer</techLevel>
 				<prerequisites>
 					<li>ShipComputerCore</li>
@@ -137,42 +137,78 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef[defName="AIPersonaCore"]</xpath>
+		<xpath>/Defs</xpath>
 		<value>
-			<costList>
-				<Gold>50</Gold>
-				<Steel>500</Steel>
-				<Plasteel>300</Plasteel>
-				<ComponentSpacer>20</ComponentSpacer>
-				<ComponentIndustrial>100</ComponentIndustrial>
-				<Uranium>100</Uranium>
-			</costList>
-			<recipeMaker>
+			<RecipeDef>
+				<defName>MakeAICore</defName>
+				<label>make AICore</label>
+				<description>Make AICore</description>
+				<jobString>Make AICore</jobString>
 				<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 				<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
 				<workSkill>Crafting</workSkill>
 				<effectWorking>Smith</effectWorking>
 				<researchPrerequisite>CreateComputerCore</researchPrerequisite>
+				<soundWorking>Recipe_Machining</soundWorking>
+				<workAmount>15000</workAmount>
 				<recipeUsers>
 					<li>FabricationBench</li>
 				</recipeUsers>
 				<skillRequirements>
-					<Crafting>12</Crafting>
-					<Intellectual>5</Intellectual>
+					<Crafting>15</Crafting>
+					<Intellectual>10</Intellectual>
 				</skillRequirements>
-			</recipeMaker>
+				<ingredients>
+					<li>
+						<filter><thingDefs><li>Gold</li></thingDefs></filter>
+						<count>50</count>
+					</li>
+					<li>
+						<filter><thingDefs><li>Silver</li></thingDefs></filter>
+						<count>100</count>
+					</li>
+					<li>
+						<filter><thingDefs><li>Steel</li></thingDefs></filter>
+						<count>500</count>
+					</li>
+					<li>
+						<filter><thingDefs><li>Plasteel</li></thingDefs></filter>
+						<count>300</count>
+					</li>
+					<li>
+						<filter><thingDefs><li>ComponentSpacer</li></thingDefs></filter>
+						<count>20</count>
+					</li>
+					<li>
+						<filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter>
+						<count>100</count>
+					</li>
+					<li>
+						<filter><thingDefs><li>Uranium</li></thingDefs></filter>
+						<count>100</count>
+					</li>
+				</ingredients>
+				<fixedIngredientFilter>
+					<thingDefs>
+						<li>Gold</li>
+						<li>Silver</li>
+						<li>Steel</li>
+						<li>Plasteel</li>
+						<li>ComponentSpacer</li>
+						<li>ComponentIndustrial</li>
+						<li>Uranium</li>
+					</thingDefs>
+				</fixedIngredientFilter>
+				<products>
+					<AIPersonaCore>1</AIPersonaCore>
+				</products>
+			</RecipeDef>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="AIPersonaCore"]/statBases/MarketValue</xpath>
 		<value>
 			<MarketValue>1500</MarketValue>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef[defName="AIPersonaCore"]/statBases</xpath>
-		<value>
-			<WorkToMake>15000</WorkToMake>
 		</value>
 	</Operation>
 	
