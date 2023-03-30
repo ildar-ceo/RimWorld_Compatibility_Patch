@@ -260,6 +260,18 @@
 					</value>
 				</li>
 				
+				<!-- Increases Orbital traders rate -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/StorytellerDef[defName="CalicatCozy"]/comps</xpath>
+					<value>
+						<li Class="StorytellerCompProperties_OnOffCycle">
+							<incident>OrbitalTraderArrival</incident>
+							<onDays>10</onDays>
+							<offDays>5</offDays>
+							<numIncidentsRange>3</numIncidentsRange>
+						</li>
+					</value>
+				</li>
 				
 			</operations>
 		</match>
@@ -720,6 +732,5 @@
 			</match>
 		</match>
 	</Operation>
-	
 	
 </Patch>

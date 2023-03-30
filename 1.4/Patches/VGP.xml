@@ -845,7 +845,7 @@
 				
 				<!-- LavishMeals -->
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="BlueberryPie" or defName="MakiRoll" or defName="grilledmeat" or defName="Tacos"]/ingestible/preferability</xpath>
+					<xpath>/Defs/ThingDef[defName="BlueberryPie" or defName="MakiRoll" or defName="Tacos"]/ingestible/preferability</xpath>
 					<value>
 						<preferability>MealLavish</preferability>
 					</value>
@@ -857,16 +857,16 @@
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="BlueberryPie" or defName="MakiRoll" or defName="grilledmeat" or defName="Tacos"]/ingestible/tasteThought</xpath>
+					<xpath>/Defs/ThingDef[defName="BlueberryPie" or defName="MakiRoll" or defName="Tacos"]/ingestible/tasteThought</xpath>
 					<value>
 						<tasteThought>AteLavishMeal</tasteThought>
 					</value>
 				</li>
 				<li Class="PatchOperationRemove">
-					<xpath>/Defs/ThingDef[defName="BlueberryPie" or defName="MakiRoll" or defName="grilledmeat"]/thingCategories/li[text()="SimpleMeals" or text()="FineMeals" or text()="LavishMeals" or defName="Tacos"]</xpath>
+					<xpath>/Defs/ThingDef[defName="BlueberryPie" or defName="MakiRoll"]/thingCategories/li[text()="SimpleMeals" or text()="FineMeals" or text()="LavishMeals" or defName="Tacos"]</xpath>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="BlueberryPie" or defName="MakiRoll" or defName="grilledmeat"]/thingCategories</xpath>
+					<xpath>/Defs/ThingDef[defName="BlueberryPie" or defName="MakiRoll"]/thingCategories</xpath>
 					<value>
 						<li>LavishMeals</li>
 					</value>

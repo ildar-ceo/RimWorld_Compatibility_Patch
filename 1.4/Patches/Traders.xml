@@ -381,6 +381,28 @@
 		</value>
 	</Operation>
 	
+	<!-- ID: 2938820380 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Factions Expanded - Empire</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/StorytellerDef[defName="VFEE_AriadneArchduchess"]/comps/li[incident="OrbitalTraderArrival"]</xpath>
+					<value>
+						<li Class="StorytellerCompProperties_OnOffCycle">
+							<incident>OrbitalTraderArrival</incident>
+							<onDays>10</onDays>
+							<offDays>5</offDays>
+							<numIncidentsRange>3</numIncidentsRange>
+						</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
 	
 	<!-- ID: 1123043922 -->
 	<Operation Class="PatchOperationFindMod">
