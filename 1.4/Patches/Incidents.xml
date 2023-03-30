@@ -5,12 +5,12 @@
 	<!-- ID: 1123043922 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Sparkling Worlds - Full Mod</li></mods>
-		<match>
+		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/IncidentDef[defName="InsectHiveDropSW"]/baseChance</xpath>
 					<value>
-						<baseChance>0.05</baseChance>
+						<baseChance>0.2</baseChance>
 					</value>
 				</li>
 			</operations>
@@ -20,13 +20,19 @@
 	
 	<!-- ID: 1938420742 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Vanilla Events Expanded<</li></mods>
-		<match>
+		<mods><li>Vanilla Events Expanded</li></mods>
+		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/IncidentDef[defName="VEE_Drought" or defName="VEE_AnimalPodCrash" or defName="VEE_Earthquake" or defName="VEE_BattleAnimalsWanderIn" or defName="VEE_WildMenWanderIn"]/baseChance</xpath>
 					<value>
-						<baseChance>0</baseChance>
+						<baseChance>0.01</baseChance>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/IncidentDef[defName="VEE_Cargopodsweapons" or defName="VEE_Cargopodsapparel"]/baseChance</xpath>
+					<value>
+						<baseChance>0.5</baseChance>
 					</value>
 				</li>
 			</operations>
@@ -37,7 +43,7 @@
 	<!-- ID: 1854376306 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Nyaron race</li></mods>
-		<match>
+		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/IncidentDef[defName="Infestation_CS"]/baseChance</xpath>
@@ -53,12 +59,12 @@
 	<!-- ID: 2260097569 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>ReGrowth: Core</li></mods>
-		<match>
+		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/IncidentDef[defName="RG_DevilDusts"]/baseChance</xpath>
 					<value>
-						<baseChance>0</baseChance>
+						<baseChance>0.01</baseChance>
 					</value>
 				</li>
 			</operations>
