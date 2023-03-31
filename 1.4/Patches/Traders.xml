@@ -322,7 +322,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>3200</MarketValue>
+						<MarketValue>4100</MarketValue>
 					</value>
 				</li>
 				

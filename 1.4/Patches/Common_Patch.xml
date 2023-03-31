@@ -273,7 +273,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="OutlanderRoughPig" or defName="PirateYttakin"]</xpath>
+					<xpath>/Defs/FactionDef[defName="OutlanderRoughPig" or defName="PirateWaster"]</xpath>
 					<value>
 						<requiredCountAtGameStart>0</requiredCountAtGameStart>
 						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
@@ -281,6 +281,13 @@
 				</li>
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/FactionDef[defName="OutlanderRoughPig"]/replacesFaction</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="TribeSavageImpid" or defName="TribeRoughNeanderthal"]</xpath>
+					<value>
+						<requiredCountAtGameStart>1</requiredCountAtGameStart>
+						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+					</value>
 				</li>
 				
 				<!--
@@ -313,6 +320,25 @@
 				
 			</operations>
 		</match>
+	</Operation>
+	
+	<!-- PawnKinds -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PawnKindDef[defName="Town_Guard" or defName="Town_Councilman" or defName="Pirate" or defName="Scavenger"]/weaponTags</xpath>
+		<value>
+			<li>IndustrialGunAdvanced</li>
+			<li>IndustrialGunRedesign</li>
+			<li>SpacerGun</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Town_Guard" or defName="Town_Councilman" or defName="Pirate" or defName="Scavenger"]/weaponMoney</xpath>
+		<value>
+			<weaponMoney>
+				<min>700</min>
+				<max>3000</max>
+			</weaponMoney>
+		</value>
 	</Operation>
 	
 	<!-- 2723801948 -->

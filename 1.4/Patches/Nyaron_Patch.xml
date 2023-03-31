@@ -44,7 +44,7 @@
 					</li>
 					
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/FactionDef[defName="PirateWaster"]/xenotypeSet/xenotypeChances</xpath>
+						<xpath>/Defs/FactionDef[defName="PirateWaster" or defName="PirateYttakin"]/xenotypeSet/xenotypeChances</xpath>
 						<value>
 							<Nyaron MayRequire="Ludeon.RimWorld.Biotech">0.35</Nyaron>
 						</value>
@@ -81,7 +81,7 @@
 							<xpath>/Defs/GeneDef[defName="Nyaron"]/forcedHeadTypes</xpath>
 						</li>
 						<li Class="PatchOperationRemove">
-							<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase" or defName="Pirate" or defName="PirateWaster"]/xenotypeSet/xenotypeChances/Nyaron</xpath>
+							<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase" or defName="Pirate" or defName="PirateWaster" or defName="PirateYttakin"]/xenotypeSet/xenotypeChances/Nyaron</xpath>
 						</li>
 						<li Class="PatchOperationRemove">
 							<xpath>/Defs/XenotypeDef[defName="Nyaron"]/genes/li[text()="Ears_Nyaron_Normal" or text()="Tail_Nyaron_Normal" or text()="PsychicAbility_Dull"]</xpath>
@@ -399,6 +399,24 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="Nyaron_Ranger" or defName="Nyaron_Ranger_Elite"]/weaponTags</xpath>
+					<value>
+						<li>IndustrialGunAdvanced</li>
+						<li>IndustrialGunRedesign</li>
+						<li>SpacerGun</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[defName="Nyaron_Ranger"]/weaponMoney</xpath>
+					<value>
+						<weaponMoney>
+							<min>700</min>
+							<max>3000</max>
+						</weaponMoney>
+					</value>
+				</li>
+				
 				<!-- Outlander Combat -->
 				<li Class="PatchOperationAdd">
 		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
@@ -566,10 +584,53 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
 						<value>
-							<Nyaron_Soldier>20</Nyaron_Soldier>
-							<Nyaron_Ranger>20</Nyaron_Ranger>
-							<Nyaron_Soldier_Light>20</Nyaron_Soldier_Light>
-							<Nyaron_Ranger_Light>20</Nyaron_Ranger_Light>
+							<Nyaron_Soldier>10</Nyaron_Soldier>
+							<Nyaron_Ranger>10</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
+						</value>
+					</li>
+					
+					<!-- Normal fights, ranged with melee mix-ins -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateYttakin"]/pawnGroupMakers/li[1]/options</xpath>
+						<value>
+							<Nyaron_Soldier>10</Nyaron_Soldier>
+							<Nyaron_Ranger>10</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
+						</value>
+					</li>
+					
+					<!-- Normal fights, melee-only -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateYttakin"]/pawnGroupMakers/li[2]/options</xpath>
+						<value>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+						</value>
+					</li>
+					
+					<!-- Normal fights, explosives with ranged mix-ins -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateYttakin"]/pawnGroupMakers/li[3]/options</xpath>
+						<value>
+							<Nyaron_Soldier>10</Nyaron_Soldier>
+							<Nyaron_Ranger>10</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
+							<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
+						</value>
+					</li>
+					
+					<!-- Base defense, mainly ranged with melee mix-ins -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateYttakin"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>10</Nyaron_Soldier>
+							<Nyaron_Ranger>10</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
 						</value>
 					</li>
 					

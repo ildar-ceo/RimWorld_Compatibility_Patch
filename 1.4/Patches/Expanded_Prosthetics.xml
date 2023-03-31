@@ -38,9 +38,23 @@
 					</value>
 				</li>
 				
+				<!-- CreatePowerArm -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="CreatePowerArm"]/ingredients/li[2]/filter/thingDefs</xpath>
+					<value>
+						<li>EPIA_ScytherBlade</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="CreatePowerArm"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>EPIA_ScytherBlade</li>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 		
 	</Operation>
-
+	
 </Patch>
