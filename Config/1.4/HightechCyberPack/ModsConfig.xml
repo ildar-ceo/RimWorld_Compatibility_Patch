@@ -1,174 +1,165 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModsConfigData>
-  <version>1.4.3613 rev642</version>
+  <version>1.4.3682 rev790</version>
   <activeMods>
     <li>brrainz.harmony</li>
     <li>ludeon.rimworld</li>
     <li>ludeon.rimworld.royalty</li>
     <li>ludeon.rimworld.ideology</li>
     <li>ludeon.rimworld.biotech</li>
-    <li>unlimitedhugs.hugslib</li>
+    <li>erdelf.humanoidalienraces</li>
+    <li>dubwise.dubsmintmenus</li>
+    <li>fluffy.researchtree</li>
+    <li>mlie.wikirim</li>
     <li>com.bymarcin.architecticons</li>
-    <li>ben.automaticnightowl</li>
-    <li>fluffy.areaunlocker</li>
-    <li>jm.bettertraders</li>
+    <li>automatic.autolinks</li>
+    <li>animalfilthdontcare.1trickponyta</li>
+    <li>razor2.3.anotherrimworldmod.autocutblight</li>
+    
     <li>fluffy.backuppower</li>
+    <li>fluffy.areaunlocker</li>
     <li>dimonsever000.backstoriesplus.specific</li>
+    <li>ben.automaticnightowl</li>
+    <li>unlimitedhugs.hugslib</li>
+    <li>unlimitedhugs.allowtool</li>
     <li>lbmaian.begonemessage</li>
-    <li>automatic.bionicicons</li>
     <li>brrainz.cameraplus</li>
-    <li>petetimessix.compacthediffs</li>
-    <li>alias.campingstuff</li>
+    <li>steve.betterquestrewards</li>
+    <li>farmradish.nyaroncosmetics</li>
+    <li>calamabanana.breachableembrasures</li>
+    <li>automatic.bionicicons</li>
+    <li>relaxedotter.bettermechanoidloot</li>
     <li>brrainz.carefulraids</li>
     <li>azuraal.choiceofpsycasts</li>
     <li>saucypigeon.pawnbadge</li>
     <li>crashm.colorcodedmoodbar.11</li>
-    <li>coldzero.craftableroyaltyweapons</li>
-    <li>kikohi.cybernetic</li>
-    <li>mlie.cyberneticwarfare</li>
-    <li>mlie.dismisstrader</li>
+    <li>edern.combatpsycasts</li>
+    <li>petetimessix.compacthediffs</li>
+    <li>ru.pashka.edern.combatpsycasts</li>
+    <li>caesarv6.damageindicators</li>
+    <li>telardo.dragselect</li>
     <li>mlie.drugpolicyfix</li>
     <li>dubwise.dubsbadhygiene</li>
-    <li>dubwise.dubsmintmenus</li>
+    <li>mlie.dismisstrader</li>
+    <li>aelanna.eccentricextras.angelhairs</li>
     <li>aelanna.eccentrictech.core</li>
     <li>aelanna.eccentrictech.angelapparel</li>
+    <li>wit.expandedroofing</li>
     <li>vat.epoeforked</li>
     <li>vat.epoeforkedroyalty</li>
-    <li>albion.goexplore</li>
-    <li>telardo.dragselect</li>
+    <li>ru.pashka.vat.epoeforked</li>
+    <li>m00nl1ght.geologicallandforms</li>
+    <li>dmitry6.rusgeologicallandforms</li>
+    <li>khorbos.gotosleep</li>
+    <li>owlchemist.giddyup</li>
+    <li>velc.hatsdisplayselection</li>
+    <li>avius.locks</li>
+    <li>haecriver.injuredcarry</li>
+    <li>smashphil.loadinginprogress</li>
     <li>m00nl1ght.mappreview</li>
+    <li>thereallemon.mapreroll</li>
+    <li>mlie.morefactioninteraction</li>
+    <li>oblitus.housekeeperassistancecat</li>
+    <li>haplo.miscellaneous.trainingnotask</li>
+    <li>darkborderman.moretraitgenes</li>
+    <li>com.github.alandariva.moreplanning</li>
+    <li>noodlesking.morepsycasts</li>
+    <li>ru.pashka.noodlesking.morepsycasts</li>
     <li>jaxe.morerandomseeds</li>
     <li>bichang.moresculpture</li>
     <li>zylle.morevanillabiomes</li>
-    <li>hobtook.mortaraccuracy</li>
-    <li>haplo.miscellaneous.trainingnotask</li>
-    <li>com.github.alandariva.moreplanning</li>
-    <li>avius.locks</li>
     <li>unon.noburnmetal</li>
     <li>doug.nojobauthors</li>
+    <li>mehni.numbers</li>
+    <li>farmradish.nyaron</li>
+    <li>hobtook.mortaraccuracy</li>
+    <li>moretraitslots.kv.rw</li>
     <li>mlie.omnicoredrill</li>
     <li>fed1splay.pawntargetfix</li>
     <li>mehni.pickupandhaul</li>
     <li>dimonsever000.psionicplus.specific</li>
     <li>oskarpotocki.vanillafactionsexpanded.core</li>
     <li>vanillaexpanded.vcef</li>
-    <li>sgc.quests</li>
-    <li>lucifer.realisticrooms</li>
-    <li>jaxe.rimhud</li>
-    <li>ratys.rtfuse</li>
-    <li>telardo.romanceontherim</li>
     <li>regrowth.botr.core</li>
     <li>regrowth.botr.borealforestexpansion</li>
+    <li>hatti.qualitybuilder</li>
+    <li>sgc.quests</li>
+    <li>lucifer.realisticrooms</li>
+    <li>ru.fartresh.reinforcedmechanoids2</li>
+    <li>xrushha.reinstallablealtars</li>
+    <li>rimfridge.kv.rw</li>
     <li>uuugggg.replacestuff</li>
+    <li>jaxe.rimhud</li>
+    <li>telardo.romanceontherim</li>
+    <li>ru.telardo.romanceontherim</li>
+    <li>roolo.runandgun</li>
     <li>owlchemist.seedspleaselite</li>
+    <li>uuugggg.sharetheload</li>
     <li>mlie.silentdoors</li>
+    <li>petetimessix.simplesidearms</li>
+    <li>longman.smallerradiusforanimatreesandshrines</li>
+    <li>killathon.androidtiersreforged</li>
     <li>uuugggg.smartmedicine</li>
     <li>sarg.smartspeed</li>
-    <li>albion.sparklingworlds.full</li>
+    <li>dhultgren.smarterconstruction</li>
+    <li>tostov.spacetechraiders</li>
     <li>linkolas.stabilize</li>
     <li>scherub.stonecuttingextended</li>
-    <li>knight.useyourgun</li>
-    <li>carnysenpai.traitraritycolors</li>
+    <li>albion.sparklingworlds.full</li>
+    <li>gt.sam.tilledsoil</li>
     <li>smashphil.dropspot</li>
-    <li>xrushha.reinstallablealtars</li>
-    <li>erdelf.humanoidalienraces</li>
-    <li>oblitus.housekeeperassistancecat</li>
-    <li>vanillaexpanded.vaeaccessories</li>
-    <li>vanillaexpanded.vfefarming</li>
-    <li>vanillaexpanded.ideo.relicsandartifacts</li>
-    <li>vanillaexpanded.vanillasocialinteractionsexpanded</li>
-    <li>vanillaexpanded.vmemese</li>
-    <li>vanillaexpanded.ideo.iconsandsymbols</li>
-    <li>vanillaexpanded.vfepower</li>
-    <li>oskarpotocki.vanillaexpanded.ideologypatches</li>
-    <li>oskarpotocki.vanillaexpanded.royaltypatches</li>
-    <li>vanillaexpanded.vwel</li>
-    <li>oskarpotocki.vfe.pirates</li>
-    <li>vanillaexpanded.vee</li>
-    <li>vanillaexpanded.varme</li>
-    <li>vanillaexpanded.vanillatraitsexpanded</li>
-    <li>vanillaexpanded.basegeneration</li>
-    <li>vfme.caravanpacks</li>
-    <li>dismarzero.vgp.vgpvegetablegarden</li>
-    <li>dismarzero.vgp.vgpgardendrinks</li>
-    <li>dismarzero.vgp.vgpgardengourmet</li>
-    <li>mlie.wehadatrader</li>
-    <li>revolus.whatsmissing</li>
+    <li>carnysenpai.traitraritycolors</li>
+    <li>mlie.turnonoffrepowered</li>
+    <li>knight.useyourgun</li>
+    <li>visibleraidpoints.1trickpwnyta</li>
     <li>murmur.walllight</li>
-    <li>petetimessix.simplesidearms</li>
-    <li>darkborderman.moretraitgenes</li>
-    <li>longman.smallerradiusforanimatreesandshrines</li>
-    <li>moretraitslots.kv.rw</li>
+    <li>udderlyevelyn.waterfreezes</li>
+    <li>divinederivative.romance</li>
+    <li>ru.nfd.waybetterromance</li>
+    <li>mlie.wehadatrader</li>
+    <li>bodlosh.weaponstats</li>
+    <li>revolus.whatsmissing</li>
+    <li>fluffy.worktab</li>
+    <li>maxzicode.zitools</li>
+    <li>grizzlemethis.tradingspot.rw</li>
     <li>frozensnowfox.filthvanisheswithrainandtime</li>
     <li>frozensnowfox.bettercamploot</li>
     <li>ryflamer.misc.drawabead</li>
-    <li>grizzlemethis.tradingspot.rw</li>
-    <li>syrchalis.scarremoval</li>
+    <li>vanillaexpanded.vaeaccessories</li>
+    <li>vanillaexpanded.basegeneration</li>
+    <li>vanillaexpanded.vee</li>
+    <li>oskarpotocki.vanillaexpanded.ideologypatches</li>
+    <li>oskarpotocki.vanillaexpanded.royaltypatches</li>
+    <li>oskarpotocki.vfe.empire</li>
+    <li>vanillaexpanded.ideo.iconsandsymbols</li>
+    <li>vanillaexpanded.vmemese</li>
+    <li>vanillaexpanded.ideo.relicsandartifacts</li>
+    <li>vanillaexpanded.vanillasocialinteractionsexpanded</li>
+    <li>vanillaexpanded.vanillatraitsexpanded</li>
+    <li>dismarzero.vgp.vgpvegetablegarden</li>
+    <li>dismarzero.vgp.vgpgardendrinks</li>
+    <li>dismarzero.vgp.vgpgardengourmet</li>
+    <li>roolo.almostthere</li>
+    <li>hlx.reinforcedmechanoids2</li>
+    <li>albion.sparklingworlds.bmchardcore</li>
+    <li>rimsenal.federation</li>
+    <li>mlie.cyberneticwarfare</li>
     <li>syrchalis.processor.framework</li>
-    <li>syrchalis.setupcamp</li>
-    <li>divinederivative.romance</li>
-    <li>m00nl1ght.geologicallandforms</li>
-    <li>ow.ru.aaa</li>
-    <li>ru.vanillaexpanded.vee</li>
-    <li>ru.vanillaexpanded.vcef</li>
-    <li>ru.vanillasocialinteractionsexpanded</li>
+    <li>com.yayo.yayoani.continued</li>
+    <li>mlie.yayoscombat3</li>
+    <li>smashphil.srtsexpanded</li>
+    <li>rus.biotech.nastia</li>
     <li>gekasid.vgp.vgpvegetablegarden.rus</li>
-    <li>gekasid.oskarpotocki.vfe.pirates.rus</li>
-    <li>ru.pashka.vat.epoeforked</li>
-    <li>dmitry6.rusgeologicallandforms</li>
-    <li>ru.vanilla.furniture.expanded.power</li>
+    <li>ru.rimsenal.federation</li>
     <li>ow.ru.vie</li>
     <li>ow.ru.traits</li>
-    <li>hol.catearsanime</li>
-    <li>roolo.almostthere</li>
-    <li>unlimitedhugs.allowtool</li>
-    <li>razor2.3.anotherrimworldmod.autocutblight</li>
-    <li>steve.betterquestrewards</li>
-    <li>3hstltd.wolf.gene</li>
-    <li>caesarv6.damageindicators</li>
-    <li>rimfridge.kv.rw</li>
-    <li>gt.sam.tilledsoil</li>
-    <li>hatti.qualitybuilder</li>
-    <li>mehni.numbers</li>
-    <li>fluffy.researchtree</li>
-    <li>fluffy.worktab</li>
-    <li>khorbos.gotosleep</li>
-    <li>wit.expandedroofing</li>
-    <li>mlie.turnonoffrepowered</li>
-    <li>bodlosh.weaponstats</li>
-    <li>visibleraidpoints.1trickpwnyta</li>
-    <li>relaxedotter.bettermechanoidloot</li>
-    <li>mlie.wikirim</li>
-    <li>haecriver.injuredcarry</li>
-    <li>udderlyevelyn.waterfreezes</li>
-    <li>notfood.mendandrecycle</li>
-    <li>maxzicode.zitools</li>
-    <li>machine.betterinfestations</li>
-    <li>calamabanana.breachableembrasures</li>
-    <li>thereallemon.mapreroll</li>
-    <li>uuugggg.sharetheload</li>
-    <li>dhultgren.smarterconstruction</li>
-    <li>ru.fartresh.reinforcedmechanoids2</li>
-    <li>hlx.reinforcedmechanoids2</li>
-    <li>roolo.giddyupcore</li>
-    <li>roolo.giddyupbattlemounts</li>
-    <li>roolo.giddyupcaravan</li>
-    <li>com.yayo.yayoani.continued</li>
-    <li>tostov.spacetechraiders</li>
-    <li>farmradish.nyaroncosmetics</li>
-    <li>farmradish.nyaron</li>
-    <li>ravvy.amw</li>
-    <li>rimsenal.feral</li>
-    <li>rimsenal.federation</li>
-    <li>rus.biotech.nastia</li>
-    <li>ru.rimsenal.federation</li>
-    <li>ru.rimsenal.feral</li>
-    <li>vanillaexpanded.vfea</li>
-    <li>ow.ru.ancients</li>
-    <li>edb.preparecarefully</li>
+    <li>ow.ru.core</li>
+    <li>ow.ru.aaa</li>
+    <li>fluffy.musicmanager</li>
+    <li>chais.custommusic</li>
     <li>goodvine.compatibility.patch</li>
-    <li>krkr.rocketman</li>
     <li>trinity.runtimegcupdated</li>
+    <li>krkr.rocketman</li>
   </activeMods>
   <knownExpansions>
     <li>ludeon.rimworld.royalty</li>

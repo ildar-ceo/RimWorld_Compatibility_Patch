@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<SettingsBlock>
-	<ModSettings Class="FasterBiosculpterPod.FasterBiosculpterPod_Settings">
-		<ageReversalDays>165</ageReversalDays>
-		<biotuningDurationDays>0</biotuningDurationDays>
-		<workToBuild>28020</workToBuild>
-	</ModSettings>
-</SettingsBlock>

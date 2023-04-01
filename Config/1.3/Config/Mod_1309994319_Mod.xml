@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<SettingsBlock>
-	<ModSettings Class="SmartMedicine.Settings">
-		<distanceToUseEqualOnGround>9</distanceToUseEqualOnGround>
-		<fieldTendingAlways>True</fieldTendingAlways>
-	</ModSettings>
-</SettingsBlock>
