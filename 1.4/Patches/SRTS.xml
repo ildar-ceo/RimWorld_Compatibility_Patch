@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<!-- ID: 2878587061 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>SRTS Expanded</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="Research_SRAF" or defName="Research_SRTSMkII"]/prerequisites</xpath>
+					<value>
+						<li>ShipSensorCluster</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

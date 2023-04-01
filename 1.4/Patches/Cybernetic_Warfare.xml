@@ -8,7 +8,7 @@
 			<operations>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="CW_NapalmBlaster" or defName="CW_Disruptor" or defName="CW_DualEraser" or defName="CW_HavocLauncher" or defName="CW_RiotBreaker" or defName="CW_BallisticShredder" or defName="CW_EnergySword" or defName="CW_BallisticCombatGun"]/tradeTags</xpath>
+					<xpath>/Defs/ThingDefdefName="CW_DualEraser" or defName="CW_RiotBreaker" or defName="CW_BallisticShredder" or defName="CW_BallisticCombatGun" or defName="CW_BallisticEnforcer" or defName="CW_Disruptor" or defName="CW_PlasmaGun" or defName="CW_HavocLauncher" or defName="CW_CoilGun"  or defName="CW_ReconBolter"]/tradeTags</xpath>
 					<value>
 						<li>ExoticMisc</li>
 					</value>

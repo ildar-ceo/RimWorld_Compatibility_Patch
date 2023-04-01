@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Mods Balance and Compatibility Patch by GoodVine</name>
+	<name>Mods Balance Patch by GoodVine</name>
 	<author>Mr.GoodVine</author>
 	<packageId>GoodVine.Compatibility.Patch</packageId>
 	<description>
 Mods Balance and Compatibility Patch
-Version: 1.4.5
+Version: 1.4.6
 
 Mod compatibility for Hightech CyberPack.
 May used as standalone mod. Must be loaded after all mods.
@@ -21,14 +21,22 @@ Common:
 - Disable visual effect in Archotech Structure Studiable
 - Wind turbine smaller size
 - Rottable BodyPartNatural
-- Tradable Psychic amplifier, Neurotrainers skill, Broadshield core, HiTechArmor
 - Craftable AI Core
 - Add money to traders
+- Add Nurse worktab
+- More works for BasicWorker
+
+=====
+
+Trading:
+- Tradable Psychic amplifier, Neurotrainers skill, Broadshield core, HiTechArmor
+- More money for traders
+- More orbital traders
 
 =====
 
 VGP:
-- Disable basic cook meals. Only from VGP.
+- Disable basic cook meals. Only from VGP
 - Fix meals ingredients
 - Make sushi with fish from Vanilla Fishing Expanded, Biomes! Islands, FishIndustry
 - Humanoid Alien Races MixingIngredients bug fix
@@ -40,6 +48,14 @@ VGP:
 Eccentric Tech:
 - Research ship needs Aurora Core
 - Add Angel Apparel to traders
+
+=====
+
+Cybernetic Warfare and Special Weapons:
+- Patch craft imbalance weapons. For end game
+- Tradable weapons
+- Add weapons to another factions
+- Add more hediffs for use weapons, then CONN is enabled
 
 =====
 
@@ -70,6 +86,25 @@ RimFridge:
 
 Expanded Prosthetics:
 - Table Prosthetics decrease requirement Plasteel for 50
+- PowerArm recipe fix
+
+=====
+
+SRTS:
+- Patch SRTS for end game, then you bild the ship
+
+=====
+
+Vanilla Base Generation Expanded:
+- Add Nyaron, BlueMoonCorp, Rimsenal Federation Faction settlements
+
+=====
+
+Disable annoying incidents for:
+- Sparkling Worlds: InsectHiveDropSW
+- Vanilla Events Expanded: Drought, AnimalPodCrash, Earthquake, BattleAnimalsWanderIn, WildMenWanderIn
+- Nyaron race: Infestation
+- ReGrowth: DevilDusts
 
 =====
 
@@ -114,6 +149,7 @@ MendAndRecycle:
 		<li>OskarPotocki.VFE.Empire</li>
 		<li>OskarPotocki.VFE.Vikings</li>
 		<li>visilt.travelthroughwater</li>
+		<li>smashphil.srtsexpanded</li>
 		<li>Haduki.AncientSpecies</li>
 		<li>Farmradish.Nyaron</li>
 		<li>Farmradish.NyaronCosmetics</li>
