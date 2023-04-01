@@ -72,7 +72,7 @@
 		<value>
 			<li Class="StockGenerator_Category">
 				<categoryDef>NeurotrainersSkill</categoryDef>
-				<thingDefCountRange>0~5</thingDefCountRange>
+				<thingDefCountRange>0~3</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</value>
@@ -426,7 +426,7 @@
 					<value>
 						<li Class="StockGenerator_Category">
 							<categoryDef>NeurotrainersSkill</categoryDef>
-							<thingDefCountRange>0~5</thingDefCountRange>
+							<thingDefCountRange>0~3</thingDefCountRange>
 							<countRange>1</countRange>
 						</li>
 					</value>

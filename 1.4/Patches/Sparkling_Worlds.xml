@@ -36,6 +36,13 @@
 					</value>
 				</li>
 				
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="BeamCannonSatellitePodSW" or defName="KineticBombardmentSatellitePodSW"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ResearchProjectDef[defName="OrbitalLaunchSW"]</xpath>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
