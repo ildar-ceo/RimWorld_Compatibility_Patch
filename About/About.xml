@@ -40,6 +40,7 @@ VGP:
 - Fix meals ingredients
 - Make sushi with fish from Vanilla Fishing Expanded, Biomes! Islands, FishIndustry
 - Humanoid Alien Races MixingIngredients bug fix
+- Add garden drinks to drug policy
 - RawFungus Fix
 - ReGroth:Core Fix
 
@@ -153,6 +154,7 @@ MendAndRecycle:
 		<li>Haduki.AncientSpecies</li>
 		<li>Farmradish.Nyaron</li>
 		<li>Farmradish.NyaronCosmetics</li>
+		<li>Killathon.AndroidTiersReforged</li>
 		<li>Rikiki.FishIndustry</li>
 		<li>kikohi.cybernetic</li>
 		<li>Ykara.EPOE</li>

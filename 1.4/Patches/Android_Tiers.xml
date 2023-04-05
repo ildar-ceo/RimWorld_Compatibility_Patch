@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	
+	<!-- ID: 2917948202 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Android Tiers Reforged</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Add money -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="ATR_Visitor_AndroidCollective_Standard"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+					<value>
+						<countRange>200~500</countRange>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="ATR_Base_AndroidCollective_Standard" or defName="ATR_Caravan_AndroidCollective_BulkGoods" or defName="Caravan_AndroidCollective_CombatSupplier"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+					<value>
+						<countRange>2000~5000</countRange>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_AndroidCollective_AndroidMerchant" or defName="Caravan_AndroidCollective_HighTech"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/FactionDef[defName="ATR_AndroidUnion"]/caravanTraderKinds/li[text()="Caravan_AndroidCollective_AndroidMerchant" or text()="Caravan_AndroidCollective_HighTech"]</xpath>
+				</li>
+				
+				
+				<!-- Visitors -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="ATR_Visitor_AndroidCollective_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>ExoticMisc</tradeTag>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>Artifact</tradeTag>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>NeurotrainersSkill</categoryDef>
+							<thingDefCountRange>-2~1</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="ATR_Visitor_AndroidCollective_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_MarketValue">
+							<tradeTag>WeaponRanged</tradeTag>
+							<countRange>0~1</countRange>
+						</li>
+					</value>
+				</li>
+				
+				
+				<!-- Base -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="ATR_Base_AndroidCollective_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="SparklingWorlds.StockGeneratorWeaponsTagsSW">
+							<weaponTag>SpacerGun</weaponTag>
+							<countRange>
+								<min>1</min>
+								<max>3</max>
+							</countRange>
+						</li>
+					</value>
+				</li>
+				
+				
+				<!-- BulkGoods -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="ATR_Base_AndroidCollective_Standard" or defName="ATR_Caravan_AndroidCollective_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_BuySingleDef">
+							<thingDef>Chemfuel</thingDef>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="ATR_Base_AndroidCollective_Standard" or defName="ATR_Caravan_AndroidCollective_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>MealSurvivalPack</thingDef>
+							<countRange>10~30</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="ATR_Caravan_AndroidCollective_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>MedicineIndustrial</thingDef>
+							<countRange>5~10</countRange>
+						</li>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>MedicineUltratech</thingDef>
+							<countRange>1~5</countRange>
+						</li>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Plasteel</thingDef>
+							<countRange>20~100</countRange>
+						</li>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Gold</thingDef>
+							<countRange>20~50</countRange>
+						</li>
+						<li Class="StockGenerator_MarketValue">
+							<tradeTag>BasicClothing</tradeTag>
+							<countRange>1~7</countRange>
+						</li>
+						<li Class="StockGenerator_MarketValue">
+							<tradeTag>Clothing</tradeTag>
+							<countRange>1~3</countRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>ExoticMisc</tradeTag>
+							<thingDefCountRange>2~4</thingDefCountRange>
+							<countRange>1~1</countRange>
+							<excludedThingDefs>
+								<li>ComponentSpacer</li>
+							</excludedThingDefs>
+							<customCountRanges>
+								<Luciferium>7~25</Luciferium>
+								<Hyperweave>40~120</Hyperweave>
+							</customCountRanges>
+						</li>
+						<li Class="StockGenerator_BuyExpensiveSimple" />
+						<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+						<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireCommon</tag></li>
+						<li Class="StockGenerator_BuyTradeTag"><tag>ImplantEmpireRoyal</tag></li>
+						<li Class="StockGenerator_BuyTradeTag"><tag>ExoticBuilding</tag></li>
+						<li Class="StockGenerator_BuyTradeTag"><tag>HiTechArmor</tag></li>
+					</value>
+				</li>
+				
+				<!-- CombatSupplier -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="ATR_Base_AndroidCollective_Standard" or defName="Caravan_AndroidCollective_CombatSupplier" or defName="ATR_Caravan_AndroidCollective_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyParts</categoryDef>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyPartsProsthetic</categoryDef>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyPartsBionic</categoryDef>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_AndroidCollective_CombatSupplier" or defName="ATR_Caravan_AndroidCollective_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>HiTechArmor</tradeTag>
+							<thingDefCountRange>0~1</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_AndroidCollective_CombatSupplier"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Category">
+							<categoryDef>NeurotrainersSkill</categoryDef>
+							<thingDefCountRange>-2~1</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_AndroidCollective_CombatSupplier"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_MarketValue">
+							<tradeTag>WeaponRanged</tradeTag>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_AndroidCollective_CombatSupplier"]/stockGenerators</xpath>
+					<value>
+						<li Class="SparklingWorlds.StockGeneratorWeaponsTagsSW">
+							<weaponTag>SpacerGun</weaponTag>
+							<countRange>
+								<min>1</min>
+								<max>3</max>
+							</countRange>
+						</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2917948202 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Android tiers</li></mods>
+		
+		<!-- ID: 2155485488 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_AndroidCollective_CombatSupplier"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Category">
+								<categoryDef>CW_CyborgWeaponry</categoryDef>
+								<thingDefCountRange>0~1</thingDefCountRange>
+								<countRange>1</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2917948202 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Android tiers</li></mods>
+		
+		<!-- ID: 2586052937 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>SeedsPlease: Lite</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="ATR_Visitor_AndroidCollective_Standard"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>Seeds</tradeTag>
+								<thingDefCountRange>
+									<min>2</min>
+									<max>5</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>20</min>
+									<max>100</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="ATR_Caravan_AndroidCollective_BulkGoods" or defName="ATR_Base_AndroidCollective_Standard"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>Seeds</tradeTag>
+								<thingDefCountRange>
+									<min>5</min>
+									<max>15</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>50</min>
+									<max>200</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+</Patch>

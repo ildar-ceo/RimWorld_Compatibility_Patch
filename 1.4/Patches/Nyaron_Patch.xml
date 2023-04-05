@@ -268,7 +268,7 @@
 							<incident>OrbitalTraderArrival</incident>
 							<onDays>10</onDays>
 							<offDays>5</offDays>
-							<numIncidentsRange>2</numIncidentsRange>
+							<numIncidentsRange>3</numIncidentsRange>
 						</li>
 					</value>
 				</li>
@@ -331,8 +331,8 @@
 					<value>
 						<li Class="StockGenerator_Category">
 							<categoryDef>NeurotrainersSkill</categoryDef>
-							<thingDefCountRange>0~2</thingDefCountRange>
-							<countRange>1~2</countRange>
+							<thingDefCountRange>-5~1</thingDefCountRange>
+							<countRange>1</countRange>
 						</li>
 					</value>
 				</li>
@@ -663,7 +663,7 @@
 						<value>
 							<li Class="StockGenerator_SingleDef">
 								<thingDef>PsychicAmplifier</thingDef>
-								<countRange>0~1</countRange>
+								<countRange>-5~1</countRange>
 							</li>
 						</value>
 					</li>
