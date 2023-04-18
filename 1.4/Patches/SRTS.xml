@@ -9,9 +9,23 @@
 			<operations>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ResearchProjectDef[defName="Research_SRAF" or defName="Research_SRTSMkII"]/prerequisites</xpath>
+					<xpath>/Defs/ResearchProjectDef[defName="Research_SRAFTek" or defName="Research_SRTSMkIII"]/prerequisites</xpath>
 					<value>
 						<li>ShipSensorCluster</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="Research_SRTSSkip" or defName="Research_SRAF"]</xpath>
+					<value>
+						<requiredResearchFacilities>
+							<li>MultiAnalyzer</li>
+						</requiredResearchFacilities>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="Research_SRAFTek"]/techLevel</xpath>
+					<value>
+						<techLevel>Spacer</techLevel>
 					</value>
 				</li>
 				

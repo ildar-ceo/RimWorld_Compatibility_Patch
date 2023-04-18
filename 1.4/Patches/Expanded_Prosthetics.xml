@@ -2,8 +2,12 @@
 <Patch>
 	
 	<!-- ID: 725956940 -->
+	<!-- ID: 1949064302 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Expanded Prosthetics and Organ Engineering</li></mods>
+		<mods>
+			<li>Expanded Prosthetics and Organ Engineering</li>
+			<li>Expanded Prosthetics and Organ Engineering - Forked</li>
+		</mods>
 		
 		<match Class="PatchOperationSequence">
 			<operations>
@@ -29,14 +33,13 @@
 						<li>TableMachining</li>
 					</value>
 				</li>
-				-->
-				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="TableProsthetics"]/costList/Plasteel</xpath>
 					<value>
 						<Plasteel>50</Plasteel>
 					</value>
 				</li>
+				-->
 				
 				<!-- CreatePowerArm -->
 				<li Class="PatchOperationAdd">

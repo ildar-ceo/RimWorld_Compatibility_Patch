@@ -62,7 +62,7 @@
 		<value>
 			<li Class="StockGenerator_Category">
 				<categoryDef>NeurotrainersSkill</categoryDef>
-				<thingDefCountRange>-5~1</thingDefCountRange>
+				<thingDefCountRange>0~1</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</value>
@@ -72,7 +72,7 @@
 		<value>
 			<li Class="StockGenerator_Category">
 				<categoryDef>NeurotrainersSkill</categoryDef>
-				<thingDefCountRange>0~2</thingDefCountRange>
+				<thingDefCountRange>1~3</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</value>
@@ -85,7 +85,7 @@
 		<value>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>HiTechArmor</tradeTag>
-				<thingDefCountRange>0~1</thingDefCountRange>
+				<thingDefCountRange>0~2</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</value>
@@ -95,7 +95,7 @@
 		<value>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>HiTechArmor</tradeTag>
-				<thingDefCountRange>1</thingDefCountRange>
+				<thingDefCountRange>1~2</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</value>
@@ -105,7 +105,7 @@
 		<value>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>HiTechArmor</tradeTag>
-				<thingDefCountRange>1~2</thingDefCountRange>
+				<thingDefCountRange>2~3</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</value>
@@ -134,7 +134,7 @@
 	
 	<!-- Add MealSurvivalPack to Traders -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Outlander_CombatSupplier"]/stockGenerators</xpath>
 		<value>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>MealSurvivalPack</thingDef>
@@ -258,6 +258,10 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators</xpath>
 		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MealSurvivalPack</thingDef>
+				<countRange>1~10</countRange>
+			</li>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>ExoticMisc</tradeTag>
 				<thingDefCountRange>0~1</thingDefCountRange>
@@ -265,6 +269,11 @@
 			</li>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>Artifact</tradeTag>
+				<thingDefCountRange>0~1</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>NeurotrainersSkill</categoryDef>
 				<thingDefCountRange>0~1</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
@@ -410,7 +419,7 @@
 					<value>
 						<li Class="StockGenerator_Tag">
 							<tradeTag>HiTechArmor</tradeTag>
-							<thingDefCountRange>1~2</thingDefCountRange>
+							<thingDefCountRange>2~3</thingDefCountRange>
 							<countRange>1</countRange>
 						</li>
 					</value>
@@ -421,7 +430,7 @@
 					<value>
 						<li Class="StockGenerator_Category">
 							<categoryDef>NeurotrainersSkill</categoryDef>
-							<thingDefCountRange>0~2</thingDefCountRange>
+							<thingDefCountRange>1~3</thingDefCountRange>
 							<countRange>1</countRange>
 						</li>
 					</value>

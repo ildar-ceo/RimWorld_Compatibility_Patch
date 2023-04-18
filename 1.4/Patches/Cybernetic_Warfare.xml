@@ -14,9 +14,91 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="CW_GunBlade" or defName="CW_Accelerator"]</xpath>
+					<xpath>/Defs/ThingDef[defName="CW_Accelerator" or defName="CW_CoilGun" or defName="CW_ReconBolter" or defName="CW_ChainSword" or defName="CW_GunBlade"]</xpath>
 					<value>
 						<tradeability>Sellable</tradeability>
+					</value>
+				</li>
+				
+				<!-- CW_RiotBreaker -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_RiotBreaker"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>2100</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_RiotBreaker"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>1</Gold>
+							<Uranium>10</Uranium>
+							<Steel>150</Steel>
+							<Plasteel>50</Plasteel>
+							<ComponentSpacer>5</ComponentSpacer>
+							<ComponentIndustrial>10</ComponentIndustrial>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_BallisticCombatGun -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_BallisticCombatGun"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>2400</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_BallisticCombatGun"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>1</Gold>
+							<Uranium>10</Uranium>
+							<Steel>200</Steel>
+							<Plasteel>50</Plasteel>
+							<ComponentSpacer>5</ComponentSpacer>
+							<ComponentIndustrial>10</ComponentIndustrial>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_BallisticShredder -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_BallisticShredder"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>1700</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_BallisticShredder"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>1</Gold>
+							<Steel>50</Steel>
+							<Plasteel>25</Plasteel>
+							<ComponentSpacer>2</ComponentSpacer>
+							<ComponentIndustrial>10</ComponentIndustrial>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_BallisticEnforcer -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_BallisticEnforcer"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>1200</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_BallisticEnforcer"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>1</Gold>
+							<Steel>50</Steel>
+							<Plasteel>25</Plasteel>
+							<ComponentSpacer>2</ComponentSpacer>
+							<ComponentIndustrial>10</ComponentIndustrial>
+						</costList>
 					</value>
 				</li>
 				
@@ -31,13 +113,13 @@
 					<xpath>/Defs/ThingDef[defName="CW_Disruptor"]/costList</xpath>
 					<value>
 						<costList>
-							<Gold>25</Gold>
+							<Gold>10</Gold>
 							<Steel>200</Steel>
 							<Plasteel>75</Plasteel>
 							<Uranium>40</Uranium>
 							<ComponentSpacer>8</ComponentSpacer>
 							<ComponentIndustrial>20</ComponentIndustrial>
-							<Hyperweave>50</Hyperweave>
+							<Hyperweave>25</Hyperweave>
 							<Weapon_GrenadeEMP>1</Weapon_GrenadeEMP>
 						</costList>
 					</value>
@@ -58,8 +140,8 @@
 							<Uranium>100</Uranium>
 							<Steel>200</Steel>
 							<Plasteel>300</Plasteel>
-							<ComponentSpacer>40</ComponentSpacer>
-							<ComponentIndustrial>100</ComponentIndustrial>
+							<ComponentSpacer>15</ComponentSpacer>
+							<ComponentIndustrial>50</ComponentIndustrial>
 							<Hyperweave>200</Hyperweave>
 						</costList>
 					</value>
@@ -86,8 +168,8 @@
 							<Uranium>75</Uranium>
 							<Steel>100</Steel>
 							<Plasteel>250</Plasteel>
-							<ComponentSpacer>45</ComponentSpacer>
-							<ComponentIndustrial>100</ComponentIndustrial>
+							<ComponentSpacer>10</ComponentSpacer>
+							<ComponentIndustrial>50</ComponentIndustrial>
 							<Hyperweave>200</Hyperweave>
 						</costList>
 					</value>
@@ -97,19 +179,19 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="CW_PlasmaGun"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>4200</MarketValue>
+						<MarketValue>5200</MarketValue>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="CW_PlasmaGun"]/costList</xpath>
 					<value>
 						<costList>
-							<Gold>50</Gold>
-							<Uranium>25</Uranium>
-							<Steel>100</Steel>
+							<Gold>10</Gold>
+							<Uranium>100</Uranium>
+							<Steel>300</Steel>
 							<Plasteel>200</Plasteel>
-							<ComponentSpacer>30</ComponentSpacer>
-							<ComponentIndustrial>100</ComponentIndustrial>
+							<ComponentSpacer>10</ComponentSpacer>
+							<ComponentIndustrial>20</ComponentIndustrial>
 							<Hyperweave>150</Hyperweave>
 						</costList>
 					</value>
@@ -130,8 +212,8 @@
 							<Uranium>75</Uranium>
 							<Steel>100</Steel>
 							<Plasteel>200</Plasteel>
-							<ComponentSpacer>40</ComponentSpacer>
-							<ComponentIndustrial>100</ComponentIndustrial>
+							<ComponentSpacer>10</ComponentSpacer>
+							<ComponentIndustrial>50</ComponentIndustrial>
 							<Hyperweave>200</Hyperweave>
 						</costList>
 					</value>
@@ -158,8 +240,8 @@
 							<Uranium>100</Uranium>
 							<Steel>200</Steel>
 							<Plasteel>300</Plasteel>
-							<ComponentSpacer>30</ComponentSpacer>
-							<ComponentIndustrial>150</ComponentIndustrial>
+							<ComponentSpacer>20</ComponentSpacer>
+							<ComponentIndustrial>100</ComponentIndustrial>
 							<Hyperweave>120</Hyperweave>
 						</costList>
 					</value>
@@ -176,13 +258,13 @@
 					<xpath>/Defs/ThingDef[defName="CW_DualEraser"]/costList</xpath>
 					<value>
 						<costList>
-							<Gold>25</Gold>
+							<Gold>10</Gold>
 							<Uranium>75</Uranium>
 							<Steel>200</Steel>
 							<Plasteel>150</Plasteel>
-							<ComponentSpacer>20</ComponentSpacer>
-							<ComponentIndustrial>100</ComponentIndustrial>
-							<Hyperweave>70</Hyperweave>
+							<ComponentSpacer>10</ComponentSpacer>
+							<ComponentIndustrial>20</ComponentIndustrial>
+							<Hyperweave>25</Hyperweave>
 						</costList>
 					</value>
 				</li>
@@ -198,54 +280,11 @@
 					<xpath>/Defs/ThingDef[defName="CW_NapalmBlaster"]/costList</xpath>
 					<value>
 						<costList>
-							<Gold>20</Gold>
+							<Gold>10</Gold>
 							<Uranium>100</Uranium>
 							<Steel>150</Steel>
 							<Plasteel>175</Plasteel>
-							<ComponentSpacer>15</ComponentSpacer>
-							<ComponentIndustrial>50</ComponentIndustrial>
-							<Hyperweave>75</Hyperweave>
-						</costList>
-					</value>
-				</li>
-				
-				<!-- CW_RiotBreaker -->
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="CW_RiotBreaker"]/statBases/MarketValue</xpath>
-					<value>
-						<MarketValue>3200</MarketValue>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="CW_RiotBreaker"]/costList</xpath>
-					<value>
-						<costList>
-							<Gold>10</Gold>
-							<Steel>200</Steel>
-							<Plasteel>175</Plasteel>
-							<ComponentSpacer>15</ComponentSpacer>
-							<ComponentIndustrial>40</ComponentIndustrial>
-							<Hyperweave>50</Hyperweave>
-						</costList>
-					</value>
-				</li>
-				
-				<!-- CW_BallisticShredder -->
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="CW_BallisticShredder"]/statBases/MarketValue</xpath>
-					<value>
-						<MarketValue>2100</MarketValue>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="CW_BallisticShredder"]/costList</xpath>
-					<value>
-						<costList>
-							<Gold>10</Gold>
-							<Uranium>10</Uranium>
-							<Steel>75</Steel>
-							<Plasteel>200</Plasteel>
-							<ComponentSpacer>5</ComponentSpacer>
+							<ComponentSpacer>10</ComponentSpacer>
 							<ComponentIndustrial>20</ComponentIndustrial>
 							<Hyperweave>25</Hyperweave>
 						</costList>
@@ -284,7 +323,7 @@
 					<xpath>/Defs/ThingDef[defName="CW_EnergySword"]/costList</xpath>
 					<value>
 						<costList>
-							<Gold>50</Gold>
+							<Gold>10</Gold>
 							<Uranium>20</Uranium>
 							<Steel>300</Steel>
 							<Plasteel>200</Plasteel>
@@ -313,49 +352,6 @@
 							<ComponentSpacer>15</ComponentSpacer>
 							<ComponentIndustrial>50</ComponentIndustrial>
 							<Hyperweave>100</Hyperweave>
-						</costList>
-					</value>
-				</li>
-				
-				<!-- CW_BallisticCombatGun -->
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="CW_BallisticCombatGun"]/statBases/MarketValue</xpath>
-					<value>
-						<MarketValue>2400</MarketValue>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="CW_BallisticCombatGun"]/costList</xpath>
-					<value>
-						<costList>
-							<Gold>10</Gold>
-							<Uranium>10</Uranium>
-							<Steel>100</Steel>
-							<Plasteel>200</Plasteel>
-							<ComponentSpacer>5</ComponentSpacer>
-							<ComponentIndustrial>20</ComponentIndustrial>
-							<Hyperweave>75</Hyperweave>
-						</costList>
-					</value>
-				</li>
-				
-				<!-- CW_BallisticEnforcer -->
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="CW_BallisticEnforcer"]/statBases/MarketValue</xpath>
-					<value>
-						<MarketValue>2400</MarketValue>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="CW_BallisticEnforcer"]/costList</xpath>
-					<value>
-						<costList>
-							<Gold>10</Gold>
-							<Steel>50</Steel>
-							<Plasteel>150</Plasteel>
-							<ComponentSpacer>2</ComponentSpacer>
-							<ComponentIndustrial>20</ComponentIndustrial>
-							<Hyperweave>25</Hyperweave>
 						</costList>
 					</value>
 				</li>

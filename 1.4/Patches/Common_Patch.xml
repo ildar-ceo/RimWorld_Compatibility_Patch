@@ -155,17 +155,13 @@
 					<li>FabricationBench</li>
 				</recipeUsers>
 				<skillRequirements>
-					<Crafting>15</Crafting>
-					<Intellectual>10</Intellectual>
+					<Crafting>10</Crafting>
+					<Intellectual>15</Intellectual>
 				</skillRequirements>
 				<ingredients>
 					<li>
 						<filter><thingDefs><li>Gold</li></thingDefs></filter>
-						<count>50</count>
-					</li>
-					<li>
-						<filter><thingDefs><li>Silver</li></thingDefs></filter>
-						<count>100</count>
+						<count>10</count>
 					</li>
 					<li>
 						<filter><thingDefs><li>Steel</li></thingDefs></filter>
@@ -177,11 +173,11 @@
 					</li>
 					<li>
 						<filter><thingDefs><li>ComponentSpacer</li></thingDefs></filter>
-						<count>20</count>
+						<count>5</count>
 					</li>
 					<li>
 						<filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter>
-						<count>100</count>
+						<count>20</count>
 					</li>
 					<li>
 						<filter><thingDefs><li>Uranium</li></thingDefs></filter>
