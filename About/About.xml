@@ -5,7 +5,7 @@
 	<packageId>GoodVine.Compatibility.Patch</packageId>
 	<description>
 Mods Balance and Compatibility Patch
-Version: 1.4.6
+Version: 1.4.7
 
 Mod compatibility for Hightech CyberPack.
 May used as standalone mod. Must be loaded after all mods.
@@ -25,6 +25,7 @@ Common:
 - Add money to traders
 - Add Nurse worktab
 - More works for BasicWorker
+- More spacer components from merchants
 
 =====
 

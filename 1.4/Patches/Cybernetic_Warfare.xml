@@ -14,7 +14,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="CW_Accelerator" or defName="CW_CoilGun" or defName="CW_ReconBolter" or defName="CW_ChainSword" or defName="CW_GunBlade"]</xpath>
+					<xpath>/Defs/ThingDef[defName="CW_Accelerator" or defName="CW_CoilGun" or defName="CW_ReconBolter" or defName="CW_ChainSword" or defName="CW_GunBlade" or defName="CW_PlasmaGun"]</xpath>
 					<value>
 						<tradeability>Sellable</tradeability>
 					</value>
@@ -32,10 +32,8 @@
 					<value>
 						<costList>
 							<Gold>1</Gold>
-							<Uranium>10</Uranium>
 							<Steel>150</Steel>
 							<Plasteel>50</Plasteel>
-							<ComponentSpacer>5</ComponentSpacer>
 							<ComponentIndustrial>10</ComponentIndustrial>
 						</costList>
 					</value>
@@ -53,10 +51,8 @@
 					<value>
 						<costList>
 							<Gold>1</Gold>
-							<Uranium>10</Uranium>
 							<Steel>200</Steel>
 							<Plasteel>50</Plasteel>
-							<ComponentSpacer>5</ComponentSpacer>
 							<ComponentIndustrial>10</ComponentIndustrial>
 						</costList>
 					</value>
@@ -76,7 +72,6 @@
 							<Gold>1</Gold>
 							<Steel>50</Steel>
 							<Plasteel>25</Plasteel>
-							<ComponentSpacer>2</ComponentSpacer>
 							<ComponentIndustrial>10</ComponentIndustrial>
 						</costList>
 					</value>
@@ -96,7 +91,6 @@
 							<Gold>1</Gold>
 							<Steel>50</Steel>
 							<Plasteel>25</Plasteel>
-							<ComponentSpacer>2</ComponentSpacer>
 							<ComponentIndustrial>10</ComponentIndustrial>
 						</costList>
 					</value>
@@ -117,7 +111,7 @@
 							<Steel>200</Steel>
 							<Plasteel>75</Plasteel>
 							<Uranium>40</Uranium>
-							<ComponentSpacer>8</ComponentSpacer>
+							<ComponentSpacer>2</ComponentSpacer>
 							<ComponentIndustrial>20</ComponentIndustrial>
 							<Hyperweave>25</Hyperweave>
 							<Weapon_GrenadeEMP>1</Weapon_GrenadeEMP>
