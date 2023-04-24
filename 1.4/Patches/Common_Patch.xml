@@ -256,6 +256,35 @@
 	
 	<!-- Factions patch -->
 	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ideology</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="CannibalPirate"]</xpath>
+					<value>
+						<maxCountAtGameStart>1</maxCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="CannibalPirate"]/requiredCountAtGameStart</xpath>
+					<value>
+						<requiredCountAtGameStart>1</requiredCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="CannibalPirate"]/startingCountAtWorldCreation</xpath>
+					<value>
+						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- Factions patch -->
+	<Operation Class="PatchOperationFindMod">
 		<mods><li>Biotech</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
@@ -269,7 +298,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="OutlanderRoughPig" or defName="PirateWaster"]</xpath>
+					<xpath>/Defs/FactionDef[defName="OutlanderRoughPig" or defName="PirateWaster" or defName="PirateYttakin"]</xpath>
 					<value>
 						<requiredCountAtGameStart>0</requiredCountAtGameStart>
 						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
@@ -281,26 +310,44 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[defName="TribeSavageImpid" or defName="TribeRoughNeanderthal"]</xpath>
 					<value>
-						<requiredCountAtGameStart>1</requiredCountAtGameStart>
-						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+						<requiredCountAtGameStart>0</requiredCountAtGameStart>
+						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
 					</value>
 				</li>
 				
-				<!--
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="OutlanderRough"]/xenotypeSet/xenotypeChances</xpath>
+					<xpath>/Defs/FactionDef[defName="OutlanderCivil" or defName="OutlanderRough"]</xpath>
 					<value>
-						<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
-						<Pigskin MayRequire="Ludeon.RimWorld.Biotech">0.25</Pigskin>
-						<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0.05</Sanguophage>
+						<xenotypeSet>
+							<xenotypeChances>
+								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.25</Impid>
+								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
+								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
+								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
+							</xenotypeChances>
+						</xenotypeSet>
 					</value>
 				</li>
-				-->
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="Pirate"]/xenotypeSet/xenotypeChances</xpath>
+					<value>
+						<xenotypeChances>
+							<Impid MayRequire="Ludeon.RimWorld.Biotech">0.25</Impid>
+							<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
+							<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
+							<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
+							<Waster MayRequire="Ludeon.RimWorld.Biotech">0.25</Waster>
+							<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.05</Dirtmole>
+						</xenotypeChances>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
 	
-	<!-- Factions patch -->
+	<!-- Empire xenotype patch -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Royalty</li></mods>
 		<match Class="PatchOperationSequence">
@@ -309,12 +356,43 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
 					<value>
+						<Impid MayRequire="Ludeon.RimWorld.Biotech">0.25</Impid>
 						<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
-						<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0.15</Sanguophage>
+						<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0.05</Sanguophage>
 					</value>
 				</li>
 				
 			</operations>
+		</match>
+	</Operation>
+	
+	<!-- Biotech -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Biotech</li></mods>
+		
+		<!-- ID: 1123043922 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Sparkling Worlds - Full Mod</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]</xpath>
+						<value>
+							<xenotypeSet>
+								<xenotypeChances>
+									<Impid MayRequire="Ludeon.RimWorld.Biotech">0.5</Impid>
+									<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.5</Neanderthal>
+									<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.5</Hussar>
+									<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.5</Yttakin>
+								</xenotypeChances>
+							</xenotypeSet>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
 		</match>
 	</Operation>
 	
