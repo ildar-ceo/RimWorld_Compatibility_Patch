@@ -39,6 +39,12 @@
 						</li>
 					</value>
 				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Eccentric_HexCell"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>75</MarketValue>
+					</value>
+				</li>
 				
 				<!-- Add minifiedDef -->
 				<li Class="PatchOperationAdd">

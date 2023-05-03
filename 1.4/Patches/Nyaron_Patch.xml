@@ -419,6 +419,41 @@
 	</Operation>
 	
 	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2012735237 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Fertile Fields [1.1]</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Add TerraformingResources -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>TerraformingResources</tradeTag>
+								<thingDefCountRange>
+									<min>0</min>
+									<max>2</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>200</min>
+									<max>400</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
 	<!-- Adds Nyaron to other factions -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Nyaron race</li></mods>

@@ -95,6 +95,11 @@
 		</value>
 	</Operation>
 	
+	<!-- Remove pen animal from Boomalope -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ThingDef[defName="Boomalope"]/race/roamMtbDays</xpath>
+	</Operation>
+	
 	<!-- Add Batteries research to default Scenario -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/ScenarioDef[defName="Crashlanded" or defName="TheRichExplorer"]/scenario/parts</xpath>
