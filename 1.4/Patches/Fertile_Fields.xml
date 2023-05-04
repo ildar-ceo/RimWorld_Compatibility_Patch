@@ -51,6 +51,46 @@
 	</Operation>
 	
 	
+	<!-- ID: 2012735237 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Fertile Fields [1.1]</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="ConstructFinishFramesGrowing"]/priorityInType</xpath>
+					<value>
+						<priorityInType>210</priorityInType>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="ConstructDeliverResourcesToBlueprintsGrowing"]/priorityInType</xpath>
+					<value>
+						<priorityInType>200</priorityInType>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="DoBillsUseRockMill"]/priorityInType</xpath>
+					<value>
+						<priorityInType>91</priorityInType>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="RottedMush"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef[defName="MakeCompost" or defName="MakeCompost5"]/ingredients/li/filter/thingDefs/li[text()="RottedMush"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef[defName="MakeCompost" or defName="MakeCompost5"]/fixedIngredientFilter/thingDefs/li[text()="RottedMush"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef[defName="MakeCompost" or defName="MakeCompost5"]/defaultIngredientFilter/thingDefs/li[text()="RottedMush"]</xpath>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	
 	<!-- ID: 836308268 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Dubs Bad Hygiene</li></mods>
