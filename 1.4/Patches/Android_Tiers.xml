@@ -213,7 +213,7 @@
 	
 	<!-- ID: 2917948202 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Android tiers</li></mods>
+		<mods><li>Android Tiers Reforged</li></mods>
 		
 		<!-- ID: 2155485488 -->
 		<match Class="PatchOperationFindMod">
@@ -240,7 +240,7 @@
 	
 	<!-- ID: 2917948202 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Android tiers</li></mods>
+		<mods><li>Android Tiers Reforged</li></mods>
 		
 		<!-- ID: 2586052937 -->
 		<match Class="PatchOperationFindMod">
@@ -283,6 +283,173 @@
 					
 				</operations>
 			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2917948202 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Android Tiers Reforged</li></mods>
+		
+		<!-- ID: 2889326293 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Androids for RW 1.4</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Move Building to Android Tiers tab -->
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="ChJDroidPrinter" or defName="ChjDroidHibernationPad" or defName="ChJAndroidPrinter"]/designationCategory</xpath>
+						<value>
+							<designationCategory>ATR_AndroidTiersDesignation</designationCategory>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="ChjAndroidEnclave"]/requiredCountAtGameStart</xpath>
+						<value>
+							<requiredCountAtGameStart>0</requiredCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="ChjAndroidEnclave"]</xpath>
+						<value>
+							<maxCountAtGameStart>0</maxCountAtGameStart>
+							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+						</value>
+					</li>
+					
+					<!-- Add pawn to faction -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="ATR_AndroidUnion"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+						<value>
+							<ChjAndroidGrenadierDestructive>2</ChjAndroidGrenadierDestructive>
+							<ChjAndroidMercenarySlasher>5</ChjAndroidMercenarySlasher>
+							<ChjAndroidTownGuard>5</ChjAndroidTownGuard>
+							<ChjAndroidTownCouncilman>5</ChjAndroidTownCouncilman>
+							<ChjAndroidMercenaryGunner>5</ChjAndroidMercenaryGunner>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="ATR_AndroidUnion"]/pawnGroupMakers/li[kindDef="Peaceful"]/options</xpath>
+						<value>
+							<ChjAndroidVillager>5</ChjAndroidVillager>
+							<ChjAndroidMercenarySlasher>2</ChjAndroidMercenarySlasher>
+							<ChjAndroidTownGuard>3</ChjAndroidTownGuard>
+							<ChjAndroidTownCouncilman>3</ChjAndroidTownCouncilman>
+							<ChjAndroidMercenaryGunner>3</ChjAndroidMercenaryGunner>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="ATR_AndroidUnion"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+						<value>
+							<ChjAndroidMercenarySlasher>2</ChjAndroidMercenarySlasher>
+							<ChjAndroidTownGuard>5</ChjAndroidTownGuard>
+							<ChjAndroidMercenaryGunner>5</ChjAndroidMercenaryGunner>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="ATR_AndroidUnion"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+						<value>
+							<ChjAndroidGrenadierDestructive>1</ChjAndroidGrenadierDestructive>
+							<ChjAndroidMercenarySlasher>2</ChjAndroidMercenarySlasher>
+							<ChjAndroidVillager>5</ChjAndroidVillager>
+							<ChjAndroidTownGuard>5</ChjAndroidTownGuard>
+							<ChjAndroidTownCouncilman>5</ChjAndroidTownCouncilman>
+							<ChjAndroidMercenaryGunner>5</ChjAndroidMercenaryGunner>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="ATR_MechanicalMarauders"]/pawnGroupMakers/li[1]/options</xpath>
+						<value>
+							<ChjAndroidGrenadierDestructive>1</ChjAndroidGrenadierDestructive>
+							<ChjAndroidMercenarySlasher>5</ChjAndroidMercenarySlasher>
+							<ChjAndroidVillager>20</ChjAndroidVillager>
+							<ChjAndroidTownGuard>20</ChjAndroidTownGuard>
+							<ChjAndroidTownCouncilman>20</ChjAndroidTownCouncilman>
+							<ChjAndroidMercenaryGunner>20</ChjAndroidMercenaryGunner>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="ATR_MechanicalMarauders"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+						<value>
+							<ChjAndroidGrenadierDestructive>1</ChjAndroidGrenadierDestructive>
+							<ChjAndroidMercenarySlasher>5</ChjAndroidMercenarySlasher>
+							<ChjAndroidVillager>10</ChjAndroidVillager>
+							<ChjAndroidTownGuard>10</ChjAndroidTownGuard>
+							<ChjAndroidTownCouncilman>10</ChjAndroidTownCouncilman>
+							<ChjAndroidMercenaryGunner>10</ChjAndroidMercenaryGunner>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2917948202 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Android Tiers Reforged</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/MeditationFocusDef[defName="Natural"][not(incompatibleBackstoriesAny)]</xpath>
+					<value>
+						<incompatibleBackstoriesAny></incompatibleBackstoriesAny>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/MeditationFocusDef[defName="Natural"]/incompatibleBackstoriesAny</xpath>
+					<value>
+						<li>
+							<categoryName>ATR_Drone</categoryName>
+							<slot>Childhood</slot>
+						</li>
+						<li>
+							<categoryName>ATR_GeneralAndroids</categoryName>
+							<slot>Childhood</slot>
+						</li>
+						<li>
+							<categoryName>SurrogateSoldier</categoryName>
+							<slot>Childhood</slot>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2889326293 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Androids for RW 1.4</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>/Defs/MeditationFocusDef[defName="Natural"][not(incompatibleBackstoriesAny)]</xpath>
+					<value>
+						<incompatibleBackstoriesAny></incompatibleBackstoriesAny>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/MeditationFocusDef[defName="Natural"]/incompatibleBackstoriesAny</xpath>
+					<value>
+						<li>
+							<categoryName>ChjDroid</categoryName>
+							<slot>Childhood</slot>
+						</li>
+					</value>
+				</li>
+			</operations>
 		</match>
 	</Operation>
 	

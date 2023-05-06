@@ -49,8 +49,8 @@ VGP:
 =====
 
 Eccentric Tech:
-- Research ship needs Aurora Core
 - Add Angel Apparel to traders
+- Apparel PawnKinds fix
 
 =====
 
@@ -158,6 +158,7 @@ MendAndRecycle:
 		<li>Farmradish.Nyaron</li>
 		<li>Farmradish.NyaronCosmetics</li>
 		<li>Killathon.AndroidTiersReforged</li>
+		<li>ChJees.Androids14</li>
 		<li>Rikiki.FishIndustry</li>
 		<li>kikohi.cybernetic</li>
 		<li>Ykara.EPOE</li>
