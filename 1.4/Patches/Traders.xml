@@ -385,6 +385,18 @@
 					</value>
 				</li>
 				
+				<!-- More HiTechArmor -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard" or defName="Orbital_Empire"]/stockGenerators/li[tradeTag="HiTechArmor"]</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>HiTechArmor</tradeTag>
+							<thingDefCountRange>4~8</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>

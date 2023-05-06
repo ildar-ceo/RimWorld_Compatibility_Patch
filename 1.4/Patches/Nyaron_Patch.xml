@@ -460,6 +460,18 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PawnKindDef[defName="Nyaron_Soldier"]/apparelRequired/li[text()="Nr_CatJacket"]</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[defName="Nyaron_Soldier" or defName="Nyaron_Ranger"]/apparelMoney</xpath>
+					<value>
+						<apparelMoney>
+							<min>2000</min>
+							<max>5000</max>
+						</apparelMoney>
+					</value>
+				</li>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/PawnKindDef[defName="Nyaron_Ranger" or defName="Nyaron_Ranger_Elite"]/weaponTags</xpath>
 					<value>

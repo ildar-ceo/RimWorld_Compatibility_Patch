@@ -11,15 +11,6 @@
 			<operations>
 				
 				<!-- Fix ships craft. Need Aurora core -->
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ResearchProjectDef[defName="ShipEngine" or defName="ShipReactor" or defName="ShipCryptosleep" or defName="ShipSensorCluster"]</xpath>
-					<value>
-						<requiredResearchFacilities>
-							<li>MultiAnalyzer</li>
-							<li>EccentricAuroraCore</li>
-						</requiredResearchFacilities>
-					</value>
-				</li>
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/ThingDef[defName="Eccentric_HexCell"]/tradeability</xpath>
 				</li>
@@ -81,6 +72,52 @@
 					<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitCommonBase" or @Name="EccentricGearBase"]/tradeability</xpath>
 				</li>
 				
+				<!-- Add tags to PawnKinds -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="OutlanderBase" or @Name="SpaceRefugeeBase" or @Name="MercenaryEliteTierBase" or defName="Town_Guard" or defName="Town_Trader" or defName="Town_Councilman" or defName="Pirate" or defName="AncientSoldier"]/apparelTags</xpath>
+					<value>
+						<li>Eccentric</li>
+					</value>
+				</li>
+				
+				<!-- Change market value -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="EccentricUndersuitArel"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>2500</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="EccentricUndersuitSeraph"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>3500</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="EccentricUndersuitApsara"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>3000</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="EccentricUniformCombat" or defName="EccentricUniformTech"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>3000</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="EccentricUniformGuardian" or defName="EccentricUniformLeader"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>3500</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="EccentricUniformWorker"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>2000</MarketValue>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
@@ -88,7 +125,9 @@
 	
 	<!-- ID: 2552623545 (Eccentric Tech - Core) -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Eccentric Tech - Core</li></mods>
+		<mods>
+			<li>Eccentric Tech - Angel Apparel</li>
+		</mods>
 		
 		<!-- ID: 1854376306 -->
 		<match Class="PatchOperationFindMod">
@@ -109,6 +148,13 @@
 							</li>
 						</value>
 					</li>
+					
+					<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="NyaronBase" or defName="Nyaron_Soldier_Light" or defName="Nyaron_Soldier" or defName="Nyaron_Ranger_Light" or defName="Nyaron_Ranger" or defName="Nyaron_Ranger_Rocketeer" or defName="Nyaron_Special_Assassin"]/apparelTags</xpath>
+					<value>
+						<li>Eccentric</li>
+					</value>
+				</li>
 					
 				</operations>
 			</match>
@@ -173,15 +219,11 @@
 						</value>
 					</li>
 					
-					<!-- Trade -->
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard" or defName="Orbital_Empire"]/stockGenerators/li[tradeTag="HiTechArmor"]</xpath>
+					<!-- Add tags to PawnKinds -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/PawnKindDef[@Name="RoyalBase" or @Name="ImperialFighterBase"]/apparelTags</xpath>
 						<value>
-							<li Class="StockGenerator_Tag">
-								<tradeTag>HiTechArmor</tradeTag>
-								<thingDefCountRange>4~8</thingDefCountRange>
-								<countRange>1~2</countRange>
-							</li>
+							<li>Eccentric</li>
 						</value>
 					</li>
 					
