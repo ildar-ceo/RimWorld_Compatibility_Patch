@@ -95,6 +95,11 @@
 		</value>
 	</Operation>
 	
+	<!-- Use Anima Tree for anyone -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/MeditationFocusDef[defName="Natural"]/requiredBackstoriesAny</xpath>
+	</Operation>
+	
 	<!-- Remove pen animal from Boomalope -->
 	<Operation Class="PatchOperationRemove">
 		<xpath>/Defs/ThingDef[defName="Boomalope"]/race/roamMtbDays</xpath>
