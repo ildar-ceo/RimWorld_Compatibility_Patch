@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModsConfigData>
-  <version>1.4.3682 rev790</version>
+  <version>1.4.3704 rev898</version>
   <activeMods>
     <li>brrainz.harmony</li>
     <li>ludeon.rimworld</li>
@@ -9,13 +9,11 @@
     <li>ludeon.rimworld.biotech</li>
     <li>erdelf.humanoidalienraces</li>
     <li>dubwise.dubsmintmenus</li>
-    <li>fluffy.researchtree</li>
     <li>mlie.wikirim</li>
     <li>com.bymarcin.architecticons</li>
     <li>automatic.autolinks</li>
     <li>animalfilthdontcare.1trickponyta</li>
     <li>razor2.3.anotherrimworldmod.autocutblight</li>
-    
     <li>fluffy.backuppower</li>
     <li>fluffy.areaunlocker</li>
     <li>dimonsever000.backstoriesplus.specific</li>
@@ -27,10 +25,9 @@
     <li>steve.betterquestrewards</li>
     <li>farmradish.nyaroncosmetics</li>
     <li>calamabanana.breachableembrasures</li>
+    <li>frozensnowfox.vanillabionicsexpansion</li>
     <li>automatic.bionicicons</li>
     <li>relaxedotter.bettermechanoidloot</li>
-    <li>brrainz.carefulraids</li>
-    <li>azuraal.choiceofpsycasts</li>
     <li>saucypigeon.pawnbadge</li>
     <li>crashm.colorcodedmoodbar.11</li>
     <li>edern.combatpsycasts</li>
@@ -44,10 +41,6 @@
     <li>aelanna.eccentricextras.angelhairs</li>
     <li>aelanna.eccentrictech.core</li>
     <li>aelanna.eccentrictech.angelapparel</li>
-    <li>wit.expandedroofing</li>
-    <li>vat.epoeforked</li>
-    <li>vat.epoeforkedroyalty</li>
-    <li>ru.pashka.vat.epoeforked</li>
     <li>m00nl1ght.geologicallandforms</li>
     <li>dmitry6.rusgeologicallandforms</li>
     <li>khorbos.gotosleep</li>
@@ -81,10 +74,8 @@
     <li>oskarpotocki.vanillafactionsexpanded.core</li>
     <li>vanillaexpanded.vcef</li>
     <li>regrowth.botr.core</li>
-    <li>regrowth.botr.borealforestexpansion</li>
     <li>hatti.qualitybuilder</li>
     <li>sgc.quests</li>
-    <li>lucifer.realisticrooms</li>
     <li>ru.fartresh.reinforcedmechanoids2</li>
     <li>xrushha.reinstallablealtars</li>
     <li>rimfridge.kv.rw</li>
@@ -98,15 +89,12 @@
     <li>mlie.silentdoors</li>
     <li>petetimessix.simplesidearms</li>
     <li>longman.smallerradiusforanimatreesandshrines</li>
-    <li>killathon.androidtiersreforged</li>
-    <li>uuugggg.smartmedicine</li>
     <li>sarg.smartspeed</li>
     <li>dhultgren.smarterconstruction</li>
     <li>tostov.spacetechraiders</li>
     <li>linkolas.stabilize</li>
     <li>scherub.stonecuttingextended</li>
     <li>albion.sparklingworlds.full</li>
-    <li>gt.sam.tilledsoil</li>
     <li>smashphil.dropspot</li>
     <li>carnysenpai.traitraritycolors</li>
     <li>mlie.turnonoffrepowered</li>
@@ -114,15 +102,12 @@
     <li>visibleraidpoints.1trickpwnyta</li>
     <li>murmur.walllight</li>
     <li>udderlyevelyn.waterfreezes</li>
-    <li>divinederivative.romance</li>
-    <li>ru.nfd.waybetterromance</li>
     <li>mlie.wehadatrader</li>
     <li>bodlosh.weaponstats</li>
     <li>revolus.whatsmissing</li>
     <li>fluffy.worktab</li>
     <li>maxzicode.zitools</li>
     <li>grizzlemethis.tradingspot.rw</li>
-    <li>frozensnowfox.filthvanisheswithrainandtime</li>
     <li>frozensnowfox.bettercamploot</li>
     <li>ryflamer.misc.drawabead</li>
     <li>vanillaexpanded.vaeaccessories</li>
@@ -141,20 +126,31 @@
     <li>dismarzero.vgp.vgpgardengourmet</li>
     <li>roolo.almostthere</li>
     <li>hlx.reinforcedmechanoids2</li>
-    <li>albion.sparklingworlds.bmchardcore</li>
-    <li>rimsenal.federation</li>
-    <li>mlie.cyberneticwarfare</li>
     <li>syrchalis.processor.framework</li>
     <li>com.yayo.yayoani.continued</li>
-    <li>mlie.yayoscombat3</li>
     <li>smashphil.srtsexpanded</li>
     <li>rus.biotech.nastia</li>
     <li>gekasid.vgp.vgpvegetablegarden.rus</li>
-    <li>ru.rimsenal.federation</li>
     <li>ow.ru.vie</li>
     <li>ow.ru.traits</li>
     <li>ow.ru.core</li>
     <li>ow.ru.aaa</li>
+    <li>shavius.vfeempire.ru</li>
+    <li>vanillaexpanded.vwel</li>
+    <li>mrkociak.biotechmoremechstuffmechupgradepod</li>
+    <li>killathon.androidtiersreforged</li>
+    <li>chjees.androids14</li>
+    <li>mlie.caveworldflora</li>
+    <li>novichok.mlie.caveworldflora</li>
+    <li>kikohi.berf</li>
+    <li>m00nl1ght.geologicallandforms.biometransitions</li>
+    <li>owlchemist.powertab</li>
+    <li>ratys.rtfuse</li>
+    <li>fluffy.researchtree</li>
+    <li>jamaicancastle.rf.fertilefields</li>
+    <li>syrchalis.scarremoval</li>
+    <li>syrchalis.prosthetictable</li>
+    <li>frozensnowfox.betterancientcomplexloot</li>
     <li>fluffy.musicmanager</li>
     <li>chais.custommusic</li>
     <li>goodvine.compatibility.patch</li>
