@@ -76,6 +76,32 @@
 						<li>DankPyon_Steel</li>
 					</value>
 				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="Electricity"]</xpath>
+					<value>
+						<requiredResearchBuilding>DankPyon_AdvancedResearchBench</requiredResearchBuilding>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="Prosthetics"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="Prosthetics"]/prerequisites</xpath>
+					<value>
+						<prerequisites>
+							<li>DankPyon_Engineering</li>
+						</prerequisites>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="DankPyon_Gunpowder"]/prerequisites</xpath>
+					<value>
+						<li>Smithing</li>
+					</value>
+				</li>
 				
 				<!-- Mineable -->
 				<li Class="PatchOperationReplace">
@@ -111,6 +137,72 @@
 				</li>
 				
 			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods><li>Biotech</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ResearchProjectDef[defName="FertilityProcedures"]/techLevel</xpath>
+						<value>
+							<techLevel>Medieval</techLevel>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ResearchProjectDef[defName="FertilityProcedures"]/prerequisites</xpath>
+						<value>
+							<prerequisites>
+								<li>DrugProduction</li>
+							</prerequisites>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
+		<!-- ID: 2882598941 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Kit's Gunpowder Weapons</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="KIT_Blackpowder"]/prerequisites</xpath>
+						<value>
+							<li>DankPyon_Gunpowder</li>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ResearchProjectDef[defName="KIT_LineInfantry"]/prerequisites</xpath>
+						<value>
+							<prerequisites>
+								<li>DankPyon_Gunpowder</li>
+								<li>Smithing</li>
+							</prerequisites>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="KIT_Gun_Arquebus"]/recipeMaker/researchPrerequisite</xpath>
+						<value>
+							<researchPrerequisite>DankPyon_Gunpowder</researchPrerequisite>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+			
 		</match>
 	</Operation>
 	
@@ -325,6 +417,50 @@
 						<value>
 							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
 						</value>
+					</li>
+					
+					<!-- Research fix -->
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ResearchProjectDef[defName="Electricity" or defName="NutrientPaste" or defName="AirConditioning"]/tags/li[text()="ClassicStart"]</xpath>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ResearchProjectDef[defName="DrugProduction" or defName="PsychiteRefining" or defName="WakeUpProduction" or defName="GoJuiceProduction" or defName="PenoxycylineProduction"]/techLevel</xpath>
+						<value>
+							<techLevel>Medieval</techLevel>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ResearchProjectDef[defName="Electricity"]/baseCost</xpath>
+						<value>
+							<baseCost>100000</baseCost>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
+		<!-- ID: 836308268 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Dubs Bad Hygiene</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ResearchProjectDef[defName="CentralHeating" or defName="GeothermalHeating" or defName="ModernFixtures" or defName="Irrigation" or defName="FireSuppression"]/techLevel</xpath>
+						<value>
+							<techLevel>Medieval</techLevel>
+						</value>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ResearchProjectDef[defName="CentralHeating"]/prerequisites/li[text()="Electricity"]</xpath>
 					</li>
 					
 				</operations>

@@ -95,6 +95,12 @@
 						<MarketValue>1</MarketValue>
 					</value>
 				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="RFF_Terraforming"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
 			</operations>
 		</match>
 	</Operation>
