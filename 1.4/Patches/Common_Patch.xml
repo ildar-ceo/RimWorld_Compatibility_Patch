@@ -325,11 +325,27 @@
 					</value>
 				</li>
 				
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="OutlanderCivil" or defName="OutlanderRough"]</xpath>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/xenotypeSet</xpath>
 					<value>
 						<xenotypeSet>
 							<xenotypeChances>
+								<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.5</Baseliner>
+								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.25</Impid>
+								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
+								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
+								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="TribeBase"]</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.5</Baseliner>
 								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.25</Impid>
 								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
 								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>

@@ -108,7 +108,7 @@ SRTS:
 =====
 
 Vanilla Base Generation Expanded:
-- Add Nyaron, BlueMoonCorp, Rimsenal Federation Faction settlements
+- Add Nyaron, BlueMoonCorp, Rimsenal Federation, Medieval overhaul Faction settlements
 
 =====
 
@@ -156,11 +156,13 @@ MendAndRecycle:
 		<li>syrchalis.processor.framework</li>
 		<li>syrchalis.universalfermenter</li>
 		<li>DankPyon.Medieval.Overhaul</li>
+		<li>Torann.ARimworldOfMagic</li>
 		<li>Ogam.MedievalOverhaul.ArcaneArchaeologists</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 		<li>OskarPotocki.VFE.Classical</li>
 		<li>OskarPotocki.VFE.Empire</li>
 		<li>OskarPotocki.VFE.Vikings</li>
+		<li>Solaris.RatkinRaceMod</li>
 		<li>visilt.travelthroughwater</li>
 		<li>jamaicancastle.RF.fertilefields</li>
 		<li>smashphil.srtsexpanded</li>

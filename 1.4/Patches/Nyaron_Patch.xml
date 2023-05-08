@@ -928,4 +928,30 @@
 		</match>
 	</Operation>
 	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 1201382956 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>A RimWorld of Magic</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Seers"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
 </Patch>

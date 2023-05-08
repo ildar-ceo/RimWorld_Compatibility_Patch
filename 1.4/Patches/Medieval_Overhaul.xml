@@ -23,6 +23,22 @@
 					</value>
 				</li>
 				
+				<!-- Add xenotypes -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase" or @Name="DankPyon_UlrikFactionBase" or @Name="DankPyon_BrigandFactionBase"]</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.5</Baseliner>
+								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.25</Impid>
+								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
+								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
+								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				
 				<!-- Add DankPyon_NobleHouseCivil Faction -->
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil"]</xpath>
@@ -34,20 +50,6 @@
 					<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil"]</xpath>
 					<value>
 						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
-					</value>
-				</li>
-				
-				<!-- Set Mechanoid Faction to zero -->
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/requiredCountAtGameStart</xpath>
-					<value>
-						<requiredCountAtGameStart>0</requiredCountAtGameStart>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]</xpath>
-					<value>
-						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
 					</value>
 				</li>
 				
@@ -181,6 +183,33 @@
 						</value>
 					</li>
 					
+					<!-- Add nyarons to faction -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce" or defName="DankPyon_NobleHouseSavage" or @Name="DankPyon_UlrikFactionBase" or @Name="DankPyon_BrigandFactionBase"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>25</Nyaron_Soldier>
+							<Nyaron_Soldier_Light>25</Nyaron_Soldier_Light>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce" or defName="DankPyon_NobleHouseSavage" or @Name="DankPyon_UlrikFactionBase" or @Name="DankPyon_BrigandFactionBase"]/pawnGroupMakers/li[kindDef="Combat" and commonality="100"]/options</xpath>
+						<value>
+							<Nyaron_Ranger>25</Nyaron_Ranger>
+							<Nyaron_Ranger_Light>25</Nyaron_Ranger_Light>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="DankPyon_NobleHouseCivil" or defName="DankPyon_NobleHouseCivil2" or defName="DankPyon_NobleHouseFierce" or defName="DankPyon_NobleHouseSavage" or @Name="DankPyon_UlrikFactionBase" or @Name="DankPyon_BrigandFactionBase"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>25</Nyaron_Soldier>
+							<Nyaron_Soldier_Light>25</Nyaron_Soldier_Light>
+							<Nyaron_Ranger>25</Nyaron_Ranger>
+							<Nyaron_Ranger_Light>25</Nyaron_Ranger_Light>
+						</value>
+					</li>
+					
 				</operations>
 			</match>
 		</match>
@@ -226,6 +255,73 @@
 					</li>
 					<li Class="PatchOperationReplace">
 						<xpath>/Defs/FactionDef[defName="CannibalPirate"]/startingCountAtWorldCreation</xpath>
+						<value>
+							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
+		<!-- ID: 2516523040 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Rimedieval</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Disable guns from crashlanded scenario -->
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ScenarioDef[defName="Crashlanded"]/scenario/parts/li[thingDef="Gun_BoltActionRifle"]</xpath>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ScenarioDef[defName="Crashlanded"]/scenario/parts/li[thingDef="Gun_Revolver"]</xpath>
+					</li>
+					
+					<!-- Set Pirate Faction to zero -->
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="Pirate"]/requiredCountAtGameStart</xpath>
+						<value>
+							<requiredCountAtGameStart>0</requiredCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Pirate"]</xpath>
+						<value>
+							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+						</value>
+					</li>
+					
+					<!-- Set Outlander Faction to zero -->
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/requiredCountAtGameStart</xpath>
+						<value>
+							<requiredCountAtGameStart>0</requiredCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]</xpath>
+						<value>
+							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+						</value>
+					</li>
+					
+					<!-- Set Mechanoid Faction to zero -->
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="Mechanoid"]/requiredCountAtGameStart</xpath>
+						<value>
+							<requiredCountAtGameStart>0</requiredCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Mechanoid"]</xpath>
 						<value>
 							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
 						</value>
@@ -360,6 +456,7 @@
 					<value>
 						<xenotypeSet>
 							<xenotypeChances>
+								<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.5</Baseliner>
 								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.25</Impid>
 								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
 								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
@@ -371,59 +468,6 @@
 				
 			</operations>
 		</match>
-	</Operation>
-	
-	
-	<!-- ID: 2553700067 -->
-	<Operation Class="PatchOperationFindMod">
-		<mods><li>Medieval Overhaul</li></mods>
-		
-		<!-- ID: 2516523040 -->
-		<match Class="PatchOperationFindMod">
-			<mods><li>Rimedieval</li></mods>
-			<match Class="PatchOperationSequence">
-				<operations>
-					
-					<!-- Disable guns from crashlanded scenario -->
-					<li Class="PatchOperationRemove">
-						<xpath>/Defs/ScenarioDef[defName="Crashlanded"]/scenario/parts/li[thingDef="Gun_BoltActionRifle"]</xpath>
-					</li>
-					<li Class="PatchOperationRemove">
-						<xpath>/Defs/ScenarioDef[defName="Crashlanded"]/scenario/parts/li[thingDef="Gun_Revolver"]</xpath>
-					</li>
-					
-					<!-- Set Pirate Faction to zero -->
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/FactionDef[defName="Pirate"]/requiredCountAtGameStart</xpath>
-						<value>
-							<requiredCountAtGameStart>0</requiredCountAtGameStart>
-						</value>
-					</li>
-					<li Class="PatchOperationAdd">
-						<xpath>/Defs/FactionDef[defName="Pirate"]</xpath>
-						<value>
-							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
-						</value>
-					</li>
-					
-					<!-- Set Outlander Faction to zero -->
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/requiredCountAtGameStart</xpath>
-						<value>
-							<requiredCountAtGameStart>0</requiredCountAtGameStart>
-						</value>
-					</li>
-					<li Class="PatchOperationAdd">
-						<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]</xpath>
-						<value>
-							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
-						</value>
-					</li>
-					
-				</operations>
-			</match>
-		</match>
-		
 	</Operation>
 	
 	
@@ -466,6 +510,7 @@
 					<value>
 						<xenotypeSet>
 							<xenotypeChances>
+								<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.5</Baseliner>
 								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
 								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
 								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
@@ -479,4 +524,54 @@
 	</Operation>
 	
 	
+	<!-- ID: 1201382956 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>A RimWorld of Magic</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Add xenotype -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="Seers"]</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
+								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
+								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1578693166 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>NewRatkinPlus</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Add xenotype -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="RatkinFactionBase"]</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
+								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
+								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
 </Patch>
