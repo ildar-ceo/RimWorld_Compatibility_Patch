@@ -24,7 +24,8 @@ Common:
 - Rottable BodyPartNatural
 - Craftable AI Core
 - Add money to traders
-- Add Nurse worktab
+- Add nurse worktab
+- Add xenotypes to common factions
 - More works for BasicWorker
 - More spacer components from merchants
 
@@ -34,6 +35,14 @@ Trading:
 - Tradable Psychic amplifier, Neurotrainers skill, Broadshield core, HiTechArmor
 - More money for traders
 - More orbital traders
+
+=====
+
+Medieval Overhaul + Rimedieval:
+- Common patches
+- Disable mechanoids
+- Disable industrial factions
+- VFE - Classical compatibility
 
 =====
 
@@ -147,6 +156,7 @@ MendAndRecycle:
 		<li>syrchalis.processor.framework</li>
 		<li>syrchalis.universalfermenter</li>
 		<li>DankPyon.Medieval.Overhaul</li>
+		<li>Ogam.MedievalOverhaul.ArcaneArchaeologists</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 		<li>OskarPotocki.VFE.Classical</li>
 		<li>OskarPotocki.VFE.Empire</li>

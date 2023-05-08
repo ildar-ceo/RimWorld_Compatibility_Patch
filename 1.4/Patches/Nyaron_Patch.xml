@@ -589,6 +589,15 @@
 					</value>
 				</li>
 				
+				<!-- Tribe Combat -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
+					<value>
+						<Nyaron_Soldier>5</Nyaron_Soldier>
+						<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
@@ -862,6 +871,58 @@
 							<Nyaron_Ranger_Elite>10</Nyaron_Ranger_Elite>
 						</value>
 					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2787850474 -->
+		<!-- ID: 2790332207 Russian -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Classical</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- VFE Classical Combat -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[@Name="VFEC_RepublicBase"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2231295285 -->
+		<!-- ID: 2247905304 Russian -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Vikings</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- VFE Vikings Combat -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEV_VikingsClan" or defName="VFEV_VikingsSlaver"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>10</Nyaron_Soldier>
+							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
+						</value>
+					</li>
+					
 				</operations>
 			</match>
 		</match>
