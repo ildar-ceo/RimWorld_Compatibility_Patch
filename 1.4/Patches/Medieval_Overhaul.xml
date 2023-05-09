@@ -248,6 +248,50 @@
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Medieval Overhaul</li></mods>
 		
+		<!-- ID: 2019053285 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>ColdCrystal</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_BulkGoodsMerchant" or defName="DankPyon_Base_Medieval_Standard"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>AmberCrystal</thingDef>
+								<countRange>10~50</countRange>
+							</li>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>ColdCrystal</thingDef>
+								<countRange>10~50</countRange>
+							</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="DankPyon_Visitor_Medieval_Standard"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>AmberCrystal</thingDef>
+								<countRange>-10~5</countRange>
+							</li>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>ColdCrystal</thingDef>
+								<countRange>-10~5</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
 		<!-- ID: 2026992161 -->
 		<match Class="PatchOperationFindMod">
 			<mods><li>Dragons Descent</li></mods>
@@ -324,6 +368,13 @@
 									<max>600</max>
 								</totalPriceRange>
 							</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/RecipeDef[defName="MakeAYAmmoniaHay" or defName="MakeAYCandleSingle" or defName="MakeAYCompost" or defName="MakeAYSaltedMeatBarrel" or defName="ExtractAYSaltedMeatFromBarrel" or defName="MakeAYTallow" or defName="MakeBulkAYTallow"]/recipeUsers</xpath>
+						<value>
+							<li>DankPyon_ButchersBlock</li>
 						</value>
 					</li>
 					
@@ -971,6 +1022,36 @@
 		
 	</Operation>
 	
+	
+	<!-- ID: 2019053285 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>ColdCrystal</li></mods>
+		
+		<!-- ID: 1578693166 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>NewRatkinPlus</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Ratkin_BulkGoods"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>AmberCrystal</thingDef>
+								<countRange>10~50</countRange>
+							</li>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>ColdCrystal</thingDef>
+								<countRange>10~50</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
 	
 	
 </Patch>

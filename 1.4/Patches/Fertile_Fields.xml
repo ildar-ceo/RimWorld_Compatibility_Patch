@@ -199,6 +199,20 @@
 						</value>
 					</li>
 					
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/RecipeDef[defName="SplitDirt" or defName="SplitDirtBulk" or defName="DirtToClay" or defName="DirtToClayBulk" or defName="MakeCrushedRocks" or defName="MakeCrushedRocksBulk" or defName="MakeCrushedRocksBlock" or defName="MakeCrushedRocksBlockBulk" or defName="MakeSand" or defName="MakeSandBulk" or defName="MakeClay" or defName="MakeClayBulk" or defName="MakeDirt" or defName="MakeDirtBulk"]/recipeUsers</xpath>
+						<value>
+							<li>DankPyon_StonecuttingSpot</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/RecipeDef[defName="MakeCompost"]/recipeUsers</xpath>
+						<value>
+							<li>DankPyon_ButchersBlock</li>
+						</value>
+					</li>
+					
 				</operations>
 			</match>
 		</match>

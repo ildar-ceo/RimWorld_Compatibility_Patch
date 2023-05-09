@@ -776,4 +776,42 @@
 		</match>
 	</Operation>
 	
+	
+	<!-- ID: 2019053285 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>ColdCrystal</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Neolithic_BulkGoods" or defName="Base_Outlander_Standard" or defName="Base_Neolithic_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>AmberCrystal</thingDef>
+							<countRange>10~50</countRange>
+						</li>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>ColdCrystal</thingDef>
+							<countRange>10~50</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>AmberCrystal</thingDef>
+							<countRange>-10~5</countRange>
+						</li>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>ColdCrystal</thingDef>
+							<countRange>-10~5</countRange>
+						</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
 </Patch>

@@ -999,4 +999,35 @@
 		
 	</Operation>
 	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2019053285 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>ColdCrystal</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>AmberCrystal</thingDef>
+								<countRange>10~50</countRange>
+							</li>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>ColdCrystal</thingDef>
+								<countRange>10~50</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
 </Patch>
