@@ -135,6 +135,40 @@
 						<maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
 					</value>
 				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/MapGeneratorDef[@Name="MapCommonBase"]/genSteps/li[text()="DankPyon_HornetNest"]</xpath>
+				</li>
+				
+				<!-- Drug fix -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="DrugProduction" or defName="PsychiteRefining" or defName="WakeUpProduction" or defName="GoJuiceProduction" or defName="PenoxycylineProduction"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+				
+				<!-- Traders -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_BulkGoodsMerchant" or defName="DankPyon_Caravan_Medieval_ArtPatron" or defName="DankPyon_Caravan_Medieval_Armorsmith" or defName="DankPyon_Caravan_Medieval_Weaponsmith" or defName="DankPyon_Caravan_Medieval_RuinsMerchant" or defName="DankPyon_Caravan_Medieval_Scholar"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+					<value>
+						<countRange>2000~5000</countRange>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_BulkGoodsMerchant"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>DankPyon_Amber</thingDef>
+							<countRange>80~155</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="DankPyon_Base_Medieval_Standard"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+					<value>
+						<countRange>5000~10000</countRange>
+					</value>
+				</li>
 				
 			</operations>
 		</match>
@@ -144,10 +178,12 @@
 	<!-- ID: 2553700067 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Medieval Overhaul</li></mods>
+		
 		<match Class="PatchOperationFindMod">
 			<mods><li>Biotech</li></mods>
 			<match Class="PatchOperationSequence">
 				<operations>
+					
 					<li Class="PatchOperationReplace">
 						<xpath>/Defs/ResearchProjectDef[defName="FertilityProcedures"]/techLevel</xpath>
 						<value>
@@ -162,9 +198,182 @@
 							</prerequisites>
 						</value>
 					</li>
+					
 				</operations>
 			</match>
 		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
+		<!-- ID: 935732834 (SeedsPlease) -->
+		<!-- ID: 2586052937 (SeedsPlease: Lite) -->
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>SeedsPlease</li>
+				<li>SeedsPlease: Lite</li>
+			</mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_BulkGoodsMerchant"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>Seeds</tradeTag>
+								<thingDefCountRange>
+									<min>5</min>
+									<max>15</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>50</min>
+									<max>700</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
+		<!-- ID: 2026992161 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Dragons Descent</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_BulkGoodsMerchant" or defName="DankPyon_Base_Medieval_Standard"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>DragonHorn</thingDef>
+								<countRange>0~3</countRange>
+							</li>
+							<li Class="StockGenerator_Category">
+								<categoryDef>EggsDragon</categoryDef>
+								<thingDefCountRange>0~1</thingDefCountRange>
+								<countRange>1</countRange>
+							</li>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>DraconicAmbrosia</thingDef>
+								<countRange>5~18</countRange>
+							</li>
+							<li Class="StockGenerator_Category">
+								<categoryDef>DragonLeathers</categoryDef>
+								<thingDefCountRange>1~2</thingDefCountRange>
+								<totalPriceRange>400~950</totalPriceRange>
+							</li>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>DragonsBlood</thingDef>
+								<countRange>0~8</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
+		<!-- ID: 2195469123 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Apothecary (Continued)</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_BulkGoodsMerchant" or defName="DankPyon_Base_Medieval_Standard"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Category">
+								<categoryDef>AYPlantMatter</categoryDef>
+								<thingDefCountRange>
+									<min>3</min>
+									<max>8</max>
+								</thingDefCountRange>
+								<totalPriceRange>
+									<min>300</min>
+									<max>600</max>
+								</totalPriceRange>
+							</li>
+							<li Class="StockGenerator_Category">
+								<categoryDef>AYProducts</categoryDef>
+								<thingDefCountRange>
+									<min>5</min>
+									<max>10</max>
+								</thingDefCountRange>
+								<totalPriceRange>
+									<min>300</min>
+									<max>600</max>
+								</totalPriceRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
+		<!-- ID: 2101545242 (Medieval Prosthetics) -->
+		<!-- ID: 2883228057 (Medieval Medicines 1.4 Medieval Overhaul Edition) -->
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>Medieval Prosthetics</li>
+				<li>Medieval Medicines 1.4 Medieval Overhaul Edition</li>
+			</mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ResearchProjectDef[defName="Prosthetics"]/prerequisites</xpath>
+						<value>
+							<prerequisites>
+								<li>ArtificialLimbs</li>
+								<li>DankPyon_Engineering</li>
+							</prerequisites>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ResearchProjectDef[defName="CrudeLimbs"]/baseCost</xpath>
+						<value>
+							<baseCost>500</baseCost>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ResearchProjectDef[defName="ArtificialLimbs"]/baseCost</xpath>
+						<value>
+							<baseCost>750</baseCost>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
 	</Operation>
 	
 	
@@ -202,8 +411,8 @@
 					
 				</operations>
 			</match>
-			
 		</match>
+		
 	</Operation>
 	
 	
@@ -229,6 +438,14 @@
 					<xpath>/Defs/FactionDef[defName="Ogam_MagicalAcademy"]</xpath>
 					<value>
 						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="Ogam_MagicalAcademy"]/caravanTraderKinds</xpath>
+					<value>
+						<caravanTraderKinds Inherit="False">
+							<li>DankPyon_Caravan_Medieval_BulkGoodsMerchant</li>
+						</caravanTraderKinds>
 					</value>
 				</li>
 				
@@ -424,12 +641,6 @@
 						<xpath>/Defs/ResearchProjectDef[defName="Electricity" or defName="NutrientPaste" or defName="AirConditioning"]/tags/li[text()="ClassicStart"]</xpath>
 					</li>
 					<li Class="PatchOperationReplace">
-						<xpath>/Defs/ResearchProjectDef[defName="DrugProduction" or defName="PsychiteRefining" or defName="WakeUpProduction" or defName="GoJuiceProduction" or defName="PenoxycylineProduction"]/techLevel</xpath>
-						<value>
-							<techLevel>Medieval</techLevel>
-						</value>
-					</li>
-					<li Class="PatchOperationReplace">
 						<xpath>/Defs/ResearchProjectDef[defName="Electricity"]/baseCost</xpath>
 						<value>
 							<baseCost>100000</baseCost>
@@ -467,6 +678,34 @@
 			</match>
 		</match>
 		
+	</Operation>
+	
+	
+	<!-- ID: 2787850474 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Factions Expanded - Classical</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- VFE Classical xenotype -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[@Name="VFEC_RepublicBase"]/xenotypeSet</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.5</Baseliner>
+								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.25</Impid>
+								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
+								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
+								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
 	</Operation>
 	
 	
@@ -530,6 +769,28 @@
 							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
 						</value>
 					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[@Name="VFEC_RepublicBase"]/caravanTraderKinds</xpath>
+						<value>
+							<caravanTraderKinds Inherit="False">
+								<li>DankPyon_Caravan_Medieval_BulkGoodsMerchant</li>
+								<li>VFEC_Caravan_Republic_WarMerchant</li>
+								<li>VFEC_Caravan_Republic_Slaver</li>
+							</caravanTraderKinds>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/TraderKindDef[defName="VFEC_Caravan_Republic_WarMerchant" or defName="VFEC_Caravan_Republic_Slaver"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+						<value>
+							<countRange>2000~5000</countRange>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/TraderKindDef[defName="VFEC_Base_Republic_Standard"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+						<value>
+							<countRange>5000~10000</countRange>
+						</value>
+					</li>
 					
 					<!-- Add VFEC_CentralRepublic Faction -->
 					<li Class="PatchOperationAdd">
@@ -579,21 +840,20 @@
 	</Operation>
 	
 	
-	<!-- ID: 2787850474 -->
+	<!-- ID: 2231295285 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>Vanilla Factions Expanded - Classical</li></mods>
+		<mods><li>Vanilla Factions Expanded - Vikings</li></mods>
 		
 		<match Class="PatchOperationSequence">
 			<operations>
 				
 				<!-- VFE Classical xenotype -->
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/FactionDef[@Name="VFEC_RepublicBase"]/xenotypeSet</xpath>
+					<xpath>/Defs/FactionDef[@Name="VFEV_VikingBase"]/xenotypeSet</xpath>
 					<value>
 						<xenotypeSet>
 							<xenotypeChances>
 								<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.5</Baseliner>
-								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.25</Impid>
 								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
 								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
 								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
@@ -630,33 +890,6 @@
 			</match>
 		</match>
 		
-	</Operation>
-	
-	
-	<!-- ID: 2231295285 -->
-	<Operation Class="PatchOperationFindMod">
-		<mods><li>Vanilla Factions Expanded - Vikings</li></mods>
-		
-		<match Class="PatchOperationSequence">
-			<operations>
-				
-				<!-- VFE Classical xenotype -->
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/FactionDef[@Name="VFEV_VikingBase"]/xenotypeSet</xpath>
-					<value>
-						<xenotypeSet>
-							<xenotypeChances>
-								<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.5</Baseliner>
-								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
-								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
-								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
-							</xenotypeChances>
-						</xenotypeSet>
-					</value>
-				</li>
-				
-			</operations>
-		</match>
 	</Operation>
 	
 	
@@ -710,4 +943,34 @@
 			</operations>
 		</match>
 	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
+		<!-- ID: 1578693166 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>NewRatkinPlus</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Ratkin_BulkGoods"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>DankPyon_Amber</thingDef>
+								<countRange>80~155</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	
 </Patch>

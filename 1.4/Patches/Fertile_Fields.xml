@@ -89,10 +89,24 @@
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/ThingDef[defName="PlantScraps"]/tradeability</xpath>
 				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="PlantScraps"]/stackLimit</xpath>
+					<value>
+						<stackLimit>1000</stackLimit>
+					</value>
+				</li>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName="PlantScraps"]/statBases</xpath>
 					<value>
-						<MarketValue>1</MarketValue>
+						<MarketValue>0.1</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Neolithic_BulkGoods" or defName="Visitor_Neolithic_Standard" or defName="Visitor_Outlander_Standard" or defName="Base_Outlander_Standart" or defName="Base_Neolithic_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_BuySingleDef">
+							<thingDef>PlantScraps</thingDef>
+						</li>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
@@ -129,6 +143,109 @@
 			</match>
 			
 		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2012735237 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Fertile Fields [1.1]</li></mods>
+		
+		<!-- ID: 2553700067 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Medieval Overhaul</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_BulkGoodsMerchant" or defName="DankPyon_Caravan_Medieval_RuinsMerchant" or defName="DankPyon_Visitor_Medieval_Standard" or defName="DankPyon_Base_Medieval_Standard"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_BuySingleDef">
+								<thingDef>PlantScraps</thingDef>
+							</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_BulkGoodsMerchant" or defName="DankPyon_Base_Medieval_Standard"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>TerraformingResources</tradeTag>
+								<thingDefCountRange>
+									<min>0</min>
+									<max>4</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>100</min>
+									<max>200</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/TraderKindDef[defName="DankPyon_Visitor_Medieval_Standard"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+							<tradeTag>TerraformingResources</tradeTag>
+								<thingDefCountRange>
+									<min>0</min>
+									<max>2</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>5</min>
+									<max>15</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2012735237 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Fertile Fields [1.1]</li></mods>
+		
+		<!-- ID: 1578693166 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>NewRatkinPlus</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Ratkin_BulkGoods"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_BuySingleDef">
+								<thingDef>PlantScraps</thingDef>
+							</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/TraderKindDef[defName="Caravan_Ratkin_BulkGoods"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>TerraformingResources</tradeTag>
+								<thingDefCountRange>
+									<min>0</min>
+									<max>4</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>100</min>
+									<max>200</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
 	</Operation>
 	
 </Patch> 

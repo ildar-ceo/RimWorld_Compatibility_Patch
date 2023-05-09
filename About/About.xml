@@ -7,7 +7,7 @@
 Mods Balance and Compatibility Patch
 Version: 1.4.7
 
-Mod compatibility for Hightech CyberPack.
+Mod compatibility for Hightech CyberPack and RimDragon.
 May used as standalone mod. Must be loaded after all mods.
 
 =====
@@ -17,7 +17,7 @@ Common:
 - More orbital trades ships
 - Nerf leather human market price
 - Craftable reinforced barrel
-- Setup start count factions for tribal to zero
+- Setup start count factions for tribal to zero for HighTech pack (except RimDragon)
 - Disable visual effect in Archotech Structure Studiable
 - Use Anima Tree for anyone
 - Wind turbine smaller size
@@ -38,11 +38,14 @@ Trading:
 
 =====
 
-Medieval Overhaul + Rimedieval:
+Medieval Overhaul:
 - Common patches
+- Traders patches
+- Rimedieval patches
 - Disable mechanoids
 - Disable industrial factions
 - VFE - Classical compatibility
+- Apothecary (Continued) integration
 
 =====
 
@@ -140,6 +143,7 @@ MendAndRecycle:
 		<li>erdelf.HumanoidAlienRaces</li>
 		<li>notfood.MendAndRecycle</li>
 		<li>LWM.DeepStorage</li>
+		<li>Mlie.Apothecary</li>
 		<li>Mlie.CyberneticWarfare</li>
 		<li>VanillaExpanded.VCookE</li>
 		<li>notfood.SeedsPlease</li>
@@ -165,6 +169,9 @@ MendAndRecycle:
 		<li>Solaris.RatkinRaceMod</li>
 		<li>visilt.travelthroughwater</li>
 		<li>jamaicancastle.RF.fertilefields</li>
+		<li>NunahurAlShamikh.MedP</li>
+		<li>JoeDaly.MedMeds.MO</li>
+		<li>onyxae.dragonsdescent</li>
 		<li>smashphil.srtsexpanded</li>
 		<li>Haduki.AncientSpecies</li>
 		<li>Farmradish.Nyaron</li>

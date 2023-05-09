@@ -46,7 +46,7 @@
 		<value>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>ComponentSpacer</thingDef>
-				<countRange>0~3</countRange>
+				<countRange>0~10</countRange>
 			</li>
 		</value>
 	</Operation>
@@ -169,6 +169,12 @@
 		<xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
 		<value>
 			<countRange>200~500</countRange>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_BulkGoods"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+		<value>
+			<countRange>1000~2000</countRange>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
