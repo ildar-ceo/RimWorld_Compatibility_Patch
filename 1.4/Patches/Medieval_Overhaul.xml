@@ -604,56 +604,6 @@
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Medieval Overhaul</li></mods>
 		
-		<match Class="PatchOperationFindMod">
-			<mods><li>Ideology</li></mods>
-			<match Class="PatchOperationSequence">
-				<operations>
-					
-					<!-- Add TribeCannibal -->
-					<li Class="PatchOperationAdd">
-						<xpath>/Defs/FactionDef[defName="TribeCannibal"]</xpath>
-						<value>
-							<maxCountAtGameStart>1</maxCountAtGameStart>
-						</value>
-					</li>
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/FactionDef[defName="TribeCannibal"]/requiredCountAtGameStart</xpath>
-						<value>
-							<requiredCountAtGameStart>1</requiredCountAtGameStart>
-						</value>
-					</li>
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/FactionDef[defName="TribeCannibal"]/startingCountAtWorldCreation</xpath>
-						<value>
-							<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
-						</value>
-					</li>
-					
-					<!-- Set CannibalPirate Faction to 0 -->
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/FactionDef[defName="CannibalPirate"]/requiredCountAtGameStart</xpath>
-						<value>
-							<requiredCountAtGameStart>0</requiredCountAtGameStart>
-						</value>
-					</li>
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/FactionDef[defName="CannibalPirate"]/startingCountAtWorldCreation</xpath>
-						<value>
-							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
-						</value>
-					</li>
-					
-				</operations>
-			</match>
-		</match>
-		
-	</Operation>
-	
-	
-	<!-- ID: 2553700067 -->
-	<Operation Class="PatchOperationFindMod">
-		<mods><li>Medieval Overhaul</li></mods>
-		
 		<!-- ID: 2516523040 -->
 		<match Class="PatchOperationFindMod">
 			<mods><li>Rimedieval</li></mods>
@@ -711,6 +661,61 @@
 					</li>
 					
 				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
+		<!-- ID: 2516523040 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Rimedieval</li></mods>
+		
+			<match Class="PatchOperationFindMod">
+				<mods><li>Ideology</li></mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+						
+						<!-- Add TribeCannibal -->
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/FactionDef[defName="TribeCannibal"]</xpath>
+							<value>
+								<maxCountAtGameStart>1</maxCountAtGameStart>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/FactionDef[defName="TribeCannibal"]/requiredCountAtGameStart</xpath>
+							<value>
+								<requiredCountAtGameStart>1</requiredCountAtGameStart>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/FactionDef[defName="TribeCannibal"]/startingCountAtWorldCreation</xpath>
+							<value>
+								<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+							</value>
+						</li>
+						
+						<!-- Set CannibalPirate Faction to 0 -->
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/FactionDef[defName="CannibalPirate"]/requiredCountAtGameStart</xpath>
+							<value>
+								<requiredCountAtGameStart>0</requiredCountAtGameStart>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>/Defs/FactionDef[defName="CannibalPirate"]/startingCountAtWorldCreation</xpath>
+							<value>
+								<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+							</value>
+						</li>
+						
+					</operations>
+				</match>
 			</match>
 		</match>
 		
