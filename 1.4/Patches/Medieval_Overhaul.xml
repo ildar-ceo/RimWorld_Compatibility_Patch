@@ -1003,6 +1003,13 @@
 					</value>
 				</li>
 				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="MicroOptical"]/prerequisites</xpath>
+					<value>
+						<li>Gunsmithing</li>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
