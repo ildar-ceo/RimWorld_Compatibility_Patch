@@ -109,6 +109,17 @@
 					</value>
 				</li>
 				
+				<!-- Scenario fix -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ScenarioDef[defName="Crashlanded"]/scenario/parts/li[thingDef="Gun_BoltActionRifle"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ScenarioDef[defName="Crashlanded"]/scenario/parts/li[thingDef="Gun_Revolver"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ResearchProjectDef[defName="Electricity" or defName="NutrientPaste" or defName="AirConditioning"]/tags/li[text()="ClassicStart"]</xpath>
+				</li>
+				
 				<!-- Mineable -->
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="DankPyon_MineableCoal" or defName="DankPyon_MineableSalt" or defName="DankPyon_MineableGold" or defName="DankPyon_MineableIron"]/building/mineableYield</xpath>
@@ -649,12 +660,18 @@
 			<match Class="PatchOperationSequence">
 				<operations>
 					
-					<!-- Disable guns from crashlanded scenario -->
-					<li Class="PatchOperationRemove">
-						<xpath>/Defs/ScenarioDef[defName="Crashlanded"]/scenario/parts/li[thingDef="Gun_BoltActionRifle"]</xpath>
+					<!-- Set Mechanoid Faction to zero -->
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="Mechanoid"]/requiredCountAtGameStart</xpath>
+						<value>
+							<requiredCountAtGameStart>0</requiredCountAtGameStart>
+						</value>
 					</li>
-					<li Class="PatchOperationRemove">
-						<xpath>/Defs/ScenarioDef[defName="Crashlanded"]/scenario/parts/li[thingDef="Gun_Revolver"]</xpath>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Mechanoid"]</xpath>
+						<value>
+							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+						</value>
 					</li>
 					
 					<!-- Set Pirate Faction to zero -->
@@ -685,24 +702,7 @@
 						</value>
 					</li>
 					
-					<!-- Set Mechanoid Faction to zero -->
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/FactionDef[defName="Mechanoid"]/requiredCountAtGameStart</xpath>
-						<value>
-							<requiredCountAtGameStart>0</requiredCountAtGameStart>
-						</value>
-					</li>
-					<li Class="PatchOperationAdd">
-						<xpath>/Defs/FactionDef[defName="Mechanoid"]</xpath>
-						<value>
-							<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
-						</value>
-					</li>
-					
 					<!-- Research fix -->
-					<li Class="PatchOperationRemove">
-						<xpath>/Defs/ResearchProjectDef[defName="Electricity" or defName="NutrientPaste" or defName="AirConditioning"]/tags/li[text()="ClassicStart"]</xpath>
-					</li>
 					<li Class="PatchOperationReplace">
 						<xpath>/Defs/ResearchProjectDef[defName="Electricity"]/baseCost</xpath>
 						<value>

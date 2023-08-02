@@ -96,9 +96,9 @@
     <li>oskarpotocki.vanillaexpanded.royaltypatches</li>
     <li>syrchalis.processor.framework</li>
     <li>dankpyon.medieval.overhaul</li>
-    <li>ogam.rimedieval</li>
     <li>dylan.animalgear</li>
     <li>pphhyy.demigryphsmod</li>
+    <li>oskarpotocki.vfe.empire</li>
     <li>accurex.medievalempireoverhaul</li>
     <li>vanillaexpanded.vmemese</li>
     <li>vanillaexpanded.ideo.relicsandartifacts</li>
@@ -133,14 +133,17 @@
     <li>botchjob.medievalfantasyrareresources</li>
     <li>jsin.medievaloverhaulmisc</li>
     <li>dankpyon.medievalgenepacks</li>
+    <li>rince.gaulishgojuice</li>
+    <li>joedaly.medmeds.mo</li>
     <li>sierra.rf.medievaloverhaul</li>
     <li>ogam.medievaloverhaul.arcanearchaeologists</li>
-    <li>sierra.rf.housedoyle</li>
     <li>sargoskar.witcherhunt</li>
+    <li>lava.mo.leathers</li>
+    <li>oken.medievalquestrewards</li>
+    <li>botchjob.medievalfantasyquestrewards</li>
+    <li>sierra.rf.housedoyle</li>
     <li>ninja.lowtoolcabinet</li>
     <li>sirmashedpotato.medievaldrugs</li>
-    <li>mlie.rimquest</li>
-    <li>oken.medievalquestrewards</li>
     <li>aoba.fortress.medieval</li>
     <li>sierra.rt.generaltraits</li>
     <li>ru.pashka.sierra.rt.generaltraits</li>
@@ -158,12 +161,22 @@
     <li>wolfcub05.draftableanimals</li>
     <li>nilchei.dynamicdiplomacy</li>
     <li>flangopink.disableautoselecttravelsupplies</li>
-    <li>yanzihko.ffr</li>
+    <li>orion.hospitality</li>
+    <li>orion.cashregister</li>
+    <li>orion.gastronomy</li>
+    <li>adamas.storefront</li>
+    <li>sr.modrimworld.factionalwar</li>
     <li>co.uk.epicguru.meleeanimation</li>
     <li>victor.wallsaresolid</li>
     <li>mastertea.randomplus</li>
-    <li>fluffy.musicmanager</li>
-    <li>chais.custommusic</li>
+    <li>macropod.rutrans.mlie.apothecary</li>
+    <li>bdew.longdistance</li>
+    <li>rince.shroomsisok</li>
+    <li>scurvyez.randomchance</li>
+    <li>mlie.smartervisitors</li>
+    <li>shavius.vfeempire.ru</li>
+    <li>smashphil.srtsexpanded</li>
+    <li>azuraal.choiceofpsycasts</li>
     <li>goodvine.compatibility.patch</li>
     <li>trinity.runtimegcupdated</li>
     <li>krkr.rocketman</li>
