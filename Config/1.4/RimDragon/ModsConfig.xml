@@ -21,6 +21,8 @@
     <li>lbmaian.begonemessage</li>
     <li>brrainz.cameraplus</li>
     <li>calamabanana.breachableembrasures</li>
+    <li>frozensnowfox.vanillabionicsexpansion</li>
+    <li>syrchalis.prosthetictable</li>
     <li>automatic.bionicicons</li>
     <li>saucypigeon.pawnbadge</li>
     <li>crashm.colorcodedmoodbar.11</li>
@@ -50,6 +52,7 @@
     <li>doug.nojobauthors</li>
     <li>mehni.numbers</li>
     <li>farmradish.nyaron</li>
+    <li>farmradish.nyaroncosmetics</li>
     <li>hobtook.mortaraccuracy</li>
     <li>moretraitslots.kv.rw</li>
     <li>fed1splay.pawntargetfix</li>
@@ -103,8 +106,6 @@
     <li>vanillaexpanded.vmemese</li>
     <li>vanillaexpanded.ideo.relicsandartifacts</li>
     <li>vanillaexpanded.vanillasocialinteractionsexpanded</li>
-    <li>oskarpotocki.vfe.classical</li>
-    <li>ow.ru.classical</li>
     <li>oskarpotocki.vfe.vikings</li>
     <li>ow.ru.vikings</li>
     <li>vanillaexpanded.vfesecurity</li>
@@ -134,9 +135,7 @@
     <li>jsin.medievaloverhaulmisc</li>
     <li>dankpyon.medievalgenepacks</li>
     <li>rince.gaulishgojuice</li>
-    <li>joedaly.medmeds.mo</li>
     <li>sierra.rf.medievaloverhaul</li>
-    <li>ogam.medievaloverhaul.arcanearchaeologists</li>
     <li>sargoskar.witcherhunt</li>
     <li>lava.mo.leathers</li>
     <li>oken.medievalquestrewards</li>
@@ -148,10 +147,6 @@
     <li>sierra.rt.generaltraits</li>
     <li>ru.pashka.sierra.rt.generaltraits</li>
     <li>sierra.milkshakes.digitaldeluxeedition</li>
-    <li>solaris.ratkinracemod</li>
-    <li>rin.ratkinapparel</li>
-    <li>ru.solaris.ratkinracemod</li>
-    <li>ru.rin.ratkinapparel</li>
     <li>kit.gunpowderweaponsscp</li>
     <li>jecrell.jecstools</li>
     <li>torann.arimworldofmagic</li>
@@ -177,6 +172,11 @@
     <li>shavius.vfeempire.ru</li>
     <li>smashphil.srtsexpanded</li>
     <li>azuraal.choiceofpsycasts</li>
+    <li>fluffy.backuppower</li>
+    <li>mlie.omnicoredrill</li>
+    <li>edb.preparecarefully</li>
+    <li>ratys.rtfuse</li>
+    <li>antaioz.modmedicinepatch</li>
     <li>goodvine.compatibility.patch</li>
     <li>trinity.runtimegcupdated</li>
     <li>krkr.rocketman</li>
