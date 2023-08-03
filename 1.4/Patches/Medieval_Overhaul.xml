@@ -108,6 +108,12 @@
 						<li>Smithing</li>
 					</value>
 				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="ComplexFurniture"]/tags</xpath>
+					<value>
+						<li>DankPyon_MedievalStart</li>
+					</value>
+				</li>
 				
 				<!-- Scenario fix -->
 				<li Class="PatchOperationRemove">
@@ -118,6 +124,12 @@
 				</li>
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/ResearchProjectDef[defName="Electricity" or defName="NutrientPaste" or defName="AirConditioning"]/tags/li[text()="ClassicStart"]</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="PlayerColony"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
 				</li>
 				
 				<!-- Mineable -->
@@ -633,6 +645,18 @@
 							</li>
 						</value>
 					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="NyaronPlayerColony"]/startingResearchTags</xpath>
+						<value>
+							<li>DankPyon_MedievalStart</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="NyaronPlayerColony"]/startingTechprintsResearchTags</xpath>
+						<value>
+							<li>DankPyon_MedievalStart</li>
+						</value>
+					</li>
 					
 				</operations>
 			</match>
@@ -773,14 +797,8 @@
 			<match Class="PatchOperationSequence">
 				<operations>
 					
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/ResearchProjectDef[defName="CentralHeating" or defName="GeothermalHeating" or defName="ModernFixtures" or defName="Irrigation" or defName="FireSuppression"]/techLevel</xpath>
-						<value>
-							<techLevel>Medieval</techLevel>
-						</value>
-					</li>
 					<li Class="PatchOperationRemove">
-						<xpath>/Defs/ResearchProjectDef[defName="CentralHeating"]/prerequisites/li[text()="Electricity"]</xpath>
+						<xpath>/Defs/ResearchProjectDef[defName="ElectricPumps"]/tags/li[text()="ClassicStart"]</xpath>
 					</li>
 					
 				</operations>
@@ -986,7 +1004,7 @@
 			<match Class="PatchOperationSequence">
 				<operations>
 					
-					<!-- Set Nyaron Faction to zero -->
+					<!-- Set Vikings Faction to zero -->
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="VFEV_VikingsClan"]</xpath>
 						<value>

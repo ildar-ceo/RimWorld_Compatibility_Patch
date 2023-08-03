@@ -146,6 +146,29 @@
 	</Operation>
 	
 	
+	<!-- ID: 836308268 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Dubs Bad Hygiene</li></mods>
+	
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="CentralHeating" or defName="GeothermalHeating" or defName="ModernFixtures" or defName="Irrigation" or defName="FireSuppression"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ResearchProjectDef[defName="CentralHeating"]/prerequisites/li[text()="Electricity"]</xpath>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+	
 	<!-- ID: 2012735237 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Fertile Fields [1.1]</li></mods>
