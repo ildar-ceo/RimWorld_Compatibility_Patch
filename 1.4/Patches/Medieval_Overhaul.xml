@@ -114,6 +114,13 @@
 						<li>DankPyon_MedievalStart</li>
 					</value>
 				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="DankPyon_Lumber" or defName="DankPyon_BasicCooking"]/tags</xpath>
+					<value>
+						<li>ClassicStart</li>
+						<li>TribalStart</li>
+					</value>
+				</li>
 				
 				<!-- Scenario fix -->
 				<li Class="PatchOperationRemove">
