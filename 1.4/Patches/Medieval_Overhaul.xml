@@ -211,7 +211,6 @@
 						<countRange>5000~10000</countRange>
 					</value>
 				</li>
-				
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
 					<value>
@@ -221,7 +220,6 @@
 						</li>
 					</value>
 				</li>
-				
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_Scholar"]/stockGenerators</xpath>
 					<value>
@@ -807,6 +805,168 @@
 					<li Class="PatchOperationRemove">
 						<xpath>/Defs/ResearchProjectDef[defName="ElectricPumps"]/tags/li[text()="ClassicStart"]</xpath>
 					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="LogBoiler" or defName="SewageSepticTank" or defName="SewageTreatment" or defName="WaterTreatment" or defName="DeepWaterWellInlet" or defName="WaterTowerS" or defName="WindPump" or defName="ElectricPump" or defName="PumpingStation" or defName="GasBoiler" or defName="ElectricBoiler" or defName="SolarHeater" or defName="GeothermHeater" or defName="HotWaterTank" or defName="RadiatorStuffed" or defName="RadiatorLarge" or defName="RadiatorTowelRail" or defName="AirConOutdoorUnit" or defName="AirconIndoorUnit" or defName="FreezerUnit" or defName="WaterTrough" or @Name="BasedWaterWell" or @Name="BasedCeilingFan"]/costList/Steel</xpath>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="LogBoiler"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>200</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="GasBoiler"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>80</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="ElectricBoiler"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>80</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="GeothermHeater"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>240</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[@Name="BasedCeilingFan"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>40</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="AirConOutdoorUnit"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>90</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="AirconIndoorUnit"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>25</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="FreezerUnit"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>30</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="HotWaterTank"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>75</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="SolarHeater"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>75</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="SewageTreatment"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>400</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="WaterTreatment"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>250</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[@Name="BasedWaterWell"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>50</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="DeepWaterWellInlet"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>100</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="WaterTowerS"]/costStuffCount</xpath>
+						<value>
+							<costStuffCount>100</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="WindPump"]/costStuffCount</xpath>
+						<value>
+							<costStuffCount>100</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="WindPump"]/stuffCategories/li[text()="Woody" or text()="Stony"]</xpath>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="ElectricPump"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>80</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="PumpingStation"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>120</costStuffCount>
+						</value>
+					</li>
 					
 				</operations>
 			</match>
@@ -1161,5 +1321,46 @@
 		</match>
 	</Operation>
 	
+	
+	<!-- ID: 2553700067 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Medieval Overhaul</li></mods>
+		
+		<!-- ID: 1935518604 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Biome Expansion: Redwood forest</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="SequoiaWoodLog"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Woody</li>
+								<li>DankPyon_RawWood</li>
+							</stuffCategories>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="SequoiaWoodLog"]/stuffProps/categories</xpath>
+						<value>
+							<categories>
+								<li>Woody</li>
+								<li>DankPyon_RawWood</li>
+							</categories>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Plant_TreeSequoia"]/plant/harvestedThingDef</xpath>
+						<value>
+							<harvestedThingDef>DankPyon_RawWood</harvestedThingDef>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
 	
 </Patch>
