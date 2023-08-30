@@ -806,7 +806,7 @@
 						<xpath>/Defs/ResearchProjectDef[defName="ElectricPumps"]/tags/li[text()="ClassicStart"]</xpath>
 					</li>
 					<li Class="PatchOperationRemove">
-						<xpath>/Defs/ThingDef[defName="LogBoiler" or defName="SewageSepticTank" or defName="SewageTreatment" or defName="WaterTreatment" or defName="DeepWaterWellInlet" or defName="WaterTowerS" or defName="WindPump" or defName="ElectricPump" or defName="PumpingStation" or defName="GasBoiler" or defName="ElectricBoiler" or defName="SolarHeater" or defName="GeothermHeater" or defName="HotWaterTank" or defName="RadiatorStuffed" or defName="RadiatorLarge" or defName="RadiatorTowelRail" or defName="AirConOutdoorUnit" or defName="AirconIndoorUnit" or defName="FreezerUnit" or defName="WaterTrough" or @Name="BasedWaterWell" or @Name="BasedCeilingFan"]/costList/Steel</xpath>
+						<xpath>/Defs/ThingDef[defName="LogBoiler" or defName="SewageSepticTank" or defName="SewageTreatment" or defName="WaterTreatment" or defName="DeepWaterWellInlet" or defName="WaterTowerS" or defName="WindPump" or defName="ElectricPump" or defName="PumpingStation" or defName="GasBoiler" or defName="ElectricBoiler" or defName="SolarHeater" or defName="GeothermHeater" or defName="HotWaterTank" or defName="RadiatorStuffed" or defName="RadiatorLarge" or defName="RadiatorTowelRail" or defName="AirConOutdoorUnit" or defName="AirconIndoorUnit" or defName="FreezerUnit" or defName="WaterTrough" or defName="BiosolidsComposter" or @Name="BasedWaterWell" or @Name="BasedCeilingFan"]/costList/Steel</xpath>
 					</li>
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/ThingDef[defName="LogBoiler"]</xpath>
@@ -965,6 +965,15 @@
 								<li>Metallic</li>
 							</stuffCategories>
 							<costStuffCount>120</costStuffCount>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="BiosolidsComposter"]</xpath>
+						<value>
+							<stuffCategories>
+								<li>Metallic</li>
+							</stuffCategories>
+							<costStuffCount>45</costStuffCount>
 						</value>
 					</li>
 					
