@@ -213,15 +213,12 @@
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Nyaron"]/styleTagsOverride/alienRace/styleSettings/li[key="HairDef"]/value/styleTagsOverride</xpath>
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Nyaron"]/alienRace/styleSettings/li[key="HairDef"]/value/styleTagsOverride</xpath>
 					<value>
-						<li>HairShort</li>
-						<li>HairLong</li>
-						<li>Nyaron</li>
-						<li>Soldier</li>
-						<li>Urban</li>
-						<li>Punk</li>
-						<li>Tribal</li>
+						<styleTagsOverride>
+							<li>HairLong</li>
+							<li>Nyaron</li>
+						</styleTagsOverride>
 					</value>
 				</li>
 				
