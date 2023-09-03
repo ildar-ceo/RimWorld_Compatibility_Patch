@@ -77,6 +77,12 @@
 				</li>
 				
 				
+				<!-- Remove Android Orbital Trader -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/TraderKindDef[defName="ATR_Orbital_Mechanized"]</xpath>
+				</li>
+				
+				
 				<!-- BulkGoods -->
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="ATR_Base_AndroidCollective_Standard" or defName="ATR_Caravan_AndroidCollective_BulkGoods"]/stockGenerators</xpath>

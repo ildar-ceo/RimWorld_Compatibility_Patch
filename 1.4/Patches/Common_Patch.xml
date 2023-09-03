@@ -381,6 +381,53 @@
 		</match>
 	</Operation>
 	
+	<!-- Add Hussar xenotype patch -->
+	
+	<!-- 2893586390 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Races Expanded - Hussar</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+					<value>
+						<VREH_Uhlan>0.1</VREH_Uhlan>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="TribeBase"]/xenotypeSet/xenotypeChances</xpath>
+					<value>
+						<VREH_Uhlan>0.1</VREH_Uhlan>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- 2893586390 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Races Expanded - Hussar</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+						<value>
+							<VREH_Uhlan>0.25</VREH_Uhlan>
+						</value>
+					</li>
+				</operations>
+			</match>
+			
+		</match>
+		
+	</Operation>
+	
 	<!-- Biotech -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Biotech</li></mods>
@@ -409,6 +456,29 @@
 				</operations>
 			</match>
 		</match>
+	</Operation>
+	
+	<!-- 2893586390 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Races Expanded - Hussar</li></mods>
+		
+		<!-- ID: 1123043922 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Sparkling Worlds - Full Mod</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]/xenotypeSet/xenotypeChances</xpath>
+						<value>
+							<VREH_Uhlan>0.25</VREH_Uhlan>
+						</value>
+					</li>
+				</operations>
+			</match>
+			
+		</match>
+		
 	</Operation>
 	
 	<!-- PawnKinds -->

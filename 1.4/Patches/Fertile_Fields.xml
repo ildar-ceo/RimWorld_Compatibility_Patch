@@ -176,6 +176,54 @@
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Fertile Fields [1.1]</li></mods>
 		
+		<!-- ID: 1957158779 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Furniture Expanded - Farming</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+	
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VFE_Sprinkler" or defName="VFE_PlanterBox" or defName="VFE_Ecosystem" or defName="Building_PlantGrower" or defName="VFE_PlanterBox_Tilable" or defName="VFE_Hydroponics_Tilable" or defName="VFE_Ecosystem_Tilable" or defName="VFE_Scarecrow"]/designationCategory</xpath>
+						<value>
+							<designationCategory>RFF_Farm</designationCategory>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2012735237 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Fertile Fields [1.1]</li></mods>
+		
+		<!-- ID: 2259058735 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>CaveworldFlora (Continued)</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+	
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="FungiponicsBasin"]/designationCategory</xpath>
+						<value>
+							<designationCategory>RFF_Farm</designationCategory>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2012735237 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Fertile Fields [1.1]</li></mods>
+		
 		<!-- ID: 2553700067 -->
 		<match Class="PatchOperationFindMod">
 			<mods><li>Medieval Overhaul</li></mods>
