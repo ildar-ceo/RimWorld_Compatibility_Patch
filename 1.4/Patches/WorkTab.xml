@@ -24,6 +24,20 @@
 		</value>
 	</Operation>
 	
+	<!-- Swap Growing and PlantCutting -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkTypeDef[defName="PlantCutting"]/naturalPriority</xpath>
+		<value>
+			<naturalPriority>701</naturalPriority>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkTypeDef[defName="Growing"]/naturalPriority</xpath>
+		<value>
+			<naturalPriority>700</naturalPriority>
+		</value>
+	</Operation>
+	
 	<!-- ID: 2552623545 (Eccentric Tech - Core) -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Eccentric Tech - Core</li></mods>
