@@ -1924,8 +1924,48 @@
 	</Operation>
 	
 	
-	<!-- ID: 2729188290 (VGP Русский) -->
-	<!-- ID: 2007061826 (VGP Vegetable Garden) -->
+	<!-- ID: 2007062982 (VGP Garden Gourmet) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Garden Gourmet</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Biotech</li></mods>
+		
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob"]/ingredients/li[2]/filter/thingDefs</xpath>
+						<value>
+							<li>RawToxipotato</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="GrillVegetables" or defName="PickleVegetable" or defName="BulkPickleVegetable" or defName="VG_VeganEgg" or defName="VG_VeganEggBulk"]/ingredients/li[1]/filter/thingDefs</xpath>
+						<value>
+							<li>RawToxipotato</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="GrillVegetables" or defName="PickleVegetable" or defName="BulkPickleVegetable" or defName="VG_VeganEgg" or defName="VG_VeganEggBulk"]/fixedIngredientFilter/thingDefs</xpath>
+						<value>
+							<li>RawToxipotato</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="GrillVegetables" or defName="PickleVegetable" or defName="BulkPickleVegetable" or defName="VG_VeganEgg" or defName="VG_VeganEggBulk"]/defaultIngredientFilter/thingDefs</xpath>
+						<value>
+							<li>RawToxipotato</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+			
+		</match>
+	</Operation>
+	
+	
 	<!-- ID: 2007062982 (VGP Garden Gourmet) -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>VGP Garden Gourmet</li></mods>

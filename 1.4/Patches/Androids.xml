@@ -455,6 +455,16 @@
 						</li>
 					</value>
 				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ScenarioDef[defName="ChJAndroidResistance" or defName="ChjAndroidRunner" or defName="ChjAndroidTheMechanist"]/scenario/parts</xpath>
+					<value>
+						<li Class="ScenPart_StartingThing_Defined">
+							<def>StartingThing_Defined</def>
+							<thingDef>Seed_Rice</thingDef>
+							<count>150</count>
+						</li>
+					</value>
+				</li>
 			</operations>
 		</match>
 	</Operation>
