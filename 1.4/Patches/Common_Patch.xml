@@ -277,6 +277,15 @@
 						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
 					</value>
 				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PreceptDef[defName="FungusEating_Despised" or defName="MarriageName_KeepNames" or defName="Research_Normal" or defName="NutrientPasteEating_DontMind"]/defaultSelectionWeight</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="Research_VeryFast" or defName="NutrientPasteEating_DontMind"]</xpath>
+					<value>
+						<defaultSelectionWeight>1</defaultSelectionWeight>
+					</value>
+				</li>
 				
 			</operations>
 		</match>

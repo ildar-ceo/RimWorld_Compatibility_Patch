@@ -219,6 +219,55 @@
 	</Operation>
 	
 	
+	<!-- ID: 2259058735 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>CaveworldFlora (Continued)</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="FungiponicsBasin"]/costList</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="FungiponicsBasin"]</xpath>
+					<value>
+						<stuffCategories>
+							<li>Stony</li>
+							<li>Woody</li>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>150</costStuffCount>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="FungiponicsBasin"]/fertility</xpath>
+					<value>
+						<fertility>2.0</fertility>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="FungiponicsBasin"]/constructEffect</xpath>
+					<value>
+						<constructEffect>ConstructMetal</constructEffect>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="FungiponicsBasin"]/terrainAffordanceNeeded</xpath>
+					<value>
+						<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="FungiponicsBasin"]/placeWorkers</xpath>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+	
 	<!-- ID: 2012735237 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Fertile Fields [1.1]</li></mods>

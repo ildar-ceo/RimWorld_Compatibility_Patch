@@ -1966,6 +1966,32 @@
 	</Operation>
 	
 	
+	<!-- ID: 2007061826 (VGP Vegetable Garden) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Vegetable Garden</li></mods>
+		
+		<!-- ID: 2259058735 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>CaveworldFlora (Continued)</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VGP_Agarilux" or defName="Plantmushroom"]/plant/sowTags</xpath>
+						<value>
+							<sowTags>
+								<li>Fungiponics</li>
+							</sowTags>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
 	<!-- ID: 2007062982 (VGP Garden Gourmet) -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>VGP Garden Gourmet</li></mods>
