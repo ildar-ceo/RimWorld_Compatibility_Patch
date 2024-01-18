@@ -51,36 +51,6 @@
 		<xpath>/Defs/ThingDef[defName="MajorArchotechStructureStudiable" or defName="GrandArchotechStructure"]/comps/li[mote="Mote_PsychicConditionCauserEffect"]</xpath>
 	</Operation>
 	
-	<!-- Disable tribes raids in endgame -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/FactionDef[@Name="TribeBase"]/raidCommonalityFromPointsCurve</xpath>
-		<value>
-			<raidCommonalityFromPointsCurve>
-				<points>
-					<li>(300,  0)</li>
-					<li>(700,  1)</li>
-					<li>(1400, 1.8)</li>
-					<li>(3500, 0)</li>
-				</points>
-			</raidCommonalityFromPointsCurve>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/FactionDef[@Name="TribeBase"]/maxPawnCostPerTotalPointsCurve</xpath>
-		<value>
-			<maxPawnCostPerTotalPointsCurve>
-				<points>
-					<li>(0,35)</li>
-					<li>(70, 50)</li>
-					<li>(800, 100)</li>
-					<li>(1300, 150)</li>
-					<li>(2000, 300)</li>
-					<li>(3500, 0)</li>
-				</points>
-			</maxPawnCostPerTotalPointsCurve>
-		</value>
-	</Operation>
-	
 	<!-- Rottable BodyPartNatural -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[@Name="BodyPartNaturalBase"]</xpath>
@@ -258,7 +228,6 @@
 		<mods><li>Ideology</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-				
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[defName="CannibalPirate"]</xpath>
 					<value>
@@ -286,7 +255,6 @@
 						<defaultSelectionWeight>1</defaultSelectionWeight>
 					</value>
 				</li>
-				
 			</operations>
 		</match>
 	</Operation>
@@ -371,12 +339,62 @@
 		</match>
 	</Operation>
 	
+	<!-- 2571594852 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>[Fuu] Uncompromising Tribal Faction</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[@Name="TribeBase"]/requiredCountAtGameStart</xpath>
+					<value>
+						<requiredCountAtGameStart>1</requiredCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[@Name="TribeBase"]/startingCountAtWorldCreation</xpath>
+					<value>
+						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<!-- 2571594852 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>[Fuu] Uncompromising Tribal Faction</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods><li>Ideology</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="TribeCannibal"]</xpath>
+						<value>
+							<maxCountAtGameStart>1</maxCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="TribeCannibal"]/requiredCountAtGameStart</xpath>
+						<value>
+							<requiredCountAtGameStart>1</requiredCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="TribeCannibal"]/startingCountAtWorldCreation</xpath>
+						<value>
+							<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+
 	<!-- Empire xenotype patch -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Royalty</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-			
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
 					<value>
@@ -385,19 +403,59 @@
 						<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0.05</Sanguophage>
 					</value>
 				</li>
-				
 			</operations>
 		</match>
 	</Operation>
 	
+	<!-- 2995385834 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Races Expanded - Highmate</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/GeneDef[defName="VRE_Libido_VeryHigh"]</xpath>
+					<value>
+						<forcedTraits>
+							<li>
+								<def>Bisexual</def>
+							</li>
+						</forcedTraits>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase" or @Name="TribeBase" or defName="Pirate"]/xenotypeSet/xenotypeChances</xpath>
+					<value>
+						<VRE_Lowmate>0.25</VRE_Lowmate>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<!-- 2995385834 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Races Expanded - Highmate</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+						<value>
+							<VRE_Lowmate>0.25</VRE_Lowmate>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+
 	<!-- Add Hussar xenotype patch -->
-	
 	<!-- 2893586390 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Vanilla Races Expanded - Hussar</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
 					<value>
@@ -410,7 +468,6 @@
 						<VREH_Uhlan>0.1</VREH_Uhlan>
 					</value>
 				</li>
-				
 			</operations>
 		</match>
 	</Operation>
@@ -418,10 +475,8 @@
 	<!-- 2893586390 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Vanilla Races Expanded - Hussar</li></mods>
-		
 		<match Class="PatchOperationFindMod">
 			<mods><li>Royalty</li></mods>
-			
 			<match Class="PatchOperationSequence">
 				<operations>
 					<li Class="PatchOperationAdd">
@@ -432,22 +487,17 @@
 					</li>
 				</operations>
 			</match>
-			
 		</match>
-		
 	</Operation>
 	
 	<!-- Biotech -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Biotech</li></mods>
-		
 		<!-- ID: 1123043922 -->
 		<match Class="PatchOperationFindMod">
 			<mods><li>Sparkling Worlds - Full Mod</li></mods>
-			
 			<match Class="PatchOperationSequence">
 				<operations>
-					
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]</xpath>
 						<value>
@@ -461,7 +511,6 @@
 							</xenotypeSet>
 						</value>
 					</li>
-					
 				</operations>
 			</match>
 		</match>
@@ -470,11 +519,9 @@
 	<!-- 2893586390 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Vanilla Races Expanded - Hussar</li></mods>
-		
 		<!-- ID: 1123043922 -->
 		<match Class="PatchOperationFindMod">
 			<mods><li>Sparkling Worlds - Full Mod</li></mods>
-			
 			<match Class="PatchOperationSequence">
 				<operations>
 					<li Class="PatchOperationAdd">
@@ -485,11 +532,28 @@
 					</li>
 				</operations>
 			</match>
-			
 		</match>
-		
 	</Operation>
 	
+	<!-- 2995385834 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Races Expanded - Highmate</li></mods>
+		<!-- ID: 1123043922 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Sparkling Worlds - Full Mod</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]/xenotypeSet/xenotypeChances</xpath>
+						<value>
+							<VRE_Lowmate>0.25</VRE_Lowmate>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+
 	<!-- PawnKinds -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/PawnKindDef[defName="Town_Guard" or defName="Town_Councilman" or defName="Pirate" or defName="Scavenger"]/weaponTags</xpath>
