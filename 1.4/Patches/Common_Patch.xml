@@ -65,11 +65,12 @@
 		</value>
 	</Operation>
 	
-	<!-- Use Anima Tree for anyone -->
+	<!-- Use Anima Tree for anyone
 	<Operation Class="PatchOperationRemove">
 		<xpath>/Defs/MeditationFocusDef[defName="Natural"]/requiredBackstoriesAny</xpath>
 	</Operation>
-	
+	-->
+
 	<!-- Remove pen animal from Boomalope -->
 	<Operation Class="PatchOperationRemove">
 		<xpath>/Defs/ThingDef[defName="Boomalope"]/race/roamMtbDays</xpath>
@@ -184,6 +185,20 @@
 			<operations>
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/RecipeDef[defName="ManufactureAICoreSW"]</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Gun_PlasmaGunSW"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>10</Gold>
+							<Steel>300</Steel>
+							<Plasteel>200</Plasteel>
+							<Uranium>100</Uranium>
+							<ComponentSpacer>10</ComponentSpacer>
+							<ComponentIndustrial>20</ComponentIndustrial>
+							<Hyperweave>120</Hyperweave>
+						</costList>
+					</value>
 				</li>
 			</operations>
 		</match>
@@ -459,13 +474,13 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
 					<value>
-						<VREH_Uhlan>0.1</VREH_Uhlan>
+						<VREH_Uhlan>0.25</VREH_Uhlan>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[@Name="TribeBase"]/xenotypeSet/xenotypeChances</xpath>
 					<value>
-						<VREH_Uhlan>0.1</VREH_Uhlan>
+						<VREH_Uhlan>0.25</VREH_Uhlan>
 					</value>
 				</li>
 			</operations>
@@ -546,7 +561,7 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]/xenotypeSet/xenotypeChances</xpath>
 						<value>
-							<VRE_Lowmate>0.25</VRE_Lowmate>
+							<VRE_Lowmate>0.15</VRE_Lowmate>
 						</value>
 					</li>
 				</operations>
@@ -598,7 +613,6 @@
 						<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
 						<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
 						<Pigskin MayRequire="Ludeon.RimWorld.Biotech">0.25</Pigskin>
-						<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0.05</Sanguophage>
 					</value>
 				</li>
 				
