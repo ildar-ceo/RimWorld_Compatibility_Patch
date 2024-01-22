@@ -14,13 +14,13 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/WorkGiverDef[defName="DoBillsFabricationBench"]/priorityInType</xpath>
 		<value>
-			<priorityInType>105</priorityInType>
+			<priorityInType>100</priorityInType>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/WorkGiverDef[defName="DoBillsMachiningTable"]/priorityInType</xpath>
 		<value>
-			<priorityInType>100</priorityInType>
+			<priorityInType>105</priorityInType>
 		</value>
 	</Operation>
 	
@@ -54,7 +54,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/WorkGiverDef[defName="Eccentric_DoBillsFabricator"]/priorityInType</xpath>
 					<value>
-						<priorityInType>105</priorityInType>
+						<priorityInType>95</priorityInType>
 					</value>
 				</li>
 				

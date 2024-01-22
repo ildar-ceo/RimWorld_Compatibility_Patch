@@ -38,7 +38,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/IncidentDef[defName="VEE_IceAge" or defName="VEE_GlobalWarming" or defName="VEE_PsychicRain" or defName="VEE_LongNight" or defName="VEE_PsychicBloom"]/minRefireDays</xpath>
 					<value>
-						<minRefireDays>180</minRefireDays>
+						<minRefireDays>150</minRefireDays>
 					</value>
 				</li>
 			</operations>
