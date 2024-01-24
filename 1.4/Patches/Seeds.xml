@@ -142,6 +142,12 @@
 					</value>
 				</li>
 				
+				<!--
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic" or defName="Caravan_Nyaron_CombatSupplier" or defName="Orbital_Exotic" or defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier]/stockGenerators/li[tradeTag="Seeds"]</xpath>
+				</li>
+				-->
+				
 			</operations>
 		</match>
 	</Operation>

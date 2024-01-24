@@ -67,16 +67,68 @@
 						</tradeTags>
 					</value>
 				</li>
-				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[@Name="EccentricUndersuitCommonBase" or @Name="EccentricGearBase"]/apparel/tags</xpath>
+					<value>
+						<li>SpacerMilitary</li>
+						<li>ExoArmorPirate</li>
+						<li>ExoArmorPirateE</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricGearBase"]/apparel/tags</xpath>
+					<value>
+						<li>SpacerMilitary</li>
+						<li>ExoArmorPirateE</li>
+					</value>
+				</li>
 				<li Class="PatchOperationRemove">
 					<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitCommonBase" or @Name="EccentricGearBase"]/tradeability</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitCommonBase" or @Name="EccentricGearBase"]/generateCommonality</xpath>
+					<value>
+						<generateCommonality>2</generateCommonality>
+					</value>
 				</li>
 				
 				<!-- Add tags to PawnKinds -->
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/PawnKindDef[@Name="OutlanderBase" or @Name="SpaceRefugeeBase" or @Name="MercenaryEliteTierBase" or defName="Town_Guard" or defName="Town_Trader" or defName="Town_Councilman" or defName="Pirate" or defName="AncientSoldier"]/apparelTags</xpath>
+					<xpath>/Defs/PawnKindDef[@Name="OutlanderBase" or @Name="SpaceRefugeeBase" or @Name="MercenaryEliteTierBase" or @Name="MercenarySniperBase" or defName="Town_Guard" or defName="Town_Trader" or @Name="MercenaryGunnerBase" or @Name="MercenarySlasherBase" or defName="Town_Councilman" or defName="Pirate" or defName="AncientSoldier"]/apparelTags</xpath>
 					<value>
 						<li>Eccentric</li>
+					</value>
+				</li>
+				
+				<!-- Change apparel money -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[@Name="MercenaryGunnerBase" or @Name="MercenarySniperBase"]/apparelMoney</xpath>
+					<value>
+						<apparelMoney>1000~3500</apparelMoney>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[@Name="MercenarySlasherBase"]/apparelMoney</xpath>
+					<value>
+						<apparelMoney>400~3500</apparelMoney>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[@Name="MercenaryEliteTierBase"]/apparelMoney</xpath>
+					<value>
+						<apparelMoney>3000~5000</apparelMoney>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[@Name="GrenadierBase"]/apparelMoney</xpath>
+					<value>
+						<apparelMoney>400~1500</apparelMoney>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[@Name="MercenaryHeavyBase"]/apparelMoney</xpath>
+					<value>
+						<apparelMoney>200~1500</apparelMoney>
 					</value>
 				</li>
 				
@@ -84,31 +136,31 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="EccentricUndersuitArel"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>2500</MarketValue>
+						<MarketValue>2000</MarketValue>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="EccentricUndersuitSeraph"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>3500</MarketValue>
+						<MarketValue>3000</MarketValue>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="EccentricUndersuitApsara"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>3000</MarketValue>
+						<MarketValue>2500</MarketValue>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="EccentricUniformCombat" or defName="EccentricUniformTech"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>3000</MarketValue>
+						<MarketValue>2500</MarketValue>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="EccentricUniformGuardian" or defName="EccentricUniformLeader"]/statBases/MarketValue</xpath>
 					<value>
-						<MarketValue>3500</MarketValue>
+						<MarketValue>3000</MarketValue>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
@@ -213,7 +265,7 @@
 					
 					<!-- Add Prestige Tag -->
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitBase"]/apparel/tags</xpath>
+						<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitCommonBase" or @Name="EccentricGearBase"]/apparel/tags</xpath>
 						<value>
 							<li>PrestigeCombatGear</li>
 						</value>

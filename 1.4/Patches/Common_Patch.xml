@@ -90,87 +90,15 @@
 		</value>
 	</Operation>
 	
-	<!-- Add AIPersonaCore -->
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs</xpath>
+	<!-- Combat power for Mercenary_Heavy -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Mercenary_Heavy"]/combatPower</xpath>
 		<value>
-			<ResearchProjectDef ParentName="ShipResearchProjectBase">
-				<defName>CreateComputerCore</defName>
-				<label>AI Computer Core</label>
-				<description>Create AI Computer Core</description>
-				<baseCost>4500</baseCost>
-				<techLevel>Spacer</techLevel>
-				<prerequisites>
-					<li>ShipComputerCore</li>
-				</prerequisites>
-			</ResearchProjectDef>
+			<combatPower>250</combatPower>
 		</value>
 	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs</xpath>
-		<value>
-			<RecipeDef>
-				<defName>MakeAICore</defName>
-				<label>make AICore</label>
-				<description>Make AICore</description>
-				<jobString>Make AICore</jobString>
-				<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-				<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
-				<workSkill>Crafting</workSkill>
-				<effectWorking>Smith</effectWorking>
-				<researchPrerequisite>CreateComputerCore</researchPrerequisite>
-				<soundWorking>Recipe_Machining</soundWorking>
-				<workAmount>15000</workAmount>
-				<recipeUsers>
-					<li>FabricationBench</li>
-				</recipeUsers>
-				<skillRequirements>
-					<Crafting>10</Crafting>
-					<Intellectual>15</Intellectual>
-				</skillRequirements>
-				<ingredients>
-					<li>
-						<filter><thingDefs><li>Gold</li></thingDefs></filter>
-						<count>10</count>
-					</li>
-					<li>
-						<filter><thingDefs><li>Steel</li></thingDefs></filter>
-						<count>500</count>
-					</li>
-					<li>
-						<filter><thingDefs><li>Plasteel</li></thingDefs></filter>
-						<count>300</count>
-					</li>
-					<li>
-						<filter><thingDefs><li>ComponentSpacer</li></thingDefs></filter>
-						<count>5</count>
-					</li>
-					<li>
-						<filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter>
-						<count>20</count>
-					</li>
-					<li>
-						<filter><thingDefs><li>Uranium</li></thingDefs></filter>
-						<count>100</count>
-					</li>
-				</ingredients>
-				<fixedIngredientFilter>
-					<thingDefs>
-						<li>Gold</li>
-						<li>Silver</li>
-						<li>Steel</li>
-						<li>Plasteel</li>
-						<li>ComponentSpacer</li>
-						<li>ComponentIndustrial</li>
-						<li>Uranium</li>
-					</thingDefs>
-				</fixedIngredientFilter>
-				<products>
-					<AIPersonaCore>1</AIPersonaCore>
-				</products>
-			</RecipeDef>
-		</value>
-	</Operation>
+	
+	<!-- AIPersonaCore -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/ThingDef[defName="AIPersonaCore"]/statBases/MarketValue</xpath>
 		<value>
@@ -183,9 +111,6 @@
 		<mods><li>Sparkling Worlds - Full Mod</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-				<li Class="PatchOperationRemove">
-					<xpath>/Defs/RecipeDef[defName="ManufactureAICoreSW"]</xpath>
-				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="Gun_PlasmaGunSW"]/costList</xpath>
 					<value>
@@ -202,6 +127,90 @@
 				</li>
 			</operations>
 		</match>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ResearchProjectDef ParentName="ShipResearchProjectBase">
+							<defName>CreateComputerCore</defName>
+							<label>AI Computer Core</label>
+							<description>Create AI Computer Core</description>
+							<baseCost>4500</baseCost>
+							<techLevel>Spacer</techLevel>
+							<prerequisites>
+								<li>ShipComputerCore</li>
+							</prerequisites>
+						</ResearchProjectDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<RecipeDef>
+							<defName>MakeAICore</defName>
+							<label>make AICore</label>
+							<description>Make AICore</description>
+							<jobString>Make AICore</jobString>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+							<workSkill>Crafting</workSkill>
+							<effectWorking>Smith</effectWorking>
+							<researchPrerequisite>CreateComputerCore</researchPrerequisite>
+							<soundWorking>Recipe_Machining</soundWorking>
+							<workAmount>15000</workAmount>
+							<recipeUsers>
+								<li>FabricationBench</li>
+							</recipeUsers>
+							<skillRequirements>
+								<Crafting>10</Crafting>
+								<Intellectual>15</Intellectual>
+							</skillRequirements>
+							<ingredients>
+								<li>
+									<filter><thingDefs><li>Gold</li></thingDefs></filter>
+									<count>10</count>
+								</li>
+								<li>
+									<filter><thingDefs><li>Steel</li></thingDefs></filter>
+									<count>500</count>
+								</li>
+								<li>
+									<filter><thingDefs><li>Plasteel</li></thingDefs></filter>
+									<count>300</count>
+								</li>
+								<li>
+									<filter><thingDefs><li>ComponentSpacer</li></thingDefs></filter>
+									<count>5</count>
+								</li>
+								<li>
+									<filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter>
+									<count>20</count>
+								</li>
+								<li>
+									<filter><thingDefs><li>Uranium</li></thingDefs></filter>
+									<count>100</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>Gold</li>
+									<li>Silver</li>
+									<li>Steel</li>
+									<li>Plasteel</li>
+									<li>ComponentSpacer</li>
+									<li>ComponentIndustrial</li>
+									<li>Uranium</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<AIPersonaCore>1</AIPersonaCore>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
 	</Operation>
 	
 	<!-- Add minifiedDef -->
@@ -225,6 +234,7 @@
 	</Operation>
 	
 	<!-- Set count factions to zero for Tribal -->
+	<!--
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/FactionDef[@Name="TribeBase"]/requiredCountAtGameStart</xpath>
 		<value>
@@ -235,6 +245,21 @@
 		<xpath>/Defs/FactionDef[@Name="TribeBase"]</xpath>
 		<value>
 			<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+		</value>
+	</Operation>
+	-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PawnKindDef[@Name="TribalBase"]/apparelTags</xpath>
+		<value>
+			<li>MedievalArmorBasic</li>
+			<li>MedievalMilitary</li>
+			<li>IndustrialMilitaryBasic</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Tribal_Penitent" or defName="Tribal_Archer" or defName="Tribal_Warrior" or defName="Tribal_Hunter" or defName="Tribal_Berserker" or defName="Tribal_HeavyArcher" or defName="Tribal_ChiefMelee"]/apparelMoney</xpath>
+		<value>
+			<apparelMoney>500~1500</apparelMoney>
 		</value>
 	</Operation>
 	
@@ -257,6 +282,24 @@
 				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/FactionDef[defName="CannibalPirate"]/startingCountAtWorldCreation</xpath>
+					<value>
+						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="TribeCannibal"]</xpath>
+					<value>
+						<maxCountAtGameStart>1</maxCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="TribeCannibal"]/requiredCountAtGameStart</xpath>
+					<value>
+						<requiredCountAtGameStart>1</requiredCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="TribeCannibal"]/startingCountAtWorldCreation</xpath>
 					<value>
 						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
 					</value>
@@ -353,57 +396,6 @@
 			</operations>
 		</match>
 	</Operation>
-	
-	<!-- 2571594852 -->
-	<Operation Class="PatchOperationFindMod">
-		<mods><li>[Fuu] Uncompromising Tribal Faction</li></mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/FactionDef[@Name="TribeBase"]/requiredCountAtGameStart</xpath>
-					<value>
-						<requiredCountAtGameStart>1</requiredCountAtGameStart>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/FactionDef[@Name="TribeBase"]/startingCountAtWorldCreation</xpath>
-					<value>
-						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
-					</value>
-				</li>
-			</operations>
-		</match>
-	</Operation>
-
-	<!-- 2571594852 -->
-	<Operation Class="PatchOperationFindMod">
-		<mods><li>[Fuu] Uncompromising Tribal Faction</li></mods>
-		<match Class="PatchOperationFindMod">
-			<mods><li>Ideology</li></mods>
-			<match Class="PatchOperationSequence">
-				<operations>
-					<li Class="PatchOperationAdd">
-						<xpath>/Defs/FactionDef[defName="TribeCannibal"]</xpath>
-						<value>
-							<maxCountAtGameStart>1</maxCountAtGameStart>
-						</value>
-					</li>
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/FactionDef[defName="TribeCannibal"]/requiredCountAtGameStart</xpath>
-						<value>
-							<requiredCountAtGameStart>1</requiredCountAtGameStart>
-						</value>
-					</li>
-					<li Class="PatchOperationReplace">
-						<xpath>/Defs/FactionDef[defName="TribeCannibal"]/startingCountAtWorldCreation</xpath>
-						<value>
-							<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
-						</value>
-					</li>
-				</operations>
-			</match>
-		</match>
-	</Operation>
 
 	<!-- Empire xenotype patch -->
 	<Operation Class="PatchOperationFindMod">
@@ -438,7 +430,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase" or @Name="TribeBase" or defName="Pirate"]/xenotypeSet/xenotypeChances</xpath>
+					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase" or defName="Pirate"]/xenotypeSet/xenotypeChances</xpath>
 					<value>
 						<VRE_Lowmate>0.25</VRE_Lowmate>
 					</value>
@@ -473,12 +465,6 @@
 			<operations>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
-					<value>
-						<VREH_Uhlan>0.25</VREH_Uhlan>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[@Name="TribeBase"]/xenotypeSet/xenotypeChances</xpath>
 					<value>
 						<VREH_Uhlan>0.25</VREH_Uhlan>
 					</value>
