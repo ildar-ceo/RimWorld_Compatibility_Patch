@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 	
+	<!-- Ideology patch -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ideology</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PreceptDef[defName="FungusEating_Despised" or defName="MarriageName_KeepNames" or defName="Research_Normal" or defName="NutrientPasteEating_DontMind"]/defaultSelectionWeight</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PreceptDef[defName="Research_VeryFast" or defName="NutrientPasteEating_DontMind"]</xpath>
+					<value>
+						<defaultSelectionWeight>1</defaultSelectionWeight>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
 	
 	<!-- ID: 2636329500 -->
 	<!-- ID: 2569397678 Русский язык -->
