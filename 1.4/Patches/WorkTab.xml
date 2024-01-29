@@ -24,7 +24,7 @@
 		</value>
 	</Operation>
 	
-	<!-- Swap Growing and PlantCutting
+	<!-- Growing and PlantCutting -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/WorkTypeDef[defName="PlantCutting"]/naturalPriority</xpath>
 		<value>
@@ -37,7 +37,18 @@
 			<naturalPriority>700</naturalPriority>
 		</value>
 	</Operation>
-	-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="GrowerHarvest"]/workType</xpath>
+		<value>
+			<workType>PlantCutting</workType>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="GrowerHarvest"]/priorityInType</xpath>
+		<value>
+			<priorityInType>150</priorityInType>
+		</value>
+	</Operation>
 	
 	<!-- ID: 935732834 (SeedsPlease) -->
 	<!-- ID: 2586052937 (SeedsPlease: Lite) -->

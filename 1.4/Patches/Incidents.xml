@@ -10,7 +10,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/IncidentDef[defName="InsectHiveDropSW"]/baseChance</xpath>
 					<value>
-						<baseChance>0.75</baseChance>
+						<baseChance>1.0</baseChance>
 					</value>
 				</li>
 			</operations>
@@ -38,7 +38,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/IncidentDef[defName="VEE_IceAge" or defName="VEE_GlobalWarming" or defName="VEE_PsychicRain" or defName="VEE_LongNight" or defName="VEE_PsychicBloom"]/minRefireDays</xpath>
 					<value>
-						<minRefireDays>150</minRefireDays>
+						<minRefireDays>120</minRefireDays>
 					</value>
 				</li>
 			</operations>
@@ -51,10 +51,40 @@
 		<mods><li>Nyaron race</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/IncidentDef[defName="Infestation_CS"]</xpath>
+					<value>
+						<minPopulation>10</minPopulation>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/IncidentDef[defName="Infestation_CS"]</xpath>
+					<value>
+						<earliestDay>60</earliestDay>
+					</value>
+				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/IncidentDef[defName="Infestation_CS"]/baseChance</xpath>
 					<value>
-						<baseChance>0.05</baseChance>
+						<baseChance>0.2</baseChance>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/IncidentDef[defName="Infestation_CS"]/minThreatPoints</xpath>
+					<value>
+						<minThreatPoints>2500</minThreatPoints>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/IncidentDef[defName="Infestation_CS"]/minRefireDays</xpath>
+					<value>
+						<minRefireDays>30</minRefireDays>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/IncidentDef[defName="Infestation_CS"]</xpath>
+					<value>
+						<letterDef>ThreatBig</letterDef>
 					</value>
 				</li>
 			</operations>

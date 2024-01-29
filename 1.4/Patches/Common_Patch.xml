@@ -94,7 +94,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/PawnKindDef[defName="Mercenary_Heavy"]/combatPower</xpath>
 		<value>
-			<combatPower>280</combatPower>
+			<combatPower>200</combatPower>
 		</value>
 	</Operation>
 	
@@ -115,12 +115,9 @@
 					<xpath>/Defs/ThingDef[defName="Gun_PlasmaGunSW"]/costList</xpath>
 					<value>
 						<costList>
-							<Gold>10</Gold>
 							<Steel>300</Steel>
 							<Plasteel>200</Plasteel>
-							<Uranium>100</Uranium>
 							<ComponentSpacer>10</ComponentSpacer>
-							<ComponentIndustrial>20</ComponentIndustrial>
 							<Hyperweave>120</Hyperweave>
 						</costList>
 					</value>

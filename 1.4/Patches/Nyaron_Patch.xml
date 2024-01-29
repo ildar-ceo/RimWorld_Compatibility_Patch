@@ -265,19 +265,6 @@
 				</li>
 				-->
 				
-				<!-- Increases Orbital traders rate -->
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/StorytellerDef[defName="CalicatCozy"]/comps</xpath>
-					<value>
-						<li Class="StorytellerCompProperties_OnOffCycle">
-							<incident>OrbitalTraderArrival</incident>
-							<onDays>10</onDays>
-							<offDays>5</offDays>
-							<numIncidentsRange>3</numIncidentsRange>
-						</li>
-					</value>
-				</li>
-				
 			</operations>
 		</match>
 	</Operation>
@@ -289,6 +276,39 @@
 		
 		<match Class="PatchOperationSequence">
 			<operations>
+				
+				<!-- Craft weapons -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Nr_ChRifle" or defName="Nr_CriPistol" or defName="Nr_MfoldPdw" or defName="Nr_NpcRifle" or defName="Nr_RapidCaster"]/recipeMaker/recipeUsers</xpath>
+					<value>
+						<recipeUsers Inherit="False">
+							<li>FabricationBench</li>
+						</recipeUsers>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Nr_ChRifle" or defName="Nr_CriPistol" or defName="Nr_MfoldPdw" or defName="Nr_NpcRifle" or defName="Nr_RapidCaster"]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisite>Fabrication</researchPrerequisite>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Nr_ChRifle" or defName="Nr_NpcRifle" or defName="Nr_RapidCaster"]/costList</xpath>
+					<value>
+						<Hyperweave>20</Hyperweave>
+					</value>
+				</li>
+				
+				<!-- Medicine -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>MedicineIndustrial</thingDef>
+							<countRange>10~30</countRange>
+						</li>
+					</value>
+				</li>
 				
 				<!-- WeaponRanged -->
 				<li Class="PatchOperationAdd">
@@ -308,7 +328,12 @@
 						<li Class="StockGenerator_Category">
 							<categoryDef>Nyaron_WeaponsRanged</categoryDef>
 							<thingDefCountRange>0~2</thingDefCountRange>
-							<countRange>1~2</countRange>
+							<countRange>1</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>Nyaron_WeaponsMelee</categoryDef>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1</countRange>
 						</li>
 					</value>
 				</li>
