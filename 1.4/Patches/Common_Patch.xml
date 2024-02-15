@@ -331,6 +331,42 @@
 		</value>
 	</Operation>
 	
+	<!-- WorkSite patch -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ideology</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/StorytellerDef[@Name="BaseStoryteller"]/comps/li[@Class="StorytellerCompProperties_WorkSite"]/incident[text()="GiveQuest_WorkSite"]</xpath>
+				</li>
+				<!--
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/QuestScriptDef[defName="OpportunitySite_WorkSite"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/IncidentDef[defName="GiveQuest_WorkSite"]</xpath>
+				</li>
+				-->
+			</operations>
+		</match>
+	</Operation>
+	<!--
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ideology</li></mods>
+		<match Class="PatchOperationFindMod">
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/SitePartDef[defName="WorkSite_Mining"]/lootTable</xpath>
+				<value>
+					<li>
+						<thing>Plasteel</thing>
+						<weight>0.2</weight>
+					</li>
+				</value>
+			</li>
+		</match>
+	</Operation>
+	-->
+	
 	<!-- Factions patch -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Ideology</li></mods>

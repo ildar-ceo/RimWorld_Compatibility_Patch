@@ -1575,7 +1575,6 @@
 					<li Class="PatchOperationRemove">
 						<xpath>Defs/ThingDef[defName="Plant_Strawberry"]/plant/sowResearchPrerequisites</xpath>
 					</li>
-					
 					<li Class="PatchOperationAdd">
 						<xpath>Defs/ThingDef[defName="Plant_Strawberry"]/plant</xpath>
 						<value>
@@ -1583,6 +1582,16 @@
 								<li>agricultureII</li>
 								<li>RG_BerryCultivation</li>
 							</sowResearchPrerequisites>
+						</value>
+					</li>
+					
+					<!-- Change Raspberries to Fruit -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="RG_RawRaspberries"]</xpath>
+						<value>
+							<thingCategories>
+								<li>FruitFoodRaw</li>
+							</thingCategories>
 						</value>
 					</li>
 					
@@ -2119,4 +2128,24 @@
 			</match>
 		</match>
 	</Operation>
+	
+	
+	<!-- ID: 2007061826 (VGP Vegetable Garden) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Vegetable Garden</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Base_Neolithic_Standard" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>VG_Hivepiece</thingDef>
+							<countRange>0~1</countRange>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
 </Patch>

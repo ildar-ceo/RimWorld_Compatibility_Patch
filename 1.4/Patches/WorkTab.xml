@@ -10,6 +10,14 @@
 		</value>
 	</Operation>
 	
+	<!-- Construction -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="Deconstruct"]/priorityInType</xpath>
+		<value>
+			<priorityInType>109</priorityInType>
+		</value>
+	</Operation>
+	
 	<!-- Smithing -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/WorkGiverDef[defName="DoBillsFabricationBench"]/priorityInType</xpath>
@@ -47,6 +55,14 @@
 		<xpath>/Defs/WorkGiverDef[defName="GrowerHarvest"]/priorityInType</xpath>
 		<value>
 			<priorityInType>150</priorityInType>
+		</value>
+	</Operation>
+	
+	<!-- Research -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="LongRangeScan" or defName="GroundPenetratingScan"]/priorityInType</xpath>
+		<value>
+			<priorityInType>200</priorityInType>
 		</value>
 	</Operation>
 	
@@ -91,6 +107,47 @@
 				
 			</operations>
 		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkTypeDef[defName="Patient"]/naturalPriority</xpath>
+		<value>
+			<naturalPriority>1300</naturalPriority>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkTypeDef[defName="Doctor"]/naturalPriority</xpath>
+		<value>
+			<naturalPriority>1350</naturalPriority>
+		</value>
+	</Operation>
+	
+	<!-- Nurse -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<WorkTypeDef>
+				<defName>Surgeon</defName>
+				<labelShort>surgeon</labelShort>
+				<pawnLabel>Surgeon</pawnLabel>
+				<gerundLabel>surgeon</gerundLabel>
+				<description>Operate on humanlikes</description>
+				<verb>Operate on</verb>
+				<naturalPriority>1345</naturalPriority>
+				<workTags>
+				  <li>Caring</li>
+				  <li>Commoner</li>
+				  <li>AllWork</li>
+				</workTags>
+			</WorkTypeDef>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="DoBillsMedicalHumanOperation" or defName="DoBillsMedicalAnimalOperation"]/workType</xpath>
+		<value>
+			<workType>Surgeon</workType>
+		</value>
 	</Operation>
 	
 	<!-- Nurse -->

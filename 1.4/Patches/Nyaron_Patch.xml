@@ -292,12 +292,14 @@
 						<researchPrerequisite>Fabrication</researchPrerequisite>
 					</value>
 				</li>
+				<!--
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName="Nr_ChRifle" or defName="Nr_NpcRifle" or defName="Nr_RapidCaster"]/costList</xpath>
 					<value>
 						<Hyperweave>20</Hyperweave>
 					</value>
 				</li>
+				-->
 				
 				<!-- Medicine -->
 				<li Class="PatchOperationAdd">
@@ -455,6 +457,32 @@
 			</operations>
 		</match>
 		
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 (VGP Vegetable Garden) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2007061826 (VGP Vegetable Garden) -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>VGP Vegetable Garden</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>VG_Hivepiece</thingDef>
+								<countRange>0~1</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
 	</Operation>
 	
 	
