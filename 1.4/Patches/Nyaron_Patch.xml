@@ -40,7 +40,7 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase" or defName="Pirate"]/xenotypeSet/xenotypeChances</xpath>
 						<value>
-							<Nyaron MayRequire="Ludeon.RimWorld.Biotech">0.25</Nyaron>
+							<Nyaron MayRequire="Ludeon.RimWorld.Biotech">0.1</Nyaron>
 						</value>
 					</li>
 					
@@ -569,8 +569,8 @@
 				<li Class="PatchOperationAdd">
 		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
 					<value>
-						<Nyaron_Soldier>20</Nyaron_Soldier>
-						<Nyaron_Ranger>20</Nyaron_Ranger>
+						<Nyaron_Soldier>10</Nyaron_Soldier>
+						<Nyaron_Ranger>10</Nyaron_Ranger>
 					</value>
 				</li>
 				
@@ -578,8 +578,8 @@
 				<li Class="PatchOperationAdd">
 		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Peaceful"]/options</xpath>
 					<value>
-						<Nyaron_Soldier>10</Nyaron_Soldier>
-						<Nyaron_Ranger>10</Nyaron_Ranger>
+						<Nyaron_Soldier>5</Nyaron_Soldier>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
 					</value>
 				</li>
 				
@@ -587,8 +587,8 @@
 				<li Class="PatchOperationAdd">
 		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
 					<value>
-						<Nyaron_Soldier>10</Nyaron_Soldier>
-						<Nyaron_Ranger>10</Nyaron_Ranger>
+						<Nyaron_Soldier>5</Nyaron_Soldier>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
 					</value>
 				</li>
 				
@@ -596,8 +596,8 @@
 				<li Class="PatchOperationAdd">
 		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
 					<value>
-						<Nyaron_Soldier>20</Nyaron_Soldier>
-						<Nyaron_Ranger>20</Nyaron_Ranger>
+						<Nyaron_Soldier>10</Nyaron_Soldier>
+						<Nyaron_Ranger>10</Nyaron_Ranger>
 					</value>
 				</li>
 				
@@ -605,8 +605,8 @@
 				<li Class="PatchOperationAdd">
 		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[1]/options</xpath>
 					<value>
-						<Nyaron_Soldier>20</Nyaron_Soldier>
-						<Nyaron_Ranger>20</Nyaron_Ranger>
+						<Nyaron_Soldier>10</Nyaron_Soldier>
+						<Nyaron_Ranger>10</Nyaron_Ranger>
 					</value>
 				</li>
 				
@@ -614,7 +614,7 @@
 				<li Class="PatchOperationAdd">
 		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[2]/options</xpath>
 					<value>
-						<Nyaron_Soldier>10</Nyaron_Soldier>
+						<Nyaron_Soldier>5</Nyaron_Soldier>
 					</value>
 				</li>
 				
@@ -622,7 +622,7 @@
 				<li Class="PatchOperationAdd">
 		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[3]/options</xpath>
 					<value>
-						<Nyaron_Ranger>20</Nyaron_Ranger>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
 					</value>
 				</li>
 				
@@ -630,7 +630,7 @@
 				<li Class="PatchOperationAdd">
 		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[4]/options</xpath>
 					<value>
-						<Nyaron_Ranger>15</Nyaron_Ranger>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
 						<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
 					</value>
 				</li>
@@ -639,7 +639,7 @@
 				<li Class="PatchOperationAdd">
 		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[5]/options</xpath>
 					<value>
-						<Nyaron_Ranger>10</Nyaron_Ranger>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
 					</value>
 				</li>
 				
@@ -647,8 +647,8 @@
 				<li Class="PatchOperationAdd">
 		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
 					<value>
-						<Nyaron_Soldier>20</Nyaron_Soldier>
-						<Nyaron_Ranger>20</Nyaron_Ranger>
+						<Nyaron_Soldier>10</Nyaron_Soldier>
+						<Nyaron_Ranger>10</Nyaron_Ranger>
 					</value>
 				</li>
 				
@@ -678,10 +678,10 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[1]/options</xpath>
 						<value>
-							<Nyaron_Soldier>20</Nyaron_Soldier>
-							<Nyaron_Ranger>20</Nyaron_Ranger>
-							<Nyaron_Soldier_Light>20</Nyaron_Soldier_Light>
-							<Nyaron_Ranger_Light>20</Nyaron_Ranger_Light>
+							<Nyaron_Soldier>10</Nyaron_Soldier>
+							<Nyaron_Ranger>10</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
 						</value>
 					</li>
 					
@@ -689,8 +689,8 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[2]/options</xpath>
 						<value>
-							<Nyaron_Soldier>10</Nyaron_Soldier>
-							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
 						</value>
 					</li>
 					
@@ -698,8 +698,8 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[3]/options</xpath>
 						<value>
-							<Nyaron_Ranger>10</Nyaron_Ranger>
-							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
 						</value>
 					</li>
 					
@@ -707,10 +707,10 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[4]/options</xpath>
 						<value>
-							<Nyaron_Soldier>20</Nyaron_Soldier>
-							<Nyaron_Ranger>20</Nyaron_Ranger>
-							<Nyaron_Soldier_Light>20</Nyaron_Soldier_Light>
-							<Nyaron_Ranger_Light>20</Nyaron_Ranger_Light>
+							<Nyaron_Soldier>10</Nyaron_Soldier>
+							<Nyaron_Ranger>10</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
 							<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
 						</value>
 					</li>
@@ -728,10 +728,10 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
 						<value>
-							<Nyaron_Soldier>10</Nyaron_Soldier>
-							<Nyaron_Ranger>10</Nyaron_Ranger>
-							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
-							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
 						</value>
 					</li>
 					
@@ -739,10 +739,10 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="PirateYttakin"]/pawnGroupMakers/li[1]/options</xpath>
 						<value>
-							<Nyaron_Soldier>10</Nyaron_Soldier>
-							<Nyaron_Ranger>10</Nyaron_Ranger>
-							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
-							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
 						</value>
 					</li>
 					
@@ -759,10 +759,10 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="PirateYttakin"]/pawnGroupMakers/li[3]/options</xpath>
 						<value>
-							<Nyaron_Soldier>10</Nyaron_Soldier>
-							<Nyaron_Ranger>10</Nyaron_Ranger>
-							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
-							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
 							<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
 						</value>
 					</li>
@@ -771,10 +771,10 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="PirateYttakin"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
 						<value>
-							<Nyaron_Soldier>10</Nyaron_Soldier>
-							<Nyaron_Ranger>10</Nyaron_Ranger>
-							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
-							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
 						</value>
 					</li>
 					
@@ -827,8 +827,8 @@
 						<value>
 							<Nyaron_Soldier>15</Nyaron_Soldier>
 							<Nyaron_Ranger>15</Nyaron_Ranger>
-							<Nyaron_Soldier_Elite>10</Nyaron_Soldier_Elite>
-							<Nyaron_Ranger_Elite>10</Nyaron_Ranger_Elite>
+							<Nyaron_Soldier_Elite>15</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>15</Nyaron_Ranger_Elite>
 						</value>
 					</li>
 					
@@ -854,10 +854,10 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_Mercenaries"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
 						<value>
-							<Nyaron_Soldier>10</Nyaron_Soldier>
-							<Nyaron_Ranger>10</Nyaron_Ranger>
-							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
-							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
 							<Nyaron_Soldier_Elite>5</Nyaron_Soldier_Elite>
 							<Nyaron_Ranger_Elite>5</Nyaron_Ranger_Elite>
 						</value>
@@ -895,8 +895,8 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
 						<value>
-							<Nyaron_Soldier>150</Nyaron_Soldier>
-							<Nyaron_Ranger>150</Nyaron_Ranger>
+							<Nyaron_Soldier>100</Nyaron_Soldier>
+							<Nyaron_Ranger>100</Nyaron_Ranger>
 							<Nyaron_Ranger_Rocketeer>50</Nyaron_Ranger_Rocketeer>
 							<Nyaron_Soldier_Elite>100</Nyaron_Soldier_Elite>
 							<Nyaron_Ranger_Elite>100</Nyaron_Ranger_Elite>
@@ -980,8 +980,8 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="VFEV_VikingsClan" or defName="VFEV_VikingsSlaver"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
 						<value>
-							<Nyaron_Soldier>10</Nyaron_Soldier>
-							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
 						</value>
 					</li>
 					
