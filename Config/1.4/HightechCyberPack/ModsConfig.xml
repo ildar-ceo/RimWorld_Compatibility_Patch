@@ -23,12 +23,10 @@
     <li>lbmaian.begonemessage</li>
     <li>brrainz.cameraplus</li>
     <li>oskarpotocki.vanillafactionsexpanded.core</li>
-    <li>steve.betterquestrewards</li>
     <li>farmradish.nyaroncosmetics</li>
     <li>calamabanana.breachableembrasures</li>
     <li>frozensnowfox.vanillabionicsexpansion</li>
     <li>automatic.bionicicons</li>
-    <li>relaxedotter.bettermechanoidloot</li>
     <li>saucypigeon.pawnbadge</li>
     <li>crashm.colorcodedmoodbar.11</li>
     <li>petetimessix.compacthediffs</li>
@@ -60,8 +58,6 @@
     <li>mehni.pickupandhaul</li>
     <li>vanillaexpanded.vcef</li>
     <li>regrowth.botr.core</li>
-    <li>hatti.qualitybuilder</li>
-    <li>sgc.quests</li>
     <li>xrushha.reinstallablealtars</li>
     <li>rimfridge.kv.rw</li>
     <li>jaxe.rimhud</li>
@@ -71,7 +67,6 @@
     <li>uuugggg.sharetheload</li>
     <li>mlie.silentdoors</li>
     <li>petetimessix.simplesidearms</li>
-    <li>longman.smallerradiusforanimatreesandshrines</li>
     <li>sarg.smartspeed</li>
     <li>dhultgren.smarterconstruction</li>
     <li>linkolas.stabilize</li>
@@ -90,8 +85,6 @@
     <li>maxzicode.zitools</li>
     <li>grizzlemethis.tradingspot.rw</li>
     <li>frozensnowfox.bettercamploot</li>
-    <li>ryflamer.misc.drawabead</li>
-    <li>vanillaexpanded.vaeaccessories</li>
     <li>vanillaexpanded.vee</li>
     <li>oskarpotocki.vanillaexpanded.ideologypatches</li>
     <li>oskarpotocki.vanillaexpanded.royaltypatches</li>
@@ -101,25 +94,21 @@
     <li>vanillaexpanded.vanillasocialinteractionsexpanded</li>
     <li>vanillaexpanded.vanillatraitsexpanded</li>
     <li>roolo.almostthere</li>
-    <li>hlx.reinforcedmechanoids2</li>
     <li>com.yayo.yayoani.continued</li>
-    <li>smashphil.srtsexpanded</li>
     <li>vanillaexpanded.varme</li>
     <li>rus.biotech.nastia</li>
     <li>vanillaexpanded.basegeneration</li>
     <li>ow.ru.vie</li>
     <li>ow.ru.traits</li>
-    <li>vanillaexpanded.skills</li>
     <li>ow.ru.core</li>
     <li>ow.ru.aaa</li>
     <li>vanillaexpanded.vfefarming</li>
-    <li>vanillaracesexpanded.hussar</li>
-    <li>ow.ru.hussar</li>
     <li>vanillaracesexpanded.highmate</li>
     <li>mewn.ru.vanillaracesexpanded.highmate</li>
     <li>vanillaexpanded.vwel</li>
     <li>dismarzero.vgp.vgpvegetablegarden</li>
     <li>dismarzero.vgp.vgpgardengourmet</li>
+    <li>warlocksforge.fishtraps</li>
     <li>gekasid.vgp.vgpvegetablegarden.rus</li>
     <li>sarg.alphamemes</li>
     <li>kamikadza13.alphamemes</li>
@@ -129,49 +118,32 @@
     <li>m00nl1ght.geologicallandforms</li>
     <li>dmitry6.rusgeologicallandforms</li>
     <li>m00nl1ght.geologicallandforms.biometransitions</li>
-    <li>mlie.smartervisitors</li>
     <li>uuugggg.smartmedicine</li>
     <li>velc.hatsdisplayselection</li>
     <li>haplo.miscellaneous.trainingnotask</li>
     <li>bdew.longdistance</li>
     <li>mastertea.randomplus</li>
-    <li>roolo.runandgun</li>
-    <li>dimonsever000.psionicplus.specific</li>
     <li>azuraal.choiceofpsycasts</li>
     <li>noodlesking.morepsycasts</li>
     <li>ru.pashka.noodlesking.morepsycasts</li>
-    <li>doll.nevergeneraterelations</li>
-    <li>uuugggg.replacestuff</li>
+    <li>mlie.morefactioninteraction</li>
     <li>ratys.rtfuse</li>
     <li>fluffy.researchtree</li>
-    <li>newcolonist.questthreatrebalance</li>
     <li>mlie.betterbeggars</li>
+    <li>falconne.bwm</li>
+    <li>sgc.quests</li>
     <li>frozensnowfox.betterancientcomplexloot</li>
     <li>sarg.alphamechs</li>
-    <li>chjees.androids14</li>
-    <li>kikohi.cybernetic</li>
-    <li>cybernetic.organism.ru</li>
-    <li>wit.expandedroofing</li>
+    <li>doll.nevergeneraterelations</li>
     <li>aelanna.eccentricextras.angelhairs</li>
     <li>aelanna.eccentrictech.core</li>
     <li>aelanna.eccentrictech.angelapparel</li>
-    <li>aelanna.eccentrictech.foxysarmory2</li>
-    <li>ru.fartresh.reinforcedmechanoids2</li>
     <li>ravvy.amw</li>
     <li>albion.sparklingworlds.full</li>
-    <li>albion.sparklingworlds.bmchardcore</li>
     <li>tostov.spacetechraiders</li>
-    <li>rimsenal.federation</li>
-    <li>ru.rimsenal.federation</li>
-    <li>mrkociak.biotechmoremechstuffmechupgradepod</li>
-    <li>orion.hospitality</li>
-    <li>orion.cashregister</li>
-    <li>orion.gastronomy</li>
-    <li>adamas.storefront</li>
     <li>syrchalis.processor.framework</li>
     <li>syrchalis.prosthetictable</li>
     <li>syrchalis.setupcamp</li>
-    <li>jamaicancastle.rf.fertilefields</li>
     <li>vanillaexpanded.vwetb</li>
     <li>fuu.uncompromisingtribalfaction</li>
     <li>edb.preparecarefully</li>
