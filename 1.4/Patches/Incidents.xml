@@ -24,13 +24,13 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/IncidentDef[defName="VEE_Drought" or defName="VEE_AnimalPodCrash" or defName="VEE_Earthquake" or defName="VEE_CaravanAnimalsWanderIn" or defName="VEE_BattleAnimalsWanderIn" or defName="VEE_WildMenWanderIn" or defName="VEE_Cargopodsweapons" or defName="VEE_Cargopodsapparel"]/baseChance</xpath>
+					<xpath>/Defs/IncidentDef[defName="VEE_Drought" or defName="VEE_AnimalPodCrash" or defName="VEE_Earthquake" or defName="VEE_CaravanAnimalsWanderIn" or defName="VEE_BattleAnimalsWanderIn" or defName="VEE_WildMenWanderIn" or defName="VEE_Cargopodsweapons" or defName="VEE_Cargopodsapparel" or defName="VEE_PsychicRain"]/baseChance</xpath>
 					<value>
 						<baseChance>0.01</baseChance>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/IncidentDef[defName="VEE_IceAge" or defName="VEE_GlobalWarming" or defName="VEE_PsychicRain" or defName="VEE_LongNight" or defName="VEE_PsychicBloom"]/baseChance</xpath>
+					<xpath>/Defs/IncidentDef[defName="VEE_IceAge" or defName="VEE_GlobalWarming" or defName="VEE_LongNight" or defName="VEE_PsychicBloom"]/baseChance</xpath>
 					<value>
 						<baseChance>0.25</baseChance>
 					</value>

@@ -409,6 +409,35 @@
 					</value>
 				</li>
 				
+				<!-- Add Exotic -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>Artifact</tradeTag>
+							<thingDefCountRange>1~4</thingDefCountRange>
+							<countRange>1~1</countRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>ExoticMisc</tradeTag>
+							<thingDefCountRange>1~4</thingDefCountRange>
+							<countRange>1~2</countRange>
+							<excludedThingDefs>
+								<li>ComponentSpacer</li> <!-- already handled by single def -->
+								<li>MedicineUltratech</li> <!-- already handled by single def -->
+							</excludedThingDefs>
+							<customCountRanges>
+								<Hyperweave>100~200</Hyperweave>
+							</customCountRanges>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>NeurotrainersPsycast</categoryDef>
+							<thingDefCountRange>2~2</thingDefCountRange>
+							<countRange>0~2</countRange>
+						</li>
+					</value>
+				</li>
+				
 				<!-- Add money -->
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard" or defName="Empire_Caravan_TraderGeneral"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>

@@ -64,6 +64,24 @@
 		</match>
 	</Operation>
 	
+	<!-- ID: 761421485 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Allow Tool</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods><li>Biotech</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="Mech_Lifter"]/race/mechEnabledWorkTypes</xpath>
+						<value>
+							<li>HaulingUrgent</li>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
 	<!-- Alpha mechs patch -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Alpha Mechs</li></mods>
