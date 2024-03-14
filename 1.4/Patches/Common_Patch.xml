@@ -391,11 +391,10 @@
 					<value>
 						<xenotypeSet>
 							<xenotypeChances>
-								<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.5</Baseliner>
-								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.25</Impid>
-								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
-								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
-								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
+								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
+								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.1</Neanderthal>
+								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.1</Hussar>
+								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.1</Yttakin>
 							</xenotypeChances>
 						</xenotypeSet>
 					</value>
@@ -406,11 +405,10 @@
 					<value>
 						<xenotypeSet>
 							<xenotypeChances>
-								<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.5</Baseliner>
-								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.25</Impid>
-								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
-								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
-								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
+								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
+								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.1</Neanderthal>
+								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.1</Hussar>
+								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.1</Yttakin>
 							</xenotypeChances>
 						</xenotypeSet>
 					</value>
@@ -420,12 +418,12 @@
 					<xpath>/Defs/FactionDef[defName="Pirate"]/xenotypeSet/xenotypeChances</xpath>
 					<value>
 						<xenotypeChances>
-							<Impid MayRequire="Ludeon.RimWorld.Biotech">0.25</Impid>
-							<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.25</Neanderthal>
-							<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
-							<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
-							<Waster MayRequire="Ludeon.RimWorld.Biotech">0.25</Waster>
-							<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.05</Dirtmole>
+							<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
+							<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.1</Neanderthal>
+							<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.1</Hussar>
+							<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.1</Yttakin>
+							<Waster MayRequire="Ludeon.RimWorld.Biotech">0.1</Waster>
+							<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.1</Dirtmole>
 						</xenotypeChances>
 					</value>
 				</li>
@@ -442,8 +440,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
 					<value>
-						<Impid MayRequire="Ludeon.RimWorld.Biotech">0.25</Impid>
-						<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
+						<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
 						<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0.05</Sanguophage>
 					</value>
 				</li>
@@ -469,7 +466,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase" or defName="Pirate"]/xenotypeSet/xenotypeChances</xpath>
 					<value>
-						<VRE_Lowmate>0.25</VRE_Lowmate>
+						<VRE_Lowmate>0.05</VRE_Lowmate>
 					</value>
 				</li>
 			</operations>
@@ -486,7 +483,7 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
 						<value>
-							<VRE_Lowmate>0.25</VRE_Lowmate>
+							<VRE_Lowmate>0.05</VRE_Lowmate>
 						</value>
 					</li>
 				</operations>
@@ -503,7 +500,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
 					<value>
-						<VREH_Uhlan>0.25</VREH_Uhlan>
+						<VREH_Uhlan>0.1</VREH_Uhlan>
 					</value>
 				</li>
 			</operations>
@@ -520,7 +517,7 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
 						<value>
-							<VREH_Uhlan>0.25</VREH_Uhlan>
+							<VREH_Uhlan>0.1</VREH_Uhlan>
 						</value>
 					</li>
 				</operations>
@@ -541,10 +538,10 @@
 						<value>
 							<xenotypeSet>
 								<xenotypeChances>
-									<Impid MayRequire="Ludeon.RimWorld.Biotech">0.5</Impid>
-									<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.5</Neanderthal>
-									<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.5</Hussar>
-									<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.5</Yttakin>
+									<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
+									<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.1</Neanderthal>
+									<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.1</Hussar>
+									<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.1</Yttakin>
 								</xenotypeChances>
 							</xenotypeSet>
 						</value>
@@ -565,7 +562,7 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]/xenotypeSet/xenotypeChances</xpath>
 						<value>
-							<VREH_Uhlan>0.25</VREH_Uhlan>
+							<VREH_Uhlan>0.1</VREH_Uhlan>
 						</value>
 					</li>
 				</operations>
@@ -584,7 +581,7 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]/xenotypeSet/xenotypeChances</xpath>
 						<value>
-							<VRE_Lowmate>0.15</VRE_Lowmate>
+							<VRE_Lowmate>0.05</VRE_Lowmate>
 						</value>
 					</li>
 				</operations>
@@ -634,8 +631,8 @@
 					<xpath>/Defs/FactionDef[defName="VFEP_Mercenaries"]/xenotypeSet/xenotypeChances</xpath>
 					<value>
 						<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
-						<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.25</Yttakin>
-						<Pigskin MayRequire="Ludeon.RimWorld.Biotech">0.25</Pigskin>
+						<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.1</Yttakin>
+						<Pigskin MayRequire="Ludeon.RimWorld.Biotech">0.1</Pigskin>
 					</value>
 				</li>
 				
