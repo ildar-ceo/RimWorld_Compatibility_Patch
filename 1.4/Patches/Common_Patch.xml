@@ -306,6 +306,21 @@
 	</Operation>
 	-->
 	
+	<!-- Biotech patch -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Biotech</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Remove noise sound -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/EffecterDef[defName="PollutionPumped"]/children/li[soundDef="PollutionPumped"]</xpath>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
 	<!-- Factions patch -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Ideology</li></mods>

@@ -2130,6 +2130,80 @@
 	</Operation>
 	
 	
+	<!-- ID: 2259058735 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>CaveworldFlora (Continued)</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<RecipeDef>
+							<defName>MakeMedicineIndustrialFromGleamcapStem</defName>
+							<label>make 4 industrial medicine from GleamcapStem</label>
+							<description>Manufactures one piece of industrial medicine.</description>
+							<jobString>Making industrial medicine.</jobString>
+							<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+							<effectWorking>Smelt</effectWorking>
+							<soundWorking>Recipe_Smelt</soundWorking>
+							<workAmount>700</workAmount>
+							<researchPrerequisite>MedicineProduction</researchPrerequisite>
+							<recipeUsers>
+								<li>DrugLab</li>
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>GleamcapStem</li>
+										</thingDefs>
+									</filter>
+									<count>4</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Neutroamine</li>
+										</thingDefs>
+									</filter>
+									<count>4</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Cloth</li>
+										</thingDefs>
+									</filter>
+									<count>12</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>GleamcapStem</li>
+									<li>Neutroamine</li>
+									<li>Cloth</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<MedicineIndustrial>4</MedicineIndustrial>
+							</products>
+							<workSkill>Intellectual</workSkill>
+							<skillRequirements>
+								<Intellectual>4</Intellectual>
+								<Crafting>6</Crafting>
+							</skillRequirements>
+						</RecipeDef>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+	
 	<!-- ID: 2007061826 (VGP Vegetable Garden) -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>VGP Vegetable Garden</li></mods>
