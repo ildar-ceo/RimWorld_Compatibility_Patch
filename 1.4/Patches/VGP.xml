@@ -886,7 +886,7 @@
 					<xpath>/Defs/RecipeDef[defName="BakeMeatPie"]</xpath>
 					<value>
 						<skillRequirements>
-							<Cooking>8</Cooking>
+							<Cooking>4</Cooking>
 						</skillRequirements>
 					</value>
 				</li>
@@ -1001,6 +1001,80 @@
 					<xpath>/Defs/ThingDef[defName="Flour"]/statBases</xpath>
 					<value>
 						<Nutrition>0.1</Nutrition>
+					</value>
+				</li>
+				
+				
+				<!-- BakeMeatPie bulk -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<RecipeDef>
+							<defName>BakeMeatPieBulk</defName>
+							<label>bake 8 meat pies</label>
+							<description>Bake a tasty pie. \n\nMakes 8 pies. \n\nFood Effects: Blood Pumping.</description>
+							<jobString>Baking pie.</jobString>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<effectWorking>Cook</effectWorking>
+							<workAmount>1000</workAmount>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>
+							<recipeUsers>
+								<li>Oven</li>
+								<li>Campfire</li>
+								<li>ElectricOven</li>
+								<li>VG_Campfire</li>
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Flour</li>
+										</thingDefs>
+									</filter>
+									<count>24</count>
+								</li>
+								<li>
+									<filter>
+										<categories>
+											<li>MeatRaw</li>
+										</categories>
+									</filter>
+									<count>40</count>
+								</li>
+							</ingredients>
+							<products>
+								<meatpie>8</meatpie>
+							</products>
+							<skillRequirements>
+								<Cooking>8</Cooking>
+							</skillRequirements>
+							<fixedIngredientFilter>
+								<categories>
+									<li>MeatRaw</li>
+								</categories>
+								<thingDefs>
+									<li>Flour</li>
+								</thingDefs>
+								<specialFiltersToDisallow>
+									<li>AllowRotten</li>
+								</specialFiltersToDisallow>
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>MeatRaw</li>
+								</categories>
+								<thingDefs>
+									<li>Flour</li>
+								</thingDefs>
+								<disallowedThingDefs>
+									<li>Meat_Human</li>
+									<li>Meat_Megaspider</li>
+									<li>InsectJelly</li>
+								</disallowedThingDefs>
+							</defaultIngredientFilter>
+							<workSkill>Cooking</workSkill>
+						</RecipeDef>
 					</value>
 				</li>
 				
@@ -1459,7 +1533,7 @@
 			<match Class="PatchOperationSequence">
 				<operations>
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter[not(disallowedThingDefs)]</xpath>
+						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie" or defName="BakeMeatPieBulk"]/defaultIngredientFilter[not(disallowedThingDefs)]</xpath>
 						<value>
 							<disallowedThingDefs />
 						</value>
@@ -1481,14 +1555,14 @@
 				<operations>
 					
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter[not(disallowedCategories)]</xpath>
+						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie" or defName="BakeMeatPieBulk"]/defaultIngredientFilter[not(disallowedCategories)]</xpath>
 						<value>
 							<disallowedCategories />
 						</value>
 					</li>
 					
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie"]/defaultIngredientFilter/disallowedCategories</xpath>
+						<xpath>/Defs/RecipeDef[defName="CookMealSimple" or defName="Grillsteak" or defName="Stirfrymeal" or defName="Cookstewpot" or defName="GrillKabob" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="BakeMeatPie" or defName="BakeMeatPieBulk"]/defaultIngredientFilter/disallowedCategories</xpath>
 						<value>
 							<li>VCEF_RawFishCategory</li>
 						</value>

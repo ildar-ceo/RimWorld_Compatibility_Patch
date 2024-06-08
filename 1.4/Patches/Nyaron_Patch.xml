@@ -11,14 +11,21 @@
 			<match Class="PatchOperationSequence">
 				<operations>
 					
-					<li Class="PatchOperationAdd">
+					<li Class="PatchOperationReplace">
 						<xpath>/Defs/XenotypeDef[defName="Nyaron"]/genes</xpath>
 						<value>
-							<li>Libido_High</li>
-							<li>DarkVision</li>
-							<li>Immunity_Strong</li>
-							<li>AptitudeTerrible_Artistic</li>
-							<li>AptitudeTerrible_Animals</li>
+							<genes>
+								<li>Body_Thin</li>
+								<li>Body_Standard</li>
+								<li>DarkVision</li>
+								<li>Nyaron</li>
+								<li>Hair_Nyaron</li>
+								<li>Ears_Nyaron_Normal</li>
+								<li>Tail_Nyaron_Normal</li>
+								<li>Beard_NoBeardOnly</li>
+								<li>MoveSpeed_Quick</li>
+								<li>Robust</li>
+							</genes>
 						</value>
 					</li>
 					
@@ -28,11 +35,11 @@
 							<biostatMet>6</biostatMet>
 						</value>
 					</li>
-					
+					<!--
 					<li Class="PatchOperationRemove">
-						<xpath>/Defs/XenotypeDef[defName="Nyaron"]/genes/li[text()="VerySleepy" or text()="Hair_SnowWhite" or text()="Hair_InkBlack" or text()="Hair_Gray" or text()="Hair_DarkBlack" or text()="Hair_MidBlack" or text()="Hair_DarkReddish" or text()="Hair_DarkSaturatedReddish" or text()="Hair_DarkBrown" or text()="Hair_ReddishBrown" or text()="Hair_SandyBlonde" or text()="Hair_Blonde" or text()="Hair_Pink" or text()="Hair_LightPurple" or text()="Hair_LightBlue" or text()="Hair_LightTeal" or text()="Hair_LightGreen" or text()="Hair_LightOrange" or text()="Hair_BrightRed" or text()="Beauty_Pretty" or text()="PsychicAbility_Dull" or text()="Pain_Reduced"]</xpath>
+						<xpath>/Defs/XenotypeDef[defName="Nyaron"]/genes/li[text()="VerySleepy" or text()="Hair_SnowWhite" or text()="Hair_InkBlack" or text()="Hair_Gray" or text()="Hair_DarkBlack" or text()="Hair_MidBlack" or text()="Hair_DarkReddish" or text()="Hair_DarkSaturatedReddish" or text()="Hair_DarkBrown" or text()="Hair_ReddishBrown" or text()="Hair_SandyBlonde" or text()="Hair_Blonde" or text()="Hair_Pink" or text()="Hair_LightPurple" or text()="Hair_LightBlue" or text()="Hair_LightTeal" or text()="Hair_LightGreen" or text()="Hair_LightOrange" or text()="Hair_BrightRed" or text()="MeleeDamage_Strong" or text()="Beauty_Pretty" or text()="PsychicAbility_Dull" or text()="Pain_Reduced"]</xpath>
 					</li>
-					
+					-->
 					<li Class="PatchOperationRemove">
 						<xpath>/Defs/FactionDef[defName="OutlanderNyaron"]</xpath>
 					</li>
@@ -89,12 +96,6 @@
 						</li>
 						<li Class="PatchOperationRemove">
 							<xpath>/Defs/XenotypeDef[defName="Nyaron"]/genes/li[text()="Ears_Nyaron_Normal" or text()="Tail_Nyaron_Normal"]</xpath>
-						</li>
-						<li Class="PatchOperationAdd">
-							<xpath>/Defs/XenotypeDef[defName="Nyaron"]/genes</xpath>
-							<value>
-								<li>Beauty_Pretty</li>
-							</value>
 						</li>
 						<li Class="PatchOperationReplace">
 							<xpath>/Defs/PawnKindDef[defName="Nyaron_Trader"]/combatPower</xpath>

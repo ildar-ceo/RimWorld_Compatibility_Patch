@@ -46,40 +46,6 @@
 				</li>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_BulkGoods"]/stockGenerators/li[tradeTag="Seeds"]</xpath>
-					<value>
-						<li Class="StockGenerator_Tag">
-							<tradeTag>Seeds</tradeTag>
-							<thingDefCountRange>
-								<min>5</min>
-								<max>15</max>
-							</thingDefCountRange>
-							<countRange>
-								<min>50</min>
-								<max>700</max>
-							</countRange>
-						</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators/li[tradeTag="Seeds"]</xpath>
-					<value>
-						<li Class="StockGenerator_Tag">
-							<tradeTag>Seeds</tradeTag>
-							<thingDefCountRange>
-								<min>5</min>
-								<max>15</max>
-							</thingDefCountRange>
-							<countRange>
-								<min>50</min>
-								<max>700</max>
-							</countRange>
-						</li>
-					</value>
-				</li>
-				
-				<li Class="PatchOperationReplace">
 					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators/li[tradeTag="Seeds"]</xpath>
 					<value>
 						<li Class="StockGenerator_Tag">
