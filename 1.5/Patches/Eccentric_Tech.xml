@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	
+	<!-- ID: 2552623545 (Eccentric Tech - Core) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Eccentric Tech - Core</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Fix ships craft. Need Aurora core -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="Eccentric_HexCell"]/tradeability</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="Eccentric_Nanoweave"]/tradeability</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_BulkGoods" or defName="Orbital_Exotic" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Eccentric_HexCell</thingDef>
+							<countRange>1~5</countRange>
+						</li>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Eccentric_Nanoweave</thingDef>
+							<countRange>50~200</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Eccentric_HexCell"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>75</MarketValue>
+					</value>
+				</li>
+				
+				<!-- Add minifiedDef -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="EccentricAuroraCore"]/building</xpath>
+					<value>
+						<uninstallWork>350</uninstallWork>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2585928816 (Eccentric Tech - Angel Apparel) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Eccentric Tech - Angel Apparel</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Trade -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitCommonBase" or @Name="EccentricGearBase"]</xpath>
+					<value>
+						<tradeTags>
+							<li>HiTechArmor</li>
+						</tradeTags>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[@Name="EccentricUndersuitCommonBase" or @Name="EccentricGearBase"]/apparel/tags</xpath>
+					<value>
+						<li>SpacerMilitary</li>
+						<li>ExoArmorPirate</li>
+						<li>ExoArmorPirateE</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricGearBase"]/apparel/tags</xpath>
+					<value>
+						<li>SpacerMilitary</li>
+						<li>ExoArmorPirateE</li>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitCommonBase" or @Name="EccentricGearBase"]/tradeability</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitCommonBase" or @Name="EccentricGearBase"]/generateCommonality</xpath>
+					<value>
+						<generateCommonality>2</generateCommonality>
+					</value>
+				</li>
+				
+				<!-- Add tags to PawnKinds -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="OutlanderBase" or @Name="SpaceRefugeeBase" or @Name="MercenaryEliteTierBase" or @Name="MercenarySniperBase" or defName="Town_Guard" or defName="Town_Trader" or @Name="MercenaryGunnerBase" or @Name="MercenarySlasherBase" or defName="Town_Councilman" or defName="Pirate" or defName="AncientSoldier"]/apparelTags</xpath>
+					<value>
+						<li>Eccentric</li>
+					</value>
+				</li>
+				
+				<!-- Change apparel money -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[@Name="MercenaryGunnerBase" or @Name="MercenarySniperBase"]/apparelMoney</xpath>
+					<value>
+						<apparelMoney>1000~3500</apparelMoney>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[@Name="MercenarySlasherBase"]/apparelMoney</xpath>
+					<value>
+						<apparelMoney>400~3500</apparelMoney>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[@Name="MercenaryEliteTierBase"]/apparelMoney</xpath>
+					<value>
+						<apparelMoney>3000~5000</apparelMoney>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[@Name="GrenadierBase"]/apparelMoney</xpath>
+					<value>
+						<apparelMoney>400~1500</apparelMoney>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[@Name="MercenaryHeavyBase"]/apparelMoney</xpath>
+					<value>
+						<apparelMoney>200~1500</apparelMoney>
+					</value>
+				</li>
+				
+				<!-- Change market value -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="EccentricUndersuitArel"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>2000</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="EccentricUndersuitSeraph"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>3000</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="EccentricUndersuitApsara"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>2500</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="EccentricUniformCombat" or defName="EccentricUniformTech"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>2500</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="EccentricUniformGuardian" or defName="EccentricUniformLeader"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>3000</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="EccentricUniformWorker"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>2000</MarketValue>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2552623545 (Eccentric Tech - Core) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Eccentric Tech - Angel Apparel</li>
+		</mods>
+		
+		<!-- ID: 1854376306 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Nyaron race</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods" or defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>Eccentric_HexCell</thingDef>
+								<countRange>1~5</countRange>
+							</li>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>Eccentric_Nanoweave</thingDef>
+								<countRange>50~200</countRange>
+							</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="NyaronBase" or defName="Nyaron_Soldier_Light" or defName="Nyaron_Soldier" or defName="Nyaron_Ranger_Light" or defName="Nyaron_Ranger" or defName="Nyaron_Ranger_Rocketeer" or defName="Nyaron_Special_Assassin"]/apparelTags</xpath>
+					<value>
+						<li>Eccentric</li>
+					</value>
+				</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2552623545 (Eccentric Tech - Core) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Eccentric Tech - Core</li>
+		</mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard" or defName="Orbital_Empire"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>Eccentric_HexCell</thingDef>
+								<countRange>1~5</countRange>
+							</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard" or defName="Orbital_Empire"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>Eccentric_Nanoweave</thingDef>
+								<countRange>50~200</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2585928816 (Eccentric Tech - Angel Apparel) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Eccentric Tech - Angel Apparel</li>
+		</mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Add Prestige Tag -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[@Name="EccentricUniformBase" or @Name="EccentricUndersuitCommonBase" or @Name="EccentricGearBase"]/apparel/tags</xpath>
+						<value>
+							<li>PrestigeCombatGear</li>
+						</value>
+					</li>
+					
+					<!-- Add tags to PawnKinds -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/PawnKindDef[@Name="RoyalBase" or @Name="ImperialFighterBase"]/apparelTags</xpath>
+						<value>
+							<li>Eccentric</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+</Patch>
