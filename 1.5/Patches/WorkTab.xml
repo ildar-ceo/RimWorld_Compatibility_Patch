@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	
+	<!-- BasicWorker -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="Refuel" or defName="RearmTurrets" or defName="TakeBeerOutOfFermentingBarrel" or defName="FillFermentingBarrel"]/workType</xpath>
+		<value>
+			<workType>BasicWorker</workType>
+		</value>
+	</Operation>
+	
+	<!-- Construction -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="Deconstruct"]/priorityInType</xpath>
+		<value>
+			<priorityInType>109</priorityInType>
+		</value>
+	</Operation>
+	
+	<!-- Smithing -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="DoBillsFabricationBench"]/priorityInType</xpath>
+		<value>
+			<priorityInType>100</priorityInType>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="DoBillsMachiningTable"]/priorityInType</xpath>
+		<value>
+			<priorityInType>105</priorityInType>
+		</value>
+	</Operation>
+	
+	<!-- Growing and PlantCutting -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkTypeDef[defName="PlantCutting"]/naturalPriority</xpath>
+		<value>
+			<naturalPriority>701</naturalPriority>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkTypeDef[defName="Growing"]/naturalPriority</xpath>
+		<value>
+			<naturalPriority>700</naturalPriority>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="GrowerHarvest"]/workType</xpath>
+		<value>
+			<workType>PlantCutting</workType>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="GrowerHarvest"]/priorityInType</xpath>
+		<value>
+			<priorityInType>150</priorityInType>
+		</value>
+	</Operation>
+	
+	<!-- Research -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="LongRangeScan" or defName="GroundPenetratingScan"]/priorityInType</xpath>
+		<value>
+			<priorityInType>200</priorityInType>
+		</value>
+	</Operation>
+	
+	<!-- ID: 935732834 (SeedsPlease) -->
+	<!-- ID: 2586052937 (SeedsPlease: Lite) -->
+	<!--
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease: Lite</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="ProcessSeeds"]/priorityInType</xpath>
+					<value>
+						<priorityInType>35</priorityInType>
+					</value>
+				</li>
+			</operations>
+	</Operation>
+	-->
+	
+	<!-- ID: 2552623545 (Eccentric Tech - Core) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Eccentric Tech - Core</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="Eccentric_DoBillsAssembler"]/priorityInType</xpath>
+					<value>
+						<priorityInType>110</priorityInType>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="Eccentric_DoBillsFabricator"]/priorityInType</xpath>
+					<value>
+						<priorityInType>95</priorityInType>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkTypeDef[defName="Patient"]/naturalPriority</xpath>
+		<value>
+			<naturalPriority>1300</naturalPriority>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkTypeDef[defName="Doctor"]/naturalPriority</xpath>
+		<value>
+			<naturalPriority>1350</naturalPriority>
+		</value>
+	</Operation>
+	
+	<!-- Nurse -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<WorkTypeDef>
+				<defName>Surgeon</defName>
+				<labelShort>surgeon</labelShort>
+				<pawnLabel>Surgeon</pawnLabel>
+				<gerundLabel>surgeon</gerundLabel>
+				<description>Operate on humanlikes</description>
+				<verb>Operate on</verb>
+				<naturalPriority>1345</naturalPriority>
+				<workTags>
+				  <li>Caring</li>
+				  <li>Commoner</li>
+				  <li>AllWork</li>
+				</workTags>
+			</WorkTypeDef>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="DoBillsMedicalHumanOperation" or defName="DoBillsMedicalAnimalOperation"]/workType</xpath>
+		<value>
+			<workType>Surgeon</workType>
+		</value>
+	</Operation>
+	
+	<!-- Nurse -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+			<WorkTypeDef>
+				<defName>Nurse</defName>
+				<labelShort>nurse</labelShort>
+				<pawnLabel>Nurse</pawnLabel>
+				<gerundLabel>nurse</gerundLabel>
+				<description>Cares for sick colonists and animals.</description>
+				<verb>Care for</verb>
+				<naturalPriority>1290</naturalPriority>
+				<workTags>
+				  <li>Caring</li>
+				  <li>Commoner</li>
+				  <li>AllWork</li>
+				</workTags>
+			</WorkTypeDef>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkGiverDef[defName="DoctorFeedHumanlikes" or defName="DoctorRescue" or defName="DoctorFeedAnimals" or defName="VisitSickPawn" or defName="TakeToBedToOperate"]/workType</xpath>
+		<value>
+			<workType>Nurse</workType>
+		</value>
+	</Operation>
+	
+	<!-- ID: 836308268 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Dubs Bad Hygiene</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="emptySepticTank" or defName="LoadWashing" or defName="UnloadWashing" or defName="RefillWater" or defName="WardenRefillWater" or defName="ClearBlockage" or defName="UnloadComposter" or defName="FillComposter" or defName="emptySepticTank" or defName="WardenEmptySepticTank"]/workType</xpath>
+					<value>
+						<workType>BasicWorker</workType>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="DBHAdministerFluids" or defName="washPatient" or defName="DocCleanBedpan"]/workType</xpath>
+					<value>
+						<workType>Nurse</workType>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ID: 836308268 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Fertile Fields [1.1]</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="EmptyCompostBarrel"]/workType</xpath>
+					<value>
+						<workType>BasicWorker</workType>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ID: 2023507013 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Expanded Framework</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="IP_RemoveProduct"]/workType</xpath>
+					<value>
+						<workType>BasicWorker</workType>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ID: 2633514537 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>[SYR] Processor Framework</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="EmptyProcessor" or defName="FillProcessor"]/workType</xpath>
+					<value>
+						<workType>BasicWorker</workType>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ID: 2007061826 (VGP Vegetable Garden) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Vegetable Garden</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="DoBillsHaulBambooCampfire"]/workType</xpath>
+					<value>
+						<workType>BasicWorker</workType>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ID: 761421485 (Allow Tool) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Allow Tool</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="HelpGatheringItemsForCaravan" or defName="LoadTransporters" or defName="UnloadCarriers" or defName="Strip"]/workType</xpath>
+					<value>
+						<workType>HaulingUrgent</workType>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

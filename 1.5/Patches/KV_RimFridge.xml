@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- ID: 2878183338 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>RimFridge Updated</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[@Name="FridgeBase"]/building</xpath>
+					<value>
+						<uninstallWork>350</uninstallWork>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[@Name="FridgeBase"]/building/maxItemsInCell</xpath>
+					<value>
+						<maxItemsInCell>2</maxItemsInCell>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RimFridge_SingleRefrigerator" or defName="RimFridge_Refrigerator" or defName="RimFridge_QuadRefrigerator"]</xpath>
+					<value>
+						<minifiedDef>MinifiedThing</minifiedDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RimFridge_SingleRefrigerator" or defName="RimFridge_Refrigerator" or defName="RimFridge_QuadRefrigerator"]/building</xpath>
+					<value>
+						<uninstallWork>350</uninstallWork>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	
+	<!-- ID: 2881513314 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Biotech Nyaron</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Biotech</li></mods>
+			
+			<match Class="PatchOperationFindMod">
+				<mods><li>Nyaron race</li></mods>
+				
+				<match Class="PatchOperationSequence">
+					<operations>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/PawnKindDef[@Name="NyaronBase"]/xenotypeSet/xenotypeChances</xpath>
+							<value>
+								<Nyaron MayRequire="Ludeon.RimWorld.Biotech">1.0</Nyaron>
+							</value>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/PawnKindDef[defName="NyaronPlayerColonist"]</xpath>
+							<value>
+								<xenotypeSet>
+									<xenotypeChances>
+										<Nyaron MayRequire="Ludeon.RimWorld.Biotech">1.0</Nyaron>
+									</xenotypeChances>
+								</xenotypeSet>
+							</value>
+						</li>
+						<li Class="PatchOperationRemove">
+							<xpath>/Defs/PawnKindDef[@Name="NyaronBase"]/xenotypeSet/xenotypeChances/Baseliner</xpath>
+						</li>
+						<li Class="PatchOperationRemove">
+							<xpath>/Defs/GeneDef[defName="Nyaron"]/forcedHeadTypes</xpath>
+						</li>
+						<li Class="PatchOperationRemove">
+							<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase" or defName="Pirate"]/xenotypeSet/xenotypeChances/Nyaron</xpath>
+						</li>
+						<li Class="PatchOperationRemove">
+							<xpath>/Defs/XenotypeDef[defName="Nyaron"]/genes/li[text()="Ears_Nyaron_Normal" or text()="Tail_Nyaron_Normal"]</xpath>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/XenotypeDef[defName="Nyaron"]/genes</xpath>
+							<value>
+								<li>Beauty_Pretty</li>
+							</value>
+						</li>
+						
+					</operations>
+				</match>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Fix Names -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RulePackDef[defName="NamerNyaronUtility"]/rulePack/rulesFiles</xpath>
+					<value>
+						<rulesFiles>
+							<li>NameNyaronMaleNames->Names/Animal_Male</li>
+							<li>NameNyaronFemaleNames->Names/Animal_Female</li>
+							<li>NameNyaronLastNames->Names/Nyaron_LastNames</li>
+						</rulesFiles>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RulePackDef[defName="NamerNyaronMale"]</xpath>
+					<value>
+						<RulePackDef>
+							<defName>NamerNyaronMale</defName>
+							<include>
+							  <li>NamerNyaronUtility</li>
+							</include>
+							<rulePack>
+							  <rulesStrings>
+								<li>r_name(p=6)->[NameNyaronMaleNames] [NameNyaronLastNames]</li>
+							  </rulesStrings>
+							</rulePack>
+						</RulePackDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RulePackDef[defName="NamerNyaronFemale"]</xpath>
+					<value>
+						<RulePackDef>
+							<defName>NamerNyaronFemale</defName>
+							 <include>
+							  <li>NamerNyaronUtility</li>
+							</include>
+							<rulePack>
+							  <rulesStrings>
+							    <li>r_name(p=6)->[NameNyaronFemaleNames] [NameNyaronLastNames]</li>
+							  </rulesStrings>
+							</rulePack>
+						</RulePackDef>
+					</value>
+				</li>
+				
+				<!--
+					Fix Gender
+					https://www.loverslab.com/topic/121825-mod-rimworld-gender-balancer/
+				-->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Nyaron"]/alienRace/generalSettings/maleGenderProbability</xpath>
+					<value>
+						<maleGenderProbability>0.5</maleGenderProbability>
+					</value>
+				</li>
+				
+				<!-- Add Hair -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/HeadTypeDef[@Name="NyaronHeadtypeBase"]/gender</xpath>
+					<value>
+						<gender>None</gender>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/HairDef[defName="Nr_Long" or defName="Nr_Short" or defName="Nr_Twin" or defName="Nr_Twintw" or defName="Nr_ShortTwin" or defName="Nr_Pony"]/styleGender</xpath>
+					<value>
+						<styleGender>Any</styleGender>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Nyaron"]/alienRace/styleSettings/li[key="HairDef"]/value/styleTagsOverride</xpath>
+					<value>
+						<styleTagsOverride>
+							<li>HairLong</li>
+							<li>Nyaron</li>
+						</styleTagsOverride>
+					</value>
+				</li>
+				
+				<!-- Trade -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Nr_PowerArmor" or defName="Nr_PowerArmorHelmet"]</xpath>
+					<value>
+						<tradeTags>
+							<li>HiTechArmor</li>
+						</tradeTags>
+					</value>
+				</li>
+				
+				<!-- Make enemy Faction
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="NyaronFaction"]</xpath>
+					<value>
+						<naturalEnemy>true</naturalEnemy>
+					</value>
+				</li>-->
+				
+				<!-- Remove Faction
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/FactionDef[defName="NyaronFactionEnemy"]</xpath>
+				</li>-->
+				
+				<!-- Scenario fix -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ScenarioDef[defName="NyaronStart"]/scenario/parts/li[def="ConfigPage_ConfigureStartingPawns"]</xpath>
+					<value>
+						<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+							<def>ConfigPage_ConfigureStartingPawns</def>
+							<pawnCount>3</pawnCount>
+							<pawnChoiceCount>8</pawnChoiceCount>
+						</li>
+					</value>
+				</li>
+				<!--
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ScenarioDef[defName="NyaronStart_butler"]/scenario/playerFaction/factionDef</xpath>
+					<value>
+						<factionDef>NyaronPlayerColony</factionDef>
+					</value>
+				</li>
+				-->
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Craft weapons -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Nr_ChRifle" or defName="Nr_CriPistol" or defName="Nr_MfoldPdw" or defName="Nr_NpcRifle" or defName="Nr_RapidCaster"]/recipeMaker/recipeUsers</xpath>
+					<value>
+						<recipeUsers Inherit="False">
+							<li>FabricationBench</li>
+						</recipeUsers>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Nr_ChRifle" or defName="Nr_CriPistol" or defName="Nr_MfoldPdw" or defName="Nr_NpcRifle" or defName="Nr_RapidCaster"]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisite>Fabrication</researchPrerequisite>
+					</value>
+				</li>
+				<!--
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Nr_ChRifle" or defName="Nr_NpcRifle" or defName="Nr_RapidCaster"]/costList</xpath>
+					<value>
+						<Hyperweave>20</Hyperweave>
+					</value>
+				</li>
+				-->
+				
+				<!-- Medicine -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>MedicineIndustrial</thingDef>
+							<countRange>10~30</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<!-- WeaponRanged -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_MarketValue">
+							<tradeTag>WeaponRanged</tradeTag>
+							<countRange>0~1</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<!-- WeaponRanged -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic" or defName="Caravan_Nyaron_CombatSupplier" or defName="Orbital_Exotic" or defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Category">
+							<categoryDef>Nyaron_WeaponsRanged</categoryDef>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>Nyaron_WeaponsMelee</categoryDef>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<!-- HiTechArmor -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_CombatSupplier"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>HiTechArmor</tradeTag>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>HiTechArmor</tradeTag>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Steel</thingDef>
+							<countRange>50~120</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Category">
+							<categoryDef>NeurotrainersSkill</categoryDef>
+							<thingDefCountRange>0~1</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<!-- Add money -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods" or defName="Caravan_Nyaron_Exotic" or defName="Caravan_Nyaron_CombatSupplier"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+					<value>
+						<countRange>1000~5000</countRange>
+					</value>
+				</li>
+				
+				<!-- BodyParts -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_CombatSupplier"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyParts</categoryDef>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyPartsProsthetic</categoryDef>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyPartsBionic</categoryDef>
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyParts</categoryDef>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>1~1</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyPartsProsthetic</categoryDef>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyPartsBionic</categoryDef>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>BodyPartsUltra</categoryDef>
+							<thingDefCountRange>0~1</thingDefCountRange>
+							<countRange>0~1</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods"]/stockGenerators/li[thingDef="ComponentSpacer"]</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>ComponentSpacer</thingDef>
+							<countRange>0~10</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators/li[thingDef="ComponentSpacer"]</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>ComponentSpacer</thingDef>
+							<countRange>1~5</countRange>
+						</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 (VGP Vegetable Garden) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2007061826 (VGP Vegetable Garden) -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>VGP Vegetable Garden</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>VG_Hivepiece</thingDef>
+								<countRange>0~1</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2012735237 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Fertile Fields [1.1]</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Add TerraformingResources -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>TerraformingResources</tradeTag>
+								<thingDefCountRange>
+									<min>0</min>
+									<max>2</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>200</min>
+									<max>400</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- Adds Nyaron to other factions -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[@Name="NyaronBase"]/apparelTags</xpath>
+					<value>
+						<li>IndustrialAdvanced</li>
+						<li>IndustrialMilitaryBasic</li>
+						<li>IndustrialMilitaryAdvanced</li>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/PawnKindDef[defName="Nyaron_Soldier"]/apparelRequired/li[text()="Nr_CatJacket"]</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[defName="Nyaron_Soldier" or defName="Nyaron_Ranger"]/apparelMoney</xpath>
+					<value>
+						<apparelMoney>
+							<min>2000</min>
+							<max>5000</max>
+						</apparelMoney>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/PawnKindDef[defName="Nyaron_Ranger" or defName="Nyaron_Ranger_Elite"]/weaponTags</xpath>
+					<value>
+						<li>IndustrialGunAdvanced</li>
+						<li>IndustrialGunRedesign</li>
+						<li>SpacerGun</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[defName="Nyaron_Ranger"]/weaponMoney</xpath>
+					<value>
+						<weaponMoney>
+							<min>700</min>
+							<max>3000</max>
+						</weaponMoney>
+					</value>
+				</li>
+				
+				<!-- Combat Power -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[defName="Nyaron_Trader"]/combatPower</xpath>
+					<value>
+						<combatPower>100</combatPower>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[@Name="NyaronCivBase" or defName="Nyaron_Soldier_Light" or defName="Nyaron_Ranger_Light"]/combatPower</xpath>
+					<value>
+						<combatPower>100</combatPower>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[defName="Nyaron_Soldier" or defName="Nyaron_Ranger"]/combatPower</xpath>
+					<value>
+						<combatPower>200</combatPower>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="NyaronFaction" or defName="NyaronFactionEnemy"]/maxPawnCostPerTotalPointsCurve</xpath>
+					<value>
+						<maxPawnCostPerTotalPointsCurve>
+							<points>
+								<li>(0, 35)</li>
+								<li>(500, 40)</li>
+								<li>(2500, 100)</li>
+								<li>(5000, 150)</li>
+								<li>(10000, 350)</li>
+								<li>(100000, 10000)</li>
+							</points>
+						</maxPawnCostPerTotalPointsCurve>
+					</value>
+				</li>
+				
+				<!-- Outlander Combat -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+					<value>
+						<Nyaron_Soldier>10</Nyaron_Soldier>
+						<Nyaron_Ranger>10</Nyaron_Ranger>
+					</value>
+				</li>
+				
+				<!-- Outlander Peaceful -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Peaceful"]/options</xpath>
+					<value>
+						<Nyaron_Soldier>5</Nyaron_Soldier>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
+					</value>
+				</li>
+				
+				<!-- Outlander Trader -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+					<value>
+						<Nyaron_Soldier>5</Nyaron_Soldier>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
+					</value>
+				</li>
+				
+				<!-- Outlander Settlement -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+					<value>
+						<Nyaron_Soldier>10</Nyaron_Soldier>
+						<Nyaron_Ranger>10</Nyaron_Ranger>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 100, Normal fights, ranged with melee mix-ins -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<Nyaron_Soldier>10</Nyaron_Soldier>
+						<Nyaron_Ranger>10</Nyaron_Ranger>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 30, Normal fights, melee-only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[2]/options</xpath>
+					<value>
+						<Nyaron_Soldier>5</Nyaron_Soldier>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 20, ranged only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[3]/options</xpath>
+					<value>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 15, explosives with ranged mix-ins -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[4]/options</xpath>
+					<value>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
+						<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
+					</value>
+				</li>
+				
+				<!-- Pirate Combat 10, snipers only -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[5]/options</xpath>
+					<value>
+						<Nyaron_Ranger>5</Nyaron_Ranger>
+					</value>
+				</li>
+				
+				<!-- Pirate Settlement -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+					<value>
+						<Nyaron_Soldier>10</Nyaron_Soldier>
+						<Nyaron_Ranger>10</Nyaron_Ranger>
+					</value>
+				</li>
+				
+				<!-- Tribe Combat -->
+				<li Class="PatchOperationAdd">
+		            <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
+					<value>
+						<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2881513314 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Biotech</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Normal fights, ranged with melee mix-ins -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[1]/options</xpath>
+						<value>
+							<Nyaron_Soldier>10</Nyaron_Soldier>
+							<Nyaron_Ranger>10</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
+						</value>
+					</li>
+					
+					<!-- Normal fights, melee-only -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[2]/options</xpath>
+						<value>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+						</value>
+					</li>
+					
+					<!-- Normal fights, ranged only -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[3]/options</xpath>
+						<value>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+						</value>
+					</li>
+					
+					<!-- Normal fights, explosives with ranged mix-ins -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[4]/options</xpath>
+						<value>
+							<Nyaron_Soldier>10</Nyaron_Soldier>
+							<Nyaron_Ranger>10</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>10</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>10</Nyaron_Ranger_Light>
+							<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
+						</value>
+					</li>
+					
+					<!-- Normal fights, snipers only -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[5]/options</xpath>
+						<value>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+						</value>
+					</li>
+					
+					<!-- Base defense, mainly ranged with melee mix-ins -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+						</value>
+					</li>
+					
+					<!-- Normal fights, ranged with melee mix-ins -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateYttakin"]/pawnGroupMakers/li[1]/options</xpath>
+						<value>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+						</value>
+					</li>
+					
+					<!-- Normal fights, melee-only -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateYttakin"]/pawnGroupMakers/li[2]/options</xpath>
+						<value>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+						</value>
+					</li>
+					
+					<!-- Normal fights, explosives with ranged mix-ins -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateYttakin"]/pawnGroupMakers/li[3]/options</xpath>
+						<value>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+							<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
+						</value>
+					</li>
+					
+					<!-- Base defense, mainly ranged with melee mix-ins -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="PirateYttakin"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Add Prestige Tag -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="Nr_PowerArmor" or defName="Nr_PowerArmorHelmet"]/apparel/tags</xpath>
+						<value>
+							<li>PrestigeCombatGear</li>
+						</value>
+					</li>
+					
+					<!-- Add PsychicAmplifier to Traders -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>PsychicAmplifier</thingDef>
+								<countRange>-5~1</countRange>
+							</li>
+						</value>
+					</li>
+					
+					<!-- Empire Trader -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+						<value>
+							<Nyaron_Soldier_Elite>15</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>15</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+					
+					<!-- Empire Combat 100 Normal fights -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>15</Nyaron_Soldier>
+							<Nyaron_Ranger>15</Nyaron_Ranger>
+							<Nyaron_Soldier_Elite>15</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>15</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2723801948 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Pirates</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Normal fights, weak mix -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_Mercenaries"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+							<Nyaron_Soldier_Elite>5</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>5</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEP_Junkers"]/pawnGroupMakers/li[4]/options</xpath>
+						<value>
+							<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEP_Mercenaries"]/pawnGroupMakers/li[3]/options</xpath>
+						<value>
+							<Nyaron_Ranger_Rocketeer>5</Nyaron_Ranger_Rocketeer>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 1123043922 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Sparkling Worlds - Full Mod</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>100</Nyaron_Soldier>
+							<Nyaron_Ranger>100</Nyaron_Ranger>
+							<Nyaron_Ranger_Rocketeer>50</Nyaron_Ranger_Rocketeer>
+							<Nyaron_Soldier_Elite>100</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>100</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2558957509 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Caravan Adventures</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[@Name="CASacrilegHuntersFactionBase"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement" or kindDef="Peaceful"]/options</xpath>
+						<value>
+							<Nyaron_Soldier_Elite>10</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>10</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[@Name="CASacrilegHuntersFactionBase"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+						<value>
+							<Nyaron_Soldier_Elite>10</Nyaron_Soldier_Elite>
+							<Nyaron_Ranger_Elite>10</Nyaron_Ranger_Elite>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2787850474 -->
+		<!-- ID: 2790332207 Russian -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Classical</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- VFE Classical Combat -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[@Name="VFEC_RepublicBase"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2231295285 -->
+		<!-- ID: 2247905304 Russian -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Vikings</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- VFE Vikings Combat -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="VFEV_VikingsClan" or defName="VFEV_VikingsSlaver"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 1201382956 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>A RimWorld of Magic</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Seers"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
+						<value>
+							<Nyaron_Soldier>5</Nyaron_Soldier>
+							<Nyaron_Soldier_Light>5</Nyaron_Soldier_Light>
+							<Nyaron_Ranger>5</Nyaron_Ranger>
+							<Nyaron_Ranger_Light>5</Nyaron_Ranger_Light>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2026992161 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Dragons Descent</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>DragonHorn</thingDef>
+								<countRange>0~3</countRange>
+							</li>
+							<li Class="StockGenerator_Category">
+								<categoryDef>EggsDragon</categoryDef>
+								<thingDefCountRange>0~1</thingDefCountRange>
+								<countRange>1</countRange>
+							</li>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>DraconicAmbrosia</thingDef>
+								<countRange>5~18</countRange>
+							</li>
+							<li Class="StockGenerator_Category">
+								<categoryDef>DragonLeathers</categoryDef>
+								<thingDefCountRange>1~2</thingDefCountRange>
+								<totalPriceRange>400~950</totalPriceRange>
+							</li>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>DragonsBlood</thingDef>
+								<countRange>0~8</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<!-- ID: 2019053285 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>ColdCrystal</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>AmberCrystal</thingDef>
+								<countRange>10~50</countRange>
+							</li>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>ColdCrystal</thingDef>
+								<countRange>10~50</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+</Patch>

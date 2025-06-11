@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	
+	<!-- WindTurbine size -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName = "WindTurbine"]/size</xpath>
+		<value>
+            <size>(5,2)</size>
+		</value>
+	</Operation>
+	
+	<!-- Add ReinforcedBarrel craftable -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="ReinforcedBarrel"]</xpath>
+		<value>
+			<costList>
+				<Steel>250</Steel>
+			</costList>
+			<recipeMaker>
+				<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+				<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+				<workSkill>Crafting</workSkill>
+				<effectWorking>Smith</effectWorking>
+				<recipeUsers>
+					<li>TableMachining</li>
+				</recipeUsers>
+				<skillRequirements>
+					<Crafting>5</Crafting>
+				</skillRequirements>
+			</recipeMaker>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="ReinforcedBarrel"]/statBases</xpath>
+		<value>
+			<WorkToMake>700</WorkToMake>
+		</value>
+	</Operation>
+	
+	<!-- Leather patch market value -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Leather_Human"]/statBases/MarketValue</xpath>
+		<value>
+			<MarketValue>1.2</MarketValue>
+		</value>
+	</Operation>
+	
+	<!-- Remove ArchotechStructure Effect -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ThingDef[defName="MajorArchotechStructureStudiable" or defName="GrandArchotechStructure"]/comps/li[mote="Mote_PsychicConditionCauserEffect"]</xpath>
+	</Operation>
+	
+	<!-- Rottable BodyPartNatural -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[@Name="BodyPartNaturalBase"]</xpath>
+		<value>
+			<tickerType>Rare</tickerType>
+            <comps>
+				<li Class="CompProperties_Rottable">
+					<daysToRotStart>5</daysToRotStart>
+					<rotDestroys>true</rotDestroys>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+	
+	<!-- Use Anima Tree for anyone
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/MeditationFocusDef[defName="Natural"]/requiredBackstoriesAny</xpath>
+	</Operation>
+	-->
+
+	<!-- Remove pen animal from Boomalope -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ThingDef[defName="Boomalope"]/race/roamMtbDays</xpath>
+	</Operation>
+	
+	<!-- Mineable -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="MineableSteel" or defName="MineableSilver" or defName="MineableGold" or defName="MineableUranium" or defName="MineablePlasteel"]/building/mineableYield</xpath>
+		<value>
+			<mineableYield>65</mineableYield>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="MineableComponentsIndustrial"]/building/mineableYield</xpath>
+		<value>
+			<mineableYield>7</mineableYield>
+		</value>
+	</Operation>
+	
+	<!-- Combat power for Mercenary_Heavy -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Mercenary_Heavy"]/combatPower</xpath>
+		<value>
+			<combatPower>200</combatPower>
+		</value>
+	</Operation>
+	
+	<!-- AIPersonaCore -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="AIPersonaCore"]/statBases/MarketValue</xpath>
+		<value>
+			<MarketValue>1500</MarketValue>
+		</value>
+	</Operation>
+	
+	<!-- ID: 1123043922 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Sparkling Worlds - Full Mod</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="Gun_PlasmaGunSW"]/costList</xpath>
+					<value>
+						<costList>
+							<Steel>300</Steel>
+							<Plasteel>200</Plasteel>
+							<ComponentSpacer>10</ComponentSpacer>
+							<Hyperweave>120</Hyperweave>
+						</costList>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ResearchProjectDef ParentName="ShipResearchProjectBase">
+							<defName>CreateComputerCore</defName>
+							<label>AI Computer Core</label>
+							<description>Create AI Computer Core</description>
+							<baseCost>4500</baseCost>
+							<techLevel>Spacer</techLevel>
+							<prerequisites>
+								<li>ShipComputerCore</li>
+							</prerequisites>
+						</ResearchProjectDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<RecipeDef>
+							<defName>MakeAICore</defName>
+							<label>make AICore</label>
+							<description>Make AICore</description>
+							<jobString>Make AICore</jobString>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+							<workSkill>Crafting</workSkill>
+							<effectWorking>Smith</effectWorking>
+							<researchPrerequisite>CreateComputerCore</researchPrerequisite>
+							<soundWorking>Recipe_Machining</soundWorking>
+							<workAmount>15000</workAmount>
+							<recipeUsers>
+								<li>FabricationBench</li>
+							</recipeUsers>
+							<skillRequirements>
+								<Crafting>10</Crafting>
+								<Intellectual>15</Intellectual>
+							</skillRequirements>
+							<ingredients>
+								<li>
+									<filter><thingDefs><li>Gold</li></thingDefs></filter>
+									<count>10</count>
+								</li>
+								<li>
+									<filter><thingDefs><li>Steel</li></thingDefs></filter>
+									<count>500</count>
+								</li>
+								<li>
+									<filter><thingDefs><li>Plasteel</li></thingDefs></filter>
+									<count>300</count>
+								</li>
+								<li>
+									<filter><thingDefs><li>ComponentSpacer</li></thingDefs></filter>
+									<count>5</count>
+								</li>
+								<li>
+									<filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter>
+									<count>20</count>
+								</li>
+								<li>
+									<filter><thingDefs><li>Uranium</li></thingDefs></filter>
+									<count>100</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>Gold</li>
+									<li>Silver</li>
+									<li>Steel</li>
+									<li>Plasteel</li>
+									<li>ComponentSpacer</li>
+									<li>ComponentIndustrial</li>
+									<li>Uranium</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<AIPersonaCore>1</AIPersonaCore>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add minifiedDef -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="CommsConsole"]</xpath>
+		<value>
+			<minifiedDef>MinifiedThing</minifiedDef>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="FabricationBench" or defName="HiTechResearchBench" or defName="BiofuelRefinery"]/minifiedDef</xpath>
+		<value>
+			<minifiedDef>MinifiedThing</minifiedDef>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="CommsConsole"]</xpath>
+		<value>
+			<thingCategories>
+				<li>BuildingsFurniture</li>
+			</thingCategories>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="HiTechResearchBench" or defName="FabricationBench" or defName="MultiAnalyzer" or defName="CommsConsole"]/building</xpath>
+		<value>
+			<uninstallWork>350</uninstallWork>
+		</value>
+	</Operation>
+	
+	<!-- Set count factions to zero for Tribal -->
+	<!--
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/FactionDef[@Name="TribeBase"]/requiredCountAtGameStart</xpath>
+		<value>
+			<requiredCountAtGameStart>0</requiredCountAtGameStart>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[@Name="TribeBase"]</xpath>
+		<value>
+			<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+		</value>
+	</Operation>
+	-->
+	
+	<!-- Add armor to Tribal faction -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PawnKindDef[@Name="TribalBase"]/apparelTags</xpath>
+		<value>
+			<li>MedievalArmorBasic</li>
+			<li>MedievalMilitary</li>
+			<li>IndustrialMilitaryBasic</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Tribal_Penitent" or defName="Tribal_Archer" or defName="Tribal_Warrior" or defName="Tribal_Hunter" or defName="Tribal_Berserker" or defName="Tribal_HeavyArcher" or defName="Tribal_ChiefMelee"]/apparelMoney</xpath>
+		<value>
+			<apparelMoney>500~1500</apparelMoney>
+		</value>
+	</Operation>
+	
+	<!-- WorkSite patch -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ideology</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/StorytellerDef[@Name="BaseStoryteller"]/comps/li[@Class="StorytellerCompProperties_WorkSite"]/incident[text()="GiveQuest_WorkSite"]</xpath>
+				</li>
+				<!--
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/QuestScriptDef[defName="OpportunitySite_WorkSite"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/IncidentDef[defName="GiveQuest_WorkSite"]</xpath>
+				</li>
+				-->
+			</operations>
+		</match>
+	</Operation>
+	<!--
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ideology</li></mods>
+		<match Class="PatchOperationFindMod">
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/SitePartDef[defName="WorkSite_Mining"]/lootTable</xpath>
+				<value>
+					<li>
+						<thing>Plasteel</thing>
+						<weight>0.2</weight>
+					</li>
+				</value>
+			</li>
+		</match>
+	</Operation>
+	-->
+	
+	<!-- Factions patch -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Ideology</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods><li>Biotech</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="CannibalPirate"]</xpath>
+						<value>
+							<maxCountAtGameStart>1</maxCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="CannibalPirate"]/requiredCountAtGameStart</xpath>
+						<value>
+							<requiredCountAtGameStart>1</requiredCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="CannibalPirate"]/startingCountAtWorldCreation</xpath>
+						<value>
+							<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="TribeCannibal"]</xpath>
+						<value>
+							<maxCountAtGameStart>1</maxCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="TribeCannibal"]/requiredCountAtGameStart</xpath>
+						<value>
+							<requiredCountAtGameStart>1</requiredCountAtGameStart>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="TribeCannibal"]/startingCountAtWorldCreation</xpath>
+						<value>
+							<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	<!-- Factions patch -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Biotech</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="OutlanderRough"]</xpath>
+					<value>
+						<requiredCountAtGameStart>1</requiredCountAtGameStart>
+						<maxCountAtGameStart>1</maxCountAtGameStart>
+						<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="OutlanderRoughPig" or defName="PirateWaster" or defName="PirateYttakin"]</xpath>
+					<value>
+						<requiredCountAtGameStart>0</requiredCountAtGameStart>
+						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/FactionDef[defName="OutlanderRoughPig"]/replacesFaction</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="TribeSavageImpid" or defName="TribeRoughNeanderthal"]</xpath>
+					<value>
+						<requiredCountAtGameStart>0</requiredCountAtGameStart>
+						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/xenotypeSet</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
+								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.1</Neanderthal>
+								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.1</Hussar>
+								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.1</Yttakin>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="TribeBase"]</xpath>
+					<value>
+						<xenotypeSet>
+							<xenotypeChances>
+								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
+								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.1</Neanderthal>
+								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.1</Hussar>
+								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.1</Yttakin>
+							</xenotypeChances>
+						</xenotypeSet>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="Pirate"]/xenotypeSet/xenotypeChances</xpath>
+					<value>
+						<xenotypeChances>
+							<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
+							<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.1</Neanderthal>
+							<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.1</Hussar>
+							<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.1</Yttakin>
+							<Waster MayRequire="Ludeon.RimWorld.Biotech">0.1</Waster>
+							<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.1</Dirtmole>
+						</xenotypeChances>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- Empire xenotype patch -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Royalty</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+					<value>
+						<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
+						<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0.05</Sanguophage>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- 2995385834 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Races Expanded - Highmate</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/GeneDef[defName="VRE_Libido_VeryHigh"]</xpath>
+					<value>
+						<forcedTraits>
+							<li>
+								<def>Bisexual</def>
+							</li>
+						</forcedTraits>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase" or defName="Pirate"]/xenotypeSet/xenotypeChances</xpath>
+					<value>
+						<VRE_Lowmate>0.05</VRE_Lowmate>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<!-- 2995385834 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Races Expanded - Highmate</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+						<value>
+							<VRE_Lowmate>0.05</VRE_Lowmate>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+
+	<!-- Add Hussar xenotype patch -->
+	<!-- 2893586390 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Races Expanded - Hussar</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[@Name="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+					<value>
+						<VREH_Uhlan>0.1</VREH_Uhlan>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- 2893586390 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Races Expanded - Hussar</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+						<value>
+							<VREH_Uhlan>0.1</VREH_Uhlan>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	<!-- Biotech -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Biotech</li></mods>
+		<!-- ID: 1123043922 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Sparkling Worlds - Full Mod</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]/xenotypeSet/xenotypeChances</xpath>
+						<value>
+							<xenotypeChances>
+								<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.1</Dirtmole>
+								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.1</Hussar>
+								<Waster MayRequire="Ludeon.RimWorld.Biotech">0.1</Waster>
+								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
+								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.1</Neanderthal>
+								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.1</Hussar>
+								<Genie MayRequire="Ludeon.RimWorld.Biotech">0.1</Genie>
+								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.1</Yttakin>
+							</xenotypeChances>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	<!-- 2893586390 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Races Expanded - Hussar</li></mods>
+		<!-- ID: 1123043922 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Sparkling Worlds - Full Mod</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]/xenotypeSet/xenotypeChances</xpath>
+						<value>
+							<VREH_Uhlan>0.1</VREH_Uhlan>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	<!-- 2995385834 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Races Expanded - Highmate</li></mods>
+		<!-- ID: 1123043922 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Sparkling Worlds - Full Mod</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="BlueMoonCorpSW"]/xenotypeSet/xenotypeChances</xpath>
+						<value>
+							<VRE_Lowmate>0.05</VRE_Lowmate>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+
+	<!-- PawnKinds -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PawnKindDef[defName="Town_Guard" or defName="Town_Councilman" or defName="Pirate" or defName="Scavenger"]/weaponTags</xpath>
+		<value>
+			<li>IndustrialGunAdvanced</li>
+			<li>IndustrialGunRedesign</li>
+			<li>SpacerGun</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/PawnKindDef[defName="Town_Guard" or defName="Town_Councilman" or defName="Pirate" or defName="Scavenger"]/weaponMoney</xpath>
+		<value>
+			<weaponMoney>
+				<min>700</min>
+				<max>3000</max>
+			</weaponMoney>
+		</value>
+	</Operation>
+	
+	<!-- 2723801948 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Factions Expanded - Pirates</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_JunkersRaidLootMaker"]/requiredCountAtGameStart</xpath>
+					<value>
+						<requiredCountAtGameStart>0</requiredCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="VFEP_Junkers" or defName="VFEP_JunkersRaidLootMaker"]</xpath>
+					<value>
+						<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="VFEP_Mercenaries"]/xenotypeSet/xenotypeChances</xpath>
+					<value>
+						<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
+						<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.1</Yttakin>
+						<Pigskin MayRequire="Ludeon.RimWorld.Biotech">0.1</Pigskin>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>
