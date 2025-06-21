@@ -405,7 +405,7 @@
 					<value>
 						<xenotypeSet>
 							<xenotypeChances>
-								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.1</Impid>
+								<Impid MayRequire="Ludeon.RimWorld.Biotech">0.5</Impid>
 								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.1</Neanderthal>
 								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0.1</Hussar>
 								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.1</Yttakin>

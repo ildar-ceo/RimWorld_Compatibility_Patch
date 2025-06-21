@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<!-- ID: 3256974620 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Milira Race</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!--
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="Milira_Race"]/alienRace/raceRestriction/onlyUseRaceRestrictedApparel</xpath>
+					<value>
+						<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
+					</value>
+				</li>
+				-->
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="Milira_Race"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Apparel_TribalA</li>
+						<li>Apparel_Parka</li>
+						<li>Apparel_Pants</li>
+						<li>Apparel_BasicShirt</li>
+						<li>Apparel_CollarShirt</li>
+						<li>Apparel_Duster</li>
+						<li>Apparel_Jacket</li>
+						<li>Apparel_FlakVest</li>
+						<!--
+						<li>Apparel_PlateArmor</li>
+						<li>Apparel_FlakPants</li>
+						<li>Apparel_FlakJacket</li>
+						-->
+						<li>Apparel_PowerArmor</li>
+						<li>Apparel_ArmorRecon</li>
+						<li>Apparel_Cape</li>
+						<li>Apparel_Robe</li>
+						
+						<li>Apparel_CowboyHat</li>
+						<li>Apparel_BowlerHat</li>
+						<li>Apparel_TribalHeaddress</li>
+						<li>Apparel_Tuque</li>
+						<li>Apparel_WarMask</li>
+						<li>Apparel_WarVeil</li>
+						<li>Apparel_SimpleHelmet</li>
+						<li>Apparel_AdvancedHelmet</li>
+						<li>Apparel_PowerArmorHelmet</li>
+						<li>Apparel_ArmorHelmetRecon</li>
+						<li>Apparel_PsychicFoilHelmet</li>
+						<li>Apparel_HatHood</li>
+						
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricApronHalf</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricApron</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricApronTech</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricLBEBasic</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricFrillWorker</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricFrillWorkerHelmet</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricFrillCombat</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricFrillCombatHelmet</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricUndersuitArel</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricUndersuitSeraph</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricUndersuitApsara</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricUniformCombat</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricUniformGuardian</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricUniformLeader</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricUniformWorker</li>
+						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricUniformTech</li>
+						
+						<li MayRequire="VanillaExpanded.VARME">VAE_Headgear_TrooperHelmet</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Apparel_TrooperArmor</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Handwear_PlateGloves</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Handwear_MarineGloves</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Footwear_PlateBoots</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Footwear_MarineBoots</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Apparel_LightPlateArmor</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Apparel_PlateShoulderpads</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Apparel_Chestplate</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Apparel_Chainmail</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Apparel_PlateHelmet</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Apparel_WoodenArmor</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Headgear_StoneWarMask</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Apparel_RiotArmor</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Apparel_RiotHelmet</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Apparel_Shield_Riot</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Headgear_Balaclava</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Headgear_GhillieHood</li>
+						<li MayRequire="VanillaExpanded.VARME">VAE_Headgear_HAZMATMask</li>
+						
+						<li MayRequire="Ludeon.RimWorld.Biotech">Apparel_KidRomper</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Apparel_KidShirt</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Apparel_KidPants</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Apparel_KidParka</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Apparel_KidTribal</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Apparel_KidHelmet</li>
+						
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ShirtRuffle</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_Corset</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_VestRoyal</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_RobeRoyal</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_HatLadies</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_HatTop</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_Crown</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_CrownStellic</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_Beret</li>
+						
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorReconPrestige</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorHelmetReconPrestige</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorMarinePrestige</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorMarineHelmetPrestige</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorCataphract</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorHelmetCataphract</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorCataphractPrestige</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorHelmetCataphractPrestige</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorLocust</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorMarineGrenadier</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorCataphractPhoenix</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_Gunlink</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ID: 761421485 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Allow Tool</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods><li>Milira Race</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[@Name="Milira_BaseMilianWalkerA" or @Name="Milira_BaseMilianWalkerB"]/race/mechEnabledWorkTypes</xpath>
+						<value>
+							<li>HaulingUrgent</li>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+</Patch>
