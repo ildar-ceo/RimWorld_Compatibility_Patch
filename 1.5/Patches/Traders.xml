@@ -539,29 +539,6 @@
 		</value>
 	</Operation>
 	
-	
-	<!-- ID: 1854376306 -->
-	<Operation Class="PatchOperationFindMod">
-		<mods><li>Nyaron race</li></mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/StorytellerDef[defName="CalicatCozy"]/comps</xpath>
-					<value>
-						<li Class="StorytellerCompProperties_OnOffCycle">
-							<incident>OrbitalTraderArrival</incident>
-							<onDays>10</onDays>
-							<offDays>5</offDays>
-							<numIncidentsRange>2</numIncidentsRange>
-						</li>
-					</value>
-				</li>
-				
-			</operations>
-		</match>
-	</Operation>
-	
 	<!-- ID: 2938820380 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Vanilla Factions Expanded - Empire</li></mods>
@@ -852,7 +829,7 @@
 	
 	<!-- ID: 2119930282 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>[RWY]Advanced Mechanoid Warfare</li></mods>
+		<mods><li>[RWY]Advanced Mechanoid Warfare(Continued)</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 				
@@ -915,7 +892,7 @@
 	
 	<!-- ID: 2119930282 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>[RWY]Advanced Mechanoid Warfare</li></mods>
+		<mods><li>[RWY]Advanced Mechanoid Warfare(Continued)</li></mods>
 		<match Class="PatchOperationFindMod">
 			<mods><li>Nyaron race</li></mods>
 			<match Class="PatchOperationSequence">
@@ -950,7 +927,7 @@
 	
 	<!-- ID: 2119930282 -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>[RWY]Advanced Mechanoid Warfare</li></mods>
+		<mods><li>[RWY]Advanced Mechanoid Warfare(Continued)</li></mods>
 		<match Class="PatchOperationFindMod">
 			<mods><li>Royalty</li></mods>
 			<match Class="PatchOperationSequence">

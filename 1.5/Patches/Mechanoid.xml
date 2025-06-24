@@ -136,133 +136,133 @@
 	<!-- ID: 2119930282 -->
 	<!-- Advanced Mechanoid Warfare -->
 	<Operation Class="PatchOperationFindMod">
-		<mods><li>[RWY]Advanced Mechanoid Warfare</li></mods>
+		<mods><li>[RWY]Advanced Mechanoid Warfare(Continued)</li></mods>
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Scourge)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Scourge)]</xpath>
 					<value>
-						<Mech_Scourge>5</Mech_Scourge>
+						<AMW_Mech_Scourge>5</AMW_Mech_Scourge>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Sawblade)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Sawblade)]</xpath>
 					<value>
-						<Mech_Sawblade>5</Mech_Sawblade>
+						<AMW_Mech_Sawblade>5</AMW_Mech_Sawblade>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Wraith)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Wraith)]</xpath>
 					<value>
-						<Mech_Wraith>5</Mech_Wraith>
+						<AMW_Mech_Wraith>5</AMW_Mech_Wraith>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Spike)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Spike)]</xpath>
 					<value>
-						<Mech_Spike>5</Mech_Spike>
+						<AMW_Mech_Spike>5</AMW_Mech_Spike>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_NovaBlossom)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_NovaBlossom)]</xpath>
 					<value>
-						<Mech_NovaBlossom>5</Mech_NovaBlossom>
+						<AMW_Mech_NovaBlossom>5</AMW_Mech_NovaBlossom>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Derg)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Derg)]</xpath>
 					<value>
-						<Mech_Derg>1</Mech_Derg>
+						<AMW_Mech_Derg>1</AMW_Mech_Derg>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Charger)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Charger)]</xpath>
 					<value>
-						<Mech_Charger>5</Mech_Charger>
+						<AMW_Mech_Charger>5</AMW_Mech_Charger>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Anarchist)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Anarchist)]</xpath>
 					<value>
-						<Mech_Anarchist>5</Mech_Anarchist>
+						<AMW_Mech_Anarchist>5</AMW_Mech_Anarchist>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Headhunter)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Headhunter)]</xpath>
 					<value>
-						<Mech_Headhunter>5</Mech_Headhunter>
+						<AMW_Mech_Headhunter>5</AMW_Mech_Headhunter>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Purger)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Purger)]</xpath>
 					<value>
-						<Mech_Purger>5</Mech_Purger>
+						<AMW_Mech_Purger>1</AMW_Mech_Purger>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Reaper)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Reaper)]</xpath>
 					<value>
-						<Mech_Reaper>5</Mech_Reaper>
+						<AMW_Mech_Reaper>1</AMW_Mech_Reaper>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Thrumbo)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Thrumbo)]</xpath>
 					<value>
-						<Mech_Thrumbo>5</Mech_Thrumbo>
+						<AMW_Mech_Thrumbo>5</AMW_Mech_Thrumbo>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Renegade)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Renegade)]</xpath>
 					<value>
-						<Mech_Renegade>5</Mech_Renegade>
+						<AMW_Mech_Renegade>5</AMW_Mech_Renegade>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Supressor)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Supressor)]</xpath>
 					<value>
-						<Mech_Supressor>5</Mech_Supressor>
+						<AMW_Mech_Supressor>5</AMW_Mech_Supressor>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Flayer)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Flayer)]</xpath>
 					<value>
-						<Mech_Flayer>5</Mech_Flayer>
+						<AMW_Mech_Flayer>5</AMW_Mech_Flayer>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Vortex)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Vortex)]</xpath>
 					<value>
-						<Mech_Vortex>5</Mech_Vortex>
+						<AMW_Mech_Vortex>5</AMW_Mech_Vortex>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Nomad)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Nomad)]</xpath>
 					<value>
-						<Mech_Nomad>5</Mech_Nomad>
+						<AMW_Mech_Nomad>5</AMW_Mech_Nomad>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Spectre)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Spectre)]</xpath>
 					<value>
-						<Mech_Spectre>1</Mech_Spectre>
+						<AMW_Mech_Spectre>1</AMW_Mech_Spectre>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_AMWSeeker)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Seeker)]</xpath>
 					<value>
-						<Mech_AMWSeeker>1</Mech_AMWSeeker>
+						<AMW_Mech_Seeker>1</AMW_Mech_Seeker>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Stalker)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Stalker)]</xpath>
 					<value>
-						<Mech_Stalker>5</Mech_Stalker>
+						<AMW_Mech_Stalker>5</AMW_Mech_Stalker>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(Mech_Impulse)]</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Impulse)]</xpath>
 					<value>
-						<Mech_Impulse>5</Mech_Impulse>
+						<AMW_Mech_Impulse>5</AMW_Mech_Impulse>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
@@ -284,14 +284,27 @@
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/PawnKindDef[defName="AMW_Mech_Spectre"]/combatPower</xpath>
+					<xpath>/Defs/PawnKindDef[defName="AMW_Mech_Spectre" or defName="AMW_Mech_Purger" or defName="AMW_Mech_Reaper"]/combatPower</xpath>
 					<value>
 						<combatPower>500</combatPower>
 					</value>
 				</li>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="Mech_NovaBlossom" or defName="AMW_Mech_Blacklight" or defName="AMW_Mech_Frosthound" or defName="AMW_Mech_Supernova" or defName="Mech_Charger" or defName="Mech_Anarchist" or defName="Mech_Headhunter" or defName="Mech_Purger" or defName="Mech_Impulse" or defName="Mech_Scourge" or defName="Mech_Sawblade"  or defName="Mech_Spike" or defName="Mech_Renegade" or defName="Mech_Supressor" or defName="Mech_Flayer" or defName="Mech_Vortex" or defName="Mech_Nomad" or defName="Mech_Stalker"]/butcherProducts</xpath>
+					<xpath>/Defs/FactionDef[defName="Mechanoid_Advanced"]/requiredCountAtGameStart</xpath>
+					<value>
+						<requiredCountAtGameStart>0</requiredCountAtGameStart>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AMW_Salvager"]</xpath>
+					<value>
+						<minifiedDef>MinifiedThing</minifiedDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AMW_Mech_NovaBlossom" or defName="AMW_Mech_Blacklight" or defName="AMW_Mech_Frosthound" or defName="AMW_Mech_Supernova" or defName="AMW_Mech_Charger" or defName="AMW_Mech_Anarchist" or defName="AMW_Mech_Headhunter" or defName="AMW_Mech_Purger" or defName="AMW_Mech_Impulse" or defName="AMW_Mech_Scourge" or defName="AMW_Mech_Sawblade" or defName="AMW_Mech_Spike" or defName="AMW_Mech_Renegade" or defName="AMW_Mech_Supressor" or defName="AMW_Mech_Flayer" or defName="AMW_Mech_Vortex" or defName="AMW_Mech_Nomad" or defName="AMW_Mech_Stalker"]/butcherProducts</xpath>
 					<value>
 						<butcherProducts>
 							<AMW_MechanoidPlates>20</AMW_MechanoidPlates>
@@ -309,7 +322,7 @@
 				</li>
 				
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="Mech_Derg" or defName="Mech_Reaper" or defName="Mech_Thrumbo" or defName="Mech_Wraith" or defName="Mech_AMWSeeker" or defName="Mech_Spectre"]/butcherProducts</xpath>
+					<xpath>/Defs/ThingDef[defName="AMW_Mech_Derg" or defName="AMW_Mech_Reaper" or defName="AMW_Mech_Thrumbo" or defName="AMW_Mech_Wraith" or defName="AMW_Mech_AMWSeeker" or defName="AMW_Mech_Spectre"]/butcherProducts</xpath>
 					<value>
 						<butcherProducts>
 							<AMW_MechanoidPlates>100</AMW_MechanoidPlates>
@@ -327,7 +340,7 @@
 				</li>
 				
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="Mech_NovaBlossom" or defName="AMW_Mech_Blacklight" or defName="AMW_Mech_Frosthound" or defName="AMW_Mech_Supernova" or defName="Mech_Derg"]/butcherProducts</xpath>
+					<xpath>/Defs/ThingDef[defName="AMW_Mech_NovaBlossom" or defName="AMW_Mech_Blacklight" or defName="AMW_Mech_Frosthound" or defName="AMW_Mech_Supernova" or defName="AMW_Mech_Derg"]/butcherProducts</xpath>
 					<value>
 						<AMW_AntigranFragments>5</AMW_AntigranFragments>
 					</value>

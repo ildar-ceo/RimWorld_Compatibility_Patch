@@ -270,6 +270,24 @@
 		</value>
 	</Operation>
 	
+	<!-- Remove sound pollution pumped -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Biotech</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/EffecterDef[defName="PollutionPumped"]/children/li[soundDef="PollutionPumped"]</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/SoundDef[defName="PollutionPumped"]/subSounds/li/volumeRange</xpath>
+					<value>
+						<volumeRange>0</volumeRange>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
 	<!-- WorkSite patch -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Ideology</li></mods>

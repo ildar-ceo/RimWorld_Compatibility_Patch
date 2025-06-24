@@ -14,10 +14,12 @@
 				
 				<match Class="PatchOperationSequence">
 					<operations>
-						<li Class="PatchOperationAdd">
+						<li Class="PatchOperationReplace">
 							<xpath>/Defs/PawnKindDef[@Name="NyaronBase"]/xenotypeSet/xenotypeChances</xpath>
 							<value>
-								<Nyaron MayRequire="Ludeon.RimWorld.Biotech">1.0</Nyaron>
+								<xenotypeChances>
+									<Nyaron MayRequire="Ludeon.RimWorld.Biotech">1.0</Nyaron>
+								</xenotypeChances>
 							</value>
 						</li>
 						<li Class="PatchOperationAdd">
@@ -165,6 +167,19 @@
 					<xpath>/Defs/FactionDef[defName="NyaronFactionEnemy"]</xpath>
 				</li>-->
 				
+				<!-- Storyteller fix -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/StorytellerDef[defName="CalicatCozy"]/comps</xpath>
+					<value>
+						<li Class="StorytellerCompProperties_OnOffCycle">
+							<incident>OrbitalTraderArrival</incident>
+							<onDays>10</onDays>
+							<offDays>5</offDays>
+							<numIncidentsRange>2</numIncidentsRange>
+						</li>
+					</value>
+				</li>
+				
 				<!-- Scenario fix -->
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ScenarioDef[defName="NyaronStart"]/scenario/parts/li[def="ConfigPage_ConfigureStartingPawns"]</xpath>
@@ -186,6 +201,105 @@
 				-->
 				
 			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2881513314 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Biotech</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/PawnKindDef[@Name="NyaronBase"]/xenotypeSet/xenotypeChances</xpath>
+						<value>
+							<xenotypeChances>
+								<Nyaron MayRequire="Ludeon.RimWorld.Biotech">1.0</Nyaron>
+							</xenotypeChances>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/PawnKindDef[defName="NyaronPlayerColonist"]</xpath>
+						<value>
+							<xenotypeSet>
+								<xenotypeChances>
+									<Nyaron MayRequire="Ludeon.RimWorld.Biotech">1.0</Nyaron>
+								</xenotypeChances>
+							</xenotypeSet>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Nyaron"]/alienRace/raceRestriction/whiteXenotypeList</xpath>
+						<value>
+							<whiteXenotypeList>
+								<li MayRequire="Ludeon.RimWorld.Biotech">Nyaron</li>
+							</whiteXenotypeList>
+						</value>
+					</li>
+					<!--
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="NyaronFaction" or defName="NyaronFactionEnemy"]/xenotypeSet/xenotypeChances</xpath>
+						<value>
+							<xenotypeChances>
+								<Nyaron MayRequire="Ludeon.RimWorld.Biotech">1.0</Nyaron>
+							</xenotypeChances>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="NyaronPlayerColony"]</xpath>
+						<value>
+							<xenotypeSet>
+								<xenotypeChances>
+									<Nyaron MayRequire="Ludeon.RimWorld.Biotech">1.0</Nyaron>
+								</xenotypeChances>
+							</xenotypeSet>
+						</value>
+					</li>
+					-->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs</xpath>
+						<value>
+							<XenotypeDef>
+								<defName>Nyaron</defName>
+								<label>nyaron</label>
+								<description>Nyaron gene</description>
+								<iconPath>World/WorldObjects/IconNyaron</iconPath>
+								<genes>
+									<li>Body_Thin</li>
+									<li>Body_Standard</li>
+									<li>DarkVision</li>
+									<li>Libido_High</li>
+									<li>MoveSpeed_Quick</li>
+									<li>Robust</li>
+									<li>AptitudeTerrible_Plants</li>
+									<li>AptitudeTerrible_Animals</li>
+									<li>AptitudeTerrible_Artistic</li>
+								</genes>
+							</XenotypeDef>
+						</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/FactionDef[defName="NyaronFaction" or defName="NyaronFactionEnemy"]/maxPawnCostPerTotalPointsCurve</xpath>
+						<value>
+							<maxPawnCostPerTotalPointsCurve>
+								<points>
+									<li>(0, 35)</li>
+									<li>(500, 40)</li>
+									<li>(2500, 100)</li>
+									<li>(5000, 150)</li>
+									<li>(10000, 350)</li>
+									<li>(100000, 10000)</li>
+								</points>
+							</maxPawnCostPerTotalPointsCurve>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
 		</match>
 	</Operation>
 	

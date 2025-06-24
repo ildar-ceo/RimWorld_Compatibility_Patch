@@ -8,6 +8,18 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/StorytellerDef[defName="Milira_Ascanete"]/comps/li[incident="OrbitalTraderArrival"]</xpath>
+					<value>
+						<li Class="StorytellerCompProperties_OnOffCycle">
+							<incident>OrbitalTraderArrival</incident>
+							<onDays>10</onDays>
+							<offDays>5</offDays>
+							<numIncidentsRange>2</numIncidentsRange>
+						</li>
+					</value>
+				</li>
+				
 				<!--
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="Milira_Race"]/alienRace/raceRestriction/onlyUseRaceRestrictedApparel</xpath>
@@ -137,6 +149,39 @@
 							<li>HaulingUrgent</li>
 						</value>
 					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Milira Race</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Empire Trader -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+						<value>
+							<Milira_YoungWarrior>3</Milira_YoungWarrior>
+							<Milira_Valkyr>3</Milira_Valkyr>
+							<Milira_Artemis>3</Milira_Artemis>
+						</value>
+					</li>
+					
+					<!-- Empire Combat 100 Normal fights -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
+						<value>
+							<Milira_YoungWarrior>3</Milira_YoungWarrior>
+							<Milira_Valkyr>3</Milira_Valkyr>
+							<Milira_Artemis>3</Milira_Artemis>
+						</value>
+					</li>
+					
 				</operations>
 			</match>
 		</match>

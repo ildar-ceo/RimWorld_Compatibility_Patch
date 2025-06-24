@@ -826,8 +826,6 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options</xpath>
 						<value>
-							<Nyaron_Soldier>15</Nyaron_Soldier>
-							<Nyaron_Ranger>15</Nyaron_Ranger>
 							<Nyaron_Soldier_Elite>15</Nyaron_Soldier_Elite>
 							<Nyaron_Ranger_Elite>15</Nyaron_Ranger_Elite>
 						</value>
