@@ -44,11 +44,11 @@
 						<li>Apparel_PlateArmor</li>
 						<li>Apparel_FlakPants</li>
 						<li>Apparel_FlakJacket</li>
-						-->
 						<li>Apparel_PowerArmor</li>
 						<li>Apparel_ArmorRecon</li>
 						<li>Apparel_Cape</li>
 						<li>Apparel_Robe</li>
+						-->
 						
 						<li>Apparel_CowboyHat</li>
 						<li>Apparel_BowlerHat</li>
@@ -116,7 +116,9 @@
 						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_Crown</li>
 						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_CrownStellic</li>
 						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_Beret</li>
+						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_Gunlink</li>
 						
+						<!--
 						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorReconPrestige</li>
 						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorHelmetReconPrestige</li>
 						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorMarinePrestige</li>
@@ -128,7 +130,7 @@
 						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorLocust</li>
 						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorMarineGrenadier</li>
 						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorCataphractPhoenix</li>
-						<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_Gunlink</li>
+						-->
 					</value>
 				</li>
 				

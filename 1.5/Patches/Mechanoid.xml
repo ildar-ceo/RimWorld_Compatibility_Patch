@@ -302,6 +302,24 @@
 						<minifiedDef>MinifiedThing</minifiedDef>
 					</value>
 				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="AMW_Salvager"]/recipes</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="AMW_SalvageComponents" or defName="AMW_SalvagePlates" or defName="AMW_SalvageNanitePacks" or defName="AMW_MakeAGShell" or defName="AMW_MakePlasteel" or defName="AMW_MakeGMedicine" or defName="AMW_MakeLuciferium"]</xpath>
+					<value>
+						<recipeUsers>
+							<li>AMW_Salvager</li>
+						</recipeUsers>
+						<workSkill>Crafting</workSkill>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="AMW_MakePlasteel"]/workAmount</xpath>
+					<value>
+						<workAmount>5000</workAmount>
+					</value>
+				</li>
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="AMW_Mech_NovaBlossom" or defName="AMW_Mech_Blacklight" or defName="AMW_Mech_Frosthound" or defName="AMW_Mech_Supernova" or defName="AMW_Mech_Charger" or defName="AMW_Mech_Anarchist" or defName="AMW_Mech_Headhunter" or defName="AMW_Mech_Purger" or defName="AMW_Mech_Impulse" or defName="AMW_Mech_Scourge" or defName="AMW_Mech_Sawblade" or defName="AMW_Mech_Spike" or defName="AMW_Mech_Renegade" or defName="AMW_Mech_Supressor" or defName="AMW_Mech_Flayer" or defName="AMW_Mech_Vortex" or defName="AMW_Mech_Nomad" or defName="AMW_Mech_Stalker"]/butcherProducts</xpath>

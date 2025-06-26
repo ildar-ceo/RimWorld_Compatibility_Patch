@@ -247,6 +247,22 @@
 		</match>
 	</Operation>
 	
+	<!-- ID: 1909914131 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Save Our Ship 2</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="LoadTorpedoTube"]/workType</xpath>
+					<value>
+						<workType>BasicWorker</workType>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
 	<!-- ID: 2633514537 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>[SYR] Processor Framework</li></mods>
@@ -296,6 +312,43 @@
 				</li>
 				
 			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ID: 836308268 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vehicle Framework</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="RefuelVehicle"]/workType</xpath>
+					<value>
+						<workType>BasicWorker</workType>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ID: 3014915404 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Allow Tool</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vehicle Framework</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/WorkGiverDef[defName="PackVehicle" or defName="HelpPackVehicleCaravan" or defName="PackVehicleTurret"]/workType</xpath>
+						<value>
+							<workType>HaulingUrgent</workType>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
 		</match>
 	</Operation>
 	
