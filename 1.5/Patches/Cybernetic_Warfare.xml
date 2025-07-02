@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<!-- ID: 2155485488 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CW_NapalmBlaster" or defName="CW_Disruptor" or defName="CW_DualEraser" or defName="CW_RiotBreaker" or defName="CW_BallisticShredder" or defName="CW_BallisticEnforcer" or defName="CW_EnergySword" or defName="CW_BallisticCombatGun"]/tradeTags</xpath>
+					<value>
+						<li>ExoticMisc</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CW_Accelerator" or defName="CW_CoilGun" or defName="CW_ReconBolter" or defName="CW_ChainSword" or defName="CW_GunBlade" or defName="CW_PlasmaGun" or defName="CW_HavocLauncher"]</xpath>
+					<value>
+						<tradeability>Sellable</tradeability>
+					</value>
+				</li>
+				
+				<!-- CW_RiotBreaker -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_RiotBreaker"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>2100</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_RiotBreaker"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>1</Gold>
+							<Steel>150</Steel>
+							<Plasteel>50</Plasteel>
+							<ComponentIndustrial>10</ComponentIndustrial>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_BallisticCombatGun -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_BallisticCombatGun"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>2400</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_BallisticCombatGun"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>1</Gold>
+							<Steel>200</Steel>
+							<Plasteel>50</Plasteel>
+							<ComponentIndustrial>10</ComponentIndustrial>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_BallisticShredder -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_BallisticShredder"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>1700</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_BallisticShredder"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>1</Gold>
+							<Steel>50</Steel>
+							<Plasteel>25</Plasteel>
+							<ComponentIndustrial>10</ComponentIndustrial>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_BallisticEnforcer -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_BallisticEnforcer"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>1200</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_BallisticEnforcer"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>1</Gold>
+							<Steel>50</Steel>
+							<Plasteel>25</Plasteel>
+							<ComponentIndustrial>10</ComponentIndustrial>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_Disruptor -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_Disruptor"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>3200</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_Disruptor"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>10</Gold>
+							<Steel>200</Steel>
+							<Plasteel>75</Plasteel>
+							<Uranium>40</Uranium>
+							<ComponentSpacer>2</ComponentSpacer>
+							<ComponentIndustrial>20</ComponentIndustrial>
+							<Hyperweave>25</Hyperweave>
+							<Weapon_GrenadeEMP>1</Weapon_GrenadeEMP>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_Accelerator -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_Accelerator"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>5200</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_Accelerator"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>50</Gold>
+							<Uranium>100</Uranium>
+							<Steel>200</Steel>
+							<Plasteel>300</Plasteel>
+							<ComponentSpacer>15</ComponentSpacer>
+							<ComponentIndustrial>50</ComponentIndustrial>
+							<Hyperweave>200</Hyperweave>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_Accelerator"]/recipeMaker/researchPrerequisite</xpath>
+					<value>
+						<researchPrerequisite>CW_FrameworkWeaponry</researchPrerequisite>
+					</value>
+				</li>
+				
+				<!-- CW_ReconBolter -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_ReconBolter"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>4500</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_ReconBolter"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>50</Gold>
+							<Uranium>75</Uranium>
+							<Steel>100</Steel>
+							<Plasteel>250</Plasteel>
+							<ComponentSpacer>10</ComponentSpacer>
+							<ComponentIndustrial>50</ComponentIndustrial>
+							<Hyperweave>200</Hyperweave>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_PlasmaGun -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_PlasmaGun"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>5200</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_PlasmaGun"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>10</Gold>
+							<Uranium>100</Uranium>
+							<Steel>300</Steel>
+							<Plasteel>200</Plasteel>
+							<ComponentSpacer>10</ComponentSpacer>
+							<ComponentIndustrial>20</ComponentIndustrial>
+							<Hyperweave>150</Hyperweave>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_CoilGun -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_CoilGun"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>4500</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_CoilGun"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>25</Gold>
+							<Uranium>75</Uranium>
+							<Steel>100</Steel>
+							<Plasteel>200</Plasteel>
+							<ComponentSpacer>10</ComponentSpacer>
+							<ComponentIndustrial>50</ComponentIndustrial>
+							<Hyperweave>200</Hyperweave>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_GunBlade -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_GunBlade"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>7000</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_GunBlade"]/statBases/RangedWeapon_Cooldown</xpath>
+					<value>
+						<RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_GunBlade"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>50</Gold>
+							<Uranium>100</Uranium>
+							<Steel>200</Steel>
+							<Plasteel>300</Plasteel>
+							<ComponentSpacer>20</ComponentSpacer>
+							<ComponentIndustrial>100</ComponentIndustrial>
+							<Hyperweave>120</Hyperweave>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_DualEraser -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_DualEraser"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>4500</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_DualEraser"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>10</Gold>
+							<Uranium>75</Uranium>
+							<Steel>200</Steel>
+							<Plasteel>150</Plasteel>
+							<ComponentSpacer>10</ComponentSpacer>
+							<ComponentIndustrial>20</ComponentIndustrial>
+							<Hyperweave>25</Hyperweave>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_NapalmBlaster -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_NapalmBlaster"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>4200</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_NapalmBlaster"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>10</Gold>
+							<Uranium>100</Uranium>
+							<Steel>150</Steel>
+							<Plasteel>175</Plasteel>
+							<ComponentSpacer>10</ComponentSpacer>
+							<ComponentIndustrial>20</ComponentIndustrial>
+							<Hyperweave>25</Hyperweave>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_HavocLauncher -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_HavocLauncher"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>3800</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_HavocLauncher"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>10</Gold>
+							<Steel>150</Steel>
+							<Plasteel>200</Plasteel>
+							<ComponentSpacer>12</ComponentSpacer>
+							<ComponentIndustrial>30</ComponentIndustrial>
+							<Hyperweave>75</Hyperweave>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_EnergySword -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_EnergySword"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>3200</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_EnergySword"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>10</Gold>
+							<Uranium>20</Uranium>
+							<Steel>300</Steel>
+							<Plasteel>200</Plasteel>
+							<ComponentSpacer>5</ComponentSpacer>
+							<ComponentIndustrial>20</ComponentIndustrial>
+							<Hyperweave>50</Hyperweave>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- CW_ChainSword -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_ChainSword"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>3200</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="CW_ChainSword"]/costList</xpath>
+					<value>
+						<costList>
+							<Gold>50</Gold>
+							<Uranium>20</Uranium>
+							<Steel>500</Steel>
+							<Plasteel>300</Plasteel>
+							<ComponentSpacer>15</ComponentSpacer>
+							<ComponentIndustrial>50</ComponentIndustrial>
+							<Hyperweave>100</Hyperweave>
+						</costList>
+					</value>
+				</li>
+				
+				<!-- Research -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="CW_CyberneticWarfare"]/baseCost</xpath>
+					<value>
+						<baseCost>7000</baseCost>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="CW_FrameworkWeaponry"]/baseCost</xpath>
+					<value>
+						<baseCost>32000</baseCost>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2155485488
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/PawnKindDef[defName="ImperialTrooperBase"]/weaponTags</xpath>
+						<value>
+							<li>IndustrialGunRedesign</li>
+							<li>SpacerGun</li>
+							<li>UltraGun</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/PawnKindDef[defName="Empire_Fighter_Cataphract" or defName="Empire_Fighter_StellicGuardRanged"]/weaponTags</xpath>
+						<value>
+							<li>IndustrialGunRedesign</li>
+							<li>UltraGun</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	-->
+	
+	<!-- ID: 2938820380 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Empire</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/PawnKindDef[defName="VFEE_Deserter"]/weaponTags</xpath>
+						<value>
+							<li>IndustrialGunRedesign</li>
+							<li>UltraGun</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2155485488 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		
+		<!-- ID: 2552623545 (Eccentric Tech - Core) -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Eccentric Tech - Core</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ResearchProjectDef[defName="CW_CyberneticWarfare" or defName="CW_FrameworkWeaponry"]</xpath>
+						<value>
+							<requiredResearchFacilities>
+								<li>MultiAnalyzer</li>
+								<li>EccentricAuroraCore</li>
+							</requiredResearchFacilities>
+						</value>
+					</li>
+				
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2155485488 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		
+		<!-- ID: 2045064990 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Cybernetic Organism and Neural Network</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/ThingDef[defName="CW_DualEraser" or defName="CW_GunBlade" or defName="CW_RiotBreaker" or defName="CW_BallisticShredder" or defName="CW_BallisticCombatGun" or defName="CW_BallisticEnforcer" or defName="CW_Disruptor" or defName="CW_PlasmaGun" or defName="CW_HavocLauncher" or defName="CW_CoilGun" or defName="CW_Accelerator" or defName="CW_ReconBolter"]/modExtensions/li[@Class="ExtraStatParts.EquipmentRequirementModifiers"]/requireAnyOfTheseHediffs</xpath>
+					
+						<value>
+							<li>CONN_hediff_ExoskeletonArmor</li>
+							<li>CONN_hediff_PowerArms</li>
+							<li>CONN_hediff_EnergyLink</li>
+							<li>CONN_hediff_Musclewire</li>
+						</value>
+						
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2155485488 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		
+		<!-- ID: 2045064990 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Cybernetic Organism and Neural Network</li></mods>
+			
+			<match Class="PatchOperationFindMod">
+				<mods><li>Royalty</li></mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+					
+						<li Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="CW_DualEraser" or defName="CW_GunBlade" or defName="CW_RiotBreaker" or defName="CW_BallisticShredder" or defName="CW_BallisticCombatGun" or defName="CW_BallisticEnforcer" or defName="CW_Disruptor" or defName="CW_PlasmaGun" or defName="CW_HavocLauncher" or defName="CW_CoilGun" or defName="CW_Accelerator" or defName="CW_ReconBolter"]/modExtensions/li[@Class="ExtraStatParts.EquipmentRequirementModifiers"]/requireAnyOfTheseHediffs</xpath>
+						
+							<value>
+								<li>FieldHand</li>
+								<li>DrillArm</li>
+							</value>
+							
+						</li>
+						
+					</operations>
+				</match>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2155485488 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		
+		<!-- ID: 2045064990 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Cybernetic Organism and Neural Network</li></mods>
+			
+			<!-- ID: 2008970276 -->
+			<match Class="PatchOperationFindMod">
+				<mods><li>EPOE-Forked: Royalty DLC expansion</li></mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+					
+						<li Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="CW_DualEraser" or defName="CW_GunBlade" or defName="CW_RiotBreaker" or defName="CW_BallisticShredder" or defName="CW_BallisticCombatGun" or defName="CW_BallisticEnforcer" or defName="CW_Disruptor" or defName="CW_PlasmaGun" or defName="CW_HavocLauncher" or defName="CW_CoilGun" or defName="CW_Accelerator" or defName="CW_ReconBolter"]/modExtensions/li[@Class="ExtraStatParts.EquipmentRequirementModifiers"]/requireAnyOfTheseHediffs</xpath>
+						
+							<value>
+								<li>EPOE_AdvancedDrillArm</li>
+							</value>
+							
+						</li>
+						
+					</operations>
+				</match>
+			</match>
+		</match>
+	</Operation>
+	
+</Patch>
