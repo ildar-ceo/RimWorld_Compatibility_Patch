@@ -154,7 +154,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li/options[not(AMW_Mech_Wraith)]</xpath>
 					<value>
-						<AMW_Mech_Wraith>5</AMW_Mech_Wraith>
+						<AMW_Mech_Wraith>1</AMW_Mech_Wraith>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
@@ -290,11 +290,16 @@
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/PawnKindDef[defName="AMW_Mech_Thrumbo"]/combatPower</xpath>
+					<xpath>/Defs/PawnKindDef[defName="AMW_Mech_Thrumbo" or defName="AMW_Mech_Wraith"]/combatPower</xpath>
 					<value>
-						<combatPower>1000</combatPower>
+						<combatPower>3500</combatPower>
 					</value>
 				</li>
+				<!--
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="AMW_Mech_Thrumbo" or defName="AMW_Mech_Wraith"]/statBases/EMPResistance</xpath>
+				</li>
+				-->
 				
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/FactionDef[defName="Mechanoid_Advanced"]/requiredCountAtGameStart</xpath>

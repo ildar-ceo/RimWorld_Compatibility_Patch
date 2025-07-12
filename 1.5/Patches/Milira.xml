@@ -63,6 +63,14 @@
 						<li>Apparel_PsychicFoilHelmet</li>
 						<li>Apparel_HatHood</li>
 						
+						<li MayRequire="kentington.saveourship2">Apparel_SpaceSuitBody</li>
+						<li MayRequire="kentington.saveourship2">Apparel_SpaceSuitBodyChild</li>
+						<li MayRequire="kentington.saveourship2">Apparel_SpaceSuitHelmet</li>
+						<li MayRequire="kentington.saveourship2">Apparel_SpaceSuitHelmetChild</li>
+						<li MayRequire="kentington.saveourship2">Apparel_SpaceSuitBodyHeavy</li>
+						<li MayRequire="kentington.saveourship2">Apparel_SpaceSuitHelmetHeavy</li>
+						<li MayRequire="kentington.saveourship2">Apparel_SpaceSurvivalBelt</li>
+						
 						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricApronHalf</li>
 						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricApron</li>
 						<li MayRequire="Aelanna.EccentricTech.AngelApparel">EccentricApronTech</li>
