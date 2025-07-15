@@ -1568,6 +1568,54 @@
 	<!-- ID: 2007061826 (VGP Vegetable Garden) -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>VGP Vegetable Garden</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<RecipeDef>
+    						<defName>Make_IronFromWood</defName>
+    						<label>make iron from wood</label>
+    						<description>Make iron from logs.</description>
+    						<jobString>Refining iron from wood.</jobString>
+    						<effectWorking>Cremate</effectWorking>
+    						<soundWorking>Recipe_Cremate</soundWorking>
+    						<workAmount>2000</workAmount>
+    						<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    						<workSkill>Crafting</workSkill>
+    						<recipeUsers>
+								<li>BiofuelRefinery</li>
+							</recipeUsers>
+    						<ingredients>
+      							<li>
+        							<filter>
+          								<thingDefs>
+            								<li>VG_IronWoodLog</li>
+          								</thingDefs>
+        							</filter>
+        							<count>70</count>
+      							</li>
+    						</ingredients>
+    						<fixedIngredientFilter>
+      							<thingDefs>
+        							<li>WoodLog</li>
+      							</thingDefs>
+    						</fixedIngredientFilter>
+    						<products>
+      							<Steel>35</Steel>
+    						</products>
+  						</RecipeDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2007061826 (VGP Vegetable Garden) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>VGP Vegetable Garden</li></mods>
 		
 		<!-- ID: 2260097569 -->
 		<match Class="PatchOperationFindMod">
