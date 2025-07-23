@@ -35,6 +35,9 @@
 						<uninstallWork>350</uninstallWork>
 					</value>
 				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="Milira_SunBlastFurnace"]/comps/li[@Class="CompProperties_Glower"]</xpath>
+				</li>
 				
 				<!--
 				<li Class="PatchOperationReplace">
@@ -202,6 +205,60 @@
 							<uninstallWork>350</uninstallWork>
 						</value>
 					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	<!-- ID: 1909914131 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Save Our Ship 2</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods><li>Milira Race</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[@Name="Milira_BaseMilian"]/statBases</xpath>
+						<value>
+							<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+							<DecompressionResistance MayRequire="kentington.saveourship2">1</DecompressionResistance>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[@Name="Milira_BaseMilian"]/comps</xpath>
+						<value>
+							<li MayRequire="kentington.saveourship2">
+								<compClass>SaveOurShip2.CompEVA</compClass>
+							</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[@Name="Milian_OverheadBase" or @Name="Milira_OverheadBaseIII"]</xpath>
+						<value>
+							<equippedStatOffsets>
+								<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+								<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+							</equippedStatOffsets>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[@Name="Milian_MiddleBase" or @Name="Milira_OnSkinBase_Furnace"]</xpath>
+						<value>
+							<equippedStatOffsets>
+								<DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
+							</equippedStatOffsets>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[@Name="ApparelBase_Milian" or @Name="ApparelBase_Milira"]/comps</xpath>
+						<value>
+							<li MayRequire="kentington.saveourship2">
+								<compClass>SaveOurShip2.CompEVA</compClass>
+							</li>
+						</value>
+					</li>
+					
 				</operations>
 			</match>
 		</match>

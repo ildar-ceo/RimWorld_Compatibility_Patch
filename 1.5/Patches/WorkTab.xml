@@ -247,6 +247,34 @@
 		</match>
 	</Operation>
 	
+	<!-- ID: 3014915404 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vehicle Framework</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="PackVehicle" or defName="HelpPackVehicleCaravan" or defName="PackVehicleTurret" or defName="LoadUpgradeMaterials" or defName="RefuelVehicle"]/workType</xpath>
+					<value>
+						<workType>BasicWorker</workType>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="RepairVehicle"]/priorityInType</xpath>
+					<value>
+						<priorityInType>190</priorityInType>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="WorkOnUpgrade"]/priorityInType</xpath>
+					<value>
+						<priorityInType>200</priorityInType>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
 	<!-- ID: 1909914131 -->
 	<Operation Class="PatchOperationFindMod">
 		<mods><li>Save Our Ship 2</li></mods>
