@@ -234,7 +234,7 @@
 					</li>
 					
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/ThingDef[@Name="Milian_OverheadBase" or @Name="Milira_OverheadBaseIII"]</xpath>
+						<xpath>/Defs/ThingDef[@Name="Milian_OverheadBase" or @Name="Milira_OverheadBaseIII" or @Name="Milian_ShellBase"]</xpath>
 						<value>
 							<equippedStatOffsets>
 								<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
@@ -243,7 +243,7 @@
 						</value>
 					</li>
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/ThingDef[@Name="Milian_MiddleBase" or @Name="Milira_OnSkinBase_Furnace"]</xpath>
+						<xpath>/Defs/ThingDef[@Name="Milian_MiddleBase" or @Name="Milira_OnSkinBase_Furnace" or defName="Milian_GestateRobe"]</xpath>
 						<value>
 							<equippedStatOffsets>
 								<DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
