@@ -8,7 +8,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="ShipPilotSeatMini" or defName="ShipConsoleTactical" or defName="ShipConsoleScience" or defName="Ship_SensorCluster" or defName="Ship_SensorClusterAdv" or defName="Ship_LifeSupport" or defName="Ship_LifeSupport_Small" or defName="ShipCloakingDevice" or defName="HullFoamDistributor" or defName="ShipCombatShieldGenerator" or defName="ShipCombatShieldGeneratorMini" or defName="ShipHeatManifold"]</xpath>
+					<xpath>/Defs/ThingDef[defName="ShipPilotSeatMini" or defName="ShipConsoleTactical" or defName="ShipConsoleScience" or defName="Ship_SensorCluster" or defName="Ship_SensorClusterAdv" or defName="Ship_LifeSupport" or defName="Ship_LifeSupport_Small" or defName="ShipCloakingDevice" or defName="HullFoamDistributor" or defName="ShipCombatShieldGenerator" or defName="ShipCombatShieldGeneratorMini" or defName="ShipHeatManifold" or defName="ShipArchotechSpore"]</xpath>
 					<value>
 						<minifiedDef>MinifiedThing</minifiedDef>
 						<thingCategories>
@@ -17,7 +17,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="ShipPilotSeatMini" or defName="ShipConsoleTactical" or defName="ShipConsoleScience" or defName="Ship_SensorCluster" or defName="Ship_SensorClusterAdv" or defName="Ship_LifeSupport" or defName="Ship_LifeSupport_Small" or defName="ShipCloakingDevice" or defName="HullFoamDistributor" or defName="ShipCombatShieldGenerator" or defName="ShipCombatShieldGeneratorMini" or defName="ShipHeatManifold"]/building</xpath>
+					<xpath>/Defs/ThingDef[defName="ShipPilotSeatMini" or defName="ShipConsoleTactical" or defName="ShipConsoleScience" or defName="Ship_SensorCluster" or defName="Ship_SensorClusterAdv" or defName="Ship_LifeSupport" or defName="Ship_LifeSupport_Small" or defName="ShipCloakingDevice" or defName="HullFoamDistributor" or defName="ShipCombatShieldGenerator" or defName="ShipCombatShieldGeneratorMini" or defName="ShipHeatManifold" or defName="ShipArchotechSpore"]/building</xpath>
 					<value>
 						<uninstallWork>350</uninstallWork>
 					</value>

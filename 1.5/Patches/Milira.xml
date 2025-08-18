@@ -247,6 +247,7 @@
 						<value>
 							<equippedStatOffsets>
 								<DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
+								<VacuumSpeedMultiplier>3</VacuumSpeedMultiplier>
 							</equippedStatOffsets>
 						</value>
 					</li>
