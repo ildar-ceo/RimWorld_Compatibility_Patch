@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	
+	<!-- ID: 1123043922 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Sparkling Worlds - Full Mod</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/IncidentDef[defName="InsectHiveDropSW"]/baseChance</xpath>
+					<value>
+						<baseChance>1.0</baseChance>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+						<xpath>/Defs/IncidentDef[defName="ThrumboSightingSW" or defName="TradeFairSW" or defName="HuntingLodgeOppSW"]/baseChance</xpath>
+						<value>
+							<baseChance>0.01</baseChance>
+						</value>
+					</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1938420742 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Events Expanded</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/IncidentDef[defName="VEE_Drought" or defName="VEE_AnimalPodCrash" or defName="VEE_Earthquake" or defName="VEE_CaravanAnimalsWanderIn" or defName="VEE_BattleAnimalsWanderIn" or defName="VEE_WildMenWanderIn" or defName="VEE_Cargopodsweapons" or defName="VEE_Cargopodsapparel" or defName="VEE_PsychicRain"]/baseChance</xpath>
+					<value>
+						<baseChance>0.01</baseChance>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/IncidentDef[defName="VEE_IceAge" or defName="VEE_GlobalWarming" or defName="VEE_LongNight" or defName="VEE_PsychicBloom"]/baseChance</xpath>
+					<value>
+						<baseChance>0.25</baseChance>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/IncidentDef[defName="VEE_IceAge" or defName="VEE_GlobalWarming" or defName="VEE_PsychicRain" or defName="VEE_LongNight" or defName="VEE_PsychicBloom"]/minRefireDays</xpath>
+					<value>
+						<minRefireDays>120</minRefireDays>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1854376306 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Nyaron race</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/IncidentDef[defName="Nyaron_Infestation"]</xpath>
+					<value>
+						<minPopulation>10</minPopulation>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/IncidentDef[defName="Nyaron_Infestation"]</xpath>
+					<value>
+						<earliestDay>60</earliestDay>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/IncidentDef[defName="Nyaron_Infestation"]/baseChance</xpath>
+					<value>
+						<baseChance>0.2</baseChance>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/IncidentDef[defName="Nyaron_Infestation"]/minThreatPoints</xpath>
+					<value>
+						<minThreatPoints>2500</minThreatPoints>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/IncidentDef[defName="Nyaron_Infestation"]/minRefireDays</xpath>
+					<value>
+						<minRefireDays>30</minRefireDays>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/IncidentDef[defName="Nyaron_Infestation"]</xpath>
+					<value>
+						<letterDef>ThreatBig</letterDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1909914131 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Sparkling Worlds - Full Mod</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Save Our Ship 2</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/IncidentDef[defName="ShipCrashSW"]/baseChance</xpath>
+						<value>
+							<baseChance>0.01</baseChance>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2260097569 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>ReGrowth: Core</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/IncidentDef[defName="RG_DevilDusts"]/baseChance</xpath>
+					<value>
+						<baseChance>0.01</baseChance>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

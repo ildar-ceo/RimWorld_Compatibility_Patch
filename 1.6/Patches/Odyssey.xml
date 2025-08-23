@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	
+	<!-- ID: 3014915404 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vehicle Framework</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods><li>Odyssey</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!--
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="PassengerShuttle"]/designationCategory</xpath>
+					</li>-->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="PassengerShuttle"]/costList</xpath>
+						<value>
+							<VVE_EngineBlock>3</VVE_EngineBlock>
+							<VVE_CarAlternator>6</VVE_CarAlternator>
+							<VVE_CarExhaust>6</VVE_CarExhaust>
+							<VVE_CarSuspension>3</VVE_CarSuspension>
+							<VVE_CarTransmission>1</VVE_CarTransmission>
+							<VVE_CarWiring>2</VVE_CarWiring>
+							<VVE_CarFuelTank>2</VVE_CarFuelTank>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="PassengerShuttle"]/researchPrerequisites</xpath>
+						<value>
+							<li>VVE_AerialVehicles</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+
+</Patch>

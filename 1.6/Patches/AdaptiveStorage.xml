@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<!-- ID: 3033901359 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Adaptive Storage Framework</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[@Name="ShelfBase" or @Name="BookcaseBase"]</xpath>
+					<value>
+						<designationCategory Inherit="false">ASFstorage</designationCategory>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ID: 2898411376 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>RimFridge: Now with Shelves!</li></mods>
+			<match Class="PatchOperationFindMod">
+			<mods><li>Adaptive Storage Framework</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[@Name="FridgeBase"]</xpath>
+						<value>
+							<designationCategory Inherit="false">ASFstorage</designationCategory>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+</Patch> 

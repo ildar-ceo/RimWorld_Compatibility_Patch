@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<!-- ID: 2012735237 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Fertile Fields [1.1]</li></mods>
+		
+		<!-- ID: 836308268 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Dubs Bad Hygiene</li></mods>
+		
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="BiosolidsComposter"]/comps/li[@Class="DubsBadHygiene.CompProperties_Composter"]/Product</xpath>
+						<value>
+							<Product>Fertilizer</Product>
+						</value>
+					</li>
+					<!--
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="BiosolidsComposter"]</xpath>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ResearchProjectDef[defName="SewageSludgeComposting"]</xpath>
+					</li>-->
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="CompostBarrel"]/researchPrerequisites</xpath>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="RawCompost" or defName="Fertilizer" or defName="RottedMush"]/thingCategories</xpath>
+						<value>
+							<thingCategories>
+								<li>Waste</li>
+							</thingCategories>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Fertilizer"]/statBases/MarketValue</xpath>
+						<value>
+							<MarketValue>2.5</MarketValue>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+			
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2012735237 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Fertile Fields [1.1]</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="ConstructFinishFramesGrowing"]/priorityInType</xpath>
+					<value>
+						<priorityInType>210</priorityInType>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="ConstructDeliverResourcesToBlueprintsGrowing"]/priorityInType</xpath>
+					<value>
+						<priorityInType>200</priorityInType>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="DoBillsUseRockMill"]/priorityInType</xpath>
+					<value>
+						<priorityInType>91</priorityInType>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="RottedMush"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef[defName="MakeCompost" or defName="MakeCompost5"]/ingredients/li/filter/thingDefs/li[text()="RottedMush"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef[defName="MakeCompost" or defName="MakeCompost5"]/fixedIngredientFilter/thingDefs/li[text()="RottedMush"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef[defName="MakeCompost" or defName="MakeCompost5"]/defaultIngredientFilter/thingDefs/li[text()="RottedMush"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="PlantScraps"]/tradeability</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="PlantScraps"]/stackLimit</xpath>
+					<value>
+						<stackLimit>1000</stackLimit>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="PlantScraps"]/statBases</xpath>
+					<value>
+						<MarketValue>0.1</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Neolithic_BulkGoods" or defName="Visitor_Neolithic_Standard" or defName="Visitor_Outlander_Standard" or defName="Base_Outlander_Standart" or defName="Base_Neolithic_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_BuySingleDef">
+							<thingDef>PlantScraps</thingDef>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="RFF_Terraforming"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 836308268 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Dubs Bad Hygiene</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Biotech</li></mods>
+		
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Wastepack"]/thingCategories</xpath>
+						<value>
+							<thingCategories>
+								<li>Waste</li>
+							</thingCategories>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+			
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 836308268 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Dubs Bad Hygiene</li></mods>
+	
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="CentralHeating" or defName="GeothermalHeating" or defName="ModernFixtures" or defName="Irrigation" or defName="FireSuppression"]/techLevel</xpath>
+					<value>
+						<techLevel>Medieval</techLevel>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ResearchProjectDef[defName="CentralHeating"]/prerequisites/li[text()="Electricity"]</xpath>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2012735237 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Fertile Fields [1.1]</li></mods>
+		
+		<!-- ID: 1957158779 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Furniture Expanded - Farming</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+	
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="VFE_Sprinkler" or defName="VFE_PlanterBox" or defName="VFE_Ecosystem" or defName="Building_PlantGrower" or defName="VFE_PlanterBox_Tilable" or defName="VFE_Hydroponics_Tilable" or defName="VFE_Ecosystem_Tilable" or defName="VFE_Scarecrow" or @Name="VFE_TilableHydroponics_Base"]/designationCategory</xpath>
+						<value>
+							<designationCategory>RFF_Farm</designationCategory>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2012735237 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Fertile Fields [1.1]</li></mods>
+		
+		<!-- ID: 2259058735 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>CaveworldFlora (Continued)</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+	
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="FungiponicsBasin"]/designationCategory</xpath>
+						<value>
+							<designationCategory>RFF_Farm</designationCategory>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2259058735 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>CaveworldFlora (Continued)</li></mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="FungiponicsBasin"]/costList</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="FungiponicsBasin"]</xpath>
+					<value>
+						<stuffCategories>
+							<li>Stony</li>
+							<li>Woody</li>
+							<li>Metallic</li>
+						</stuffCategories>
+						<costStuffCount>150</costStuffCount>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="FungiponicsBasin"]/fertility</xpath>
+					<value>
+						<fertility>2.0</fertility>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="FungiponicsBasin"]/constructEffect</xpath>
+					<value>
+						<constructEffect>ConstructMetal</constructEffect>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="FungiponicsBasin"]/terrainAffordanceNeeded</xpath>
+					<value>
+						<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="FungiponicsBasin"]/placeWorkers</xpath>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2012735237 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Fertile Fields [1.1]</li></mods>
+		
+		<!-- ID: 2553700067 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Medieval Overhaul</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_BulkGoodsMerchant" or defName="DankPyon_Caravan_Medieval_RuinsMerchant" or defName="DankPyon_Visitor_Medieval_Standard" or defName="DankPyon_Base_Medieval_Standard"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_BuySingleDef">
+								<thingDef>PlantScraps</thingDef>
+							</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/TraderKindDef[defName="DankPyon_Caravan_Medieval_BulkGoodsMerchant" or defName="DankPyon_Base_Medieval_Standard"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>TerraformingResources</tradeTag>
+								<thingDefCountRange>
+									<min>0</min>
+									<max>4</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>100</min>
+									<max>200</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/TraderKindDef[defName="DankPyon_Visitor_Medieval_Standard"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+							<tradeTag>TerraformingResources</tradeTag>
+								<thingDefCountRange>
+									<min>0</min>
+									<max>2</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>5</min>
+									<max>15</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/RecipeDef[defName="SplitDirt" or defName="SplitDirtBulk" or defName="DirtToClay" or defName="DirtToClayBulk" or defName="MakeCrushedRocks" or defName="MakeCrushedRocksBulk" or defName="MakeCrushedRocksBlock" or defName="MakeCrushedRocksBlockBulk" or defName="MakeSand" or defName="MakeSandBulk" or defName="MakeClay" or defName="MakeClayBulk" or defName="MakeDirt" or defName="MakeDirtBulk"]/recipeUsers</xpath>
+						<value>
+							<li>DankPyon_StonecuttingSpot</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/RecipeDef[defName="MakeCompost"]/recipeUsers</xpath>
+						<value>
+							<li>DankPyon_ButchersBlock</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2012735237 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Fertile Fields [1.1]</li></mods>
+		
+		<!-- ID: 1578693166 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>NewRatkinPlus</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Ratkin_BulkGoods"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_BuySingleDef">
+								<thingDef>PlantScraps</thingDef>
+							</li>
+						</value>
+					</li>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/TraderKindDef[defName="Caravan_Ratkin_BulkGoods"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>TerraformingResources</tradeTag>
+								<thingDefCountRange>
+									<min>0</min>
+									<max>4</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>100</min>
+									<max>200</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+</Patch> 

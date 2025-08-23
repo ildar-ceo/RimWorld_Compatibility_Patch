@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Add Steel to Traders -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Steel</thingDef>
+				<countRange>50~120</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Steel</thingDef>
+				<countRange>500~800</countRange>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- Add Medicine to Traders -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Neolithic_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>10~30</countRange>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- Add Components to Traders -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic"]/stockGenerators/li[thingDef="ComponentIndustrial"]</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>30~50</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Base_Outlander_Standard"]/stockGenerators/li[thingDef="ComponentSpacer"]</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentSpacer</thingDef>
+				<countRange>5~20</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators/li[thingDef="ComponentSpacer"]</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentSpacer</thingDef>
+				<countRange>0~10</countRange>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- Add Drugs to Traders -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators/li[categoryDef="Drugs"]</xpath>
+		<value>
+			<li Class="StockGenerator_Category">
+				<categoryDef>Drugs</categoryDef>
+				<thingDefCountRange>4~9</thingDefCountRange>
+				<totalPriceRange>2000~3000</totalPriceRange>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- Add NeurotrainersSkill -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Category">
+				<categoryDef>NeurotrainersSkill</categoryDef>
+				<thingDefCountRange>0~1</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Category">
+				<categoryDef>NeurotrainersSkill</categoryDef>
+				<thingDefCountRange>1~3</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- Add MechSerumHealer to traders -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ThingDef[defName="MechSerumHealer"]/tradeability</xpath>
+	</Operation>
+	
+	
+	<!-- Add HiTechArmor to Traders -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_CombatSupplier" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>HiTechArmor</tradeTag>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>HiTechArmor</tradeTag>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>HiTechArmor</tradeTag>
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_PirateMerchant" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_MarketValue">
+				<tradeTag>WeaponRanged</tradeTag>
+				<countRange>0~1</countRange>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- Add Chemfuel to Traders -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_BuySingleDef">
+				<thingDef>Chemfuel</thingDef>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- Add MealSurvivalPack to Traders -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Outlander_CombatSupplier"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MealSurvivalPack</thingDef>
+				<countRange>10~30</countRange>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- Add WeaponRanged to Traders -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_MarketValue">
+				<tradeTag>WeaponRanged</tradeTag>
+				<countRange>0~2</countRange>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- Add Threads to Traders -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Caravan_Outlander_BulkGoods" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Synthread</thingDef>
+				<countRange>10~30</countRange>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- Add money -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+		<value>
+			<countRange>200~500</countRange>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier" or defName="Caravan_Outlander_PirateMerchant" or defName="Caravan_Neolithic_BulkGoods" or defName="Caravan_Neolithic_WarMerchant" or defName="Caravan_Neolithic_Slaver" or defName="Caravan_Neolithic_ShamanMerchant"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+		<value>
+			<countRange>2000~5000</countRange>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Orbital_PirateMerchant" or defName="Orbital_CombatSupplier" or defName="Base_Neolithic_Standard" or defName="Base_Outlander_Standard"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+		<value>
+			<countRange>5000~10000</countRange>
+		</value>
+	</Operation>
+	
+	
+	<!-- Add BodyParts -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Base_Neolithic_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyParts</categoryDef>
+				<thingDefCountRange>0~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsProsthetic</categoryDef>
+				<thingDefCountRange>0~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyParts</categoryDef>
+				<thingDefCountRange>0~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsProsthetic</categoryDef>
+				<thingDefCountRange>0~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsBionic</categoryDef>
+				<thingDefCountRange>0~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_CombatSupplier"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyParts</categoryDef>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsProsthetic</categoryDef>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsBionic</categoryDef>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyParts</categoryDef>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1~1</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsProsthetic</categoryDef>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsBionic</categoryDef>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsUltra</categoryDef>
+				<thingDefCountRange>0~1</thingDefCountRange>
+				<countRange>0~1</countRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyParts</categoryDef>
+				<thingDefCountRange>1~4</thingDefCountRange>
+				<countRange>1~1</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsProsthetic</categoryDef>
+				<thingDefCountRange>1~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsBionic</categoryDef>
+				<thingDefCountRange>1~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsUltra</categoryDef>
+				<thingDefCountRange>1~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsArchotech</categoryDef>
+				<thingDefCountRange>1~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+				<excludedThingDefs>
+					<li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech">PsychicAmplifier</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Mechlink</li>
+				</excludedThingDefs>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- Visitors -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MealSurvivalPack</thingDef>
+				<countRange>1~10</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>ExoticMisc</tradeTag>
+				<thingDefCountRange>0~1</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>Artifact</tradeTag>
+				<thingDefCountRange>0~1</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>NeurotrainersSkill</categoryDef>
+				<thingDefCountRange>0~1</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</value>
+	</Operation>
+	
+	
+	<!-- Royalty -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Royalty</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Add BroadshieldCore to Traders -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>BroadshieldCore</thingDef>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>BroadshieldCore</thingDef>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="BroadshieldCore"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>2000</MarketValue>
+					</value>
+				</li>
+				
+				<!-- Add PsychicAmplifier to Traders -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard" or defName="Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>PsychicAmplifier</thingDef>
+							<countRange>-5~2</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]/statBases/MarketValue</xpath>
+					<value>
+						<MarketValue>4100</MarketValue>
+					</value>
+				</li>
+				
+				<!-- Add Exotic -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>Artifact</tradeTag>
+							<thingDefCountRange>1~4</thingDefCountRange>
+							<countRange>1~1</countRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>ExoticMisc</tradeTag>
+							<thingDefCountRange>1~4</thingDefCountRange>
+							<countRange>1~2</countRange>
+							<excludedThingDefs>
+								<li>ComponentSpacer</li> <!-- already handled by single def -->
+								<li>MedicineUltratech</li> <!-- already handled by single def -->
+							</excludedThingDefs>
+							<customCountRanges>
+								<Hyperweave>100~200</Hyperweave>
+							</customCountRanges>
+						</li>
+						<li Class="StockGenerator_Category">
+							<categoryDef>NeurotrainersPsycast</categoryDef>
+							<thingDefCountRange>2~2</thingDefCountRange>
+							<countRange>0~2</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<!-- Add money -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard" or defName="Empire_Caravan_TraderGeneral"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+					<value>
+						<countRange>2000~5000</countRange>
+					</value>
+				</li>
+				
+				<!-- More HiTechArmor -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard" or defName="Orbital_Empire" or defName="Empire_Caravan_TraderGeneral"]/stockGenerators/li[tradeTag="HiTechArmor"]</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>HiTechArmor</tradeTag>
+							<thingDefCountRange>4~8</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<!-- Add Medicine to Traders -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>MedicineIndustrial</thingDef>
+							<countRange>10~30</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<!-- Add Plasteel to Traders -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Plasteel</thingDef>
+							<countRange>200~350</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<!-- Add NeurotrainersSkill -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Category">
+							<categoryDef>NeurotrainersSkill</categoryDef>
+							<thingDefCountRange>1~3</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- Increases Orbital traders rate -->
+	<!--
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/StorytellerDef[@Name="BaseStoryteller"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+				<incident>OrbitalTraderArrival</incident>
+				<onDays>7</onDays>
+				<offDays>5</offDays>
+				<numIncidentsRange>2</numIncidentsRange>
+			</li>
+		</value>
+	</Operation>-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StorytellerDef[defName="Cassandra" or defName="Phoebe"]/comps/li[incident="OrbitalTraderArrival"]</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+				<incident>OrbitalTraderArrival</incident>
+				<onDays>10</onDays>
+				<offDays>5</offDays>
+				<numIncidentsRange>2</numIncidentsRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/StorytellerDef[defName="Randy"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+				<incident>OrbitalTraderArrival</incident>
+				<onDays>10</onDays>
+				<offDays>5</offDays>
+				<numIncidentsRange>2</numIncidentsRange>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StorytellerDef[defName="Randy"]/comps/li[@Class="StorytellerCompProperties_RandomMain"]/categoryWeights/FactionArrival</xpath>
+		<value>
+			<FactionArrival>1</FactionArrival>
+		</value>
+	</Operation>
+	
+	<!-- ID: 2938820380 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Vanilla Factions Expanded - Empire</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/StorytellerDef[defName="VFEE_AriadneArchduchess"]/comps/li[incident="OrbitalTraderArrival"]</xpath>
+					<value>
+						<li Class="StorytellerCompProperties_OnOffCycle">
+							<incident>OrbitalTraderArrival</incident>
+							<onDays>10</onDays>
+							<offDays>5</offDays>
+							<numIncidentsRange>2</numIncidentsRange>
+						</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1123043922 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Sparkling Worlds - Full Mod</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_GlitterWorldSW"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>HiTechArmor</tradeTag>
+							<thingDefCountRange>2~3</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_GlitterWorldSW"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Category">
+							<categoryDef>NeurotrainersSkill</categoryDef>
+							<thingDefCountRange>1~3</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_GlitterWorldSW"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>Steel</thingDef>
+							<countRange>500~800</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_GlitterWorldSW"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_MarketValue">
+							<tradeTag>WeaponRanged</tradeTag>
+							<countRange>0~2</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier" or defName="Caravan_Outlander_PirateMerchant"]/stockGenerators</xpath>
+					<value>
+						<li Class="SparklingWorlds.StockGeneratorWeaponsTagsSW">
+							<weaponTag>SpacerGun</weaponTag>
+							<countRange>
+								<min>1</min>
+								<max>3</max>
+							</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Orbital_PirateMerchant" or defName="Orbital_CombatSupplier" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="SparklingWorlds.StockGeneratorWeaponsTagsSW">
+							<weaponTag>SpacerGun</weaponTag>
+							<countRange>
+								<min>0</min>
+								<max>2</max>
+							</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<!-- Add money -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_GlitterWorldSW"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+					<value>
+						<countRange>5000~20000</countRange>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1123043922 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Sparkling Worlds - Full Mod</li></mods>
+		
+		<!-- ID: 2012735237 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Fertile Fields [1.1]</li></mods>
+			
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Add TerraformingResources -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_MiningGoodsSW"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>TerraformingResources</tradeTag>
+								<thingDefCountRange>
+									<min>0</min>
+									<max>2</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>200</min>
+									<max>400</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Orbital_MiningGoodsSW"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>TerraformingResources</tradeTag>
+								<thingDefCountRange>
+									<min>0</min>
+									<max>3</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>500</min>
+									<max>1000</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 1123043922 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Sparkling Worlds - Full Mod</li></mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Add BroadshieldCore to Traders -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Orbital_GlitterWorldSW"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>BroadshieldCore</thingDef>
+								<countRange>1~2</countRange>
+							</li>
+						</value>
+					</li>
+				
+					<!-- Add PsychicAmplifier to Traders -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Orbital_GlitterWorldSW"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>PsychicAmplifier</thingDef>
+								<countRange>-5~1</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 1123043922 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Sparkling Worlds - Full Mod</li></mods>
+		
+		<!-- ID: 2654846754 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Ancients</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Add super-nanites -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Orbital_GlitterWorldSW"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_SingleDef">
+								<thingDef>VFEA_SuperNanites</thingDef>
+								<countRange>0~1</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2155485488 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!--
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier" or defName="Caravan_Outlander_PirateMerchant"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Category">
+							<categoryDef>CW_CyborgWeaponry</categoryDef>
+							<thingDefCountRange>0~1</thingDefCountRange>
+							<countRange>1~2</countRange>
+						</li>
+					</value>
+				</li>
+				-->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic" or defName="Orbital_PirateMerchant" or defName="Orbital_CombatSupplier" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Category">
+							<categoryDef>CW_CyborgWeaponry</categoryDef>
+							<thingDefCountRange>0~1</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2155485488 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>Cybernetic Warfare and Special Weapons (Continued)</li></mods>
+		
+		<!-- ID: 1123043922 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Sparkling Worlds - Full Mod</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Orbital_GlitterWorldSW"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Category">
+								<categoryDef>CW_CyborgWeaponry</categoryDef>
+								<thingDefCountRange>0~1</thingDefCountRange>
+								<countRange>1~2</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+		
+	</Operation>
+	
+	
+	<!-- ID: 2119930282 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>[RWY]Advanced Mechanoid Warfare(Continued)</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[@Name="AMWBaseGun"]</xpath>
+					<value>
+						<tradeTags>
+							<li>WeaponRanged</li>
+						</tradeTags>
+					</value>
+				</li>
+				
+				<!-- AMW_Parts -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="AMW_MechanoidComponents"]/tradeability</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Caravan_Outlander_Exotic" or defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>AMW_Parts</tradeTag>
+							<thingDefCountRange>1~4</thingDefCountRange>
+							<countRange>10~200</countRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>AMW_Parts_Exotic</tradeTag>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>5~20</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AMW_MechanoidPlates" or defName="AMW_MechanoidCores" or defName="AMW_MechanoidComponents" or defName="AMW_MechanoidMechanites"]</xpath>
+					<value>
+						<tradeTags>
+							<li>AMW_Parts</li>
+						</tradeTags>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="AMW_MechanitePack" or defName="AMW_AntigranFragments"]</xpath>
+					<value>
+						<tradeTags>
+							<li>AMW_Parts_Exotic</li>
+						</tradeTags>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Outlander_CombatSupplier" or defName="Base_Neolithic_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_BuyTradeTag"><tag>AMW_Parts</tag></li>
+						<li Class="StockGenerator_BuyTradeTag"><tag>AMW_Parts_Exotic</tag></li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2119930282 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>[RWY]Advanced Mechanoid Warfare(Continued)</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods><li>Nyaron race</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>AMW_Parts</tradeTag>
+								<thingDefCountRange>1~4</thingDefCountRange>
+								<countRange>10~200</countRange>
+							</li>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>AMW_Parts_Exotic</tradeTag>
+								<thingDefCountRange>1~2</thingDefCountRange>
+								<countRange>5~20</countRange>
+							</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_BulkGoods" or defName="Caravan_Nyaron_CombatSupplier"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_BuyTradeTag"><tag>AMW_Parts</tag></li>
+							<li Class="StockGenerator_BuyTradeTag"><tag>AMW_Parts_Exotic</tag></li>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2119930282 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>[RWY]Advanced Mechanoid Warfare(Continued)</li></mods>
+		<match Class="PatchOperationFindMod">
+			<mods><li>Royalty</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard" or defName="Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>AMW_Parts</tradeTag>
+								<thingDefCountRange>1~4</thingDefCountRange>
+								<countRange>50~200</countRange>
+							</li>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>AMW_Parts_Exotic</tradeTag>
+								<thingDefCountRange>1~2</thingDefCountRange>
+								<countRange>10~50</countRange>
+							</li>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_BuyTradeTag"><tag>AMW_Parts</tag></li>
+							<li Class="StockGenerator_BuyTradeTag"><tag>AMW_Parts_Exotic</tag></li>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2586052937 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>SeedsPlease: Lite</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<!-- Add money -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_GreenHouseTrader"]/stockGenerators/li[thingDef="Silver"]/countRange</xpath>
+					<value>
+						<countRange>1000~5000</countRange>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 2019053285 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>ColdCrystal</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods" or defName="Orbital_Exotic" or defName="Caravan_Outlander_BulkGoods" or defName="Caravan_Neolithic_BulkGoods" or defName="Base_Outlander_Standard" or defName="Base_Neolithic_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>AmberCrystal</thingDef>
+							<countRange>10~50</countRange>
+						</li>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>ColdCrystal</thingDef>
+							<countRange>10~50</countRange>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>AmberCrystal</thingDef>
+							<countRange>-10~5</countRange>
+						</li>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>ColdCrystal</thingDef>
+							<countRange>-10~5</countRange>
+						</li>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

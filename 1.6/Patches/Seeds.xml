@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<!-- ID: 3523459853 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods><li>SeedsPlease: Lite Redux</li></mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[defName="RefineBerries"]/Products</xpath>
+					<value>
+						<products>
+							<RawStrawberries>4</RawStrawberries>
+						</products>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ID: 935732834 (SeedsPlease) -->
+	<!-- ID: 2586052937 (SeedsPlease: Lite) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="GreenHouseTrader"]/stockGenerators/li[tradeTag="Seeds"]</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>Seeds</tradeTag>
+							<thingDefCountRange>
+								<min>10</min>
+								<max>25</max>
+							</thingDefCountRange>
+							<countRange>
+								<min>50</min>
+								<max>700</max>
+							</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_GreenHouseTrader"]/stockGenerators/li[tradeTag="Seeds"]</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>Seeds</tradeTag>
+							<thingDefCountRange>
+								<min>10</min>
+								<max>25</max>
+							</thingDefCountRange>
+							<countRange>
+								<min>50</min>
+								<max>700</max>
+							</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_BulkGoods"]/stockGenerators/li[tradeTag="Seeds"]</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>Seeds</tradeTag>
+							<thingDefCountRange>
+								<min>5</min>
+								<max>15</max>
+							</thingDefCountRange>
+							<countRange>
+								<min>50</min>
+								<max>700</max>
+							</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators/li[tradeTag="Seeds"]</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>Seeds</tradeTag>
+							<thingDefCountRange>
+								<min>5</min>
+								<max>15</max>
+							</thingDefCountRange>
+							<countRange>
+								<min>50</min>
+								<max>700</max>
+							</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators/li[tradeTag="Seeds"]</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>Seeds</tradeTag>
+							<thingDefCountRange>
+								<min>10</min>
+								<max>15</max>
+							</thingDefCountRange>
+							<countRange>
+								<min>50</min>
+								<max>700</max>
+							</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Visitor_Neolithic_Standard"]/stockGenerators/li[tradeTag="Seeds"]</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>Seeds</tradeTag>
+							<thingDefCountRange>
+								<min>2</min>
+								<max>5</max>
+							</thingDefCountRange>
+							<countRange>
+								<min>50</min>
+								<max>700</max>
+							</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName="Visitor_Outlander_Standard"]/stockGenerators/li[tradeTag="Seeds"]</xpath>
+					<value>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>Seeds</tradeTag>
+							<thingDefCountRange>
+								<min>2</min>
+								<max>5</max>
+							</thingDefCountRange>
+							<countRange>
+								<min>50</min>
+								<max>700</max>
+							</countRange>
+						</li>
+					</value>
+				</li>
+				
+				<!-- Add Rice to default Scenario -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ScenarioDef[defName="Crashlanded" or defName="LostTribe" or defName="TheRichExplorer"]/scenario/parts</xpath>
+					<value>
+						<li Class="ScenPart_StartingThing_Defined">
+							<def>StartingThing_Defined</def>
+							<thingDef>Seed_Rice</thingDef>
+							<count>150</count>
+						</li>
+					</value>
+				</li>
+				
+				<!--
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/TraderKindDef[defName="Caravan_Nyaron_Exotic" or defName="Caravan_Nyaron_CombatSupplier" or defName="Orbital_Exotic" or defName="Caravan_Outlander_Exotic" or defName="Caravan_Outlander_CombatSupplier]/stockGenerators/li[tradeTag="Seeds"]</xpath>
+				</li>
+				-->
+				
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 935732834 (SeedsPlease) -->
+	<!-- ID: 2586052937 (SeedsPlease: Lite) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
+		
+		<match Class="PatchOperationFindMod">
+			<mods><li>Biotech</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<!-- Add Rice to default Scenario -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ScenarioDef[defName="Mechanitor" or defName="Sanguophage"]/scenario/parts</xpath>
+						<value>
+							<li Class="ScenPart_StartingThing_Defined">
+								<def>StartingThing_Defined</def>
+								<thingDef>Seed_Rice</thingDef>
+								<count>150</count>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 935732834 (SeedsPlease) -->
+	<!-- ID: 2586052937 (SeedsPlease: Lite) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
+		
+		<!-- ID: 1854376306 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Nyaron race</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<!-- Add Rice to default Nyaron scenario -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ScenarioDef[defName="NyaronStart_butler" or defName="NyaronStart" or defName="NyaronClassicStart"]/scenario/parts</xpath>
+						<value>
+							<li Class="ScenPart_StartingThing_Defined">
+								<def>StartingThing_Defined</def>
+								<thingDef>Seed_Rice</thingDef>
+								<count>150</count>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 935732834 (SeedsPlease) -->
+	<!-- ID: 2586052937 (SeedsPlease: Lite) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
+		
+		<!-- ID: 1386412863 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Android tiers</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<!-- Add Rice to default scenario -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ScenarioDef[defName="AndroidTiers_FireAndDestruction" or defName="LostAndroids" or defName="AndroidTiers_RiseOfMachines"]/scenario/parts</xpath>
+						<value>
+							<li Class="ScenPart_StartingThing_Defined">
+								<def>StartingThing_Defined</def>
+								<thingDef>Seed_Rice</thingDef>
+								<count>150</count>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 935732834 (SeedsPlease) -->
+	<!-- ID: 2586052937 (SeedsPlease: Lite) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
+		
+		<!-- ID: 2654846754 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Ancients</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<!-- Add Rice to default scenario -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ScenarioDef[defName="RE_NewVault" or defName="VFEA_CargoCult"]/scenario/parts</xpath>
+						<value>
+							<li Class="ScenPart_StartingThing_Defined">
+								<def>StartingThing_Defined</def>
+								<thingDef>Seed_Rice</thingDef>
+								<count>150</count>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 935732834 (SeedsPlease) -->
+	<!-- ID: 2586052937 (SeedsPlease: Lite) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
+		
+		<!-- ID: 2723801948 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Vanilla Factions Expanded - Pirates</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<!-- Add Rice to default scenario -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ScenarioDef[defName="VFEP_LowOrbitCrash"]/scenario/parts</xpath>
+						<value>
+							<li Class="ScenPart_StartingThing_Defined">
+								<def>StartingThing_Defined</def>
+								<thingDef>Seed_Rice</thingDef>
+								<count>150</count>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 935732834 (SeedsPlease) -->
+	<!-- ID: 2586052937 (SeedsPlease: Lite) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
+		
+		<!-- ID: 2479560240 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Rim-Effect: Core</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<!-- Add Rice to default scenario -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ScenarioDef[defName="RE_AllianceColony"]/scenario/parts</xpath>
+						<value>
+							<li Class="ScenPart_StartingThing_Defined">
+								<def>StartingThing_Defined</def>
+								<thingDef>Seed_Rice</thingDef>
+								<count>150</count>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 935732834 (SeedsPlease) -->
+	<!-- ID: 2586052937 (SeedsPlease: Lite) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
+		
+		<!-- ID: 2651149728 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>Rim-Effect: Asari and Reapers</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+				
+					<!-- Add Rice to default Nyaron scenario -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/ScenarioDef[defName="RE_LoneAsariExplorer"]/scenario/parts</xpath>
+						<value>
+							<li Class="ScenPart_StartingThing_Defined">
+								<def>StartingThing_Defined</def>
+								<thingDef>Seed_Rice</thingDef>
+								<count>150</count>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+	
+	<!-- ID: 935732834 (SeedsPlease) -->
+	<!-- ID: 2586052937 (SeedsPlease: Lite) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease</li>
+			<li>SeedsPlease: Lite</li>
+		</mods>
+		
+		<!-- ID: 1578693166 -->
+		<match Class="PatchOperationFindMod">
+			<mods><li>NewRatkinPlus</li></mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="Caravan_Ratkin_BulkGoods"]/stockGenerators</xpath>
+						<value>
+							<li Class="StockGenerator_Tag">
+								<tradeTag>Seeds</tradeTag>
+								<thingDefCountRange>
+									<min>5</min>
+									<max>15</max>
+								</thingDefCountRange>
+								<countRange>
+									<min>50</min>
+									<max>700</max>
+								</countRange>
+							</li>
+						</value>
+					</li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	
+</Patch>
