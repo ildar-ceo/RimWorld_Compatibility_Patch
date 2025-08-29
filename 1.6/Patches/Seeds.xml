@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 	
-	<!-- ID: 3523459853 -->
-	<Operation Class="PatchOperationFindMod">
-		<mods><li>SeedsPlease: Lite Redux</li></mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/RecipeDef[defName="RefineBerries"]/Products</xpath>
-					<value>
-						<products>
-							<RawStrawberries>4</RawStrawberries>
-						</products>
-					</value>
-				</li>
-			</operations>
-		</match>
-	</Operation>
-	
 	<!-- ID: 935732834 (SeedsPlease) -->
 	<!-- ID: 2586052937 (SeedsPlease: Lite) -->
 	<Operation Class="PatchOperationFindMod">

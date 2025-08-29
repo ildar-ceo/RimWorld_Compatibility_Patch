@@ -87,7 +87,7 @@
 										<li>MeatRaw</li>
 									</categories>
 								</filter>
-								<count>1</count>
+								<count>18</count>
 							</li>
 							<li>
 								<filter>
@@ -98,7 +98,7 @@
 										<li>PickledVeg</li>
 									</thingDefs>
 								</filter>
-								<count>1</count>
+								<count>18</count>
 							</li>
 						</ingredients>
 						<fixedIngredientFilter>
@@ -156,7 +156,7 @@
 										<li>PickledVeg</li>
 									</thingDefs>
 								</filter>
-								<count>1</count>
+								<count>18</count>
 							</li>
 							<li>
 								<filter>
@@ -164,7 +164,7 @@
 										<li>FruitFoodRaw</li>
 									</categories>
 								</filter>
-								<count>1</count>
+								<count>18</count>
 							</li>
 						</ingredients>
 						<fixedIngredientFilter>
